@@ -306,12 +306,12 @@ window.PreviewManager = class PreviewManager {
   }
 
   static getCSSPath() {
-    const isDev = window.location.port === '1234'
+    const isDev = window.location.port === '4321'
     return isDev ? '/dist/css/style.css' : '/css/style.min.css'
   }
 
   static getJSPath(filename) {
-    const isDev = window.location.port === '1234'
+    const isDev = window.location.port === '4321'
     return isDev ? `/dist/js/${filename}.js` : `/js/${filename}.min.js`
   }
 
