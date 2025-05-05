@@ -20,10 +20,10 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 
 // Default configuration
 const DEFAULT_CONFIG = {
-  port: 1234, // this port is important for the component preview
+  port: 4321, // this port is important for the component preview
   host: '0.0.0.0', // listen on all interfaces
   openBrowser: true,
-  startPath: '/dashboard',
+  startPath: '/',
   cleanBeforeBuild: true
 }
 
@@ -83,7 +83,7 @@ async function initialBuild(options = {}) {
 /**
  * Starts the Astro development server
  * @param {Object} [options] - Server options
- * @param {number} [options.port=1234] - Port to run the server on
+ * @param {number} [options.port=4321] - Port to run the server on
  * @param {string} [options.host="0.0.0.0"] - Host to run the server on
  * @param {boolean} [options.openBrowser=true] - Whether to open the browser
  * @param {string} [options.startPath='/dashboard'] - Path to open in the browser
@@ -195,7 +195,7 @@ async function startAstroServer(options = {}) {
 /**
  * Starts the development server and file watchers
  * @param {Object} [options] - Development options
- * @param {number} [options.port=1234] - Port to run the server on
+ * @param {number} [options.port=4321] - Port to run the server on
  * @param {string} [options.host="0.0.0.0"] - Host to run the server on
  * @param {boolean} [options.openBrowser=true] - Whether to open the browser
  * @param {string} [options.startPath='/dashboard'] - Path to open in the browser
