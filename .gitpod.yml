@@ -2,5 +2,5 @@ tasks:
   - init: pnpm install
     command: pnpm run dev
 ports:
-  - port: 1234
+  - port: 4321
     onOpen: open-preview
