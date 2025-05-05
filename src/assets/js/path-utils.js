@@ -4,7 +4,7 @@
  * @returns {string} The prefixed path
  */
 export function getPathPrefix(path) {
-  const isDev = window.location.port === '1234'
+  const isDev = window.location.port === '4321'
   return isDev ? `${path}` : `/pages${path}`
 }
 
@@ -14,6 +14,6 @@ export function getPathPrefix(path) {
  * @returns {string} The prefixed asset path
  */
 export function getAssetPrefix(path) {
-  const isDev = window.location.port === '1234'
+  const isDev = window.location.port === '4321'
   return isDev ? `/dist${path}` : `${path}`
 }
