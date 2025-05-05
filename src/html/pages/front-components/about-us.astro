@@ -1,0 +1,547 @@
+---
+import AdminLayout from '../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../components/component-preview/component-preview.astro'
+import Toc from '../../components/toc/toc.astro'
+import PageHeader from '../../components/common/page-header.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
+
+// Page header configuration with navigation breadcrumbs
+const pageHeaderConfig = {
+  title: 'About Us',
+  breadcrumbs: [
+    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Components', href: getPathPrefix('/front-components') },
+    { label: 'About Us', class: 'active' }
+  ]
+}
+
+// About us examples
+const code_1 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h2 class="mb-2">About Us</h2>
+                <p class="lead mb-2">Lorem ipsum dolor sit amet consect adipis elit.</p>
+                <p class="mb-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero
+                corporis dignissimos provident nulla nemo! Quam impedit dolores vel sit amet consectetur
+                adipisicing elit.
+                </p>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="ri-shield-check-line text-primary fs-2 p-2 rounded-3 bg-primary-subtle"></i>
+                        <h6 class="my-2">Top-notch security</h6>
+                        <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="col-6">
+                        <i class="ri-customer-service-line text-primary fs-2 p-2 rounded-3 bg-primary-subtle"></i>
+                        <h6 class="my-2">24/7 customer support</h6>
+                        <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0">
+                <img
+                src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+                class="img-fluid rounded-3"
+                alt="about us image"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_2 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">About Us</h2>
+                <h2 class="mb-2">Learn more about us</h2>
+                <p class="mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero
+                corporis dignissimos provident nulla nemo!
+                </p>
+                <div class="row g-4">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <i class="ri-shield-check-line text-primary fs-2 mb-0 me-3"></i>
+                        <div>
+                            <h6 class="mb-2">Top-notch security</h6>
+                            <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <i class="ri-customer-service-line text-primary fs-2 mb-0 me-3"></i>
+                        <div>
+                            <h6 class="mb-2">24/7 customer support</h6>
+                            <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <i class="ri-loop-left-line text-primary fs-2 mb-0 me-3"></i>
+                        <div>
+                            <h6 class="mb-2">Regular updates</h6>
+                            <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <i class="ri-global-line text-primary fs-2 mb-0 me-3"></i>
+                        <div>
+                            <h6 class="mb-2">Multi-language interface</h6>
+                            <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0">
+                <img
+                src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+                class="img-fluid rounded-3"
+                alt="about us image"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_3 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">About Us</h2>
+                <h2 class="mb-2">Who are we?</h2>
+                <p class="mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero
+                corporis dignissimos provident nulla nemo! Quam impedit dolores vel sit amet consectetur 
+                adipisicing elit.
+                </p>
+                <div class="accordion accordion-flush accordion-icon" id="accordionFlushExample" role="tablist" aria-multiselectable="true">
+                    <div class="accordion-item border rounded mb-3">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed rounded shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <i class="ri-shield-check-line me-2"></i>Top-notch security
+                        </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border rounded mb-3">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed rounded shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <i class="ri-customer-service-line me-2"></i>24/7 customer support
+                        </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border rounded mb-3">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed rounded shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <i class="ri-global-line me-2"></i>Multi-language interface
+                        </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0">
+                <img
+                src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+                class="img-fluid rounded-3"
+                alt="about us image"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_4 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <img
+                src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+                class="img-fluid rounded-3"
+                alt="about us image"
+                />
+            </div>
+            <div class="col-md-7 mt-4 mt-md-0">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">About Us</h2>
+                <h2 class="mb-2">What we do?</h2>
+                <p class="mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero
+                corporis dignissimos provident nulla nemo! Quam impedit dolores vel sit amet consectetur 
+                adipisicing elit.
+                </p>
+                <div>
+                    <label for="progressbar-maintenance" class="form-label">Maintenance</label>
+                    <div class="progress mb-2" id="progressbar-maintenance" role="progressbar" aria-label="progress bar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 12px">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"></div>
+                    </div>
+                    <label for="progressbar-security" class="form-label">Security</label>
+                    <div class="progress mb-2" id="progressbar-security" role="progressbar" aria-label="progress bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 12px">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%"></div>
+                    </div>
+                    <label for="progressbar-updates" class="form-label">Updates</label>
+                    <div class="progress mb-2" id="progressbar-updates" role="progressbar" aria-label="progress bar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 12px">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_5 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img
+                src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+                class="img-fluid rounded-3"
+                alt="about us image"
+                />
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <i class="ri-shield-user-fill text-primary fs-1"></i>
+                <h2 class="mb-2">About Us</h2>
+                <p class="mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam impedit dolores vel sit amet consectetur adipisicing elit.
+                </p>
+                <div class="row g-2 mb-4">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <i class="ri-shield-check-line text-primary fs-2 mb-0 me-3"></i>
+                        <h6 class="mb-2">Top-notch security</h6>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <i class="ri-loop-left-line text-primary fs-2 mb-0 me-3"></i>
+                        <h6 class="mb-2">Regular updates</h6>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <i class="ri-customer-service-line text-primary fs-2 mb-0 me-3"></i>
+                        <h6 class="mb-2">24/7 customer support</h6>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <i class="ri-global-line text-primary fs-2 mb-0 me-3"></i>
+                        <h6 class="mb-2">Multi-language interface</h6>
+                    </div>
+                </div>
+                <button class="btn btn-primary">Learn more <i class="ri-arrow-right-line"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_6 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center mb-4">
+            <div class="col-md-7">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">About Us</h2>
+                <h2 class="mb-2">Who are we?</h2>
+                <p class="mb-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero
+                corporis dignissimos provident nulla nemo!
+                </p>
+                <button class="btn btn-primary">Learn more <i class="ri-arrow-right-line"></i></button>
+            </div>
+            <div class="col-md-5 mt-4 mt-md-0">
+                <img
+                src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+                class="img-fluid rounded-3"
+                alt="about us image"
+                />
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col-md-4">
+                <div class="card p-0">
+                    <div class="card-body d-flex align-items-center p-3">
+                        <i class="ri-shield-check-line text-primary fs-2 mb-0 me-3"></i>
+                        <h6 class="mb-0">Top-notch security</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-0">
+                    <div class="card-body d-flex align-items-center p-3">
+                        <i class="ri-customer-service-line text-primary fs-2 mb-0 me-3"></i>
+                        <h6 class="mb-0">24/7 customer support</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-0">
+                    <div class="card-body d-flex align-items-center p-3">
+                        <i class="ri-loop-left-line text-primary fs-2 mb-0 me-3"></i>
+                        <h6 class="mb-0">Regular updates</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_7 = `<section class="my-4">
+    <div class="container">
+      <img
+        src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-1200x440.png')}"
+        class="img-fluid rounded-3 mb-3"
+        alt="about us image"
+      />
+      <h2 class="fw-semibold mb-3">
+        Our story, our passion, and <span class="text-primary">our purpose</span>
+      </h2>
+      <div class="row g-2">
+        <div class="col-md-6 mb-4 mb-md-0 pe-0 pe-md-5">
+          <p class="mb-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero
+            corporis dignissimos provident nulla nemo! Quam impedit dolores vel sit amet consectetur
+            adipisicing elit.
+          </p>
+          <div>
+            <button class="btn btn-primary me-1">Start now <i class="ri-login-box-line"></i></button
+            >
+            <button class="btn btn-outline-primary"
+              >Learn more <i class="ri-arrow-right-line"></i></button
+            >
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-2">
+            <div class="col-sm-6">
+              <div class="card p-0">
+                <div class="card-body d-flex align-items-center p-3">
+                  <i
+                    class="ri-shield-check-line text-primary bg-primary-subtle fs-2 rounded-3 p-2 me-2"
+                  ></i>
+                  <h5 class="card-title my-0">Top-notch security</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card p-0">
+                <div class="card-body d-flex align-items-center p-3">
+                  <i
+                    class="ri-customer-service-line text-primary bg-primary-subtle fs-2 rounded-3 p-2 me-2"
+                  ></i>
+                  <h5 class="card-title my-0">24/7 support</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card p-0">
+                <div class="card-body d-flex align-items-center p-3">
+                  <i
+                    class="ri-loop-left-line text-primary bg-primary-subtle fs-2 rounded-3 p-2 me-2"
+                  ></i>
+                  <h5 class="card-title my-0">Regular updates</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card p-0">
+                <div class="card-body d-flex align-items-center p-3">
+                  <i class="ri-global-line text-primary bg-primary-subtle fs-2 rounded-3 p-2 me-2"
+                  ></i>
+                  <h5 class="card-title my-0">Multi-language</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+`
+
+const code_8 = `<section class="my-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-start">
+          <h2 class="text-primary text-uppercase small fw-semibold mb-2">About Us</h2>
+          <h2 class="mb-2">Driven by passion, built on trust</h2>
+          <p class="mb-3">Lorem ipsum dolor sit amet consect adipisi elit. Rem exercit accusan aut nostrum eligen ea odit commod id quae sint magnam velit dolores consect dolorib repellat esse dignissi.</p>
+          <button class="btn btn-primary">Get started <i class="ri-arrow-right-line"></i></button>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="row g-2">
+            <div class="col-sm-6">
+              <figure class="img-grayscale h-100">
+                <a href="#">
+                  <img
+                    src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-colored-540x540.png')}"
+                    class="img-fluid rounded w-100 h-100 object-fit-cover"
+                    alt="about us image"
+                  />
+                </a>
+              </figure>
+            </div>
+            <div class="col-sm-6">
+              <div class="card text-center border rounded-3 h-100">
+                <div class="card-body d-flex align-items-center">
+                  <div>
+                    <i class="ri-shield-check-line text-primary fs-1 p-2 rounded-3 bg-primary-subtle"></i>
+                    <h6 class="my-2">Top-notch security</h6>
+                    <p class="mb-0 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercit accusan aut nostrum eligen ea odit commod id quae sint magnam velit dolores consect.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card text-center border rounded-3 h-100">
+                <div class="card-body d-flex align-items-center">
+                  <div>
+                    <i class="ri-global-line text-primary fs-1 p-2 rounded-3 bg-primary-subtle"></i>
+                    <h6 class="my-2">Multi-language interface</h6>
+                    <p class="mb-0 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercit accusan aut nostrum eligen ea odit commod id quae sint magnam velit dolores consect.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <figure class="img-grayscale h-100">
+                <a href="#">
+                  <img
+                    src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-colored-540x540.png')}"
+                    class="img-fluid rounded w-100 h-100 object-fit-cover"
+                    alt="about us image"
+                  />
+                </a>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+`
+
+// Shared preview configuration for consistent component display
+const previewConfig = {
+  cssCode: '',
+  jsCode: ''
+}
+---
+
+<AdminLayout
+  title="About Us"
+  description="About us examples"
+  currentPath="front-components/about-us"
+  enableComponentPreview={true}
+>
+  <PageHeader {...pageHeaderConfig} />
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <div class="row">
+        <div class="col-12">
+          <p class="my-0">
+            "About Us" blocks are sections on websites or applications that provide an overview of a
+            company, organization, or individual. These blocks typically include key information
+            such as the mission, vision, values, history, and team behind the entity, helping users
+            understand the purpose and background of the brand or service.
+          </p>
+        </div>
+      </div>
+      <div class="row js-toc-content">
+        <div class="col-12">
+          <div class="my-3">
+            <h3 class="mb-2" id="example-1">Example 1</h3>
+
+            <ComponentPreview
+              title="About Us Example 1"
+              height="550px"
+              component={code_1}
+              htmlCode={code_1}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-2">Example 2</h3>
+
+            <ComponentPreview
+              title="About Us Example 2"
+              height="550px"
+              component={code_2}
+              htmlCode={code_2}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-3">Example 3</h3>
+
+            <ComponentPreview
+              title="About Us Example 3"
+              height="550px"
+              component={code_3}
+              htmlCode={code_3}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-4">Example 4</h3>
+
+            <ComponentPreview
+              title="About Us Example 4"
+              height="550px"
+              component={code_4}
+              htmlCode={code_4}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-5">Example 5</h3>
+
+            <ComponentPreview
+              title="About Us Example 5"
+              height="550px"
+              component={code_5}
+              htmlCode={code_5}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-6">Example 6</h3>
+
+            <ComponentPreview
+              title="About Us Example 6"
+              height="550px"
+              component={code_6}
+              htmlCode={code_6}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-7">Example 7</h3>
+
+            <ComponentPreview
+              title="About Us Example 7"
+              height="550px"
+              component={code_7}
+              htmlCode={code_7}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-8">Example 8</h3>
+
+            <ComponentPreview
+              title="About Us Example 8"
+              height="550px"
+              component={code_8}
+              htmlCode={code_8}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>

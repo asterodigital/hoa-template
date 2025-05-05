@@ -1,0 +1,297 @@
+---
+import AdminLayout from '../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../components/component-preview/component-preview.astro'
+import Toc from '../../components/toc/toc.astro'
+import PageHeader from '../../components/common/page-header.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
+
+// Page header configuration with navigation breadcrumbs
+const pageHeaderConfig = {
+  title: 'Features',
+  breadcrumbs: [
+    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Components', href: getPathPrefix('/front-components') },
+    { label: 'Features', class: 'active' }
+  ]
+}
+
+// Features examples
+const code_1 = `<section class="my-4">
+  <div class="container">
+    <h2 class="text-primary text-uppercase small fw-semibold mb-2">Features</h2>
+    <h2 class="mb-4">These are some of the features we have to offer.</h2>
+    <div class="row g-2">
+      <div class="col-md-3">
+        <div class="card h-100 p-0">
+          <div class="card-body p-3">
+            <i class="ri-shield-check-line text-primary fs-2 p-2 rounded-3 bg-primary-subtle"></i>
+            <h5 class="card-title my-2">Top-notch security</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet libero corpor digniss provide nulla nemo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 p-0">
+          <div class="card-body p-3">
+            <i class="ri-customer-service-line text-primary fs-2 p-2 rounded-3 bg-primary-subtle"></i>
+            <h5 class="card-title my-2">24/7 support</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet libero corpor digniss provide nulla nemo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 p-0">
+          <div class="card-body p-3">
+            <i class="ri-loop-left-line text-primary fs-2 p-2 rounded-3 bg-primary-subtle"></i>
+            <h5 class="card-title my-2">Regular updates</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet libero corpor digniss provide nulla nemo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 p-0">
+          <div class="card-body p-3">
+            <i class="ri-global-line text-primary fs-2 p-2 rounded-3 bg-primary-subtle"></i>
+            <h5 class="card-title my-2">Multi-language interface</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet libero corpor digniss provide nulla nemo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`
+
+const code_2 = `<section class="my-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="text-primary text-uppercase small fw-semibold mb-2">Features</h2>
+        <h2 class="mb-3">These are some of the features we have to offer.</h2>
+        <p class="mb-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod, nisi vel
+          consectetur interdum, nisl nisi venenatis enim, in facilisis nunc nunc eget ligula.
+        </p>
+        <button class="btn btn-primary">Learn More</button>
+      </div>
+      <div class="col-md-6 mt-4 mt-md-0">
+        <div class="card p-0 mb-2">
+          <div class="card-body p-2 d-flex align-items-center">
+            <i class="ri-shield-check-line text-primary bg-primary-subtle fs-2 rounded-3 p-2 me-2"></i>
+            <h5 class="card-title my-0">Top-notch security</h5>
+          </div>
+        </div>
+        <div class="card p-0 mb-2">
+          <div class="card-body p-2 d-flex align-items-center">
+            <i class="ri-customer-service-line text-primary bg-primary-subtle fs-2 rounded-3 p-2 me-2"></i>
+            <h5 class="card-title my-0">24/7 support</h5>
+          </div>
+        </div>
+        <div class="card p-0 mb-2">
+          <div class="card-body p-2 d-flex align-items-center">
+            <i class="ri-loop-left-line text-primary bg-primary-subtle fs-2 rounded-3 p-2 me-2"></i>
+            <h5 class="card-title my-0">Regular updates</h5>
+          </div>
+        </div>
+        <div class="card p-0">
+          <div class="card-body p-2 d-flex align-items-center">
+            <i class="ri-global-line text-primary bg-primary-subtle fs-2 rounded-3 p-2 me-2"></i>
+            <h5 class="card-title my-0">Multi-language interface</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`
+
+const code_3 = `<section class="my-4">
+  <div class="container">
+    <h2 class="text-primary text-center text-uppercase small fw-semibold mb-2">Our Features</h2>
+    <h2 class="text-center mb-0">These are some of the features we offer</h2>
+    <div class="row mt-4 g-2">
+      <div class="col-sm-4 mb-4 text-center">
+        <i class="ri-shield-check-line text-primary fs-2 p-3 rounded-3 bg-primary-subtle"></i>
+        <h5 class="card-title pt-3">Top-notch security</h5>
+      </div>
+      <div class="col-sm-4 mb-4 text-center">
+        <i class="ri-customer-service-line text-primary fs-2 p-3 rounded-3 bg-primary-subtle"></i>
+        <h5 class="card-title pt-3">24/7 support</h5>
+      </div>
+      <div class="col-sm-4 mb-4 text-center">
+        <i class="ri-loop-left-line text-primary fs-2 p-3 rounded-3 bg-primary-subtle"></i>
+        <h5 class="card-title pt-3">Regular updates</h5>
+      </div>
+      <div class="col-sm-4 mb-4 mb-sm-0 text-center">
+        <i class="ri-shake-hands-line text-primary fs-2 p-3 rounded-3 bg-primary-subtle"></i>
+        <h5 class="card-title pt-3">User-Friendly</h5>
+      </div>
+      <div class="col-sm-4 mb-4 mb-sm-0 text-center">
+        <i class="ri-device-line text-primary fs-2 p-3 rounded-3 bg-primary-subtle"></i>
+        <h5 class="card-title pt-3">Cross-Platform</h5>
+      </div>
+      <div class="col-sm-4 mb-4 mb-sm-0 text-center">
+        <i class="ri-global-line text-primary fs-2 p-3 rounded-3 bg-primary-subtle"></i>
+        <h5 class="card-title pt-3">Multi-language</h5>
+      </div>
+    </div>
+  </div>
+</section>
+`
+
+const code_4 = `<section class="my-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="mb-3">Explore the key features we offer.</h2>
+        <p class="mb-3 text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod, nisi vel
+          consectetur interdum.
+        </p>
+        <button class="btn btn-outline-primary">Explore more <i class="ri-arrow-right-line"></i></button>
+      </div>
+      <div class="col-md-6 mt-4 mt-md-0">
+        <label for="progressbar-security" class="form-label">Top-notch security</label>
+        <div class="progress mb-2" id="progressbar-security" role="progressbar" aria-label="progress bar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 12px">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"></div>
+        </div>
+        <label for="progressbar-support" class="form-label">24/7 support</label>
+        <div class="progress mb-2" id="progressbar-support" role="progressbar" aria-label="progress bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 12px">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%"></div>
+        </div>
+        <label for="progressbar-updates" class="form-label">Regular updates</label>
+        <div class="progress mb-2" id="progressbar-updates" role="progressbar" aria-label="progress bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 12px">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%"></div>
+        </div>
+        <label for="progressbar-language" class="form-label">Multi-language</label>
+        <div class="progress mb-2" id="progressbar-language" role="progressbar" aria-label="progress bar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 12px">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 85%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`
+
+const code_5 = `<section class="my-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="mb-2">Features</h2>
+        <p class="lead mb-2">These are some of the features we offer.</p>
+        <p class="mb-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero
+        corporis dignissimos provident nulla nemo!
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="list-unstyled mb-2">
+              <li class="mb-2"><i class="ri-checkbox-circle-fill text-primary"></i> Top-notch security</li>
+              <li><i class="ri-checkbox-circle-fill text-primary"></i> 24/7 support</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled mb-2">
+              <li class="mb-2"><i class="ri-checkbox-circle-fill text-primary"></i> Regular updates</li>
+              <li><i class="ri-checkbox-circle-fill text-primary"></i> Multi-language</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-4 mt-md-0">
+        <img
+        src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+        class="img-fluid rounded-3"
+        alt="features image"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`
+
+// Shared preview configuration for consistent component display
+const previewConfig = {
+  cssCode: '',
+  jsCode: ''
+}
+---
+
+<AdminLayout
+  title="Features"
+  description="Features examples"
+  currentPath="front-components/features"
+  enableComponentPreview={true}
+>
+  <PageHeader {...pageHeaderConfig} />
+
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <div class="row">
+        <div class="col-12">
+          <p class="my-0">
+            Features components highlight key aspects or benefits of a product or service. These
+            sections typically use clear, concise descriptions, icons, or images to showcase the
+            most important functionalities, helping users understand what sets the offering apart
+            and how it can meet their needs.
+          </p>
+        </div>
+      </div>
+      <div class="row js-toc-content">
+        <div class="col-12">
+          <div class="my-3">
+            <h3 class="mb-2" id="example-1">Example 1</h3>
+
+            <ComponentPreview
+              title="Features Example 1"
+              height="550px"
+              component={code_1}
+              htmlCode={code_1}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-2">Example 2</h3>
+
+            <ComponentPreview
+              title="Features Example 2"
+              height="550px"
+              component={code_2}
+              htmlCode={code_2}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-3">Example 3</h3>
+
+            <ComponentPreview
+              title="Features Example 3"
+              height="550px"
+              component={code_3}
+              htmlCode={code_3}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-4">Example 4</h3>
+
+            <ComponentPreview
+              title="Features Example 4"
+              height="550px"
+              component={code_4}
+              htmlCode={code_4}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-5">Example 5</h3>
+
+            <ComponentPreview
+              title="Features Example 5"
+              height="550px"
+              component={code_5}
+              htmlCode={code_5}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>

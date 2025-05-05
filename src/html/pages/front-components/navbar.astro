@@ -1,0 +1,615 @@
+---
+import AdminLayout from '../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../components/component-preview/component-preview.astro'
+import Toc from '../../components/toc/toc.astro'
+import PageHeader from '../../components/common/page-header.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
+
+// Page header configuration with navigation breadcrumbs
+const pageHeaderConfig = {
+  title: 'Navbar',
+  breadcrumbs: [
+    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Components', href: getPathPrefix('/front-components') },
+    { label: 'Navbar', class: 'active' }
+  ]
+}
+
+// Navbar examples
+const code_1 = `<nav class="navbar navbar-expand-md navbar-light">
+  <div class="container-fluid">
+    <!-- Brand Logo or Text -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="${getAssetPrefix('/assets/svg/astero-icon-color.svg')}" alt="Logo" class="me-2" style="width: 30px; height: 30px;">
+        <span>Astero Digital</span>
+    </a>
+    <!-- Navbar Toggler for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+        <!-- About Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+
+        <!-- Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">Careers</a></li>
+            <li><a class="dropdown-item" href="#">Portfolio</a></li>
+          </ul>
+        </li>
+
+        <!-- Services Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+
+        <!-- Contact Link -->
+        <li class="nav-item d-block d-md-none">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <a class="btn btn-primary rounded ms-2 d-none d-md-block" href="#">Contact Us</a>
+  </div>
+</nav>
+`
+
+const code_2 = `<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Brand Logo or Text -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="${getAssetPrefix('/assets/svg/astero-icon-color.svg')}" alt="Logo" class="me-2" style="width: 30px; height: 30px;">
+        <span>Astero Digital</span>
+    </a>
+    <!-- Navbar Toggler for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+        <!-- About Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+
+        <!-- Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">Careers</a></li>
+            <li><a class="dropdown-item" href="#">Portfolio</a></li>
+          </ul>
+        </li>
+
+        <!-- Services Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+
+        <!-- Contact Link -->
+        <li class="nav-item d-block d-md-none">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <a class="btn btn-primary rounded ms-2 d-none d-md-block" href="#">Contact Us</a>
+  </div>
+</nav>
+`
+
+const code_3 = `<nav class="navbar navbar-expand-md navbar-light">
+  <div class="container-fluid">
+    <!-- Brand Logo or Text -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="${getAssetPrefix('/assets/svg/astero-icon-color.svg')}" alt="Logo" class="me-2" style="width: 30px; height: 30px;">
+        <span>Astero Digital</span>
+    </a>
+
+    <!-- Navbar Toggler for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links (Centered) -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+        <!-- About Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+
+        <!-- Services Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+
+        <!-- Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">Careers</a></li>
+            <li><a class="dropdown-item" href="#">Portfolio</a></li>
+          </ul>
+        </li>
+
+        <!-- Contact Link -->
+        <li class="nav-item d-block d-md-none">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <a class="btn btn-primary rounded d-none d-md-block" href="#">Contact Us</a>
+  </div>
+</nav>
+`
+
+const code_4 = `<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Brand Logo or Text -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="${getAssetPrefix('/assets/svg/astero-icon-color.svg')}" alt="Logo" class="me-2" style="width: 30px; height: 30px;">
+        <span>Astero Digital</span>
+    </a>
+
+    <!-- Navbar Toggler for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links (Centered) -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+        <!-- About Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+
+        <!-- Services Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+
+        <!-- Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">Careers</a></li>
+            <li><a class="dropdown-item" href="#">Portfolio</a></li>
+          </ul>
+        </li>
+
+        <!-- Contact Link -->
+        <li class="nav-item d-block d-md-none">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <a class="btn btn-primary rounded d-none d-md-block" href="#">Contact Us</a>
+  </div>
+</nav>
+`
+
+const code_5 = `<nav class="navbar navbar-expand-md navbar-light m-2 m-md-3 m-lg-4 rounded-3 border shadow">
+  <div class="container-fluid">
+    <!-- Brand Logo or Text -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="${getAssetPrefix('/assets/svg/astero-icon-color.svg')}" alt="Logo" class="me-2" style="width: 30px; height: 30px;">
+        <span>Astero Digital</span>
+    </a>
+
+    <!-- Navbar Toggler for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links (Centered) -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Home Link -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+
+        <!-- About Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+
+        <!-- Services Link -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+
+        <!-- Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">Careers</a></li>
+            <li><a class="dropdown-item" href="#">Portfolio</a></li>
+          </ul>
+        </li>
+
+        <!-- Contact Link -->
+        <li class="nav-item d-block d-md-none">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <a class="btn btn-primary rounded d-none d-md-block" href="#">Contact Us</a>
+  </div>
+</nav>
+`
+
+const code_6 = `<nav class="navbar navbar-expand-md navbar-light">
+  <div class="container-fluid">
+    <!-- Brand Logo -->
+    <a class="navbar-brand d-flex align-items-center me-3" href="#">
+      <img src="${getAssetPrefix('/assets/svg/astero-icon-color.svg')}" alt="Logo" style="width: 30px; height: 30px;" class="me-2">
+      <span>Astero Digital</span>
+    </a>
+
+    <!-- Navbar Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavIcons" aria-controls="navbarNavIcons" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links + Icons -->
+    <div class="collapse navbar-collapse" id="navbarNavIcons">
+      <ul class="navbar-nav me-auto">
+        <!-- Left-aligned Nav Links -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">Careers</a></li>
+            <li><a class="dropdown-item" href="#">Portfolio</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Right-aligned Icons (Visible on md+ screens) -->
+      <ul class="navbar-nav d-none d-md-flex flex-row align-items-center gap-2">
+        <li class="nav-item">
+          <a class="nav-link" href="#" title="Notifications">
+            <i class="ri-notification-3-fill fs-5"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" title="Messages">
+            <i class="ri-mail-fill fs-5"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" title="Profile">
+            <img src="${getAssetPrefix('/assets/img/avatars/avatar2.jpg')}" alt="User Avatar" class="rounded-circle" style="width: 30px; height: 30px;">
+          </a>
+        </li>
+      </ul>
+
+      <!-- Icons for Mobile (inside collapsible menu) -->
+      <ul class="navbar-nav d-md-none mt-2 border-top pt-2">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="ri-notification-3-fill me-2"></i>Notifications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="ri-mail-fill me-2"></i>Messages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="ri-user-3-fill me-2"></i>Profile</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+`
+
+const code_7 = `<nav class="navbar navbar-expand-md navbar-light">
+  <div class="container-fluid">
+    <!-- Brand Logo -->
+    <a class="navbar-brand d-flex align-items-center me-3" href="#">
+      <img src="${getAssetPrefix('/assets/svg/astero-icon-color.svg')}" alt="Logo" style="width: 30px; height: 30px;" class="me-2">
+      <span>Astero Digital</span>
+    </a>
+
+    <!-- Navbar Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarSearch">
+      <!-- Nav Links -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSearch" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownSearch">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">Careers</a></li>
+            <li><a class="dropdown-item" href="#">Portfolio</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Search Bar -->
+      <form class="d-none d-md-flex ms-auto" role="search" style="max-width: 300px;">
+        <input class="form-control form-control-sm me-2" type="search" placeholder="Search..." aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </form>
+
+      <!-- Search Bar (Mobile) -->
+      <div class="d-md-none pt-3 mt-2 border-top">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+`
+
+// Logo is duplicated for responsive alignment: left on mobile, centered on md+ screens
+const code_8 = `<nav class="navbar navbar-expand-md navbar-light">
+  <div class="container-fluid">
+    <!-- Logo + Toggler (Visible on screens below md) -->
+    <div class="d-block d-md-none">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="${getAssetPrefix('/assets/svg/astero-icon-color.svg')}" alt="Logo" style="width: 30px; height: 30px;" class="me-2">
+        <span>Astero Digital</span>
+        </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <div class="d-md-flex justify-content-between align-items-center w-100">
+
+        <!-- Left: Links -->
+        <ul class="navbar-nav me-md-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+              <li><a class="dropdown-item" href="#">Careers</a></li>
+              <li><a class="dropdown-item" href="#">Portfolio</a></li>
+              <li><a class="dropdown-item" href="#">Services</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Center: Brand (only on md+) -->
+        <div class="d-none d-md-block text-center flex-grow-1">
+          <a class="navbar-brand d-inline-flex align-items-center mx-auto" href="#">
+            <img src="${getAssetPrefix('/assets/svg/astero-icon-color.svg')}" alt="Logo" style="width: 30px; height: 30px;" class="me-2">
+            <span>Astero Digital</span>
+          </a>
+        </div>
+
+        <!-- Right: Icons (only on md+) -->
+        <ul class="navbar-nav d-none d-md-flex flex-row align-items-center gap-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#" title="Notifications">
+              <i class="ri-notification-3-fill fs-5"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" title="Messages">
+              <i class="ri-mail-fill fs-5"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" title="Profile">
+              <img src="${getAssetPrefix('/assets/img/avatars/avatar2.jpg')}" alt="User Avatar" class="rounded-circle" style="width: 30px; height: 30px;">
+            </a>
+          </li>
+        </ul>
+
+        <!-- On mobile: show icons as nav items inside collapse -->
+        <ul class="navbar-nav d-md-none mt-3 border-top pt-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-notification-3-fill me-2"></i>Notifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-mail-fill me-2"></i>Messages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-user-3-fill me-2"></i>Profile</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+`
+
+// Shared preview configuration for consistent component display
+const previewConfig = {
+  cssCode: '',
+  jsCode: ''
+}
+---
+
+<AdminLayout
+  title="Navbar"
+  description="Navbar examples"
+  currentPath="front-components/navbar"
+  enableComponentPreview={true}
+>
+  <PageHeader {...pageHeaderConfig} />
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <div class="row">
+        <div class="col-12">
+          <p class="my-0">
+            "Navbar" components are navigational elements on websites or applications that provide a
+            structured way for users to move between different sections or pages. These components
+            typically include links, dropdowns, icons, and sometimes search bars or user profile
+            access.
+          </p>
+        </div>
+      </div>
+      <div class="row js-toc-content">
+        <div class="col-12">
+          <div class="my-3">
+            <h3 class="mb-2" id="classic-navbar">Classic Navbar</h3>
+
+            <ComponentPreview
+              title="Classic Navbar"
+              height="350px"
+              component={code_1}
+              htmlCode={code_1}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="classic-navbar-dark">Classic Navbar - Dark</h3>
+
+            <ComponentPreview
+              title="Classic Navbar - Dark"
+              height="350px"
+              component={code_2}
+              htmlCode={code_2}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="centered-navbar">Centered Navbar</h3>
+
+            <ComponentPreview
+              title="Centered Navbar"
+              height="350px"
+              component={code_3}
+              htmlCode={code_3}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="centered-navbar-dark">Centered Navbar - Dark</h3>
+
+            <ComponentPreview
+              title="Centered Navbar - Dark"
+              height="350px"
+              component={code_4}
+              htmlCode={code_4}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="centered-navbar-fancy">Centered Navbar - Fancy</h3>
+
+            <ComponentPreview
+              title="Centered Navbar - Fancy"
+              height="350px"
+              component={code_5}
+              htmlCode={code_5}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="navbar-with-icons">Navbar with Icons</h3>
+
+            <ComponentPreview
+              title="Navbar with Icons"
+              height="350px"
+              component={code_6}
+              htmlCode={code_6}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="navbar-with-search-bar">Navbar with Search Bar</h3>
+
+            <ComponentPreview
+              title="Navbar with Search Bar"
+              height="350px"
+              component={code_7}
+              htmlCode={code_7}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="navbar-centered-logo">Navbar - Centered Logo</h3>
+
+            <ComponentPreview
+              title="Navbar - Centered Logo"
+              height="350px"
+              component={code_8}
+              htmlCode={code_8}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>

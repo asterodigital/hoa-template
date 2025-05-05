@@ -1,0 +1,582 @@
+---
+import AdminLayout from '../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../components/component-preview/component-preview.astro'
+import Toc from '../../components/toc/toc.astro'
+import PageHeader from '../../components/common/page-header.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
+
+// Page header configuration with navigation breadcrumbs
+const pageHeaderConfig = {
+  title: 'Portfolio',
+  breadcrumbs: [
+    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Components', href: getPathPrefix('/front-components') },
+    { label: 'Portfolio', class: 'active' }
+  ]
+}
+
+// Portfolio examples
+const code_1_html = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<section class="my-4">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="text-primary text-uppercase small fw-semibold mb-2">Our Portfolio</h2>
+            <h2 class="mb-4">Showcasing the work we’re proud of</h2>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper mb-5">
+                <div class="swiper-slide" style="height: auto;">
+                    <div class="card shadow-sm border h-100 p-0">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2">Task Hive</h5>
+                            <span class="badge text-primary border shadow-sm mb-2">Productivity</span>
+                            <p class="text-muted mb-0">Organize tasks, projects, and teams with seamless cross-platform access.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="height: auto;">
+                    <div class="card shadow-sm border h-100 p-0">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2">Snap Audit</h5>
+                            <span class="badge text-primary border shadow-sm mb-2">Security</span>
+                            <p class="text-muted mb-0">Automated vulnerability scanner for websites and app monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="height: auto;">
+                    <div class="card shadow-sm border h-100 p-0">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2">Code Nest</h5>
+                            <span class="badge text-primary border shadow-sm mb-2">Tools</span>
+                            <p class="text-muted mb-0">Collaborative code editor with real-time syncing and suggestions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="height: auto;">
+                    <div class="card shadow-sm border h-100 p-0">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2">API Bridge</h5>
+                            <span class="badge text-primary border shadow-sm mb-2">Integration</span>
+                            <p class="text-muted mb-0">Connect and manage multiple APIs with low-code custom workflows.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="height: auto;">
+                    <div class="card shadow-sm border h-100 p-0">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2">Pixel Press</h5>
+                            <span class="badge text-primary border shadow-sm mb-2">Website Builder</span>
+                            <p class="text-muted mb-0">Drag-and-drop website builder optimized for speed and SEO.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="height: auto;">
+                    <div class="card shadow-sm border h-100 p-0">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2">Dev Flow</h5>
+                            <span class="badge text-primary border shadow-sm mb-2">Management</span>
+                            <p class="text-muted mb-0">Agile-friendly platform for tracking sprints, bugs and workflows.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+`
+
+const code_1_js = `<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        }
+    });
+</script>
+`
+
+const code_2 = `<section class="my-4">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-6 mb-2 mb-md-0">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">Our Portfolio</h2>
+                <h2 class="mb-0">Showcasing the work we’re proud of</h2>
+            </div>
+            <div class="col-md-6">
+                <p class="mb-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero
+                corporis dignissimos provident nulla nemo! Quam impedit dolores vel sit amet.
+                </p>
+            </div>
+        </div>
+        <div class="row g-2 g-md-3 g-lg-4 mb-4">
+            <div class="col-sm-6 col-md-4">
+                <div class="card shadow-sm border h-100 p-0">
+                    <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                    <div class="card-body p-3">
+                        <h5 class="card-title mb-2">Task Hive</h5>
+                        <span class="badge text-primary border shadow-sm mb-2">Productivity</span>
+                        <p class="text-muted mb-2">Organize tasks, projects, and teams with seamless cross-platform access.</p>
+                        <a href="#" class="text-decoration-none text-primary mb-0">See case study <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card shadow-sm border h-100 p-0">
+                    <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                    <div class="card-body p-3">
+                        <h5 class="card-title mb-2">Snap Audit</h5>
+                        <span class="badge text-primary border shadow-sm mb-2">Security</span>
+                        <p class="text-muted mb-2">Automated vulnerability scanner for websites and app monitoring.</p>
+                        <a href="#" class="text-decoration-none text-primary mb-0">See case study <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card shadow-sm border h-100 p-0">
+                    <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                    <div class="card-body p-3">
+                        <h5 class="card-title mb-2">Code Nest</h5>
+                        <span class="badge text-primary border shadow-sm mb-2">Tools</span>
+                        <p class="text-muted mb-2">Collaborative code editor with real-time syncing and suggestions.</p>
+                        <a href="#" class="text-decoration-none text-primary mb-0">See case study <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card shadow-sm border h-100 p-0">
+                    <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                    <div class="card-body p-3">
+                        <h5 class="card-title mb-2">API Bridge</h5>
+                        <span class="badge text-primary border shadow-sm mb-2">Integration</span>
+                        <p class="text-muted mb-2">Connect and manage multiple APIs with low-code custom workflows.</p>
+                        <a href="#" class="text-decoration-none text-primary mb-0">See case study <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card shadow-sm border h-100 p-0">
+                    <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                    <div class="card-body p-3">
+                        <h5 class="card-title mb-2">Pixel Press</h5>
+                        <span class="badge text-primary border shadow-sm mb-2">Website Builder</span>
+                        <p class="text-muted mb-2">Drag-and-drop website builder optimized for speed and SEO.</p>
+                        <a href="#" class="text-decoration-none text-primary mb-0">See case study <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="card shadow-sm border h-100 p-0">
+                    <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="card-img-top" alt="portfolio image">
+                    <div class="card-body p-3">
+                        <h5 class="card-title mb-2">Dev Flow</h5>
+                        <span class="badge text-primary border shadow-sm mb-2">Management</span>
+                        <p class="text-muted mb-2">Agile-friendly platform for tracking sprints, bugs and workflows.</p>
+                        <a href="#" class="text-decoration-none text-primary mb-0">See case study <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-md-end">
+            <button class="btn btn-primary">See all projects <i class="ri-arrow-right-line"></i></button>
+        </div>
+    </div>
+</section>
+`
+
+const code_3 = `<section class="my-4">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="text-primary text-uppercase small fw-semibold mb-2">Our Portfolio</h2>
+            <h2 class="mb-4">Showcasing the work we’re proud of</h2>
+        </div>
+        <div class="row border shadow-sm rounded-3 p-4 mb-4">
+            <div class="col-md-7 mb-4 mb-md-0 pe-0 pe-md-4">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">Productivity</h2>
+                <h2 class="mb-2">Task Hive</h2>
+                <p class="mb-2">Organize tasks, projects, and teams with seamless cross-platform access.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled mb-2">
+                            <li class="mb-2"><i class="ri-checkbox-circle-fill text-primary"></i> Top-notch security</li>
+                            <li><i class="ri-checkbox-circle-fill text-primary"></i> 24/7 support</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled mb-2">
+                            <li class="mb-2"><i class="ri-checkbox-circle-fill text-primary"></i> Regular updates</li>
+                            <li><i class="ri-checkbox-circle-fill text-primary"></i> Multi-language</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="text-decoration-none text-primary mb-0">See case study <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="col-md-5 px-0">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-dark-540x540.png')}" class="img-fluid rounded-3" alt="portfolio image">
+            </div>
+        </div>
+        <div class="row border shadow-sm rounded-3 p-4">
+            <div class="col-md-5 mb-4 mb-md-0 px-0">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-dark-540x540.png')}" class="img-fluid rounded-3" alt="portfolio image">
+            </div>
+            <div class="col-md-7 ps-0 ps-md-4">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">Security</h2>
+                <h2 class="mb-2">Snap Audit</h2>
+                <p class="mb-2">Automated vulnerability scanner for websites and app monitoring.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled mb-2">
+                            <li class="mb-2"><i class="ri-checkbox-circle-fill text-primary"></i> Top-notch security</li>
+                            <li><i class="ri-checkbox-circle-fill text-primary"></i> 24/7 support</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled mb-2">
+                            <li class="mb-2"><i class="ri-checkbox-circle-fill text-primary"></i> Regular updates</li>
+                            <li><i class="ri-checkbox-circle-fill text-primary"></i> Multi-language</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="text-decoration-none text-primary mb-0">See case study <i class="ri-arrow-right-line"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_4 = `<section class="my-4">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="text-primary text-uppercase small fw-semibold mb-2">Portfolio</h2>
+            <h2 class="mb-4">Projects that tell <span class="underline primary">our story</span></h2>
+        </div>
+        <div class="row g-2 g-md-4 g-lg-5">
+            <div class="col-md-6">
+                <figure class="img-lift pt-3 mb-2">
+                    <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="img-fluid rounded-3" alt="image">
+                </figure>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h5 class="card-title">Task Hive</h5>
+                    <span class="badge text-primary border shadow-sm">Productivity</span>
+                </div>
+                <p class="text-muted mb-2">Organize tasks, projects, and teams with seamless cross-platform access.</p>
+                <a href="#" class="text-decoration-none text-primary mb-0">Check project <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="col-md-6">
+                <figure class="img-lift pt-3 mb-2">
+                    <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="img-fluid rounded-3" alt="image">
+                </figure>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h5 class="card-title">Snap Audit</h5>
+                    <span class="badge text-primary border shadow-sm">Security</span>
+                </div>
+                <p class="text-muted mb-2">Automated vulnerability scanner for websites and app monitoring.</p>
+                <a href="#" class="text-decoration-none text-primary mb-0">Check project <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="col-md-6">
+                <figure class="img-lift pt-3 mb-2">
+                    <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="img-fluid rounded-3" alt="image">
+                </figure>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h5 class="card-title">Code Nest</h5>
+                    <span class="badge text-primary border shadow-sm">Tools</span>
+                </div>
+                <p class="text-muted mb-2">Collaborative code editor with real-time syncing and suggestions.</p>
+                <a href="#" class="text-decoration-none text-primary mb-0">Check project <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="col-md-6">
+                <figure class="img-lift pt-3 mb-2">
+                    <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}" class="img-fluid rounded-3" alt="image">
+                </figure>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <h5 class="card-title">API Bridge</h5>
+                    <span class="badge text-primary border shadow-sm">Integration</span>
+                </div>
+                <p class="text-muted mb-2">Connect and manage multiple APIs with low-code custom workflows.</p>
+                <a href="#" class="text-decoration-none text-primary mb-0">Check project <i class="ri-arrow-right-line"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_5_html = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<section class="my-4">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="text-primary text-uppercase small fw-semibold mb-2">What We’ve Built</h2>
+            <h2 class="mb-4">Crafted with care, designed to impress</h2>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper mb-5">
+                <div class="swiper-slide" style="height: auto;">
+                    <figure class="img-grayscale">
+                        <a href="#">
+                            <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-colored-300x200.png')}" class="img-fluid rounded-0" alt="image">
+                        </a>
+                    </figure>
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h5><a href="#" class="text-decoration-none text-body">Task Hive</a></h5>
+                        <span class="badge text-primary border shadow-sm mb-0">Productivity</span>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="height: auto;">
+                    <figure class="img-grayscale">
+                        <a href="#">
+                            <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-colored-300x200.png')}" class="img-fluid rounded-0" alt="image">
+                        </a>
+                    </figure>
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h5><a href="#" class="text-decoration-none text-body">Snap Audit</a></h5>
+                        <span class="badge text-primary border shadow-sm mb-0">Security</span>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="height: auto;">
+                    <figure class="img-grayscale">
+                        <a href="#">
+                            <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-colored-300x200.png')}" class="img-fluid rounded-0" alt="image">
+                        </a>
+                    </figure>
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h5><a href="#" class="text-decoration-none text-body">Code Nest</a></h5>
+                        <span class="badge text-primary border shadow-sm mb-0">Tools</span>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="height: auto;">
+                    <figure class="img-grayscale">
+                        <a href="#">
+                            <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-colored-300x200.png')}" class="img-fluid rounded-0" alt="image">
+                        </a>
+                    </figure>
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h5><a href="#" class="text-decoration-none text-body">API Bridge</a></h5>
+                        <span class="badge text-primary border shadow-sm mb-0">Integration</span>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="height: auto;">
+                    <figure class="img-grayscale">
+                        <a href="#">
+                            <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-colored-300x200.png')}" class="img-fluid rounded-0" alt="image">
+                        </a>
+                    </figure>
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h5><a href="#" class="text-decoration-none text-body">Dev Flow</a></h5>
+                        <span class="badge text-primary border shadow-sm mb-0">Management</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+`
+
+const code_5_js = `<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
+        }
+    });
+</script>
+`
+
+const code_6 = `<section class="my-4">
+    <div class="container">
+      <div class="row align-items-center mb-4">
+        <div class="col-lg-6 text-center text-lg-start">
+          <h2 class="text-primary text-uppercase small fw-semibold mb-2">What We’ve Built</h2>
+          <h2 class="mb-2">Projects that tell our story</h2>
+          <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <button class="btn btn-primary">Learn more <i class="ri-arrow-right-line"></i></button>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="row g-2">
+            <div class="col-sm-6">
+              <figure class="img-grayscale h-100">
+                <a href="#">
+                  <img
+                    src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-colored-540x540.png')}"
+                    class="img-fluid rounded w-100 h-100 object-fit-cover"
+                    alt="portfolio image"
+                  />
+                </a>
+              </figure>
+            </div>
+            <div class="col-sm-6">
+              <div class="card text-center border rounded-3 h-100 p-0">
+                <div class="card-body d-flex align-items-center p-3">
+                  <div>
+                    <i class="ri-shield-check-line text-primary fs-1"></i>
+                    <h6 class="mt-1 mb-2">Top-notch security</h6>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card text-center border rounded-3 h-100 p-0">
+                <div class="card-body d-flex align-items-center p-3">
+                  <div>
+                    <i class="ri-global-line text-primary fs-1"></i>
+                    <h6 class="mt-1 mb-2">Multi-language interface</h6>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <figure class="img-grayscale h-100">
+                <a href="#">
+                  <img
+                    src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-colored-540x540.png')}"
+                    class="img-fluid rounded w-100 h-100 object-fit-cover"
+                    alt="portfolio image"
+                  />
+                </a>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+`
+
+// Shared preview configuration for consistent component display
+const previewConfig = {
+  cssCode: '',
+  jsCode: ''
+}
+---
+
+<AdminLayout
+  title="Portfolio"
+  description="Portfolio examples"
+  currentPath="front-components/portfolio"
+  enableComponentPreview={true}
+>
+  <PageHeader {...pageHeaderConfig} />
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <div class="row">
+        <div class="col-12">
+          <p class="my-0">
+            "Portfolio" blocks are sections on websites or applications that showcase a collection
+            of work, projects, or case studies created by an individual or organization. They help
+            demonstrate expertise, creativity, and experience, giving users insight into the quality
+            and scope of past or ongoing work.
+          </p>
+        </div>
+      </div>
+      <div class="row js-toc-content">
+        <div class="col-12">
+          <div class="my-3">
+            <h3 class="mb-2" id="example-1">Example 1</h3>
+
+            <ComponentPreview
+              title="Portfolio Example 1"
+              height="600px"
+              component={code_1_html}
+              htmlCode={code_1_html}
+              jsCode={code_1_js}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-2">Example 2</h3>
+
+            <ComponentPreview
+              title="Portfolio Example 2"
+              height="550px"
+              component={code_2}
+              htmlCode={code_2}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-3">Example 3</h3>
+
+            <ComponentPreview
+              title="Portfolio Example 3"
+              height="550px"
+              component={code_3}
+              htmlCode={code_3}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-4">Example 4</h3>
+
+            <ComponentPreview
+              title="Portfolio Example 4"
+              height="550px"
+              component={code_4}
+              htmlCode={code_4}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-5">Example 5</h3>
+
+            <ComponentPreview
+              title="Portfolio Example 5"
+              height="500px"
+              component={code_5_html}
+              htmlCode={code_5_html}
+              jsCode={code_5_js}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-6">Example 6</h3>
+
+            <ComponentPreview
+              title="Portfolio Example 6"
+              height="550px"
+              component={code_6}
+              htmlCode={code_6}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>

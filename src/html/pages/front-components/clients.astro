@@ -1,0 +1,187 @@
+---
+import AdminLayout from '../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../components/component-preview/component-preview.astro'
+import Toc from '../../components/toc/toc.astro'
+import PageHeader from '../../components/common/page-header.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
+
+// Page header configuration with navigation breadcrumbs
+const pageHeaderConfig = {
+  title: 'Clients',
+  breadcrumbs: [
+    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Components', href: getPathPrefix('/front-components') },
+    { label: 'Clients', class: 'active' }
+  ]
+}
+
+// Clients examples
+const code_1 = `<section class="my-4">
+    <div class="container text-center">
+        <h2 class="text-primary text-uppercase small fw-semibold mb-2">Our Clients</h2>
+        <h2 class="mb-4">We are trusted by 200+ brands across the world</h2>
+        <div class="row g-3">
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 1 Logo">
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 2 Logo">
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 3 Logo">
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 4 Logo">
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 5 Logo">
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 5 Logo">
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_2 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">Our Clients</h2>
+                <h2 class="mb-2">We are trusted by 200+ brands across the world</h2>
+                <p class="mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit libero corpori digniss.
+                </p>
+                <button class="btn btn-outline-primary">Case studies <i class="ri-arrow-right-line"></i></button>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div class="row g-3">
+                    <div class="col-6 col-sm-4">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 1 Logo">
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 2 Logo">
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 3 Logo">
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 4 Logo">
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 5 Logo">
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 5 Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_3 = `<section class="my-4">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <h2 class="mb-2">We are trusted by 200+ brands across the world</h2>
+            </div>
+            <div class="col-md-6">
+                <p class="mb-2">
+                Lorem ipsum dolor sit amet consect adipisi elit libero corpori digniss. Sit amet consect adipisi elit. Dolorum quibusd, libero corporis dignissi provident nulla nemo!
+                </p>
+            </div>
+        </div>
+        <div class="row mb-4 g-3">
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 1 Logo">
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 2 Logo">
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 3 Logo">
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 4 Logo">
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 5 Logo">
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="img-fluid" alt="Client 5 Logo">
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-outline-primary">Case studies <i class="ri-arrow-right-line"></i></button>
+        </div>
+    </div>
+</section>
+`
+
+// Shared preview configuration for consistent component display
+const previewConfig = {
+  cssCode: '',
+  jsCode: ''
+}
+---
+
+<AdminLayout
+  title="Clients"
+  description="Clients examples"
+  currentPath="front-components/clients"
+  enableComponentPreview={true}
+>
+  <PageHeader {...pageHeaderConfig} />
+
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <div class="row">
+        <div class="col-12">
+          <p class="my-0">
+            Clients components showcase the logos of trusted partners, customers, or brands that the
+            company has worked with. These sections help build credibility and trust by visually
+            displaying recognizable names, often using clean, grid-based layouts.
+          </p>
+        </div>
+      </div>
+      <div class="row js-toc-content">
+        <div class="col-12">
+          <div class="my-3">
+            <h3 class="mb-2" id="example-1">Example 1</h3>
+
+            <ComponentPreview
+              title="Clients Example 1"
+              height="450px"
+              component={code_1}
+              htmlCode={code_1}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-2">Example 2</h3>
+
+            <ComponentPreview
+              title="Clients Example 2"
+              height="550px"
+              component={code_2}
+              htmlCode={code_2}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-3">Example 3</h3>
+
+            <ComponentPreview
+              title="Clients Example 3"
+              height="550px"
+              component={code_3}
+              htmlCode={code_3}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>

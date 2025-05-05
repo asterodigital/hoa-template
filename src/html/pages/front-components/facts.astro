@@ -1,0 +1,340 @@
+---
+import AdminLayout from '../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../components/component-preview/component-preview.astro'
+import Toc from '../../components/toc/toc.astro'
+import PageHeader from '../../components/common/page-header.astro'
+import { getPathPrefix } from '../../../utils/path.js'
+
+// Page header configuration with navigation breadcrumbs
+const pageHeaderConfig = {
+  title: 'Facts',
+  breadcrumbs: [
+    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Components', href: getPathPrefix('/front-components') },
+    { label: 'Facts', class: 'active' }
+  ]
+}
+
+// Facts examples
+const code_1 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">Facts</h2>
+                <h2 class="mb-2">Key Highlights</h2>
+                <p class="mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+            <div class="col-md-8 mt-4 mt-md-0">
+                <div class="row">
+                    <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                        <i class="ri-user-fill text-bg-primary bg-gradient fs-2 p-2 rounded-3"></i>
+                        <p class="card-title mt-2 mb-0">1,200</p>
+                        <p class="card-text">Active Users</p>
+                    </div>
+                    <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                        <i class="ri-shake-hands-fill text-bg-primary bg-gradient fs-2 p-2 rounded-3"></i>
+                        <p class="card-title mt-2 mb-0">150+</p>
+                        <p class="card-text">Partners</p>
+                    </div>
+                    <div class="col-6 col-sm-3 text-center">
+                        <i class="ri-award-fill text-bg-primary bg-gradient fs-2 p-2 rounded-3"></i>
+                        <p class="card-title mt-2 mb-0">500+</p>
+                        <p class="card-text">Awards</p>
+                    </div>
+                    <div class="col-6 col-sm-3 text-center">
+                        <i class="ri-box-3-fill text-bg-primary bg-gradient fs-2 p-2 rounded-3"></i>
+                        <p class="card-title mt-2 mb-0">800+</p>
+                        <p class="card-text">Deliveries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_2 = `<section class="my-4">
+    <div class="container text-bg-primary bg-gradient rounded-3 p-4">
+        <div class="row">
+            <div class="col-6 col-md-3 text-center mb-4 mb-md-0">
+                <i class="ri-user-fill text-light fs-2"></i>
+                <p class="card-title">1,200+</p>
+                <p class="card-text">Active Users</p>
+            </div>
+            <div class="col-6 col-md-3 text-center mb-4 mb-md-0">
+                <i class="ri-shake-hands-fill text-light fs-2"></i>
+                <p class="card-title">150+</p>
+                <p class="card-text">Partners</p>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <i class="ri-award-fill text-light fs-2"></i>
+                <p class="card-title">500+</p>
+                <p class="card-text">Awards</p>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <i class="ri-box-3-fill text-light fs-2"></i>
+                <p class="card-title">800+</p>
+                <p class="card-text">Deliveries</p>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_3 = `<section class="my-4">
+    <div class="container text-center">
+        <h2 class="text-primary text-uppercase small fw-semibold mb-2">Facts</h2>
+        <h2 class="mb-4">Here are some of the most important and standout highlights that define who we are</h2>
+        <div class="row">
+            <div class="col-6 col-md-3 text-center mb-4 mb-md-0">
+                <i class="ri-user-fill text-primary fs-2"></i>
+                <p class="card-title">1,200+</p>
+                <p class="card-text">Active Users</p>
+            </div>
+            <div class="col-6 col-md-3 text-center mb-4 mb-md-0">
+                <i class="ri-shake-hands-fill text-primary fs-2"></i>
+                <p class="card-title">150+</p>
+                <p class="card-text">Partners</p>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <i class="ri-award-fill text-primary fs-2"></i>
+                <p class="card-title">500+</p>
+                <p class="card-text">Awards</p>
+            </div>
+            <div class="col-6 col-md-3 text-center">
+                <i class="ri-box-3-fill text-primary fs-2"></i>
+                <p class="card-title">800+</p>
+                <p class="card-text">Deliveries</p>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_4 = `<section class="my-4">
+    <div class="container">
+        <div class="row text-center g-2">
+            <div class="col-sm-6 col-md-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="ri-user-fill text-primary display-5"></i>
+                        <p class="card-title my-2">1,200+</p>
+                        <p class="card-text">Active Users</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="ri-shake-hands-fill text-primary display-5"></i>
+                        <p class="card-title my-2">150+</p>
+                        <p class="card-text">Partners</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="ri-award-fill text-primary display-5"></i>
+                        <p class="card-title my-2">500+</p>
+                        <p class="card-text">Awards</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="ri-box-3-fill text-primary display-5"></i>
+                        <p class="card-title my-2">800+</p>
+                        <p class="card-text">Deliveries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_5 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">Facts</h2>
+                <h2 class="mb-2">These are some of the key highlights about us</h2>
+                <p class="mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit libero corpori digniss.
+                </p>
+                <button class="btn btn-outline-primary">Explore more <i class="ri-arrow-right-line"></i></button>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div class="row text-center g-2">
+                    <div class="col-sm-6">
+                        <div class="card h-100 p-0">
+                            <div class="card-body p-3">
+                                <i class="ri-user-fill text-primary display-5"></i>
+                                <p class="card-title my-2">1,200+</p>
+                                <p class="card-text">Active Users</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card h-100 p-0">
+                            <div class="card-body p-3">
+                                <i class="ri-shake-hands-fill text-primary display-5"></i>
+                                <p class="card-title my-2">150+</p>
+                                <p class="card-text">Partners</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card h-100 p-0">
+                            <div class="card-body p-3">
+                                <i class="ri-award-fill text-primary display-5"></i>
+                                <p class="card-title my-2">500+</p>
+                                <p class="card-text">Awards</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card h-100 p-0">
+                            <div class="card-body p-3">
+                                <i class="ri-box-3-fill text-primary display-5"></i>
+                                <p class="card-title my-2">800+</p>
+                                <p class="card-text">Deliveries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_6 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="text-primary text-uppercase small fw-semibold mb-2">Facts</h2>
+                <h2 class="mb-2">Some facts about us</h2>
+                <p class="mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit libero corpori digniss.
+                </p>
+                <div class="row">
+                    <div class="col-6">
+                        <i class="ri-user-fill text-primary fs-2"></i>
+                        <p class="card-title my-2">1,200+</p>
+                        <p class="card-text mb-0">Active Users</p>
+                    </div>
+                    <div class="col-6">
+                        <i class="ri-shake-hands-fill text-primary fs-2"></i>
+                        <p class="card-title my-2">150+</p>
+                        <p class="card-text mb-0">Partners</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <img src="/dist/assets/img/placeholder-images/placeholder-image-540x540.png" class="img-fluid rounded-3" alt="facts image">
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+// Shared preview configuration for consistent component display
+const previewConfig = {
+  cssCode: '',
+  jsCode: ''
+}
+---
+
+<AdminLayout
+  title="Facts"
+  description="Facts examples"
+  currentPath="front-components/facts"
+  enableComponentPreview={true}
+>
+  <PageHeader {...pageHeaderConfig} />
+
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <div class="row">
+        <div class="col-12">
+          <p class="my-0">
+            Facts components present important data or statistics in a clear and impactful way.
+            These sections typically use bold numbers, icons, or visuals to convey key insights,
+            helping users quickly grasp essential information and understand the significance of the
+            data.
+          </p>
+        </div>
+      </div>
+      <div class="row js-toc-content">
+        <div class="col-12">
+          <div class="my-3">
+            <h3 class="mb-2" id="example-1">Example 1</h3>
+
+            <ComponentPreview
+              title="Facts Example 1"
+              height="450px"
+              component={code_1}
+              htmlCode={code_1}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-2">Example 2</h3>
+
+            <ComponentPreview
+              title="Facts Example 2"
+              height="400px"
+              component={code_2}
+              htmlCode={code_2}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-3">Example 3</h3>
+
+            <ComponentPreview
+              title="Facts Example 3"
+              height="450px"
+              component={code_3}
+              htmlCode={code_3}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-4">Example 4</h3>
+
+            <ComponentPreview
+              title="Facts Example 4"
+              height="450px"
+              component={code_4}
+              htmlCode={code_4}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-5">Example 5</h3>
+
+            <ComponentPreview
+              title="Facts Example 5"
+              height="450px"
+              component={code_5}
+              htmlCode={code_5}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-6">Example 6</h3>
+
+            <ComponentPreview
+              title="Facts Example 6"
+              height="450px"
+              component={code_6}
+              htmlCode={code_6}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>

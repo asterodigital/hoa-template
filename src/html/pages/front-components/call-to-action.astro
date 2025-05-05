@@ -1,0 +1,250 @@
+---
+import AdminLayout from '../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../components/component-preview/component-preview.astro'
+import Toc from '../../components/toc/toc.astro'
+import PageHeader from '../../components/common/page-header.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
+
+// Page header configuration with navigation breadcrumbs
+const pageHeaderConfig = {
+  title: 'Call to Action',
+  breadcrumbs: [
+    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Components', href: getPathPrefix('/front-components') },
+    { label: 'Call to Action', class: 'active' }
+  ]
+}
+
+// Call to action examples
+const code_1 = `<section class="my-4">
+    <div class="container text-center">
+        <i class="ri-shake-hands-fill text-primary fs-1"></i>
+        <h2 class="mb-2">Get started now!</h2>
+        <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero corporis dignissimos provident nulla nemo!</p>
+        <button class="btn btn-primary btn-lg">Get started</button>
+        <button class="btn btn-outline-primary btn-lg">Learn more</button>
+    </div>
+</section>
+`
+
+const code_2 = `<section class="my-4">
+    <div class="container bg-primary bg-gradient text-light rounded-3 p-4">
+        <div class="row">
+            <div class="col-12 col-md-9">
+                <h2 class="mb-2">Get started now!</h2>
+                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero corporis dignissimos provident nulla nemo!</p>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center">
+                <button class="btn btn-light btn-lg text-nowrap mx-auto">Get started</button>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_3 = `<section class="my-4">
+    <div class="container bg-primary bg-gradient text-center text-light rounded-3 p-4">
+        <h2 class="text-warning text-uppercase small fw-semibold mb-2">Get started</h2>
+        <h4 class="mb-3">Unlock all the <span class="underline-3 warning">possibilities</span> that await you! Take the first step towards achieving your goals.</h4>
+        <button class="btn btn-light btn-lg text-nowrap mx-auto">Get started</button>
+    </div>
+</section>
+`
+
+const code_4 = `<section class="bg-primary-subtle my-4">
+    <div class="container px-4 py-5 text-center">
+        <h2 class="text-primary text-uppercase small fw-semibold mb-3">Get started</h2>
+        <h4 class="mb-4">Subscribe to our newsletter today and stay updated with the latest news and offers from us!</h4>
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                <form>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email address" aria-describedby="button-addon2" required>
+                        <button class="btn btn-primary" type="submit" id="button-addon2">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_5 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img
+                src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+                class="img-fluid rounded-3"
+                alt="call to action image"
+                />
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-2">Start your journey today!</h2>
+                <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero corporis dignissimos provident nulla nemo!</p>
+                <button class="btn btn-primary btn-lg mb-1"><i class="ri-download-2-line me-2"></i>Download</button>
+                <button class="btn btn-outline-primary btn-lg mb-1"><i class="ri-information-line me-2"></i>Learn more</button>
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_6 = `<section class="my-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-7 mb-4 mb-md-0 pe-md-5">
+                <h2 class="mb-2">Join us on this <span class="underline primary">adventure</span> today!</h2>
+                <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit lorum quibus libero corporis.</p>
+                <div class="row mb-2">
+                  <div class="col-sm-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2"><i class="ri-checkbox-circle-fill text-primary"></i> Top-notch security</li>
+                      <li><i class="ri-checkbox-circle-fill text-primary"></i> 24/7 support</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2"><i class="ri-checkbox-circle-fill text-primary"></i> Regular updates</li>
+                      <li><i class="ri-checkbox-circle-fill text-primary"></i> Multi-language</li>
+                    </ul>
+                  </div>
+                </div>
+                <form class="mb-2">
+                  <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                    <button class="btn btn-primary" type="submit">Join Now</button>
+                  </div>
+                </form>
+                <p class="text-muted small mb-0">*We respect your privacy. No spam, ever.</p>
+            </div>
+            <div class="col-md-5">
+                <img
+                  src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+                  class="img-fluid rounded-3"
+                  alt="call to action image"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+`
+
+const code_7 = `<section class="my-4 text-light position-relative" style="background-image: url('${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-1200x440.png')}'); background-size: cover; background-position: center;">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+  <div class="container text-center py-5 position-relative">
+    <div class="mt-2 mt-md-4">
+      <i class="ri-lightbulb-flash-fill text-light fs-1"></i>
+    </div>
+    <h2 class="mb-3">Unlock all the possibilities that await you! Take the first step towards achieving your goals.</h2>
+    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quibusdam, libero corporis dignissimos provident nulla nemo!</p>
+    <button class="btn btn-light btn-lg mb-3 mb-md-5"><i class="ri-sparkling-2-fill"></i> Get started</button>
+  </div>
+</section>
+`
+
+// Shared preview configuration for consistent component display
+const previewConfig = {
+  cssCode: '',
+  jsCode: ''
+}
+---
+
+<AdminLayout
+  title="Call to Action"
+  description="Call to action examples"
+  currentPath="front-components/call-to-action"
+  enableComponentPreview={true}
+>
+  <PageHeader {...pageHeaderConfig} />
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <div class="row">
+        <div class="col-12">
+          <p class="my-0">
+            "Call to Action" (CTA) blocks are sections on websites or applications designed to
+            encourage users to take a specific action, such as signing up, making a purchase, or
+            contacting the company. These blocks typically feature clear and compelling messages,
+            prominent buttons, or links that guide users toward the desired action, helping to drive
+            conversions and user engagement.
+          </p>
+        </div>
+      </div>
+      <div class="row js-toc-content">
+        <div class="col-12">
+          <div class="my-3">
+            <h3 class="mb-2" id="example-1">Example 1</h3>
+
+            <ComponentPreview
+              title="CTA Example 1"
+              height="350px"
+              component={code_1}
+              htmlCode={code_1}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-2">Example 2</h3>
+
+            <ComponentPreview
+              title="CTA Example 2"
+              height="350px"
+              component={code_2}
+              htmlCode={code_2}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-3">Example 3</h3>
+
+            <ComponentPreview
+              title="CTA Example 3"
+              height="350px"
+              component={code_3}
+              htmlCode={code_3}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-4">Example 4</h3>
+
+            <ComponentPreview
+              title="CTA Example 4"
+              height="450px"
+              component={code_4}
+              htmlCode={code_4}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-5">Example 5</h3>
+
+            <ComponentPreview
+              title="CTA Example 5"
+              height="550px"
+              component={code_5}
+              htmlCode={code_5}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-6">Example 6</h3>
+
+            <ComponentPreview
+              title="CTA Example 6"
+              height="550px"
+              component={code_6}
+              htmlCode={code_6}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-7">Example 7</h3>
+
+            <ComponentPreview
+              title="CTA Example 7"
+              height="550px"
+              component={code_7}
+              htmlCode={code_7}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>
