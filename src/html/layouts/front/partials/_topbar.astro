@@ -1,0 +1,100 @@
+---
+// import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+import Logo from './_topbar/_logo.astro'
+import { getPathPrefix } from '../../../../utils/path'
+---
+
+<!-- Top Navigation -->
+<div class="container">
+  <header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3"
+  >
+    <a
+      href="/"
+      class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
+    >
+      <Logo />
+    </a>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="#" class="nav-link px-2">Home</a></li>
+      <li><a href="#" class="nav-link px-2">Features</a></li>
+      <li><a href="#" class="nav-link px-2">Pricing</a></li>
+      <li><a href="#" class="nav-link px-2">FAQs</a></li>
+      <li><a href="#" class="nav-link px-2">About</a></li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle px-2"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Blocks
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/about-us')}>About Us</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/blog')}>Blog</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/call-to-action')}
+              >Call to Action</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/clients')}>Clients</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/contact')}>Contact</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/facts')}>Facts</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/faq')}>FAQs</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/features')}>Features</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/footer')}>Footer</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/hero')}>Hero</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/navbar')}>Navbar</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/portfolio')}
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/pricing')}>Pricing</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/process')}>Process</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/team')}>Team</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href={getPathPrefix('/front-components/testimonials')}
+              >Testimonials</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <button type="button" class="btn btn-outline-primary me-2">Login</button>
+      <button type="button" class="btn btn-primary">Sign-up</button>
+    </div>
+  </header>
+</div>

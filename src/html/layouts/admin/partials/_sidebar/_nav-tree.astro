@@ -52,6 +52,16 @@ const isActiveParent = (path: string) => currentPath.startsWith(path)
             <span>Alerts</span>
           </a>
         </li>
+        <li class={`nav-item ${isActive('interface/animations') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/interface/animations')}>
+            <span>Animations</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('interface/avatars') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/interface/avatars')}>
+            <span>Avatars</span>
+          </a>
+        </li>
         <li class={`nav-item ${isActive('interface/badges') ? 'active' : ''}`}>
           <a class="nav-link" href={getPathPrefix('/interface/badges')}>
             <span>Badges</span>
@@ -97,9 +107,19 @@ const isActiveParent = (path: string) => currentPath.startsWith(path)
             <span>Colors</span>
           </a>
         </li>
+        <li class={`nav-item ${isActive('interface/dividers') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/interface/dividers')}>
+            <span>Dividers</span>
+          </a>
+        </li>
         <li class={`nav-item ${isActive('interface/dropdowns') ? 'active' : ''}`}>
           <a class="nav-link" href={getPathPrefix('/interface/dropdowns')}>
             <span>Dropdowns</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('interface/image-hover') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/interface/image-hover')}>
+            <span>Image Hover</span>
           </a>
         </li>
         <li class={`nav-item ${isActive('interface/info-box') ? 'active' : ''}`}>
@@ -110,6 +130,11 @@ const isActiveParent = (path: string) => currentPath.startsWith(path)
         <li class={`nav-item ${isActive('interface/list-group') ? 'active' : ''}`}>
           <a class="nav-link" href={getPathPrefix('/interface/list-group')}>
             <span>List Group</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('interface/marquee') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/interface/marquee')}>
+            <span>Marquee</span>
           </a>
         </li>
         <li class={`nav-item ${isActive('interface/modal') ? 'active' : ''}`}>
@@ -157,6 +182,11 @@ const isActiveParent = (path: string) => currentPath.startsWith(path)
             <span>Scrollspy</span>
           </a>
         </li>
+        <li class={`nav-item ${isActive('interface/shadows') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/interface/shadows')}>
+            <span>Shadows</span>
+          </a>
+        </li>
         <li class={`nav-item ${isActive('interface/small-box') ? 'active' : ''}`}>
           <a class="nav-link" href={getPathPrefix('/interface/small-box')}>
             <span>Small Box</span>
@@ -172,6 +202,11 @@ const isActiveParent = (path: string) => currentPath.startsWith(path)
             <span>Text Animations</span>
           </a>
         </li>
+        <li class={`nav-item ${isActive('interface/text-highlights') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/interface/text-highlights')}>
+            <span>Text Highlights</span>
+          </a>
+        </li>
         <li class={`nav-item ${isActive('interface/toasts') ? 'active' : ''}`}>
           <a class="nav-link" href={getPathPrefix('/interface/toasts')}>
             <span>Toasts</span>
@@ -185,6 +220,99 @@ const isActiveParent = (path: string) => currentPath.startsWith(path)
         <li class={`nav-item ${isActive('interface/typography') ? 'active' : ''}`}>
           <a class="nav-link" href={getPathPrefix('/interface/typography')}>
             <span>Typography</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Components Section -->
+    <li
+      class={`nav-item has-submenu parent ${isActiveParent('front-components') ? 'active open' : ''}`}
+    >
+      <a class="nav-link" href="#">
+        <i class="ri-shadow-line"></i>
+        <span>Components</span>
+        <i class="ri-arrow-right-s-line"></i>
+      </a>
+      <ul class="submenu">
+        <li class={`nav-item ${isActive('front-components/about-us') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/about-us')}>
+            <span>About Us</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/blog') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/blog')}>
+            <span>Blog</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/call-to-action') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/call-to-action')}>
+            <span>Call to Action</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/clients') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/clients')}>
+            <span>Clients</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/contact') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/contact')}>
+            <span>Contact</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/facts') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/facts')}>
+            <span>Facts</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/faq') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/faq')}>
+            <span>FAQ</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/features') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/features')}>
+            <span>Features</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/footer') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/footer')}>
+            <span>Footer</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/hero') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/hero')}>
+            <span>Hero</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/navbar') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/navbar')}>
+            <span>Navbar</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/portfolio') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/portfolio')}>
+            <span>Portfolio</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/pricing') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/pricing')}>
+            <span>Pricing</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/process') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/process')}>
+            <span>Process</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/team') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/team')}>
+            <span>Team</span>
+          </a>
+        </li>
+        <li class={`nav-item ${isActive('front-components/testimonials') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/front-components/testimonials')}>
+            <span>Testimonials</span>
           </a>
         </li>
       </ul>

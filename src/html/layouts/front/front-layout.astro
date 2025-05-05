@@ -1,0 +1,44 @@
+---
+import Head from './partials/_head.astro'
+import TopNav from './partials/_topbar.astro'
+import Footer from './partials/_footer.astro'
+import Scripts from './partials/_scripts.astro'
+
+interface Props {
+  title: string
+  description?: string
+  currentPath?: string
+  pageScript?: string
+  pageCss?: string
+  isRtl?: boolean
+}
+
+const { title, description, pageScript, pageCss, isRtl = false } = Astro.props
+
+const pageSeo = {
+  title,
+  description: description || `${title} page of the admin dashboard`
+}
+---
+
+<!doctype html>
+<html lang="en" dir={isRtl ? 'rtl' : 'ltr'}>
+  <head>
+    <Head {...pageSeo} {pageCss} isRtl={isRtl} />
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <TopNav />
+      <!-- Page Content -->
+      <div class="content-wrapper py-4">
+        <div class="container">
+          <slot />
+        </div>
+      </div>
+      <Footer />
+    </main>
+    <!-- All Scripts -->
+    <Scripts {pageScript} />
+  </body>
+</html>
