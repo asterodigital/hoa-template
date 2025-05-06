@@ -1,0 +1,231 @@
+---
+import AdminLayout from '../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../components/component-preview/component-preview.astro'
+import Toc from '../../components/toc/toc.astro'
+import PageHeader from '../../components/common/page-header.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
+
+// Page header configuration with navigation breadcrumbs
+const pageHeaderConfig = {
+  title: 'Animations',
+  breadcrumbs: [
+    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Interface', href: getPathPrefix('/interface') },
+    { label: 'Animations', class: 'active' }
+  ]
+}
+
+// Animation examples
+const fadeInHtml = `<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="fade-in" alt="fade-in example" />
+`
+
+const fadeInJs = `<script>
+// JavaScript to handle different animations for images with data-cue attribute
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll('img[data-cue]');
+
+  // Set initial delay to 0
+  let delay = 0;
+
+  // Set up an IntersectionObserver to detect when the image is in view
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      // If the image is in view
+      if (entry.isIntersecting) {
+        const image = entry.target;
+        
+        // Get the animation type from the data-cue attribute (fadeIn, zoomIn, etc.)
+        const animationType = image.getAttribute('data-cue');
+
+        // Add the corresponding class based on the animation type
+        setTimeout(() => {
+          image.classList.add(animationType);
+        }, delay);
+
+        // Increment the delay for the next image (so they fade in one by one)
+        delay += 200; // Adjust the delay between images (in milliseconds)
+
+        // Unobserve the image once it has been handled
+        observer.unobserve(image);
+      }
+    });
+  }, {
+    threshold: 0.5 // Trigger when 50% of the image is in view
+  });
+
+  // Observe all images with the data-cue attribute
+  images.forEach(image => observer.observe(image));
+});
+</script>
+`
+
+const zoomHtml = `<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="zoom-in" alt="zoom-in example" />
+<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="zoom-out" alt="zoom-out example" />
+`
+
+const zoomJs = `<script>
+// JavaScript to handle different animations for images with data-cue attribute
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll('img[data-cue]');
+
+  // Set initial delay to 0
+  let delay = 0;
+
+  // Set up an IntersectionObserver to detect when the image is in view
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      // If the image is in view
+      if (entry.isIntersecting) {
+        const image = entry.target;
+        
+        // Get the animation type from the data-cue attribute (fadeIn, zoomIn, etc.)
+        const animationType = image.getAttribute('data-cue');
+
+        // Add the corresponding class based on the animation type
+        setTimeout(() => {
+          image.classList.add(animationType);
+        }, delay);
+
+        // Increment the delay for the next image (so they fade in one by one)
+        delay += 200; // Adjust the delay between images (in milliseconds)
+
+        // Unobserve the image once it has been handled
+        observer.unobserve(image);
+      }
+    });
+  }, {
+    threshold: 0.5 // Trigger when 50% of the image is in view
+  });
+
+  // Observe all images with the data-cue attribute
+  images.forEach(image => observer.observe(image));
+});
+</script>
+`
+
+const slideHtml = `<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="slide-in-up" alt="slide-in-up example" />
+<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="slide-in-down" alt="slide-in-down example" />
+<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="slide-in-left" alt="slide-in-left example" />
+<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="slide-in-right" alt="slide-in-right example" />
+`
+
+const slideJs = `<script>
+// JavaScript to handle different animations for images with data-cue attribute
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll('img[data-cue]');
+
+  // Set initial delay to 0
+  let delay = 0;
+
+  // Set up an IntersectionObserver to detect when the image is in view
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      // If the image is in view
+      if (entry.isIntersecting) {
+        const image = entry.target;
+        
+        // Get the animation type from the data-cue attribute (fadeIn, zoomIn, etc.)
+        const animationType = image.getAttribute('data-cue');
+
+        // Add the corresponding class based on the animation type
+        setTimeout(() => {
+          image.classList.add(animationType);
+        }, delay);
+
+        // Increment the delay for the next image (so they fade in one by one)
+        delay += 200; // Adjust the delay between images (in milliseconds)
+
+        // Unobserve the image once it has been handled
+        observer.unobserve(image);
+      }
+    });
+  }, {
+    threshold: 0.5 // Trigger when 50% of the image is in view
+  });
+
+  // Observe all images with the data-cue attribute
+  images.forEach(image => observer.observe(image));
+});
+</script>
+`
+
+// Shared preview configuration for consistent component display
+const previewConfig = {
+  cssCode: '',
+  jsCode: ''
+}
+---
+
+<AdminLayout
+  title="Animations"
+  description="Animation examples"
+  currentPath="interface/animations"
+  enableComponentPreview={true}
+>
+  <PageHeader {...pageHeaderConfig} />
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <div class="row">
+        <div class="col-12">
+          <p class="my-0">
+            Animations are visual effects that bring elements to life by gradually changing their
+            properties over time to enhance user experience.
+          </p>
+        </div>
+      </div>
+      <div class="row js-toc-content">
+        <div class="col-12">
+          <div class="my-3">
+            <h3 class="mb-0" id="fade-in">Fade-in animation</h3>
+            <p class="py-2">
+              The fade-in animation gradually changes an element's opacity from 0 to 1, making it
+              smoothly appear on the screen, typically used to create a soft, gradual entrance
+              effect.
+            </p>
+
+            <ComponentPreview
+              title="Fade-In"
+              height="300px"
+              component={fadeInHtml}
+              htmlCode={fadeInHtml}
+              jsCode={fadeInJs}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="zoom">Zoom animations</h3>
+            <p class="py-2">
+              The zoom animation gradually changes the scale of an element, making it appear to zoom
+              in or out, typically used to emphasize an object by increasing its size or to create a
+              shrinking effect for a smoother transition.
+            </p>
+
+            <ComponentPreview
+              title="Zoom-In and Zoom-Out"
+              height="500px"
+              component={zoomHtml}
+              htmlCode={zoomHtml}
+              jsCode={zoomJs}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="slide">Slide animations</h3>
+            <p class="py-2">
+              The slide animation moves an element from one position to another (e.g., from the
+              left, right, top, or bottom), creating a smooth transition that mimics sliding in or
+              out of the view, often used to add dynamic movement to elements.
+            </p>
+
+            <ComponentPreview
+              title="Slide-In-Up, Down, Left and Right"
+              height="550px"
+              component={slideHtml}
+              htmlCode={slideHtml}
+              jsCode={slideJs}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>

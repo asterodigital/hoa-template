@@ -377,6 +377,120 @@ const gridCardsEqualHeightExample = `<div class="row row-cols-1 row-cols-md-3 g-
     </div>
   </div>
 </div>`
+
+const basicCard = `<div class="row g-2">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Default card</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card border">
+      <div class="card-body">
+        <h5 class="card-title">Card with border</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow">
+      <div class="card-body">
+        <h5 class="card-title">Card with shadow</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+`
+
+const cardColor = `<div class="row g-2">
+  <div class="col-md-6">
+    <div class="card text-bg-primary">
+      <div class="card-body">
+        <h5 class="card-title">Primary</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card bg-primary-subtle">
+      <div class="card-body">
+        <h5 class="card-title">Subtle Primary</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+`
+
+const cardBorder = `<div class="row g-2">
+  <div class="col-md-6">
+    <div class="card bg-primary-subtle" style="border-left: 4px solid var(--bs-primary);">
+      <div class="card-body">
+        <h5 class="card-title">Border Start</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card bg-success-subtle" style="border-top: 4px solid var(--bs-success);">
+      <div class="card-body">
+        <h5 class="card-title">Border Top</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card bg-danger-subtle" style="border-right: 4px solid var(--bs-danger);">
+      <div class="card-body">
+        <h5 class="card-title">Border End</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card bg-warning-subtle" style="border-bottom: 4px solid var(--bs-warning);">
+      <div class="card-body">
+        <h5 class="card-title">Border Bottom</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`
+
+const cardImage = `<div class="row g-2">
+  <div class="col-md-6">
+    <div class="card border p-0">
+      <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-300x200.png')}" class="card-img-top" alt="...">
+      <div class="card-body p-3">
+        <h5 class="card-title">Image Top</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card border p-0">
+      <div class="card-body p-3">
+        <h5 class="card-title">Image Bottom</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      <img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-300x200.png')}" class="card-img-bottom" alt="...">
+    </div>
+  </div>
+</div>
+`
 ---
 
 <AdminLayout
@@ -783,6 +897,68 @@ const gridCardsEqualHeightExample = `<div class="row row-cols-1 row-cols-md-3 g-
               bgColor={true}
               component={gridCardsEqualHeightExample}
               htmlCode={gridCardsEqualHeightExample}
+              cssCode={``}
+              jsCode={``}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="basic-cards">Basic Cards</h3>
+            <p class="py-2">
+              This is a basic card component that displays content within a bordered container.
+            </p>
+
+            <ComponentPreview
+              title="Basic Cards"
+              height="500px"
+              component={basicCard}
+              htmlCode={basicCard}
+              cssCode={``}
+              jsCode={``}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="basic-cards">Card Color</h3>
+            <p class="py-2">
+              Customize the card's background and text color using Bootstrap's utility classes or
+              custom styles.
+            </p>
+
+            <ComponentPreview
+              title="Card Color"
+              height="350px"
+              component={cardColor}
+              htmlCode={cardColor}
+              cssCode={``}
+              jsCode={``}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="card-border">Card Border</h3>
+            <p class="py-2">
+              Add borders to the card using classes that define the border's color, width, and
+              style.
+            </p>
+
+            <ComponentPreview
+              title="Card Border"
+              height="550px"
+              component={cardBorder}
+              htmlCode={cardBorder}
+              cssCode={``}
+              jsCode={``}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="card-image">Card Image</h3>
+            <p class="py-2">
+              Embed images within cards either at the top or bottom to enhance visual appeal.
+            </p>
+
+            <ComponentPreview
+              title="Card Image"
+              height="550px"
+              component={cardImage}
+              htmlCode={cardImage}
               cssCode={``}
               jsCode={``}
             />
