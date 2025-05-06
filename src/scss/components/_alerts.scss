@@ -1,3 +1,49 @@
 /* ==========================================================================
      Alert Components
      ========================================================================== */
+
+.alert {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  @extend .rounded-2; // Using Bootstrap's extend for border-radius
+
+  .alert-heading {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.05rem 1rem;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &.alert-dismissible {
+    padding-right: 3rem;
+  }
+}
+
+/* Alert Variants */
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    color: var(--bs-#{$color}-text);
+    background-color: var(--bs-#{$color}-bg-subtle);
+    border-color: var(--bs-#{$color}-border-subtle);
+
+    .alert-link {
+      color: var(--bs-#{$color}-text);
+      text-decoration: underline;
+    }
+
+    hr {
+      background-color: var(--bs-#{$color}-border-subtle);
+    }
+  }
+}

@@ -1,4 +1,7 @@
-// card changes
+/* ==========================================================================
+    Card Components
+    ========================================================================== */
+
 .card {
   padding: 1.5rem;
   border-width: 0;
@@ -35,4 +38,15 @@
 
 .card-img-overlay {
   border-radius: calc(var(--bs-border-radius-xl) - (var(--bs-border-width)));
+}
+
+// Card lift effect
+.card-lift {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.075);
+    transform: translateY(-8px);
+  }
 }

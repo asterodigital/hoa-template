@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Marquee
+   ========================================================================== */
+
+.marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+}
+
+.marquee-track {
+  display: flex;
+  min-width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  padding-right: 2rem;
+  white-space: nowrap;
+}

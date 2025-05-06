@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Dividers
+   ========================================================================== */
+
+// Mixins for common functionality
+@mixin border-sizes {
+  &.border-2 { height: 2px; }
+  &.border-3 { height: 4px; }
+  &.border-4 { height: 6px; }
+  &.border-5 { height: 8px; }
+}
+
+@mixin color-variants {
+  &.primary { background-color: var(--bs-primary); }
+  &.secondary { background-color: var(--bs-secondary); }
+  &.success { background-color: var(--bs-success); }
+  &.info { background-color: var(--bs-info); }
+  &.warning { background-color: var(--bs-warning); }
+  &.danger { background-color: var(--bs-danger); }
+  &.dark { background-color: var(--bs-dark); }
+  &.light { background-color: var(--bs-light); }
+}
+
+@mixin separator-color-variants {
+  &.primary::before,
+  &.primary::after { background-color: var(--bs-primary); }
+  &.secondary::before,
+  &.secondary::after { background-color: var(--bs-secondary); }
+  &.success::before,
+  &.success::after { background-color: var(--bs-success); }
+  &.info::before,
+  &.info::after { background-color: var(--bs-info); }
+  &.warning::before,
+  &.warning::after { background-color: var(--bs-warning); }
+  &.danger::before,
+  &.danger::after { background-color: var(--bs-danger); }
+  &.dark::before,
+  &.dark::after { background-color: var(--bs-dark); }
+  &.light::before,
+  &.light::after { background-color: var(--bs-light); }
+}
+
+@mixin separator-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 8px 0;
+  text-align: center;
+
+  &::before,
+  &::after {
+    flex-grow: 1;
+    height: 1px;
+    margin: 0 10px;
+    content: '';
+  }
+
+  span {
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+// Basic divider styles
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 8px 0;
+  background-color: var(--bs-border-color);
+
+  @include border-sizes();
+  @include color-variants();
+}
+
+// Dotted divider
+.divider-dotted {
+  width: 100%;
+  height: 1px;
+  margin: 8px 0;
+  border-top: 1px dotted var(--bs-border-color);
+
+  @include border-sizes();
+  @include color-variants();
+}
+
+// Dashed divider
+.divider-dashed {
+  width: 100%;
+  height: 1px;
+  margin: 8px 0;
+  border-top: 1px dashed var(--bs-border-color);
+
+  @include border-sizes();
+  @include color-variants();
+}
+
+// Separator styles
+.separator {
+  @include separator-base();
+  &::before,
+  &::after {
+    background-color: var(--bs-border-color);
+  }
+
+  @include separator-color-variants();
+}
+
+// Dotted separator
+.separator-dotted {
+  @include separator-base();
+  &::before,
+  &::after {
+    border-top: 1px dotted var(--bs-border-color);
+  }
+
+  @include separator-color-variants();
+}
+
+// Dashed separator
+.separator-dashed {
+  @include separator-base();
+  &::before,
+  &::after {
+    border-top: 1px dashed var(--bs-border-color);
+  }
+
+  @include separator-color-variants();
+}

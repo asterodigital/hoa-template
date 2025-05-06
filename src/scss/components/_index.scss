@@ -5,28 +5,36 @@
 // Bootstrap Core Components
 @import 'accordion';
 @import 'alerts';
+@import 'animations';
+@import 'avatars';
 @import 'borders';
 @import 'breadcrumbs';
 @import 'button-group';
 @import 'buttons';
 @import 'cards';
 @import 'colors';
+@import 'dividers';
 @import 'dropdowns';
 @import 'forms';
+@import 'image-hover';
+@import 'marquee';
+@import 'misc';
 @import 'modals';
 @import 'nav';
 @import 'paginations';
 @import 'progress-bars';
 @import 'switch';
 @import 'tables';
+@import 'text-animations';
+@import 'text-highlights';
 @import 'tooltips';
+@import 'typography';
+
 
 // Astero Admin Components
 @import 'datatable';
 @import 'info-box'; // Credit: AdminLTE
 @import 'simplebar'; // Custom SimpleBar styles
 @import 'small-box'; // Credit: AdminLTE
-@import 'text-animations';
 @import 'toc'; // Table of Contents Component
-@import 'typography';
 // @import 'timeline';   // Credit: AdminLTE

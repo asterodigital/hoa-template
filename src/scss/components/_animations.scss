@@ -1,0 +1,132 @@
+/* ==========================================================================
+     Animation Components
+     ========================================================================== */
+
+// Define the fade-in animation
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Define the zoom-in animation
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Define the zoom-out animation
+@keyframes zoomOut {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Define the slide-in-up animation
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Define the slide-in-down animation
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Define the slide-in-left animation
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Define the slide-in-right animation
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Class to be added when the image is triggered to fade in
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.75s ease-out forwards;
+}
+
+// Class to be added when the image is triggered to zoom in
+.zoom-in {
+  opacity: 0;
+  animation: zoomIn 0.75s ease-out forwards;
+}
+
+// Class to be added when the image is triggered to zoom out
+.zoom-out {
+  opacity: 0;
+  animation: zoomOut 0.75s ease-out forwards;
+}
+
+// Class to be added when the image is triggered to slide in up
+.slide-in-up {
+  opacity: 0;
+  animation: slideInUp 0.75s ease-out forwards;
+}
+
+// Class to be added when the image is triggered to slide in down
+.slide-in-down {
+  opacity: 0;
+  animation: slideInDown 0.75s ease-out forwards;
+}
+
+// Class to be added when the image is triggered to slide in left
+.slide-in-left {
+  opacity: 0;
+  animation: slideInLeft 0.75s ease-out forwards;
+}
+
+// Class to be added when the image is triggered to slide in right
+.slide-in-right {
+  opacity: 0;
+  animation: slideInRight 0.75s ease-out forwards;
+}
+
+img[data-cue] {
+  opacity: 0;
+  transition: opacity 0.75s ease-out;
+}
