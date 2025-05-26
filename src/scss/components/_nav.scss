@@ -1,4 +1,34 @@
 // ==========================================================================
+//   Navbar Styles
+// ==========================================================================
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem; // slightly increase navbar link font size
+  color: var(--bs-text-body);
+  transition: color 0.25s ease;
+}
+
+// Navbar link hover/focus
+.navbar-nav .nav-link:hover {
+  color: var(--bs-primary);
+}
+
+// Dropdown item styling
+.dropdown-menu .dropdown-item {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  font-size: 1rem; // match navbar link size
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+// Dropdown item hover/focus
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  color: var(--bs-primary);
+  background-color: var(--bs-primary-bg-subtle); // optional for subtle hover background
+}
+
+// ==========================================================================
 //   Navigation Size Mixins
 // ==========================================================================
 
