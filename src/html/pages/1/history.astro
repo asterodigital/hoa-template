@@ -1,0 +1,457 @@
+---
+import Head from '../../../html/layouts/front/partials/_head.astro'
+import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head />
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Page Content -->
+      <div class="content-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
+          <div class="container">
+            <!-- Brand Logo or Text -->
+            <a class="navbar-brand d-flex align-items-center" href="/1/home">
+              <img
+                src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
+                alt="Logo"
+                class="me-2"
+                style="height: 32px;"
+              />
+            </a>
+
+            <!-- Offcanvas Toggler -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+              <div class="offcanvas-header">
+                <a class="navbar-brand d-flex align-items-center" href="/1/home">
+                  <img
+                    src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
+                    alt="Logo"
+                    class="me-2"
+                    style="height: 32px;"
+                  />
+                </a>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+                <ul
+                  class="navbar-nav flex-grow-1 pe-3 justify-content-start justify-content-lg-center"
+                >
+                  <!-- Home -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/1/home">Home</a>
+                  </li>
+
+                  <!-- About Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="aboutDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      About
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                      <li><a class="dropdown-item" href="/1/about">About Us</a></li>
+                      <li><a class="dropdown-item" href="/1/amenities">Amenities</a></li>
+                      <li>
+                        <a class="dropdown-item active" aria-current="page" href="/1/history"
+                          >History</a
+                        >
+                      </li>
+                      <li><a class="dropdown-item" href="/1/faq">FAQs</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Community Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="communityDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Community
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="communityDropdown">
+                      <li><a class="dropdown-item" href="/1/board-members">Board Members</a></li>
+                      <li><a class="dropdown-item" href="/1/events">Events</a></li>
+                      <li><a class="dropdown-item" href="/1/news">News</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Facilities -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/1/facilities">Facilities</a>
+                  </li>
+
+                  <!-- Gallery -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/1/gallery">Gallery</a>
+                  </li>
+
+                  <!-- Contact -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/1/contact">Contact</a>
+                  </li>
+                </ul>
+
+                <!-- Bottom Section -->
+                <div class="d-block d-lg-none mt-4">
+                  <a href="tel:+12345678901" class="btn btn-outline-leaf rounded w-100 mb-2">
+                    <i class="ri-phone-fill me-2"></i>Book Consultation
+                  </a>
+                  <a class="btn btn-leaf rounded w-100" href="#"
+                    ><i class="ri-sparkling-2-fill me-2"></i> Get Started Now</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="d-none d-lg-flex align-items-center gap-3">
+              <div class="text-start">
+                <small class="text-muted d-block">Book Consultation</small>
+                <a href="tel:+12345678901" class="text-decoration-none text-body fw-medium">
+                  +1 (234) 567-8901
+                </a>
+              </div>
+
+              <a class="btn btn-lg btn-leaf rounded" href="#">Get Started</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section
+          class="position-relative text-light text-center"
+          style="background-image: url('/dist/assets/img/theme-images/hero-1.jpg'); background-size: cover; background-position: center; height: 400px;"
+        >
+          <!-- Overlay -->
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+          <!-- Content -->
+          <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                <h1 class="display-4 fw-semibold mb-2">Our History</h1>
+                <p class="fs-4 mb-0">
+                  Discover the roots of Longhorn Heights and how our vibrant Austin community came
+                  to life.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- The Beginning Section -->
+        <section class="bg-body py-5">
+          <div class="container">
+            <h2 class="text-md-center fs-1 mb-3">The Beginning</h2>
+            <p class="lead">
+              Longhorn Heights was established in the early 1980s with a vision to create a
+              close-knit, family-friendly neighborhood in the heart of Austin. What began as a
+              modest development soon grew into a thriving community grounded in shared values,
+              safety, and natural beauty.
+            </p>
+            <p class="lead mb-4">
+              Over the years, Longhorn Heights has become a beloved Austin neighborhood, cherished
+              for its friendly residents and beautiful homes.
+            </p>
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <img
+                      src="/dist/assets/img/theme-images/img-7.jpg"
+                      class="img-fluid rounded-4"
+                      alt="The Beginning"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <img
+                      src="/dist/assets/img/theme-images/img-6.jpg"
+                      class="img-fluid rounded-4"
+                      alt="The Beginning - Map"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="pt-3 pb-5 bg-body">
+          <div class="container">
+            <h2 class="fs-1 text-center mb-4">Our Journey Through the Decades</h2>
+            <!-- Timeline Start -->
+            <div class="row gy-4 gy-md-5">
+              <!-- 1950s -->
+              <div class="col-lg-8 offset-lg-2">
+                <div class="d-flex align-items-start">
+                  <div class="me-3">
+                    <span class="badge text-bg-leaf fs-4"><i class="ri-building-2-line"></i></span>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">1950s — Original Land Use</h5>
+                    <p class="mb-0">
+                      The area that would become Longhorn Heights was largely open ranchland on the
+                      outskirts of Austin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 1970s -->
+              <div class="col-lg-8 offset-lg-2">
+                <div class="d-flex align-items-start">
+                  <div class="me-3">
+                    <span class="badge text-bg-leaf fs-4"><i class="ri-seedling-line"></i></span>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">1970s — Zoning & Early Planning</h5>
+                    <p class="mb-0">
+                      Initial zoning approvals paved the way for future residential development
+                      while preserving green space.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 1982 -->
+              <div class="col-lg-8 offset-lg-2">
+                <div class="d-flex align-items-start">
+                  <div class="me-3">
+                    <span class="badge text-bg-leaf fs-4"><i class="ri-home-2-line"></i></span>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">1982 — Longhorn Heights Is Born</h5>
+                    <p class="mb-0">
+                      The first homes were completed and families began moving into the newly formed
+                      Longhorn Heights community.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2000 -->
+              <div class="col-lg-8 offset-lg-2">
+                <div class="d-flex align-items-start">
+                  <div class="me-3">
+                    <span class="badge text-bg-leaf fs-4"><i class="ri-community-line"></i></span>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">2000 — Growing Community</h5>
+                    <p class="mb-0">
+                      With over 200 families, the community flourished, hosting its first series of
+                      neighborhood events and HOA elections.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2012 -->
+              <div class="col-lg-8 offset-lg-2">
+                <div class="d-flex align-items-start">
+                  <div class="me-3">
+                    <span class="badge text-bg-leaf fs-4"><i class="ri-leaf-line"></i></span>
+                  </div>
+                  <div>
+                    <h5 class="mb-1">2012 — Going Green</h5>
+                    <p class="mb-0">
+                      The HOA introduced eco-friendly initiatives including water conservation,
+                      native landscaping, and solar panels.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Timeline End -->
+          </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="bg-leaf-pale py-5">
+          <div class="container">
+            <h2 class="text-center fs-1 mb-4">Community Gallery</h2>
+            <div class="row g-3 g-md-4 mb-4">
+              <!-- Gallery Image 1 -->
+              <div class="col-6 col-lg-3">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-2.jpg"
+                    class="img-fluid"
+                    alt="Gallery Image"
+                  />
+                </figure>
+              </div>
+
+              <!-- Gallery Image 2 -->
+              <div class="col-6 col-lg-3">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-1.jpg"
+                    class="img-fluid"
+                    alt="Gallery Image"
+                  />
+                </figure>
+              </div>
+
+              <!-- Gallery Image 3 -->
+              <div class="col-6 col-lg-3">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-3.jpg"
+                    class="img-fluid"
+                    alt="Gallery Image"
+                  />
+                </figure>
+              </div>
+
+              <!-- Gallery Image 4 -->
+              <div class="col-6 col-lg-3">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-4.jpg"
+                    class="img-fluid"
+                    alt="Gallery Image"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div class="text-center">
+              <a href="/1/gallery" class="btn btn-lg btn-outline-leaf"
+                >View Full Gallery<i class="ri-arrow-right-line ms-2"></i></a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-body">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 px-3 px-lg-5 pt-5 pb-4">
+            <div class="col mb-3">
+              <a
+                href="/"
+                class="d-inline-flex align-items-center text-decoration-none mb-3"
+                aria-label="Your Company Logo"
+              >
+                <img
+                  src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
+                  alt="Logo"
+                  style="height: 32px;"
+                  class="me-2"
+                />
+              </a>
+              <p class="text-body-secondary mb-3">
+                Stay connected with our community—subscribe to updates and never miss important news
+                or events!
+              </p>
+              <button class="btn btn-lg btn-leaf">Get in touch</button>
+            </div>
+
+            <div class="col mb-3"></div>
+
+            <div class="col mb-3">
+              <nav aria-label="Quick Links">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="/1/home" class="nav-link p-0 text-body-secondary">Home</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/1/about" class="nav-link p-0 text-body-secondary">About</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/1/news" class="nav-link p-0 text-body-secondary">News</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/1/contact" class="nav-link p-0 text-body-secondary">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="col mb-3">
+              <nav aria-label="Legal">
+                <h5 class="mb-3">Legal</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary">Cookies Policy</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="col mb-3">
+              <h5 class="mb-3">Contact</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2 text-body-secondary">
+                  <i class="ri-phone-fill text-leaf me-2"></i>
+                  <a
+                    href="tel:+12345678901"
+                    class="text-body-secondary text-decoration-none text-break">+1 (234) 567-8901</a
+                  >
+                </li>
+                <li class="nav-item mb-2 text-body-secondary">
+                  <i class="ri-mail-fill text-leaf me-2"></i>
+                  <a
+                    href="mailto:hello@email.com"
+                    class="text-body-secondary text-decoration-none text-break">hello@email.com</a
+                  >
+                </li>
+                <li class="nav-item mb-2 text-body-secondary">
+                  <address class="text-body-secondary">
+                    <i class="ri-map-pin-fill text-leaf me-2"></i>
+                    123 Longhorn Heights, Austin, TX
+                  </address>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-center text-bg-dark py-4">
+            <p class="mb-0">© 2025 Company, Inc. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+
+      <!-- All Scripts -->
+      <Scripts />
+    </main>
+  </body>
+</html>
