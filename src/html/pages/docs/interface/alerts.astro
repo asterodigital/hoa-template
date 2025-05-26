@@ -1,0 +1,346 @@
+---
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import Toc from '../../../components/toc/toc.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
+
+// Page header configuration with navigation breadcrumbs
+const pageHeaderConfig = {
+  title: 'Alerts',
+  breadcrumbs: [
+    { label: 'Docs', href: getPathPrefix('/docs') },
+    { label: 'Interface', href: getPathPrefix('/interface') },
+    { label: 'Alerts', class: 'active' }
+  ]
+}
+
+// Basic contextual alert examples with different states
+const contextualAlertExamples = `<div class="alert alert-primary" role="alert">
+  <i class="ri-information-line me-2"></i><strong>Primary Alert:</strong> Important system update available!
+</div>
+<div class="alert alert-secondary" role="alert">
+  <i class="ri-file-list-line me-2"></i><strong>Secondary Alert:</strong> Additional information for your reference.
+</div>
+<div class="alert alert-success" role="alert">
+  <i class="ri-check-line me-2"></i><strong>Success!</strong> Your changes have been saved successfully.
+</div>
+<div class="alert alert-danger" role="alert">
+  <i class="ri-error-warning-line me-2"></i><strong>Error!</strong> Unable to process your request. Please try again.
+</div>
+<div class="alert alert-warning" role="alert">
+  <i class="ri-alarm-warning-line me-2"></i><strong>Warning!</strong> Your session will expire in 5 minutes.
+</div>
+<div class="alert alert-info" role="alert">
+  <i class="ri-calendar-event-line me-2"></i><strong>Info:</strong> Scheduled maintenance on Sunday at 2 AM UTC.
+</div>
+<div class="alert alert-light" role="alert">
+  <i class="ri-lightbulb-line me-2"></i><strong>Note:</strong> Light alert for subtle notifications.
+</div>
+<div class="alert alert-dark" role="alert">
+  <i class="ri-flag-line me-2"></i><strong>Important:</strong> Dark alert for high-contrast messages.
+</div>`
+
+// Alert examples with interactive links
+const alertWithLinkExamples = `<div class="alert alert-primary alert-dismissible fade show" role="alert">
+  <i class="ri-question-line me-2"></i>Need help? Check our <a href="#" class="alert-link">documentation guide</a> for detailed instructions.
+</div>
+<div class="alert alert-secondary" role="alert">
+  <i class="ri-file-text-line me-2"></i>View our <a href="#" class="alert-link">terms of service</a> for more information.
+</div>
+<div class="alert alert-success" role="alert">
+  <i class="ri-user-follow-line me-2"></i>Account verified! <a href="#" class="alert-link">Complete your profile</a> to get started.
+</div>
+<div class="alert alert-danger" role="alert">
+  <i class="ri-bank-card-line me-2"></i>Payment failed. <a href="#" class="alert-link">Update payment method</a> to continue service.
+</div>
+<div class="alert alert-warning" role="alert">
+  <i class="ri-chrome-line me-2"></i>Browser update required. <a href="#" class="alert-link">Install latest version</a> for better security.
+</div>
+<div class="alert alert-info" role="alert">
+  <i class="ri-notification-3-line me-2"></i>New features available! <a href="#" class="alert-link">View changelog</a> to learn more.
+</div>
+<div class="alert alert-light" role="alert">
+  <i class="ri-mail-line me-2"></i>Subscribe to our <a href="#" class="alert-link">newsletter</a> for weekly updates.
+</div>
+<div class="alert alert-dark" role="alert">
+  <i class="ri-group-line me-2"></i>Join our <a href="#" class="alert-link">community forum</a> for discussions and support.
+</div>`
+
+// Rich content alert example with structured information
+const richContentAlertExample = `<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading js-toc-ignore"><i class="ri-award-line me-2"></i>Project Milestone Achieved! 🎉</h4>
+  <p>
+    Congratulations on completing this phase of the project! Your team has successfully delivered all required deliverables ahead of schedule.
+  </p>
+  <hr>
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <strong>Key Achievements:</strong>
+    <span class="badge bg-success">Sprint Goals Met</span>
+  </div>
+  <ul class="mb-2">
+    <li><i class="ri-checkbox-circle-line me-1"></i> 100% test coverage achieved</li>
+    <li><i class="ri-speed-up-line me-1"></i> Performance benchmarks exceeded</li>
+    <li><i class="ri-file-paper-2-line me-1"></i> Documentation completed</li>
+    <li><i class="ri-user-voice-line me-1"></i> Stakeholder feedback incorporated</li>
+  </ul>
+  <p class="mb-0">
+    <i class="ri-calendar-todo-line me-1"></i> The next sprint planning meeting is scheduled for tomorrow at 10 AM.
+  </p>
+</div>`
+
+// Dismissible alert examples with enhanced content and icons
+const dismissibleAlertExamples = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <div class="d-flex align-items-center">
+    <i class="ri-alert-line fs-5 me-3"></i>
+    <div>
+      <strong>Attention Required!</strong>
+      <p class="mb-0">Please review and update your security settings before continuing.</p>
+      <div class="mt-2">
+        <a href="#" class="btn btn-sm btn-warning">Review Settings</a>
+        <a href="#" class="btn btn-sm btn-outline-warning ms-2">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="alert alert-info alert-dismissible fade show mt-3" role="alert">
+  <div class="d-flex">
+    <i class="ri-lightbulb-flash-line fs-5 me-3"></i>
+    <div>
+      <strong>Quick Tip:</strong>
+      <p class="mb-0">You can customize alert animations and timing through JavaScript.</p>
+      <div class="mt-2">
+        <code>$('.alert').alert('close')</code> - Closes an alert by removing it from the DOM
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`
+
+// Alert with custom border and icon positioning
+const customStyledAlertExamples = `<div class="alert alert-primary border-0 border-start border-5 border-primary d-flex align-items-center ps-2" role="alert">
+  <div class="bg-primary bg-opacity-25 p-2 me-3 rounded">
+    <i class="ri-shield-check-line text-primary fs-4"></i>
+  </div>
+  <div>
+    <strong>Security Update:</strong> Your account has been protected with enhanced security measures.
+  </div>
+</div>
+
+<div class="alert alert-success border-0 border-start border-5 border-success d-flex align-items-center ps-2" role="alert">
+  <div class="bg-success bg-opacity-25 p-2 me-3 rounded">
+    <i class="ri-check-double-line text-success fs-4"></i>
+  </div>
+  <div>
+    <strong>Task Completed:</strong> All items in your workflow have been processed successfully.
+  </div>
+</div>
+
+<div class="alert alert-danger border-0 border-start border-5 border-danger d-flex align-items-center ps-2" role="alert">
+  <div class="bg-danger bg-opacity-25 p-2 me-3 rounded">
+    <i class="ri-close-circle-line text-danger fs-4"></i>
+  </div>
+  <div>
+    <strong>Critical Error:</strong> Unable to connect to the server. Please check your connection.
+  </div>
+</div>
+
+<div class="alert alert-warning border-0 border-start border-5 border-warning d-flex align-items-center ps-2" role="alert">
+  <div class="bg-warning bg-opacity-25 p-2 me-3 rounded">
+    <i class="ri-alert-line text-warning fs-4"></i>
+  </div>
+  <div>
+    <strong>Attention Required:</strong> Your subscription will expire in 3 days. Please renew now.
+  </div>
+</div>`
+
+// Live alert example with JavaScript interaction
+const liveAlertExample = `<div id="liveAlertPlaceholder"></div>
+<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>`
+
+// JavaScript code for the live alert example
+const liveAlertJsCode = `<script>
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    '<div class="alert alert-' + type + ' alert-dismissible fade show" role="alert">',
+    '   <div>' + message + '</div>',
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    appendAlert('Nice, you triggered this alert message!', 'success')
+  })
+}
+</script>`
+
+// Shared preview configuration for consistent component display
+const previewConfig = {
+  cssCode: '',
+  jsCode: ''
+}
+---
+
+<AdminLayout
+  title="Alerts"
+  description="Interactive alert components for user notifications and feedback"
+  currentPath="docs/interface/alerts"
+  enableComponentPreview={true}
+>
+  <PageHeader {...pageHeaderConfig} />
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <div class="row">
+        <div class="col-12">
+          <p class="my-0">
+            Alerts are versatile UI components designed to deliver important feedback,
+            notifications, and status messages to users. They provide contextual visual cues through
+            color, icons, and content structure to effectively communicate different types of
+            information. Well-designed alerts help guide users, prevent errors, and enhance the
+            overall user experience by providing timely and relevant information.
+          </p>
+        </div>
+      </div>
+      <div class="row js-toc-content">
+        <div class="col-12">
+          <div class="my-3">
+            <h3 class="mb-0" id="examples">Contextual Alerts</h3>
+            <p class="py-2">
+              Choose from eight contextual alert styles to convey different message types. Each
+              style provides distinct visual cues through color and icons, helping users quickly
+              understand the nature and importance of the message. Use <code>alert-primary</code>, <code
+                >alert-success</code
+              >, etc. classes to apply different styles based on the message context:
+              <ul class="mt-2">
+                <li><strong>Primary/Secondary:</strong> General information and system messages</li>
+                <li>
+                  <strong>Success:</strong> Confirmation of completed actions or positive outcomes
+                </li>
+                <li>
+                  <strong>Danger:</strong> Critical errors, failures, or actions requiring immediate
+                  attention
+                </li>
+                <li><strong>Warning:</strong> Potential issues or actions requiring caution</li>
+                <li><strong>Info:</strong> Helpful information, tips, or announcements</li>
+                <li><strong>Light/Dark:</strong> Subtle notifications or high-contrast messages</li>
+              </ul>
+            </p>
+
+            <ComponentPreview
+              title="Contextual Alert Examples"
+              height="550px"
+              component={contextualAlertExamples}
+              htmlCode={contextualAlertExamples}
+              {...previewConfig}
+            />
+          </div>
+
+          <div class="my-3">
+            <h3 class="mb-0 fs-2" id="link-color">Interactive Alerts</h3>
+            <p class="py-2">
+              Enhance alerts with interactive elements using the <code>.alert-link</code> class. This
+              maintains consistent styling while providing clear call-to-action opportunities within
+              your alerts. Links automatically inherit the alert's color scheme for seamless integration,
+              creating a cohesive visual experience while enabling users to take immediate action based
+              on the notification.
+            </p>
+
+            <ComponentPreview
+              title="Alerts with Interactive Links"
+              height="550px"
+              component={alertWithLinkExamples}
+              htmlCode={alertWithLinkExamples}
+              {...previewConfig}
+            />
+          </div>
+
+          <div class="my-3">
+            <h3 class="mb-0 fs-2" id="additional-content">Rich Content Alerts</h3>
+            <p class="py-2">
+              Create more engaging and informative alerts by incorporating rich content such as
+              headings, lists, badges, and icons. These elements help structure information
+              hierarchically and highlight key details within the alert context. Rich content alerts
+              are particularly useful for complex notifications that require more explanation or
+              contain multiple pieces of related information.
+            </p>
+
+            <ComponentPreview
+              title="Rich Content Alert Example"
+              height="550px"
+              component={richContentAlertExample}
+              htmlCode={richContentAlertExample}
+              {...previewConfig}
+            />
+          </div>
+
+          <div class="my-3">
+            <h3 class="mb-0 fs-2" id="dismissing">Dismissible Alerts</h3>
+            <p class="py-2">
+              Add the <code>alert-dismissible</code> class and dismiss button to create closeable alerts.
+              These are perfect for temporary notifications that users can acknowledge and remove when
+              no longer needed. Include the <code>fade</code> and <code>show</code> classes for smooth
+              transition effects. Dismissible alerts give users control over their interface while ensuring
+              important messages are seen.
+            </p>
+
+            <ComponentPreview
+              title="Dismissible Alert Examples"
+              height="500px"
+              component={dismissibleAlertExamples}
+              htmlCode={dismissibleAlertExamples}
+              {...previewConfig}
+            />
+          </div>
+
+          <div class="my-3">
+            <h3 class="mb-0 fs-2" id="live-alert">Live Alert Example</h3>
+            <p class="py-2">
+              Create dynamic alerts that respond to user interactions using JavaScript. This example
+              demonstrates how to show an alert (hidden initially) when a button is clicked, then
+              dismiss it with the built-in close button. This pattern is useful for providing
+              feedback after user actions without requiring a page refresh.
+            </p>
+
+            <ComponentPreview
+              title="Live Alert Example"
+              height="300px"
+              component={liveAlertExample}
+              htmlCode={liveAlertExample}
+              jsCode={liveAlertJsCode}
+              cssCode=""
+            />
+          </div>
+
+          <div class="my-3">
+            <h3 class="mb-0 fs-2" id="custom-styled">Custom Styled Alerts</h3>
+            <p class="py-2">
+              Create visually distinctive alerts by combining utility classes with the base alert
+              component. This example demonstrates alerts with left borders, custom icon containers,
+              and enhanced visual hierarchy. Custom styling can help establish different levels of
+              importance or categorize alerts within your interface while maintaining accessibility
+              and usability.
+            </p>
+
+            <ComponentPreview
+              title="Custom Styled Alert Examples"
+              height="550px"
+              component={customStyledAlertExamples}
+              htmlCode={customStyledAlertExamples}
+              {...previewConfig}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>

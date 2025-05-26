@@ -35,190 +35,192 @@ const isActiveParent = (path: string) => currentPath.startsWith(path)
     </li>
 
     <!-- Interface Section -->
-    <li class={`nav-item has-submenu parent ${isActiveParent('interface') ? 'active open' : ''}`}>
+    <li
+      class={`nav-item has-submenu parent ${isActiveParent('docs/interface') ? 'active open' : ''}`}
+    >
       <a class="nav-link" href="#">
         <i class="ri-layout-grid-line"></i>
         <span>Interface</span>
         <i class="ri-arrow-right-s-line"></i>
       </a>
       <ul class="submenu">
-        <li class={`nav-item ${isActive('interface/accordion') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/accordion')}>
+        <li class={`nav-item ${isActive('docs/interface/accordion') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/accordion')}>
             <span>Accordion</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/alerts') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/alerts')}>
+        <li class={`nav-item ${isActive('docs/interface/alerts') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/alerts')}>
             <span>Alerts</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/animations') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/animations')}>
+        <li class={`nav-item ${isActive('docs/interface/animations') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/animations')}>
             <span>Animations</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/avatars') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/avatars')}>
+        <li class={`nav-item ${isActive('docs/interface/avatars') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/avatars')}>
             <span>Avatars</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/badges') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/badges')}>
+        <li class={`nav-item ${isActive('docs/interface/badges') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/badges')}>
             <span>Badges</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/breadcrumb') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/breadcrumb')}>
+        <li class={`nav-item ${isActive('docs/interface/breadcrumb') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/breadcrumb')}>
             <span>Breadcrumb</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/buttons') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/buttons')}>
+        <li class={`nav-item ${isActive('docs/interface/buttons') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/buttons')}>
             <span>Buttons</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/button-group') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/button-group')}>
+        <li class={`nav-item ${isActive('docs/interface/button-group') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/button-group')}>
             <span>Button Group</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/cards') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/cards')}>
+        <li class={`nav-item ${isActive('docs/interface/cards') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/cards')}>
             <span>Cards</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/carousel') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/carousel')}>
+        <li class={`nav-item ${isActive('docs/interface/carousel') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/carousel')}>
             <span>Carousel</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/close-button') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/close-button')}>
+        <li class={`nav-item ${isActive('docs/interface/close-button') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/close-button')}>
             <span>Close Button</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/collapse') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/collapse')}>
+        <li class={`nav-item ${isActive('docs/interface/collapse') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/collapse')}>
             <span>Collapse</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/colors') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/colors')}>
+        <li class={`nav-item ${isActive('docs/interface/colors') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/colors')}>
             <span>Colors</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/dividers') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/dividers')}>
+        <li class={`nav-item ${isActive('docs/interface/dividers') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/dividers')}>
             <span>Dividers</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/dropdowns') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/dropdowns')}>
+        <li class={`nav-item ${isActive('docs/interface/dropdowns') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/dropdowns')}>
             <span>Dropdowns</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/image-hover') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/image-hover')}>
+        <li class={`nav-item ${isActive('docs/interface/image-hover') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/image-hover')}>
             <span>Image Hover</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/info-box') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/info-box')}>
+        <li class={`nav-item ${isActive('docs/interface/info-box') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/info-box')}>
             <span>Info Box</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/list-group') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/list-group')}>
+        <li class={`nav-item ${isActive('docs/interface/list-group') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/list-group')}>
             <span>List Group</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/marquee') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/marquee')}>
+        <li class={`nav-item ${isActive('docs/interface/marquee') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/marquee')}>
             <span>Marquee</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/modal') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/modal')}>
+        <li class={`nav-item ${isActive('docs/interface/modal') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/modal')}>
             <span>Modal</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/navbar') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/navbar')}>
+        <li class={`nav-item ${isActive('docs/interface/navbar') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/navbar')}>
             <span>Navbar</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/navs-and-tabs') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/navs-and-tabs')}>
+        <li class={`nav-item ${isActive('docs/interface/navs-and-tabs') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/navs-and-tabs')}>
             <span>Navs and tabs</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/offcanvas') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/offcanvas')}>
+        <li class={`nav-item ${isActive('docs/interface/offcanvas') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/offcanvas')}>
             <span>Offcanvas</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/pagination') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/pagination')}>
+        <li class={`nav-item ${isActive('docs/interface/pagination') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/pagination')}>
             <span>Pagination</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/placeholders') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/placeholders')}>
+        <li class={`nav-item ${isActive('docs/interface/placeholders') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/placeholders')}>
             <span>Placeholders</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/popovers') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/popovers')}>
+        <li class={`nav-item ${isActive('docs/interface/popovers') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/popovers')}>
             <span>Popovers</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/progress') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/progress')}>
+        <li class={`nav-item ${isActive('docs/interface/progress') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/progress')}>
             <span>Progress</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/scrollspy') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/scrollspy')}>
+        <li class={`nav-item ${isActive('docs/interface/scrollspy') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/scrollspy')}>
             <span>Scrollspy</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/shadows') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/shadows')}>
+        <li class={`nav-item ${isActive('docs/interface/shadows') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/shadows')}>
             <span>Shadows</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/small-box') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/small-box')}>
+        <li class={`nav-item ${isActive('docs/interface/small-box') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/small-box')}>
             <span>Small Box</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/spinners') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/spinners')}>
+        <li class={`nav-item ${isActive('docs/interface/spinners') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/spinners')}>
             <span>Spinners</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/text-animations') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/text-animations')}>
+        <li class={`nav-item ${isActive('docs/interface/text-animations') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/text-animations')}>
             <span>Text Animations</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/text-highlights') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/text-highlights')}>
+        <li class={`nav-item ${isActive('docs/interface/text-highlights') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/text-highlights')}>
             <span>Text Highlights</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/toasts') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/toasts')}>
+        <li class={`nav-item ${isActive('docs/interface/toasts') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/toasts')}>
             <span>Toasts</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/tooltips') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/tooltips')}>
+        <li class={`nav-item ${isActive('docs/interface/tooltips') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/tooltips')}>
             <span>Tooltips</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('interface/typography') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/interface/typography')}>
+        <li class={`nav-item ${isActive('docs/interface/typography') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/interface/typography')}>
             <span>Typography</span>
           </a>
         </li>
