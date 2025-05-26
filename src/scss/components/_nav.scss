@@ -4,7 +4,6 @@
 
 .navbar-nav .nav-link {
   font-size: 1.1rem; // slightly increase navbar link font size
-  color: var(--bs-text-body);
   transition: color 0.25s ease;
 }
 
@@ -17,15 +16,17 @@
 .dropdown-menu .dropdown-item {
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
-  font-size: 1rem; // match navbar link size
+  font-size: 1rem;
   transition: color 0.25s ease, background-color 0.25s ease;
 }
 
-// Dropdown item hover/focus
+// Dropdown item hover, focus and active
 .dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item:focus {
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:active,
+.dropdown-menu .dropdown-item.active {
   color: var(--bs-primary);
-  background-color: var(--bs-primary-bg-subtle); // optional for subtle hover background
+  background-color: var(--bs-primary-bg-subtle);
 }
 
 // ==========================================================================
