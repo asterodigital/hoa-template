@@ -7,6 +7,7 @@
   // Base styles inherited from Bootstrap
   @extend .shadow-sm;
   margin-top: 0;
+  overflow: visible !important;
   border: 0;
 
   // Simple fade transition
@@ -16,6 +17,17 @@
   &.show {
     opacity: 1;
   }
+}
+
+// Add border-radius to first and last visible dropdown items
+.dropdown-menu > li:first-child > .dropdown-item {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.dropdown-menu > li:last-child > .dropdown-item {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 /* Improved dropdown toggle arrow */
@@ -280,4 +292,40 @@
 .dropdown-menu .dropdown-menu .dropdown-item {
   padding-right: 2rem;
   padding-left: 2rem;
+}
+
+.dropdown-submenu {
+  position: relative;
+
+  > .dropdown-toggle {
+    position: relative;
+
+    &::after {
+      display: none; // Hide Bootstrap's default down arrow
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 1.5rem;
+      font-size: 2rem;
+      content: '›';
+      transform: translateY(-50%);
+    }
+  }
+
+  > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    display: none;
+    border: 0;
+
+    .dropdown-item {
+      padding: 0.6rem 1.5rem;
+    }
+  }
+
+  &.show > .dropdown-menu {
+    display: block;
+  }
 }
