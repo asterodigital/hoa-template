@@ -1,16 +1,16 @@
 ---
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
-import Toc from '../../components/toc/toc.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import { getPathPrefix } from '../../../utils/path.js'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import Toc from '../../../components/toc/toc.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
 
 // Page header configuration with navigation breadcrumbs
 const pageHeaderConfig = {
   title: 'Pricing',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
-    { label: 'Components', href: getPathPrefix('/front-components') },
+    { label: 'Docs', href: getPathPrefix('/docs') },
+    { label: 'Components', href: getPathPrefix('/components') },
     { label: 'Pricing', class: 'active' }
   ]
 }
@@ -251,7 +251,7 @@ const previewConfig = {
 <AdminLayout
   title="Pricing"
   description="Pricing examples"
-  currentPath="front-components/pricing"
+  currentPath="docs/components/pricing"
   enableComponentPreview={true}
 >
   <PageHeader {...pageHeaderConfig} />

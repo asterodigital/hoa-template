@@ -1,16 +1,16 @@
 ---
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
-import Toc from '../../components/toc/toc.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import Toc from '../../../components/toc/toc.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 
 // Page header configuration with navigation breadcrumbs
 const pageHeaderConfig = {
   title: 'Portfolio',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
-    { label: 'Components', href: getPathPrefix('/front-components') },
+    { label: 'Docs', href: getPathPrefix('/docs') },
+    { label: 'Components', href: getPathPrefix('/components') },
     { label: 'Portfolio', class: 'active' }
   ]
 }
@@ -494,7 +494,7 @@ const previewConfig = {
 <AdminLayout
   title="Portfolio"
   description="Portfolio examples"
-  currentPath="front-components/portfolio"
+  currentPath="docs/components/portfolio"
   enableComponentPreview={true}
 >
   <PageHeader {...pageHeaderConfig} />
