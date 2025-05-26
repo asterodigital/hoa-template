@@ -12,6 +12,12 @@
   color: var(--bs-primary);
 }
 
+// Dropdown menu styling
+.dropdown-menu {
+  padding: 0;
+  overflow: hidden;
+}
+
 // Dropdown item styling
 .dropdown-menu .dropdown-item {
   padding-top: 0.6rem;
