@@ -1,0 +1,77 @@
+---
+import AdminLayout from '../../layouts/admin/admin-layout.astro'
+import PageHeader from '../../components/common/page-header.astro'
+import Toc from '../../components/toc/toc.astro'
+import { getPathPrefix } from '../../../utils/path.js'
+
+const pageHeaderProps = {
+  title: 'Get Started',
+  breadcrumbs: [
+    { label: 'Docs', href: getPathPrefix('/docs') },
+    { label: 'Get Started', class: 'active' }
+  ]
+}
+---
+
+<AdminLayout
+  currentPath="docs"
+  title="Get Started"
+  description="Learn how to set up, run, and structure your project."
+>
+  <PageHeader {...pageHeaderProps} />
+
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <div class="mb-5">
+        <h2 class="h4" id="installation">📦 Installation</h2>
+        <p>Install the Astro CLI to start a new project:</p>
+        <pre class="bg-body p-3 rounded"><code>npm create astro@latest</code></pre>
+        <p>Follow the prompts to scaffold your project.</p>
+      </div>
+
+      <div class="mb-5">
+        <h2 class="h4" id="project-structure">🛠 Project Structure</h2>
+        <p>After setup, your project directory will look like this:</p>
+        <pre
+          class="bg-body p-3 rounded"><code>.
+├── public/
+├── src/
+│   ├── components/
+│   └── pages/
+├── astro.config.mjs
+└── package.json
+        </code></pre>
+      </div>
+
+      <div class="mb-5">
+        <h2 class="h4" id="running-dev-server">🚀 Running the Dev Server</h2>
+        <p>To preview your site locally:</p>
+        <pre class="bg-body p-3 rounded"><code>npm run dev</code></pre>
+        <p>Open your browser and navigate to <code>http://localhost:4321</code>.</p>
+      </div>
+
+      <div class="mb-5">
+        <h2 class="h4" id="adding-pages">📁 Adding Pages</h2>
+        <p>Create a new file in <code>src/pages</code> to add a route:</p>
+        <pre
+          class="bg-body p-3 rounded"><code>// src/pages/about.astro
+---
+title: "About Us"
+---
+
+&lt;h1&gt;About&lt;/h1&gt;
+&lt;p&gt;This is the about page.&lt;/p&gt;
+        </code></pre>
+      </div>
+
+      <div class="mb-5">
+        <h2 class="h4" id="using-bootstrap">🎨 Using Bootstrap</h2>
+        <p>To use Bootstrap components, import the CSS in your layout or page:</p>
+        <pre
+          class="bg-body p-3 rounded"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"&gt;</code></pre>
+        <p>Now you can use components like buttons, cards, and navbars.</p>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>
