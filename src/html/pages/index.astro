@@ -1,116 +1,101 @@
 ---
-import { getPathPrefix } from '../../utils/path.js'
-
-// Determine the target redirect URL with environment-specific path prefix
-const redirectTargetPath = getPathPrefix('/test')
-
-// Configuration for meta refresh (in seconds)
-const REDIRECT_DELAY = 0
+import FrontLayout from '../layouts/front/front-layout.astro'
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content={`${REDIRECT_DELAY};url=${redirectTargetPath}`} />
-    <title>Welcome to Astero Admin Dashboard</title>
-    <style>
-      /* Base styles for the redirect page */
-      body {
-        font-family:
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          'Segoe UI',
-          Roboto,
-          Oxygen,
-          Ubuntu,
-          Cantarell,
-          'Open Sans',
-          'Helvetica Neue',
-          sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        padding: 1.25rem;
-        text-align: center;
-        color: var(--bs-gray-800, #333);
-        background-color: var(--bs-gray-100, #f8f9fa);
-      }
-
-      /* Loading animation styles */
-      .loading-spinner {
-        border: 0.25rem solid var(--bs-gray-200, #f3f3f3);
-        border-top: 0.25rem solid var(--bs-primary, #3498db);
-        border-radius: 50%;
-        width: 2.5rem;
-        height: 2.5rem;
-        animation: spinAnimation 1s linear infinite;
-        margin-bottom: 1.25rem;
-      }
-
-      /* Spinner rotation animation */
-      @keyframes spinAnimation {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* Text content styles */
-      .redirect-title {
-        font-size: 1.75rem;
-        margin-bottom: 1rem;
-        color: var(--bs-gray-900, #212529);
-      }
-
-      .redirect-message {
-        margin: 0.625rem 0;
-        color: var(--bs-gray-700, #495057);
-      }
-
-      /* Link styles */
-      .redirect-link {
-        color: var(--bs-primary, #3498db);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s ease;
-      }
-
-      .redirect-link:hover {
-        text-decoration: underline;
-        color: var(--bs-primary-dark, #2773a5);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="loading-spinner" role="status">
-      <span class="visually-hidden"></span>
+<FrontLayout currentPath="test" title="Test" description="Test lorem ipsum.">
+  <!-- Hero Section -->
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold">Hey there!</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ab enim sapiente aperiam
+        aspernatur tempora ipsum tenetur voluptas iure!
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
+        <button type="button" class="btn btn-outline-primary btn-lg px-4">Outline button</button>
+      </div>
     </div>
-    <h1 class="redirect-title">Welcome to Astero Admin Dashboard</h1>
-    <p class="redirect-message">
-      Redirecting you to the dashboard...
-      <br />
-      <small>
-        If you are not redirected automatically,
-        <a href={redirectTargetPath} class="redirect-link">
-          <i class="ri-arrow-right-line"></i> click here
-        </a>
-      </small>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img
+          src="https://asterodigital.com/storage/local/aamf/cms/media/124/dashboard-img-2.png"
+          class="img-fluid border rounded-3 shadow-lg mb-4"
+          alt="Example image"
+          width="700"
+          height="500"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- Pricing Section -->
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h2 class="display-6 fw-bold">Pricing</h2>
+    <p class="lead">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ab enim sapiente aperiam
+      aspernatur tempora ipsum tenetur voluptas iure!
     </p>
-
-    <script is:inline define:vars={{ redirectTargetPath }}>
-      // Fallback JavaScript redirection if meta refresh fails
-      document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-          window.location.href = redirectTargetPath
-        }, 100) // Small delay to ensure smooth transition
-      })
-    </script>
-  </body>
-</html>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 mb-5 text-center">
+    <div class="col">
+      <div class="card rounded-3 shadow-sm p-0 mb-4">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Free</h4>
+        </div>
+        <div class="card-body p-3">
+          <h1 class="card-title pricing-card-title">
+            $0<small class="text-muted fw-light">/mo</small>
+          </h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>10 users included</li>
+            <li>2 GB of storage</li>
+            <li>Email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="w-100 btn btn-lg btn-outline-primary"
+            >Sign up for free</button
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card rounded-3 shadow-sm p-0 mb-4">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Pro</h4>
+        </div>
+        <div class="card-body p-3">
+          <h1 class="card-title pricing-card-title">
+            $15<small class="text-muted fw-light">/mo</small>
+          </h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>20 users included</li>
+            <li>10 GB of storage</li>
+            <li>Priority email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card rounded-3 shadow-sm border-primary p-0 mb-4">
+        <div class="card-header py-3 text-white bg-primary border-primary">
+          <h4 class="my-0 fw-normal">Enterprise</h4>
+        </div>
+        <div class="card-body p-3">
+          <h1 class="card-title pricing-card-title">
+            $29<small class="text-muted fw-light">/mo</small>
+          </h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>30 users included</li>
+            <li>15 GB of storage</li>
+            <li>Phone and email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</FrontLayout>
