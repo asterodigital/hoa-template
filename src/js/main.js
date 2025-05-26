@@ -4,6 +4,7 @@ import { darkMode } from './layout/dark-mode.js'
 import { initSidebar } from './layout/sidebar-handler.js'
 import { initSidebarMini } from './layout/sidebar-mini-handler.js'
 import { initNavigation } from './layout/nav-handler.js'
+import { dropdownHover } from './layout/dropdown-hover.js'
 import { initPasswordWrapper } from './components/password.js'
 
 // Expose bootstrap and simplebar globally for inline scripts
@@ -46,6 +47,7 @@ const AsteroAdmin = (function () {
       initSidebar()
       initSidebarMini()
       initNavigation()
+      dropdownHover()
       initPasswordWrapper()
       initBootstrap()
       initSimpleBar()
