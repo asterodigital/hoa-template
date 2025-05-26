@@ -50,3 +50,29 @@
     transform: translateY(-8px);
   }
 }
+
+// Card expand effect
+@media (min-width: 992px) {
+  .card-expand {
+    overflow: hidden;
+
+    figure {
+      margin: 0;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 250px; // initial image height
+        object-fit: cover;
+        transition: height 0.25s ease;
+      }
+    }
+
+    &:hover {
+      figure img {
+        height: 275px; // expanded image height on hover
+      }
+    }
+  }
+}
