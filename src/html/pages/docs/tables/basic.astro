@@ -1,15 +1,15 @@
 ---
-import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
-import Toc from '../../components/toc/toc.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import Toc from '../../../components/toc/toc.astro'
 
 // Page header configuration with breadcrumb navigation
 const pageHeaderProps = {
   title: 'Basic Tables',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Docs', href: getPathPrefix('/docs') },
     { label: 'Tables', href: getPathPrefix('/tables') },
     { label: 'Basic Tables', class: 'active' }
   ]
@@ -1236,7 +1236,7 @@ const invoiceTableTemplate = `<div class="table-responsive">
 <AdminLayout
   title="Basic Tables"
   description="Modern and responsive table examples with Bootstrap"
-  currentPath="tables/basic"
+  currentPath="docs/tables/basic"
   enableComponentPreview={true}
 >
   <PageHeader {...pageHeaderProps} />

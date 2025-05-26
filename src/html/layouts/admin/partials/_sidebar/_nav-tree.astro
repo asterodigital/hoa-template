@@ -371,30 +371,30 @@ const isActiveParent = (path: string) => currentPath.startsWith(path)
     </li>
 
     <!-- Tables Section -->
-    <li class={`nav-item has-submenu parent ${isActiveParent('tables') ? 'active open' : ''}`}>
+    <li class={`nav-item has-submenu parent ${isActiveParent('docs/tables') ? 'active open' : ''}`}>
       <a class="nav-link" href="#">
         <i class="ri-table-line"></i>
         <span>Tables</span>
         <i class="ri-arrow-right-s-line ms-auto"></i>
       </a>
       <ul class="submenu">
-        <li class={`nav-item ${isActive('tables/basic') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/tables/basic')}>
+        <li class={`nav-item ${isActive('docs/tables/basic') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/tables/basic')}>
             <span>Basic Tables</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('tables/enhanced') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/tables/enhanced')}>
+        <li class={`nav-item ${isActive('docs/tables/enhanced') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/tables/enhanced')}>
             <span>Enhanced Tables</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('tables/advanced') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/tables/advanced')}>
+        <li class={`nav-item ${isActive('docs/tables/advanced') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/tables/advanced')}>
             <span>Advanced Tables</span>
           </a>
         </li>
-        <li class={`nav-item ${isActive('tables/datatable') ? 'active' : ''}`}>
-          <a class="nav-link" href={getPathPrefix('/tables/datatable')}>
+        <li class={`nav-item ${isActive('docs/tables/datatable') ? 'active' : ''}`}>
+          <a class="nav-link" href={getPathPrefix('/docs/tables/datatable')}>
             <span>Datatable</span>
           </a>
         </li>

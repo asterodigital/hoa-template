@@ -1,8 +1,8 @@
 ---
-import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
 
 // Register table scripts for search, filter and pagination functionality
 const pageScript = `
@@ -15,7 +15,7 @@ const pageHeaderProps = {
   title: 'Advanced Tables',
   description: 'Feature-rich tables with search, filters, sorting and bulk actions',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Docs', href: getPathPrefix('/docs') },
     { label: 'Tables', href: getPathPrefix('/tables') },
     { label: 'Advanced Tables', class: 'active' }
   ]
@@ -343,7 +343,7 @@ const advancedTableTemplate = `<div class="astero-table">
 <AdminLayout
   title="Advanced Tables"
   description="Feature-rich tables with search, filters, sorting and bulk actions"
-  currentPath="tables/advanced"
+  currentPath="docs/tables/advanced"
   pageScript={pageScript}
   enableComponentPreview={true}
 >

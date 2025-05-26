@@ -1,9 +1,9 @@
 ---
-import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
-import ConfirmationModal from '../../components/common/confirmation-modal.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import ConfirmationModal from '../../../components/common/confirmation-modal.astro'
 
 // Register DataTables styles with versioning for better dependency management
 const pageStyles = `
@@ -27,13 +27,13 @@ const pageHeaderProps = {
   title: 'DataTables',
   description: 'Advanced data tables with dynamic filtering, sorting, and pagination',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Docs', href: getPathPrefix('/docs') },
     { label: 'Tables', href: getPathPrefix('/tables') },
     { label: 'DataTables', class: 'active' }
   ]
 }
 
-const iframesrc = getPathPrefix('/tables/datatable/products')
+const iframesrc = getPathPrefix('datatable/products')
 
 // Products table template with enhanced features
 const productsTableTemplate = `<div class="astero-table">
@@ -211,7 +211,7 @@ const productsTableTemplate = `<div class="astero-table">
 <AdminLayout
   title="DataTables"
   description="Advanced data tables with dynamic filtering, sorting, and pagination"
-  currentPath="tables/datatable"
+  currentPath="docs/tables/datatable"
   pageScript={pageScript}
   enableComponentPreview={true}
 >
