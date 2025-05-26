@@ -1,15 +1,15 @@
 ---
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
-import Toc from '../../components/toc/toc.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import { getPathPrefix } from '../../../utils/path.js'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import Toc from '../../../components/toc/toc.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
 
 // Page header configuration with breadcrumb navigation
 const pageConfig = {
   title: 'Horizontal Form Layouts',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard'), icon: 'ri-dashboard-line' },
+    { label: 'Docs', href: getPathPrefix('/docs'), icon: 'ri-dashboard-line' },
     { label: 'Forms', href: getPathPrefix('/forms'), icon: 'ri-layout-line' },
     { label: 'Horizontal Forms', class: 'active', icon: 'ri-layout-right-line' }
   ]
@@ -733,7 +733,7 @@ const tabFormExample = `<ul class="nav nav-tabs form-tabs" id="formTabs" role="t
 <AdminLayout
   title="Horizontal Form Layouts"
   description="Modern Bootstrap Horizontal Form Layouts with Various Input Types"
-  currentPath="forms/horizontal"
+  currentPath="docs/forms/horizontal"
   enableComponentPreview={true}
 >
   <PageHeader {...pageConfig} />

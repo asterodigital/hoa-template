@@ -1,15 +1,15 @@
 ---
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import { getPathPrefix } from '../../../utils/path.js'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
-import Toc from '../../components/toc/toc.astro'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import Toc from '../../../components/toc/toc.astro'
 
 // Page header configuration
 const pageHeaderProps = {
   title: 'Form Controls',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Docs', href: getPathPrefix('/docs') },
     { label: 'Forms', href: '' },
     { label: 'Form Controls', class: 'active' }
   ]
@@ -404,7 +404,7 @@ const formButtonsAndDropdowns = `<div class="row g-3">
 <AdminLayout
   title="Form Controls"
   description="Create modern and user-friendly forms with Bootstrap's extensive collection of form controls"
-  currentPath="forms/form-controls"
+  currentPath="docs/forms/form-controls"
   enableComponentPreview={true}
 >
   <PageHeader {...pageHeaderProps} />

@@ -1,15 +1,15 @@
 ---
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
-import Toc from '../../components/toc/toc.astro'
-import { getPathPrefix } from '../../../utils/path.js'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import Toc from '../../../components/toc/toc.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
 
 // Page header configuration with breadcrumb navigation
 const pageHeaderConfig = {
   title: 'Vertical Form Layouts',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Docs', href: getPathPrefix('/docs') },
     { label: 'Forms' },
     { label: 'Vertical Forms', class: 'active' }
   ]
@@ -527,7 +527,7 @@ const pageScript = `
 <AdminLayout
   title="Vertical Form Layouts"
   description="Modern and accessible Bootstrap vertical form layouts with comprehensive examples"
-  currentPath="forms/vertical"
+  currentPath="docs/forms/vertical"
   pageScript={pageScript}
   enableComponentPreview={true}
 >

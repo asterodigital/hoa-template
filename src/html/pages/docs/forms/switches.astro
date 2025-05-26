@@ -1,15 +1,15 @@
 ---
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
-import Toc from '../../components/toc/toc.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import { getPathPrefix } from '../../../utils/path.js'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import Toc from '../../../components/toc/toc.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
 
 // Page configuration with breadcrumb navigation
 const pageHeaderProps = {
   title: 'Switches',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Docs', href: getPathPrefix('/docs') },
     { label: 'Forms', href: '' },
     { label: 'Switches', class: 'active' }
   ]
@@ -228,7 +228,7 @@ const sizedSwitchControls = `
 <AdminLayout
   title="Switches"
   description="Modern toggle switches with various styles and options for enhanced user interaction"
-  currentPath="forms/switches"
+  currentPath="docs/forms/switches"
   enableComponentPreview={true}
 >
   <PageHeader {...pageHeaderProps} />

@@ -1,15 +1,15 @@
 ---
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
-import Toc from '../../components/toc/toc.astro'
-import { getPathPrefix } from '../../../utils/path.js'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import Toc from '../../../components/toc/toc.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
 
 // Page configuration with breadcrumb navigation
 const pageHeaderProps = {
   title: 'Form Validation',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Docs', href: getPathPrefix('/docs') },
     { label: 'Forms' },
     { label: 'Form Validation', class: 'active' }
   ]
@@ -343,7 +343,7 @@ const tooltipValidation = `<form class="row g-3 needs-validation" novalidate>
 <AdminLayout
   title="Form Validation"
   description="Examples and usage guidelines for form validation styles with Bootstrap."
-  currentPath="forms/validation"
+  currentPath="docs/forms/validation"
   enableComponentPreview={true}
 >
   <PageHeader {...pageHeaderProps} />

@@ -1,14 +1,14 @@
 ---
-import AdminLayout from '../../layouts/admin/admin-layout.astro'
-import ComponentPreview from '../../components/component-preview/component-preview.astro'
-import Toc from '../../components/toc/toc.astro'
-import PageHeader from '../../components/common/page-header.astro'
-import { getPathPrefix, getAssetPrefix } from '../../../utils/path.js'
+import AdminLayout from '../../../layouts/admin/admin-layout.astro'
+import ComponentPreview from '../../../components/component-preview/component-preview.astro'
+import Toc from '../../../components/toc/toc.astro'
+import PageHeader from '../../../components/common/page-header.astro'
+import { getPathPrefix, getAssetPrefix } from '../../../../utils/path.js'
 
 const pageHeaderProps = {
   title: 'Radio & Checkbox',
   breadcrumbs: [
-    { label: 'Dashboard', href: getPathPrefix('/dashboard') },
+    { label: 'Docs', href: getPathPrefix('/docs') },
     { label: 'Forms', href: '' },
     { label: 'Radio & Checkbox', class: 'active' }
   ]
@@ -419,7 +419,7 @@ const bootstrapImageOptions = `<div class="row g-4">
 <AdminLayout
   title="Radio & Checkbox"
   description="Radio buttons and checkboxes with various styles and options"
-  currentPath="forms/radio-checkbox"
+  currentPath="docs/forms/radio-checkbox"
   enableComponentPreview={true}
 >
   <PageHeader {...pageHeaderProps} />
