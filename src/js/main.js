@@ -6,6 +6,7 @@ import { initSidebarMini } from './layout/sidebar-mini-handler.js'
 import { initNavigation } from './layout/nav-handler.js'
 import { dropdownHover } from './layout/dropdown-hover.js'
 import { initPasswordWrapper } from './components/password.js'
+import { imageModal } from './layout/image-modal.js'
 
 // Expose bootstrap and simplebar globally for inline scripts
 window.bootstrap = bootstrap
@@ -48,6 +49,7 @@ const AsteroAdmin = (function () {
       initSidebarMini()
       initNavigation()
       dropdownHover()
+      imageModal()
       initPasswordWrapper()
       initBootstrap()
       initSimpleBar()
