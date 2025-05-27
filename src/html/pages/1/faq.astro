@@ -414,93 +414,96 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
 
         <!-- Footer -->
         <footer class="bg-body">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 px-3 px-lg-5 pt-5 pb-4">
-            <div class="col mb-3">
-              <a
-                href="/"
-                class="d-inline-flex align-items-center text-decoration-none mb-3"
-                aria-label="Your Company Logo"
-              >
-                <img
-                  src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
-                  alt="Logo"
-                  style="height: 32px;"
-                  class="me-2"
-                />
-              </a>
-              <p class="text-body-secondary mb-3">
-                Stay connected with our community—subscribe to updates and never miss important news
-                or events!
-              </p>
-              <button class="btn btn-lg btn-primary">Get in touch</button>
-            </div>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 px-3 px-lg-5 pt-5 pb-4">
+              <div class="col mb-3">
+                <a
+                  href="/"
+                  class="d-inline-flex align-items-center text-decoration-none mb-3"
+                  aria-label="Your Company Logo"
+                >
+                  <img
+                    src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
+                    alt="Logo"
+                    style="height: 32px;"
+                    class="me-2"
+                  />
+                </a>
+                <p class="text-body-secondary mb-3">
+                  Stay connected with our community—subscribe to updates and never miss important
+                  news or events!
+                </p>
+                <button class="btn btn-lg btn-primary">Get in touch</button>
+              </div>
 
-            <div class="col mb-3"></div>
+              <div class="col mb-3"></div>
 
-            <div class="col mb-3">
-              <nav aria-label="Quick Links">
-                <h5 class="mb-3">Quick Links</h5>
+              <div class="col mb-3">
+                <nav aria-label="Quick Links">
+                  <h5 class="mb-3">Quick Links</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="/1/home" class="nav-link p-0 text-body-secondary">Home</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/1/about" class="nav-link p-0 text-body-secondary">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/1/news" class="nav-link p-0 text-body-secondary">News</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/1/contact" class="nav-link p-0 text-body-secondary">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="col mb-3">
+                <nav aria-label="Legal">
+                  <h5 class="mb-3">Legal</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Cookies Policy</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="col mb-3">
+                <h5 class="mb-3">Contact</h5>
                 <ul class="nav flex-column">
-                  <li class="nav-item mb-2">
-                    <a href="/1/home" class="nav-link p-0 text-body-secondary">Home</a>
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <i class="ri-phone-fill text-primary me-2"></i>
+                    <a
+                      href="tel:+12345678901"
+                      class="text-body-secondary text-decoration-none text-break"
+                      >+1 (234) 567-8901</a
+                    >
                   </li>
-                  <li class="nav-item mb-2">
-                    <a href="/1/about" class="nav-link p-0 text-body-secondary">About</a>
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <i class="ri-mail-fill text-primary me-2"></i>
+                    <a
+                      href="mailto:hello@email.com"
+                      class="text-body-secondary text-decoration-none text-break">hello@email.com</a
+                    >
                   </li>
-                  <li class="nav-item mb-2">
-                    <a href="/1/news" class="nav-link p-0 text-body-secondary">News</a>
-                  </li>
-                  <li class="nav-item mb-2">
-                    <a href="/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
-                  </li>
-                  <li class="nav-item mb-2">
-                    <a href="/1/contact" class="nav-link p-0 text-body-secondary">Contact</a>
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <address class="text-body-secondary">
+                      <i class="ri-map-pin-fill text-primary me-2"></i>
+                      123 Longhorn Heights, Austin, TX
+                    </address>
                   </li>
                 </ul>
-              </nav>
-            </div>
-
-            <div class="col mb-3">
-              <nav aria-label="Legal">
-                <h5 class="mb-3">Legal</h5>
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2">
-                    <a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a>
-                  </li>
-                  <li class="nav-item mb-2">
-                    <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
-                  </li>
-                  <li class="nav-item mb-2">
-                    <a href="#" class="nav-link p-0 text-body-secondary">Cookies Policy</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
-            <div class="col mb-3">
-              <h5 class="mb-3">Contact</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2 text-body-secondary">
-                  <i class="ri-phone-fill text-primary me-2"></i>
-                  <a
-                    href="tel:+12345678901"
-                    class="text-body-secondary text-decoration-none text-break">+1 (234) 567-8901</a
-                  >
-                </li>
-                <li class="nav-item mb-2 text-body-secondary">
-                  <i class="ri-mail-fill text-primary me-2"></i>
-                  <a
-                    href="mailto:hello@email.com"
-                    class="text-body-secondary text-decoration-none text-break">hello@email.com</a
-                  >
-                </li>
-                <li class="nav-item mb-2 text-body-secondary">
-                  <address class="text-body-secondary">
-                    <i class="ri-map-pin-fill text-primary me-2"></i>
-                    123 Longhorn Heights, Austin, TX
-                  </address>
-                </li>
-              </ul>
+              </div>
             </div>
           </div>
           <div class="text-center text-bg-dark py-4">
