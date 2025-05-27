@@ -1,6 +1,6 @@
 ---
-import Head from '../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
+import Head from '../../../../html/layouts/front/partials/_head.astro'
+import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
 ---
 
 <!doctype html>
@@ -17,7 +17,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
         <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
           <div class="container">
             <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/1/home">
+            <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
               <img
                 src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
                 alt="Logo"
@@ -41,7 +41,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
             <!-- Offcanvas Menu -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
               <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/1/home">
+                <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
                   <img
                     src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
                     alt="Logo"
@@ -61,7 +61,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                 >
                   <!-- Home -->
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/1/home">Home</a>
+                    <a class="nav-link" href="/theme/1/home">Home</a>
                   </li>
 
                   <!-- About Dropdown -->
@@ -77,10 +77,16 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                       About
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                      <li><a class="dropdown-item" href="/1/about">About Us</a></li>
-                      <li><a class="dropdown-item" href="/1/amenities">Amenities</a></li>
-                      <li><a class="dropdown-item" href="/1/history">History</a></li>
-                      <li><a class="dropdown-item" href="/1/faq">FAQs</a></li>
+                      <li><a class="dropdown-item" href="/theme/1/about">About Us</a></li>
+                      <li>
+                        <a class="dropdown-item" href="/theme/1/amenities">Amenities</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/theme/1/history">History</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/theme/1/faq">FAQs</a>
+                      </li>
                     </ul>
                   </li>
 
@@ -97,25 +103,31 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                       Community
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="communityDropdown">
-                      <li><a class="dropdown-item" href="/1/board-members">Board Members</a></li>
-                      <li><a class="dropdown-item" href="/1/events">Events</a></li>
-                      <li><a class="dropdown-item" href="/1/news">News</a></li>
+                      <li>
+                        <a class="dropdown-item" href="/theme/1/board-members">Board Members</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item active" aria-current="page" href="/theme/1/events"
+                          >Events</a
+                        >
+                      </li>
+                      <li><a class="dropdown-item" href="/theme/1/news">News</a></li>
                     </ul>
                   </li>
 
                   <!-- Facilities -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/facilities">Facilities</a>
+                    <a class="nav-link" href="/theme/1/facilities">Facilities</a>
                   </li>
 
                   <!-- Gallery -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/gallery">Gallery</a>
+                    <a class="nav-link" href="/theme/1/gallery">Gallery</a>
                   </li>
 
                   <!-- Contact -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/contact">Contact</a>
+                    <a class="nav-link" href="/theme/1/contact">Contact</a>
                   </li>
                 </ul>
 
@@ -147,7 +159,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
         <!-- Hero Section -->
         <section
           class="position-relative text-light text-center"
-          style="background-image: url('/dist/assets/img/theme-images/hero-1.jpg'); background-size: cover; background-position: center; height: 600px;"
+          style="background-image: url('/dist/assets/img/theme-images/hero-1.jpg'); background-size: cover; background-position: center; height: 400px;"
         >
           <!-- Overlay -->
           <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
@@ -155,204 +167,76 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
           <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
             <div class="row">
               <div class="col-lg-6 offset-lg-3">
-                <h1 class="display-4 fw-semibold mb-2">Welcome to Longhorn Heights</h1>
-                <p class="fs-4 mb-4">
-                  Bringing neighbors together through shared spaces, events, and community spirit.
+                <h1 class="display-4 fw-semibold mb-2">Events</h1>
+                <p class="fs-4 mb-0">
+                  Stay connected with neighborhood events, from seasonal festivals to board meetings
+                  and community clean-up days. There’s always something happening!
                 </p>
-                <div class="d-flex justify-content-center flex-wrap gap-2 mb-2">
-                  <button class="btn btn-lg btn-primary">
-                    Amenities<i class="ri-arrow-right-line ms-2"></i>
-                  </button>
-                  <button class="btn btn-lg btn-outline-light">
-                    Meet the Board<i class="ri-arrow-right-line ms-2"></i>
-                  </button>
-                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- About Section -->
+        <!-- Upcoming Events Section -->
         <section class="bg-body py-5">
           <div class="container">
-            <div class="row">
-              <div class="col-lg-8 offset-lg-2">
-                <h2 class="fs-1 text-md-center mb-3">Welcome to Longhorn Heights</h2>
-                <p class="lead">
-                  Longhorn Heights is a vibrant community nestled in the heart of Austin, Texas. Our
-                  mission is to foster a sense of belonging and connection among residents through
-                  shared spaces, events, and community spirit.
-                </p>
-                <p class="lead mb-0">
-                  With tree-lined streets, well-maintained homes, and access to top-notch amenities
-                  like our private pool, walking trails, and community clubhouse, Longhorn Heights
-                  offers the perfect blend of comfort, convenience, and charm.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Cards Section -->
-        <section class="bg-body pb-5">
-          <div class="container">
+            <h2 class="fs-1 text-center mb-4">Upcoming Events</h2>
             <div class="row g-4">
-              <!-- Card 1 -->
-              <div class="col-md-4">
-                <div
-                  class="card card-lift text-light p-0"
-                  style="height: 300px; background: url('/dist/assets/img/theme-images/img-2.jpg') center center / cover no-repeat;"
-                >
-                  <div
-                    class="card-body d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3 rounded-4"
-                  >
-                    <h5 class="fs-5 card-title">Resort-Style Amenities</h5>
+              <!-- Event 1 -->
+              <div class="col-lg-4">
+                <div class="card card-lift h-100 border">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                      <i class="ri-leaf-line display-5 text-primary me-3"></i>
+                      <div>
+                        <h5 class="card-title fs-5 mb-0">Spring Clean-Up Day</h5>
+                        <p class="text-muted mb-0">Saturday, June 1 · 9:00 AM</p>
+                      </div>
+                    </div>
                     <p class="card-text">
-                      Enjoy access to our clubhouse, private pool, and beautifully maintained green
-                      spaces.
+                      Join neighbors to help beautify our green spaces. Supplies will be provided.
+                      Meet at the clubhouse.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <!-- Card 2 -->
-              <div class="col-md-4">
-                <div
-                  class="card card-lift text-light p-0"
-                  style="height: 300px; background: url('/dist/assets/img/theme-images/img-3.jpg') center center / cover no-repeat;"
-                >
-                  <div
-                    class="card-body d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3 rounded-4"
-                  >
-                    <h5 class="fs-5 card-title">Community Events</h5>
+              <!-- Event 2 -->
+              <div class="col-lg-4">
+                <div class="card card-lift h-100 border">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                      <i class="ri-discuss-line display-5 text-primary me-3"></i>
+                      <div>
+                        <h5 class="card-title fs-5 mb-0">Board Meeting</h5>
+                        <p class="text-muted mb-0">Tuesday, June 18 · 6:00 PM</p>
+                      </div>
+                    </div>
                     <p class="card-text">
-                      From holiday gatherings to outdoor movie nights, there’s always something
-                      happening.
+                      Open to all residents. Come share your thoughts or simply listen in on the
+                      latest updates and plans.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <!-- Card 3 -->
-              <div class="col-md-4">
-                <div
-                  class="card card-lift text-light p-0"
-                  style="height: 300px; background: url('/dist/assets/img/theme-images/img-4.jpg') center center / cover no-repeat;"
-                >
-                  <div
-                    class="card-body d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3 rounded-4"
-                  >
-                    <h5 class="fs-5 card-title">Playgrounds & Family Areas</h5>
+              <!-- Event 3 -->
+              <div class="col-lg-4">
+                <div class="card card-lift h-100 border">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                      <i class="ri-sun-line display-5 text-primary me-3"></i>
+                      <div>
+                        <h5 class="card-title fs-5 mb-0">Summer Social</h5>
+                        <p class="text-muted mb-0">Saturday, July 20 · 4:00 PM</p>
+                      </div>
+                    </div>
                     <p class="card-text">
-                      Safe and well-equipped play zones for children and shaded seating for
-                      families.
+                      Food, music, and games for all ages at the community park. Bring your lawn
+                      chairs and enjoy the fun!
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="text-bg-primary py-5">
-          <div class="container">
-            <div class="row text-center g-4">
-              <!-- Feature 1 -->
-              <div class="col-6 col-md-2">
-                <i class="ri-home-4-fill display-5"></i>
-                <h6 class="mt-2 mb-0">Beautiful Homes</h6>
-              </div>
-
-              <!-- Feature 2 -->
-              <div class="col-6 col-md-2">
-                <i class="ri-group-3-fill display-5"></i>
-                <h6 class="mt-2 mb-0">Strong Community</h6>
-              </div>
-
-              <!-- Feature 3 -->
-              <div class="col-6 col-md-2">
-                <i class="ri-shield-check-fill display-5"></i>
-                <h6 class="mt-2 mb-0">Safe & Secure</h6>
-              </div>
-
-              <!-- Feature 4 -->
-              <div class="col-6 col-md-2">
-                <i class="ri-leaf-fill display-5"></i>
-                <h6 class="mt-2 mb-0">Green Spaces</h6>
-              </div>
-
-              <!-- Feature 5 -->
-              <div class="col-6 col-md-2">
-                <i class="ri-building-3-fill display-5"></i>
-                <h6 class="mt-2 mb-0">Modern Clubhouse</h6>
-              </div>
-
-              <!-- Feature 6 -->
-              <div class="col-6 col-md-2">
-                <i class="ri-basketball-fill display-5"></i>
-                <h6 class="mt-2 mb-0">Sports Courts</h6>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Address Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <div class="row g-4">
-              <!-- Google Map -->
-              <div class="col-md-6">
-                <div class="ratio ratio-4x3">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6891.918314633661!2d-97.74639088460376!3d30.26674489620698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX%2C%20USA!5e0!3m2!1sen!2sin!4v1748249504404!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  >
-                  </iframe>
-                </div>
-              </div>
-
-              <!-- Contact Info -->
-              <div class="col-md-6 ps-lg-4">
-                <h5 class="fs-1 mb-4">Location</h5>
-
-                <p class="mb-3 d-flex align-items-start">
-                  <i class="ri-map-pin-line me-3 fs-4 text-primary"></i>
-                  <span>
-                    <strong>Address:</strong><br />
-                    123 Longhorn Heights<br />
-                    Austin, TX
-                  </span>
-                </p>
-
-                <p class="mb-3 d-flex align-items-start">
-                  <i class="ri-phone-line me-3 fs-4 text-primary"></i>
-                  <span>
-                    <strong>Phone:</strong><br />
-                    +1 (234) 567-8901
-                  </span>
-                </p>
-
-                <p class="mb-3 d-flex align-items-start">
-                  <i class="ri-mail-line me-3 fs-4 text-primary"></i>
-                  <span>
-                    <strong>Email:</strong><br />
-                    hello@email.com
-                  </span>
-                </p>
-
-                <p class="mb-0 d-flex align-items-start">
-                  <i class="ri-time-line me-3 fs-4 text-primary"></i>
-                  <span>
-                    <strong>Office Hours:</strong><br />
-                    Mon–Fri: 9:00 AM – 5:00 PM
-                  </span>
-                </p>
               </div>
             </div>
           </div>
@@ -361,7 +245,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
         <!-- Gallery Section -->
         <section class="bg-primary-pale py-5">
           <div class="container">
-            <h2 class="fs-1 text-center mb-4">Community Gallery</h2>
+            <h2 class="fs-1 text-center mb-4">Events Gallery</h2>
             <div class="row g-3 g-md-4 mb-4">
               <!-- Gallery Image 1 -->
               <div class="col-6 col-lg-3">
@@ -373,7 +257,6 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                   />
                 </figure>
               </div>
-
               <!-- Gallery Image 2 -->
               <div class="col-6 col-lg-3">
                 <figure class="img-scale rounded-4 mb-0">
@@ -384,7 +267,6 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                   />
                 </figure>
               </div>
-
               <!-- Gallery Image 3 -->
               <div class="col-6 col-lg-3">
                 <figure class="img-scale rounded-4 mb-0">
@@ -395,7 +277,6 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                   />
                 </figure>
               </div>
-
               <!-- Gallery Image 4 -->
               <div class="col-6 col-lg-3">
                 <figure class="img-scale rounded-4 mb-0">
@@ -408,73 +289,9 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
               </div>
             </div>
             <div class="text-center text-md-end">
-              <a href="/1/gallery" class="btn btn-lg btn-outline-primary"
+              <a href="/theme/1/gallery" class="btn btn-lg btn-outline-primary"
                 >View Full Gallery<i class="ri-arrow-right-line ms-2"></i></a
               >
-            </div>
-          </div>
-        </section>
-
-        <!-- Learn More Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <div class="row g-4">
-              <div class="col-lg-4">
-                <h5 class="fs-1 mb-2">Learn More</h5>
-                <p class="mb-0">
-                  Discover more about our community and how you can get involved. Lorem ipsum dolor
-                  sit amet consectetur adipisicing elit.
-                </p>
-              </div>
-              <div class="col-sm-6 col-lg-4">
-                <div class="card border h-100 p-0">
-                  <figure class="mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-5.jpg"
-                      class="card-img-top"
-                      style="object-fit: cover; height: 200px;"
-                      alt="Amenities"
-                    />
-                  </figure>
-                  <div class="card-body p-3">
-                    <h5 class="card-title fs-5">
-                      <a href="/1/amenities" class="text-decoration-none text-body">Amenities</a>
-                    </h5>
-
-                    <p class="card-text mb-2">
-                      Discover the amenities available to our residents, including a pool, clubhouse
-                      and more.
-                    </p>
-                    <a href="/1/amenities" class="link-primary text-decoration-none"
-                      >Explore Amenities<i class="ri-arrow-right-line ms-1"></i></a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-4">
-                <div class="card border h-100 p-0">
-                  <figure class="mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/hero-1.jpg"
-                      class="card-img-top"
-                      style="object-fit: cover; height: 200px;"
-                      alt="History"
-                    />
-                  </figure>
-                  <div class="card-body p-3">
-                    <h5 class="card-title fs-5">
-                      <a href="/1/history" class="text-decoration-none text-body">Our History</a>
-                    </h5>
-                    <p class="card-text mb-2">
-                      Learn about the roots of Longhorn Heights and how our community has grown over
-                      the years.
-                    </p>
-                    <a href="/1/history" class="link-primary text-decoration-none"
-                      >Read Our Story<i class="ri-arrow-right-line ms-1"></i></a
-                    >
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -563,19 +380,20 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                   <h5 class="mb-3">Quick Links</h5>
                   <ul class="nav flex-column">
                     <li class="nav-item mb-2">
-                      <a href="/1/home" class="nav-link p-0 text-body-secondary">Home</a>
+                      <a href="/theme/1/home" class="nav-link p-0 text-body-secondary">Home</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/about" class="nav-link p-0 text-body-secondary">About</a>
+                      <a href="/theme/1/about" class="nav-link p-0 text-body-secondary">About</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/news" class="nav-link p-0 text-body-secondary">News</a>
+                      <a href="/theme/1/news" class="nav-link p-0 text-body-secondary">News</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
+                      <a href="/theme/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/contact" class="nav-link p-0 text-body-secondary">Contact</a>
+                      <a href="/theme/1/contact" class="nav-link p-0 text-body-secondary">Contact</a
+                      >
                     </li>
                   </ul>
                 </nav>

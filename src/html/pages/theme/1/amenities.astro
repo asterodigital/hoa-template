@@ -1,6 +1,6 @@
 ---
-import Head from '../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
+import Head from '../../../../html/layouts/front/partials/_head.astro'
+import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
 ---
 
 <!doctype html>
@@ -17,7 +17,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
         <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
           <div class="container">
             <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/1/home">
+            <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
               <img
                 src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
                 alt="Logo"
@@ -41,7 +41,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
             <!-- Offcanvas Menu -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
               <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/1/home">
+                <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
                   <img
                     src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
                     alt="Logo"
@@ -61,7 +61,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                 >
                   <!-- Home -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/home">Home</a>
+                    <a class="nav-link" href="/theme/1/home">Home</a>
                   </li>
 
                   <!-- About Dropdown -->
@@ -77,16 +77,18 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                       About
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                      <li><a class="dropdown-item" href="/1/about">About Us</a></li>
+                      <li><a class="dropdown-item" href="/theme/1/about">About Us</a></li>
                       <li>
-                        <a class="dropdown-item" href="/1/amenities">Amenities</a>
+                        <a
+                          class="dropdown-item active"
+                          aria-current="page"
+                          href="/theme/1/amenities">Amenities</a
+                        >
                       </li>
                       <li>
-                        <a class="dropdown-item" href="/1/history">History</a>
+                        <a class="dropdown-item" href="/theme/1/history">History</a>
                       </li>
-                      <li>
-                        <a class="dropdown-item" href="/1/faq">FAQs</a>
-                      </li>
+                      <li><a class="dropdown-item" href="/theme/1/faq">FAQs</a></li>
                     </ul>
                   </li>
 
@@ -104,30 +106,26 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="communityDropdown">
                       <li>
-                        <a class="dropdown-item" href="/1/board-members">Board Members</a>
+                        <a class="dropdown-item" href="/theme/1/board-members">Board Members</a>
                       </li>
-                      <li>
-                        <a class="dropdown-item active" aria-current="page" href="/1/events"
-                          >Events</a
-                        >
-                      </li>
-                      <li><a class="dropdown-item" href="/1/news">News</a></li>
+                      <li><a class="dropdown-item" href="/theme/1/events">Events</a></li>
+                      <li><a class="dropdown-item" href="/theme/1/news">News</a></li>
                     </ul>
                   </li>
 
                   <!-- Facilities -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/facilities">Facilities</a>
+                    <a class="nav-link" href="/theme/1/facilities">Facilities</a>
                   </li>
 
                   <!-- Gallery -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/gallery">Gallery</a>
+                    <a class="nav-link" href="/theme/1/gallery">Gallery</a>
                   </li>
 
                   <!-- Contact -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/contact">Contact</a>
+                    <a class="nav-link" href="/theme/1/contact">Contact</a>
                   </li>
                 </ul>
 
@@ -167,131 +165,146 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
           <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
             <div class="row">
               <div class="col-lg-6 offset-lg-3">
-                <h1 class="display-4 fw-semibold mb-2">Events</h1>
+                <h1 class="display-4 fw-semibold mb-2">Amenities</h1>
                 <p class="fs-4 mb-0">
-                  Stay connected with neighborhood events, from seasonal festivals to board meetings
-                  and community clean-up days. There’s always something happening!
+                  Explore the amenities that make life at Longhorn Heights comfortable, active, and
+                  connected to nature.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Upcoming Events Section -->
+        <!-- Pool Section -->
         <section class="bg-body py-5">
           <div class="container">
-            <h2 class="fs-1 text-center mb-4">Upcoming Events</h2>
-            <div class="row g-4">
-              <!-- Event 1 -->
-              <div class="col-lg-4">
-                <div class="card card-lift h-100 border">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-3">
-                      <i class="ri-leaf-line display-5 text-primary me-3"></i>
-                      <div>
-                        <h5 class="card-title fs-5 mb-0">Spring Clean-Up Day</h5>
-                        <p class="text-muted mb-0">Saturday, June 1 · 9:00 AM</p>
-                      </div>
-                    </div>
-                    <p class="card-text">
-                      Join neighbors to help beautify our green spaces. Supplies will be provided.
-                      Meet at the clubhouse.
-                    </p>
+            <div class="row">
+              <div class="col-md-8">
+                <h2 class="fs-1 mb-2">Resort-Style Pool</h2>
+                <p class="mb-3">
+                  Enjoy a relaxing day at our resort-style pool, featuring shaded seating, a shallow
+                  kids’ area, and poolside Wi-Fi access.
+                </p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Lounge Areas
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill text-primary me-2"></i>Kids Zone</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Poolside Wi-Fi
+                      </li>
+                      <li>
+                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Outdoor Showers
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-
-              <!-- Event 2 -->
-              <div class="col-lg-4">
-                <div class="card card-lift h-100 border">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-3">
-                      <i class="ri-discuss-line display-5 text-primary me-3"></i>
-                      <div>
-                        <h5 class="card-title fs-5 mb-0">Board Meeting</h5>
-                        <p class="text-muted mb-0">Tuesday, June 18 · 6:00 PM</p>
-                      </div>
-                    </div>
-                    <p class="card-text">
-                      Open to all residents. Come share your thoughts or simply listen in on the
-                      latest updates and plans.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Event 3 -->
-              <div class="col-lg-4">
-                <div class="card card-lift h-100 border">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-3">
-                      <i class="ri-sun-line display-5 text-primary me-3"></i>
-                      <div>
-                        <h5 class="card-title fs-5 mb-0">Summer Social</h5>
-                        <p class="text-muted mb-0">Saturday, July 20 · 4:00 PM</p>
-                      </div>
-                    </div>
-                    <p class="card-text">
-                      Food, music, and games for all ages at the community park. Bring your lawn
-                      chairs and enjoy the fun!
-                    </p>
-                  </div>
-                </div>
+              <div class="col-md-4 mt-4 mt-md-0">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-2.jpg"
+                    class="img-fluid"
+                    alt="Amenities Image"
+                  />
+                </figure>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Gallery Section -->
+        <!-- Sports Section -->
         <section class="bg-primary-pale py-5">
           <div class="container">
-            <h2 class="fs-1 text-center mb-4">Events Gallery</h2>
-            <div class="row g-3 g-md-4 mb-4">
-              <!-- Gallery Image 1 -->
-              <div class="col-6 col-lg-3">
-                <figure class="img-scale rounded-4 mb-0">
-                  <img
-                    src="/dist/assets/img/theme-images/img-2.jpg"
-                    class="img-fluid"
-                    alt="Gallery Image"
-                  />
-                </figure>
+            <div class="row">
+              <div class="col-md-8 order-md-2 ps-lg-5">
+                <h2 class="fs-1 mb-2">Sports Facilities</h2>
+                <p class="mb-3">
+                  Stay active and energized with access to our multi-use sports court, perfect for
+                  tennuis, basketball, and community games.
+                </p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Tennis Court
+                      </li>
+                      <li>
+                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Basketball Court
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Shaded Seating
+                      </li>
+                      <li>
+                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Evening Lighting
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <!-- Gallery Image 2 -->
-              <div class="col-6 col-lg-3">
-                <figure class="img-scale rounded-4 mb-0">
-                  <img
-                    src="/dist/assets/img/theme-images/img-1.jpg"
-                    class="img-fluid"
-                    alt="Gallery Image"
-                  />
-                </figure>
-              </div>
-              <!-- Gallery Image 3 -->
-              <div class="col-6 col-lg-3">
-                <figure class="img-scale rounded-4 mb-0">
-                  <img
-                    src="/dist/assets/img/theme-images/img-3.jpg"
-                    class="img-fluid"
-                    alt="Gallery Image"
-                  />
-                </figure>
-              </div>
-              <!-- Gallery Image 4 -->
-              <div class="col-6 col-lg-3">
+              <div class="col-md-4 order-md-1 mt-4 mt-md-0">
                 <figure class="img-scale rounded-4 mb-0">
                   <img
                     src="/dist/assets/img/theme-images/img-4.jpg"
                     class="img-fluid"
-                    alt="Gallery Image"
+                    alt="Amenities Image"
                   />
                 </figure>
               </div>
             </div>
-            <div class="text-center text-md-end">
-              <a href="/1/gallery" class="btn btn-lg btn-outline-primary"
-                >View Full Gallery<i class="ri-arrow-right-line ms-2"></i></a
-              >
+          </div>
+        </section>
+
+        <!-- Clubhouse Section -->
+        <section class="bg-body py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                <h2 class="fs-1 mb-2">Community Clubhouse</h2>
+                <p class="mb-3">
+                  Host private events or relax with neighbors in our clubhouse, complete with a
+                  kitchen, seating, and media lounge.
+                </p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Lounge Seating
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill text-primary me-2"></i>Event Space</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Full Kitchen
+                      </li>
+                      <li>
+                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Big-Screen TV
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4 mt-md-0">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-3.jpg"
+                    class="img-fluid"
+                    alt="Amenities Image"
+                  />
+                </figure>
+              </div>
             </div>
           </div>
         </section>
@@ -380,19 +393,20 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                   <h5 class="mb-3">Quick Links</h5>
                   <ul class="nav flex-column">
                     <li class="nav-item mb-2">
-                      <a href="/1/home" class="nav-link p-0 text-body-secondary">Home</a>
+                      <a href="/theme/1/home" class="nav-link p-0 text-body-secondary">Home</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/about" class="nav-link p-0 text-body-secondary">About</a>
+                      <a href="/theme/1/about" class="nav-link p-0 text-body-secondary">About</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/news" class="nav-link p-0 text-body-secondary">News</a>
+                      <a href="/theme/1/news" class="nav-link p-0 text-body-secondary">News</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
+                      <a href="/theme/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/contact" class="nav-link p-0 text-body-secondary">Contact</a>
+                      <a href="/theme/1/contact" class="nav-link p-0 text-body-secondary">Contact</a
+                      >
                     </li>
                   </ul>
                 </nav>

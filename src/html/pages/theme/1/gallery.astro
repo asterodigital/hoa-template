@@ -1,6 +1,6 @@
 ---
-import Head from '../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
+import Head from '../../../../html/layouts/front/partials/_head.astro'
+import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
 ---
 
 <!doctype html>
@@ -17,7 +17,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
         <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
           <div class="container">
             <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/1/home">
+            <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
               <img
                 src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
                 alt="Logo"
@@ -41,7 +41,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
             <!-- Offcanvas Menu -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
               <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/1/home">
+                <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
                   <img
                     src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
                     alt="Logo"
@@ -61,7 +61,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                 >
                   <!-- Home -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/home">Home</a>
+                    <a class="nav-link" href="/theme/1/home">Home</a>
                   </li>
 
                   <!-- About Dropdown -->
@@ -77,15 +77,15 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                       About
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                      <li><a class="dropdown-item" href="/1/about">About Us</a></li>
+                      <li><a class="dropdown-item" href="/theme/1/about">About Us</a></li>
                       <li>
-                        <a class="dropdown-item" href="/1/amenities">Amenities</a>
+                        <a class="dropdown-item" href="/theme/1/amenities">Amenities</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="/1/history">History</a>
+                        <a class="dropdown-item" href="/theme/1/history">History</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="/1/faq">FAQs</a>
+                        <a class="dropdown-item" href="/theme/1/faq">FAQs</a>
                       </li>
                     </ul>
                   </li>
@@ -104,28 +104,32 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="communityDropdown">
                       <li>
-                        <a class="dropdown-item active" aria-current="page" href="/1/board-members"
-                          >Board Members</a
-                        >
+                        <a class="dropdown-item" href="/theme/1/board-members">Board Members</a>
                       </li>
-                      <li><a class="dropdown-item" href="/1/events">Events</a></li>
-                      <li><a class="dropdown-item" href="/1/news">News</a></li>
+                      <li>
+                        <a class="dropdown-item" href="/theme/1/events">Events</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/theme/1/news">News</a>
+                      </li>
                     </ul>
                   </li>
 
                   <!-- Facilities -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/facilities">Facilities</a>
+                    <a class="nav-link" href="/theme/1/facilities">Facilities</a>
                   </li>
 
                   <!-- Gallery -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/gallery">Gallery</a>
+                    <a class="nav-link active" aria-current="page" href="/theme/1/gallery"
+                      >Gallery</a
+                    >
                   </li>
 
                   <!-- Contact -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/contact">Contact</a>
+                    <a class="nav-link" href="/theme/1/contact">Contact</a>
                   </li>
                 </ul>
 
@@ -165,208 +169,176 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
           <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
             <div class="row">
               <div class="col-lg-6 offset-lg-3">
-                <h1 class="display-4 fw-semibold mb-2">Board Members</h1>
+                <h1 class="display-4 fw-semibold mb-2">Gallery</h1>
                 <p class="fs-4 mb-0">
-                  Get to know the dedicated residents who lead our community, make key decisions,
-                  and ensure Longhorn Heights thrives year-round.
+                  A glimpse into life at Longhorn Heights — explore moments, milestones, and
+                  memories captured throughout our vibrant community.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Meet the Board Section -->
+        <!-- Gallery Section -->
         <section class="bg-body py-5">
           <div class="container">
-            <h2 class="fs-1 text-center mb-4">Meet the Current Board</h2>
-            <div class="row g-4">
-              <!-- Member 1 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Jane Doe</h5>
-                    <p class="card-text mb-2">President</p>
-                    <a href="mailto:jane.doe@email.com" class="text-primary text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>jane.doe@email.com
-                    </a>
-                  </div>
-                </div>
+            <h2 class="fs-1 text-center mb-4">Explore Our Gallery</h2>
+            <div class="row g-3 g-md-4">
+              <!-- Gallery Image 1 -->
+              <div class="col-6 col-lg-3">
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-img-src="/dist/assets/img/theme-images/img-2.jpg"
+                >
+                  <figure class="img-scale rounded-4 mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-2.jpg"
+                      class="img-fluid"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </a>
               </div>
-
-              <!-- Member 2 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Mark Smith</h5>
-                    <p class="card-text mb-2">Vice President</p>
-                    <a href="mailto:mark.smith@email.com" class="text-primary text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>mark.smith@email.com
-                    </a>
-                  </div>
-                </div>
+              <!-- Gallery Image 2 -->
+              <div class="col-6 col-lg-3">
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-img-src="/dist/assets/img/theme-images/img-1.jpg"
+                >
+                  <figure class="img-scale rounded-4 mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-1.jpg"
+                      class="img-fluid"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </a>
               </div>
-
-              <!-- Member 3 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Lisa Johnson</h5>
-                    <p class="card-text mb-2">Treasurer</p>
-                    <a href="mailto:lisa.j@email.com" class="text-primary text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>lisa.j@email.com
-                    </a>
-                  </div>
-                </div>
+              <!-- Gallery Image 3 -->
+              <div class="col-6 col-lg-3">
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-img-src="/dist/assets/img/theme-images/img-3.jpg"
+                >
+                  <figure class="img-scale rounded-4 mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-3.jpg"
+                      class="img-fluid"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </a>
               </div>
-
-              <!-- Member 4 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Carlos Rivera</h5>
-                    <p class="card-text mb-2">Secretary</p>
-                    <a href="mailto:carlos.r@email.com" class="text-primary text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>carlos.r@email.com
-                    </a>
-                  </div>
-                </div>
+              <!-- Gallery Image 4 -->
+              <div class="col-6 col-lg-3">
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-img-src="/dist/assets/img/theme-images/img-4.jpg"
+                >
+                  <figure class="img-scale rounded-4 mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-4.jpg"
+                      class="img-fluid"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </a>
               </div>
-
-              <!-- Member 5 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Emily Chen</h5>
-                    <p class="card-text mb-2">Events Coordinator</p>
-                    <a href="mailto:emily.chen@email.com" class="text-primary text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>emily.chen@email.com
-                    </a>
-                  </div>
-                </div>
+              <!-- Gallery Image 5 -->
+              <div class="col-6 col-lg-3">
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-img-src="/dist/assets/img/theme-images/img-5.jpg"
+                >
+                  <figure class="img-scale rounded-4 mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-5.jpg"
+                      class="img-fluid"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </a>
               </div>
-
-              <!-- Member 6 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">David Patel</h5>
-                    <p class="card-text mb-2">Maintenance Chair</p>
-                    <a
-                      href="mailto:david.patel@email.com"
-                      class="text-primary text-decoration-none"
-                    >
-                      <i class="ri-mail-fill me-2"></i>david.patel@email.com
-                    </a>
-                  </div>
-                </div>
+              <!-- Gallery Image 6 -->
+              <div class="col-6 col-lg-3">
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-img-src="/dist/assets/img/theme-images/img-8.jpg"
+                >
+                  <figure class="img-scale rounded-4 mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-8.jpg"
+                      class="img-fluid"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </a>
               </div>
-
-              <!-- Member 7 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Angela Brooks</h5>
-                    <p class="card-text mb-2">Landscaping Lead</p>
-                    <a href="mailto:angela.b@email.com" class="text-primary text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>angela.b@email.com
-                    </a>
-                  </div>
-                </div>
+              <!-- Gallery Image 7 -->
+              <div class="col-6 col-lg-3">
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-img-src="/dist/assets/img/theme-images/img-10.jpg"
+                >
+                  <figure class="img-scale rounded-4 mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-10.jpg"
+                      class="img-fluid"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </a>
               </div>
-
-              <!-- Member 8 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Thomas Nguyen</h5>
-                    <p class="card-text mb-2">Member-at-Large</p>
-                    <a href="mailto:thomas.n@email.com" class="text-primary text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>thomas.n@email.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Elections Section -->
-        <section class="bg-body pb-5">
-          <div class="container">
-            <h2 class="fs-1 text-center mb-4">Board Elections</h2>
-            <div class="row justify-content-center">
-              <div class="col-md-10">
-                <div class="p-4 border rounded-4">
-                  <p>
-                    Board members are elected by HOA members during our annual community meeting.
-                    Each household has one vote, and terms last for two years. Nominations open 30
-                    days before the election.
-                  </p>
-                  <ul class="list-group list-group-flush mt-3">
-                    <li class="list-group-item">
-                      <i class="ri-checkbox-circle-line text-primary me-2"></i>Nominations open in
-                      October
-                    </li>
-                    <li class="list-group-item">
-                      <i class="ri-checkbox-circle-line text-primary me-2"></i>Annual elections held
-                      in November
-                    </li>
-                    <li class="list-group-item">
-                      <i class="ri-checkbox-circle-line text-primary me-2"></i>Each household may
-                      vote once
-                    </li>
-                    <li class="list-group-item">
-                      <i class="ri-checkbox-circle-line text-primary me-2"></i>Results shared via
-                      email & posted online
-                    </li>
-                  </ul>
-                </div>
+              <!-- Gallery Image 8 -->
+              <div class="col-6 col-lg-3">
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-img-src="/dist/assets/img/theme-images/img-9.jpg"
+                >
+                  <figure class="img-scale rounded-4 mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-9.jpg"
+                      class="img-fluid"
+                      alt="Gallery Image"
+                    />
+                  </figure>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Meetings Section -->
-        <section class="bg-body pb-5">
-          <div class="container">
-            <h2 class="fs-1 text-center mb-4">Board Meetings</h2>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card bg-primary-pale border">
-                  <div class="card-body">
-                    <h5 class="card-title fs-5">
-                      <i class="ri-calendar-event-fill me-2"></i>Next Meeting
-                    </h5>
-                    <p class="card-text mb-2">Tuesday, June 18, 2025</p>
-                    <p class="card-text mb-2">6:00 PM at the Clubhouse</p>
-                    <p class="card-text">
-                      <i class="ri-map-pin-line me-1"></i>123 Longhorn Heights, Austin, TX
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 mt-4 mt-md-0">
-                <h5>What to Expect:</h5>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <i class="ri-discuss-fill text-primary me-2"></i>Community Updates
-                  </li>
-                  <li class="list-group-item">
-                    <i class="ri-clipboard-fill text-primary me-2"></i>Financial Reports
-                  </li>
-                  <li class="list-group-item">
-                    <i class="ri-user-voice-fill text-primary me-2"></i>Open Forum for Residents
-                  </li>
-                  <li class="list-group-item">
-                    <i class="ri-calendar-check-fill text-primary me-2"></i>Upcoming Events &
-                    Planning
-                  </li>
-                </ul>
+        <!-- Image Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+              <div class="modal-body p-0">
+                <img
+                  id="modalImage"
+                  src=""
+                  class="img-fluid rounded-4 w-100"
+                  alt="Full Size Image"
+                />
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         <!-- Newsletter Section -->
         <section class="text-bg-primary py-5">
@@ -452,19 +424,20 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                   <h5 class="mb-3">Quick Links</h5>
                   <ul class="nav flex-column">
                     <li class="nav-item mb-2">
-                      <a href="/1/home" class="nav-link p-0 text-body-secondary">Home</a>
+                      <a href="/theme/1/home" class="nav-link p-0 text-body-secondary">Home</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/about" class="nav-link p-0 text-body-secondary">About</a>
+                      <a href="/theme/1/about" class="nav-link p-0 text-body-secondary">About</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/news" class="nav-link p-0 text-body-secondary">News</a>
+                      <a href="/theme/1/news" class="nav-link p-0 text-body-secondary">News</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
+                      <a href="/theme/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/contact" class="nav-link p-0 text-body-secondary">Contact</a>
+                      <a href="/theme/1/contact" class="nav-link p-0 text-body-secondary">Contact</a
+                      >
                     </li>
                   </ul>
                 </nav>

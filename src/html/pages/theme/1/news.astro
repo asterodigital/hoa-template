@@ -1,6 +1,6 @@
 ---
-import Head from '../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
+import Head from '../../../../html/layouts/front/partials/_head.astro'
+import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
 ---
 
 <!doctype html>
@@ -17,7 +17,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
         <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
           <div class="container">
             <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/1/home">
+            <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
               <img
                 src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
                 alt="Logo"
@@ -41,7 +41,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
             <!-- Offcanvas Menu -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
               <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/1/home">
+                <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
                   <img
                     src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
                     alt="Logo"
@@ -61,7 +61,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                 >
                   <!-- Home -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/home">Home</a>
+                    <a class="nav-link" href="/theme/1/home">Home</a>
                   </li>
 
                   <!-- About Dropdown -->
@@ -77,15 +77,15 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                       About
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                      <li><a class="dropdown-item" href="/1/about">About Us</a></li>
+                      <li><a class="dropdown-item" href="/theme/1/about">About Us</a></li>
                       <li>
-                        <a class="dropdown-item" href="/1/amenities">Amenities</a>
+                        <a class="dropdown-item" href="/theme/1/amenities">Amenities</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="/1/history">History</a>
+                        <a class="dropdown-item" href="/theme/1/history">History</a>
                       </li>
                       <li>
-                        <a class="dropdown-item active" aria-current="page" href="/1/faq">FAQs</a>
+                        <a class="dropdown-item" href="/theme/1/faq">FAQs</a>
                       </li>
                     </ul>
                   </li>
@@ -103,25 +103,33 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                       Community
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="communityDropdown">
-                      <li><a class="dropdown-item" href="/1/board-members">Board Members</a></li>
-                      <li><a class="dropdown-item" href="/1/events">Events</a></li>
-                      <li><a class="dropdown-item" href="/1/news">News</a></li>
+                      <li>
+                        <a class="dropdown-item" href="/theme/1/board-members">Board Members</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/theme/1/events">Events</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item active" aria-current="page" href="/theme/1/news"
+                          >News</a
+                        >
+                      </li>
                     </ul>
                   </li>
 
                   <!-- Facilities -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/facilities">Facilities</a>
+                    <a class="nav-link" href="/theme/1/facilities">Facilities</a>
                   </li>
 
                   <!-- Gallery -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/gallery">Gallery</a>
+                    <a class="nav-link" href="/theme/1/gallery">Gallery</a>
                   </li>
 
                   <!-- Contact -->
                   <li class="nav-item">
-                    <a class="nav-link" href="/1/contact">Contact</a>
+                    <a class="nav-link" href="/theme/1/contact">Contact</a>
                   </li>
                 </ul>
 
@@ -161,197 +169,93 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
           <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
             <div class="row">
               <div class="col-lg-6 offset-lg-3">
-                <h1 class="display-4 fw-semibold mb-2">Your Questions, Answered</h1>
+                <h1 class="display-4 fw-semibold mb-2">News</h1>
                 <p class="fs-4 mb-0">
-                  Find answers to the most common questions about our homeowners association and
-                  community.
+                  Stay informed with the latest updates, announcements, and neighborhood happenings
+                  at Longhorn Heights.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- FAQs Section -->
+        <!-- News Section -->
         <section class="bg-body py-5">
           <div class="container">
-            <h2 class="fs-1 text-center mb-3">Frequently Asked Questions</h2>
-            <p class="mb-4 text-center">
-              Find answers to the most common questions about our homeowners association and
-              community. If you have any additional questions, please don't hesitate to reach out to
-              us.
-            </p>
-            <div class="row">
-              <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                <!-- Nav -->
-                <ul class="nav nav-tabs justify-content-center flex-wrap gap-2 mb-3">
-                  <li class="nav-item">
-                    <a class="nav-link text-body active" aria-current="page" href="#">General</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-body" href="#">Payments</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-body" href="#">Policies</a>
-                  </li>
-                </ul>
-
-                <div
-                  class="accordion accordion-flush"
-                  id="accordionFAQs"
-                  role="tablist"
-                  aria-multiselectable="true"
-                >
-                  <div class="accordion-item bg-transparent">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseOne"
-                      >
-                        When are homeowners association meetings held?
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseOne"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionFAQs"
-                    >
-                      <div class="accordion-body p-3 pt-0">
-                        HOA meetings are held quarterly at the clubhouse. Dates are posted on the
-                        community website and emailed to residents in advance.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item bg-transparent">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseTwo"
-                      >
-                        Who do I contact for maintenance issues in common areas?
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseTwo"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionFAQs"
-                    >
-                      <div class="accordion-body p-3 pt-0">
-                        Please report any maintenance concerns through the HOA contact form or by
-                        calling the property management company directly.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item bg-transparent">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseThree"
-                      >
-                        Are there rules about parking or street parking?
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseThree"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionFAQs"
-                    >
-                      <div class="accordion-body p-3 pt-0">
-                        Yes. Overnight street parking is limited in certain areas. Residents are
-                        encouraged to use driveways and garages when possible.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item bg-transparent">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseFour"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseFour"
-                      >
-                        How do I reserve the clubhouse for a private event?
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseFour"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionFAQs"
-                    >
-                      <div class="accordion-body p-3 pt-0">
-                        You can request a reservation through the resident portal or by contacting
-                        the HOA office. A deposit and cleaning fee may apply.
-                      </div>
-                    </div>
+            <h2 class="fs-1 text-center mb-4">Community News</h2>
+            <div class="row g-4">
+              <!-- News Item 1 -->
+              <div class="col-md-8 offset-md-2">
+                <div class="card h-100 border p-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-4.jpg"
+                    class="card-img-top img-fluid"
+                    style="height: 200px; object-fit: cover;"
+                    alt="News Image"
+                  />
+                  <div class="card-body p-3">
+                    <a href="#" class="text-decoration-none text-body">
+                      <h5 class="card-title fs-5">New Playground Installation Completed</h5>
+                    </a>
+                    <p class="text-muted mb-2">
+                      <i class="ri-calendar-line me-1"></i>May 20, 2025 ·
+                      <i class="ri-user-line ms-2 me-1"></i>By HOA Admin
+                    </p>
+                    <p class="card-text mb-2">
+                      Our upgraded playground area is now open! It features new equipment, benches,
+                      and shaded areas for families to enjoy.
+                    </p>
+                    <a href="#" class="link-primary text-decoration-none">Read More</a>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Contact Card -->
-        <section class="bg-body pb-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                <div class="card bg-primary-pale border">
-                  <div class="card-body">
-                    <h5 class="card-title fs-5">Didn't find your question?</h5>
-                    <p class="card-text mb-4">
-                      We're here to help! Reach out to us directly using the contact details below.
+              <!-- News Item 2 -->
+              <div class="col-md-8 offset-md-2">
+                <div class="card h-100 border p-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-2.jpg"
+                    class="card-img-top img-fluid"
+                    style="height: 200px; object-fit: cover;"
+                    alt="News Image"
+                  />
+                  <div class="card-body p-3">
+                    <a href="#" class="text-decoration-none text-body">
+                      <h5 class="card-title fs-5">Reminder: Pool Safety Guidelines</h5>
+                    </a>
+                    <p class="text-muted mb-2">
+                      <i class="ri-calendar-line me-1"></i>May 10, 2025 ·
+                      <i class="ri-user-line ms-2 me-1"></i>By Safety Committee
                     </p>
-                    <div class="row g-3">
-                      <div class="col-md-6">
-                        <div class="d-flex align-items-start">
-                          <i class="ri-map-pin-line me-3 fs-4 text-primary"></i>
-                          <span>
-                            <strong>Address:</strong><br />
-                            123 Longhorn Heights, Austin, TX
-                          </span>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="d-flex align-items-start">
-                          <i class="ri-phone-line me-3 fs-4 text-primary"></i>
-                          <span>
-                            <strong>Phone:</strong><br />
-                            +1 (234) 567-8901
-                          </span>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="d-flex align-items-start">
-                          <i class="ri-mail-line me-3 fs-4 text-primary"></i>
-                          <span>
-                            <strong>Email:</strong><br />
-                            hello@email.com
-                          </span>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="d-flex align-items-start">
-                          <i class="ri-time-line me-3 fs-4 text-primary"></i>
-                          <span>
-                            <strong>Office Hours:</strong><br />
-                            Mon–Fri: 9:00 AM – 5:00 PM
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                    <p class="card-text mb-2">
+                      As summer kicks off, please review the HOA’s pool safety rules to ensure a
+                      safe and fun season for all.
+                    </p>
+                    <a href="#" class="link-primary text-decoration-none">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <!-- News Item 3 -->
+              <div class="col-md-8 offset-md-2">
+                <div class="card h-100 border p-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-5.jpg"
+                    class="card-img-top img-fluid"
+                    style="height: 200px; object-fit: cover;"
+                    alt="News Image"
+                  />
+                  <div class="card-body p-3">
+                    <a href="#" class="text-decoration-none text-body">
+                      <h5 class="card-title fs-5">New Jogging Path Now Open Along Greenbelt</h5>
+                    </a>
+                    <p class="text-muted mb-2">
+                      <i class="ri-calendar-line me-1"></i>Apr 15, 2025 ·
+                      <i class="ri-user-line ms-2 me-1"></i>By Emily Chen
+                    </p>
+                    <p class="card-text mb-2">
+                      Residents can now enjoy a newly paved jogging and walking path that winds
+                      through the Longhorn Heights greenbelt.
+                    </p>
+                    <a href="#" class="link-primary text-decoration-none">Read More</a>
                   </div>
                 </div>
               </div>
@@ -443,19 +347,20 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                   <h5 class="mb-3">Quick Links</h5>
                   <ul class="nav flex-column">
                     <li class="nav-item mb-2">
-                      <a href="/1/home" class="nav-link p-0 text-body-secondary">Home</a>
+                      <a href="/theme/1/home" class="nav-link p-0 text-body-secondary">Home</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/about" class="nav-link p-0 text-body-secondary">About</a>
+                      <a href="/theme/1/about" class="nav-link p-0 text-body-secondary">About</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/news" class="nav-link p-0 text-body-secondary">News</a>
+                      <a href="/theme/1/news" class="nav-link p-0 text-body-secondary">News</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
+                      <a href="/theme/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
                     </li>
                     <li class="nav-item mb-2">
-                      <a href="/1/contact" class="nav-link p-0 text-body-secondary">Contact</a>
+                      <a href="/theme/1/contact" class="nav-link p-0 text-body-secondary">Contact</a
+                      >
                     </li>
                   </ul>
                 </nav>
