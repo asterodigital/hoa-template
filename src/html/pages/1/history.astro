@@ -172,7 +172,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
         <!-- The Beginning Section -->
         <section class="bg-body py-5">
           <div class="container">
-            <h2 class="text-md-center fs-1 mb-3">The Beginning</h2>
+            <h2 class="fs-1 text-md-center mb-3">The Beginning</h2>
             <p class="lead">
               Longhorn Heights was established in the early 1980s with a vision to create a
               close-knit, family-friendly neighborhood in the heart of Austin. What began as a
@@ -299,7 +299,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
         <!-- Gallery Section -->
         <section class="bg-leaf-pale py-5">
           <div class="container">
-            <h2 class="text-center fs-1 mb-4">Community Gallery</h2>
+            <h2 class="fs-1 text-center mb-4">Community Gallery</h2>
             <div class="row g-3 g-md-4 mb-4">
               <!-- Gallery Image 1 -->
               <div class="col-6 col-lg-3">
@@ -345,10 +345,63 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                 </figure>
               </div>
             </div>
-            <div class="text-center">
+            <div class="text-center text-md-end">
               <a href="/1/gallery" class="btn btn-lg btn-outline-leaf"
                 >View Full Gallery<i class="ri-arrow-right-line ms-2"></i></a
               >
+            </div>
+          </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="text-bg-leaf py-5">
+          <div class="container text-center">
+            <!-- Heading and Intro -->
+            <h2 class="fs-1 mb-2">Stay Connected</h2>
+            <p class="mb-4">
+              Sign up for updates about community news, upcoming events, and important HOA
+              announcements.
+            </p>
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2">
+                <!-- Form -->
+                <form class="row g-4 justify-content-center">
+                  <!-- Name Field -->
+                  <div class="col-12 col-md-6">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <!-- Phone Field -->
+                  <div class="col-12 col-md-6">
+                    <input
+                      type="tel"
+                      class="form-control form-control-lg"
+                      placeholder="Phone Number"
+                      pattern="[0-9\-+()\s]{7,15}"
+                      required
+                    />
+                  </div>
+                  <!-- Email Field -->
+                  <div class="col-12">
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      placeholder="Email Address"
+                      required
+                    />
+                  </div>
+                  <!-- Submit Button -->
+                  <div class="col-12 col-md-auto">
+                    <button type="submit" class="btn btn-lg btn-dark w-100">
+                      Subscribe<i class="ri-arrow-right-line ms-2"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </section>

@@ -61,7 +61,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                 >
                   <!-- Home -->
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/1/home">Home</a>
+                    <a class="nav-link" href="/1/home">Home</a>
                   </li>
 
                   <!-- About Dropdown -->
@@ -78,8 +78,14 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
                       <li><a class="dropdown-item" href="/1/about">About Us</a></li>
-                      <li><a class="dropdown-item" href="/1/amenities">Amenities</a></li>
-                      <li><a class="dropdown-item" href="/1/history">History</a></li>
+                      <li>
+                        <a class="dropdown-item active" aria-current="page" href="/1/amenities"
+                          >Amenities</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/1/history">History</a>
+                      </li>
                       <li><a class="dropdown-item" href="/1/faq">FAQs</a></li>
                     </ul>
                   </li>
@@ -147,7 +153,7 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
         <!-- Hero Section -->
         <section
           class="position-relative text-light text-center"
-          style="background-image: url('/dist/assets/img/theme-images/hero-1.jpg'); background-size: cover; background-position: center; height: 600px;"
+          style="background-image: url('/dist/assets/img/theme-images/hero-1.jpg'); background-size: cover; background-position: center; height: 400px;"
         >
           <!-- Overlay -->
           <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
@@ -155,192 +161,145 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
           <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
             <div class="row">
               <div class="col-lg-6 offset-lg-3">
-                <h1 class="display-4 fw-semibold mb-2">Welcome to Longhorn Heights</h1>
-                <p class="fs-4 mb-4">
-                  Bringing neighbors together through shared spaces, events, and community spirit.
+                <h1 class="display-4 fw-semibold mb-2">Amenities</h1>
+                <p class="fs-4 mb-0">
+                  Explore the amenities that make life at Longhorn Heights comfortable, active, and
+                  connected to nature.
                 </p>
-                <div class="d-flex justify-content-center flex-wrap gap-2 mb-2">
-                  <button class="btn btn-lg btn-leaf">
-                    Amenities<i class="ri-arrow-right-line ms-2"></i>
-                  </button>
-                  <button class="btn btn-lg btn-outline-light">
-                    Meet the Board<i class="ri-arrow-right-line ms-2"></i>
-                  </button>
-                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- About Section -->
+        <!-- Pool Section -->
         <section class="bg-body py-5">
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 offset-lg-2">
-                <h2 class="fs-1 text-md-center mb-3">Welcome to Longhorn Heights</h2>
-                <p class="lead">
-                  Longhorn Heights is a vibrant community nestled in the heart of Austin, Texas. Our
-                  mission is to foster a sense of belonging and connection among residents through
-                  shared spaces, events, and community spirit.
+              <div class="col-md-8">
+                <h2 class="fs-1 mb-2">Resort-Style Pool</h2>
+                <p class="mb-3">
+                  Enjoy a relaxing day at our resort-style pool, featuring shaded seating, a shallow
+                  kids’ area, and poolside Wi-Fi access.
                 </p>
-                <p class="lead mb-0">
-                  With tree-lined streets, well-maintained homes, and access to top-notch amenities
-                  like our private pool, walking trails, and community clubhouse, Longhorn Heights
-                  offers the perfect blend of comfort, convenience, and charm.
-                </p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-leaf me-2"></i>Lounge Areas
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill text-leaf me-2"></i>Kids Zone</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-leaf me-2"></i>Poolside Wi-Fi
+                      </li>
+                      <li>
+                        <i class="ri-checkbox-circle-fill text-leaf me-2"></i>Outdoor Showers
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4 mt-md-0">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-2.jpg"
+                    class="img-fluid"
+                    alt="Amenities Image"
+                  />
+                </figure>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Cards Section -->
+        <!-- Sports Section -->
         <section class="bg-body pb-5">
           <div class="container">
-            <div class="row g-4">
-              <!-- Card 1 -->
-              <div class="col-md-4">
-                <div
-                  class="card card-lift text-light p-0"
-                  style="height: 300px; background: url('/dist/assets/img/theme-images/img-2.jpg') center center / cover no-repeat;"
-                >
-                  <div
-                    class="card-body d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3 rounded-4"
-                  >
-                    <h5 class="fs-5 card-title">Resort-Style Amenities</h5>
-                    <p class="card-text">
-                      Enjoy access to our clubhouse, private pool, and beautifully maintained green
-                      spaces.
-                    </p>
+            <div class="row">
+              <div class="col-md-8 order-md-2 ps-lg-5">
+                <h2 class="fs-1 mb-2">Sports Facilities</h2>
+                <p class="mb-3">
+                  Stay active and energized with access to our multi-use sports court, perfect for
+                  tennuis, basketball, and community games.
+                </p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-leaf me-2"></i>Tennis Court
+                      </li>
+                      <li>
+                        <i class="ri-checkbox-circle-fill text-leaf me-2"></i>Basketball Court
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-leaf me-2"></i>Shaded Seating
+                      </li>
+                      <li>
+                        <i class="ri-checkbox-circle-fill text-leaf me-2"></i>Evening Lighting
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-
-              <!-- Card 2 -->
-              <div class="col-md-4">
-                <div
-                  class="card card-lift text-light p-0"
-                  style="height: 300px; background: url('/dist/assets/img/theme-images/img-3.jpg') center center / cover no-repeat;"
-                >
-                  <div
-                    class="card-body d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3 rounded-4"
-                  >
-                    <h5 class="fs-5 card-title">Community Events</h5>
-                    <p class="card-text">
-                      From holiday gatherings to outdoor movie nights, there’s always something
-                      happening.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 3 -->
-              <div class="col-md-4">
-                <div
-                  class="card card-lift text-light p-0"
-                  style="height: 300px; background: url('/dist/assets/img/theme-images/img-4.jpg') center center / cover no-repeat;"
-                >
-                  <div
-                    class="card-body d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3 rounded-4"
-                  >
-                    <h5 class="fs-5 card-title">Playgrounds & Family Areas</h5>
-                    <p class="card-text">
-                      Safe and well-equipped play zones for children and shaded seating for
-                      families.
-                    </p>
-                  </div>
-                </div>
+              <div class="col-md-4 order-md-1 mt-4 mt-md-0">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-4.jpg"
+                    class="img-fluid"
+                    alt="Amenities Image"
+                  />
+                </figure>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Features Section -->
-        <section class="text-bg-leaf py-5">
+        <!-- Clubhouse Section -->
+        <section class="bg-body pb-5">
           <div class="container">
-            <div class="row text-center g-4">
-              <!-- Feature 1 -->
-              <div class="col-6 col-md-3">
-                <i class="ri-home-4-line" style="font-size: 48px;"></i>
-                <h6 class="fs-5 mt-2 mb-0">Beautiful Homes</h6>
-              </div>
-
-              <!-- Feature 2 -->
-              <div class="col-6 col-md-3">
-                <i class="ri-community-line" style="font-size: 48px;"></i>
-                <h6 class="fs-5 mt-2 mb-0">Strong Community</h6>
-              </div>
-
-              <!-- Feature 3 -->
-              <div class="col-6 col-md-3">
-                <i class="ri-shield-check-line" style="font-size: 48px;"></i>
-                <h6 class="fs-5 mt-2 mb-0">Safe & Secure</h6>
-              </div>
-
-              <!-- Feature 4 -->
-              <div class="col-6 col-md-3">
-                <i class="ri-leaf-line" style="font-size: 48px;"></i>
-                <h6 class="fs-5 mt-2 mb-0">Green Spaces</h6>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Address Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <div class="row g-4">
-              <!-- Google Map -->
-              <div class="col-md-6">
-                <div class="ratio ratio-4x3">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6891.918314633661!2d-97.74639088460376!3d30.26674489620698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX%2C%20USA!5e0!3m2!1sen!2sin!4v1748249504404!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  >
-                  </iframe>
+            <div class="row">
+              <div class="col-md-8">
+                <h2 class="fs-1 mb-2">Community Clubhouse</h2>
+                <p class="mb-3">
+                  Host private events or relax with neighbors in our clubhouse, complete with a
+                  kitchen, seating, and media lounge.
+                </p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-leaf me-2"></i>Lounge Seating
+                      </li>
+                      <li><i class="ri-checkbox-circle-fill text-leaf me-2"></i>Event Space</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled mb-2">
+                      <li class="mb-2">
+                        <i class="ri-checkbox-circle-fill text-leaf me-2"></i>Full Kitchen
+                      </li>
+                      <li>
+                        <i class="ri-checkbox-circle-fill text-leaf me-2"></i>Big-Screen TV
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <!-- Contact Info -->
-              <div class="col-md-6 ps-lg-4">
-                <h5 class="fs-1 mb-4">Location</h5>
-
-                <p class="mb-3 d-flex align-items-start">
-                  <i class="ri-map-pin-line me-3 fs-4 text-leaf"></i>
-                  <span>
-                    <strong>Address:</strong><br />
-                    123 Longhorn Heights<br />
-                    Austin, TX
-                  </span>
-                </p>
-
-                <p class="mb-3 d-flex align-items-start">
-                  <i class="ri-phone-line me-3 fs-4 text-leaf"></i>
-                  <span>
-                    <strong>Phone:</strong><br />
-                    +1 (234) 567-8901
-                  </span>
-                </p>
-
-                <p class="mb-3 d-flex align-items-start">
-                  <i class="ri-mail-line me-3 fs-4 text-leaf"></i>
-                  <span>
-                    <strong>Email:</strong><br />
-                    hello@email.com
-                  </span>
-                </p>
-
-                <p class="mb-0 d-flex align-items-start">
-                  <i class="ri-time-line me-3 fs-4 text-leaf"></i>
-                  <span>
-                    <strong>Office Hours:</strong><br />
-                    Mon–Fri: 9:00 AM – 5:00 PM
-                  </span>
-                </p>
+              <div class="col-md-4 mt-4 mt-md-0">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-3.jpg"
+                    class="img-fluid"
+                    alt="Amenities Image"
+                  />
+                </figure>
               </div>
             </div>
           </div>
@@ -361,7 +320,6 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                   />
                 </figure>
               </div>
-
               <!-- Gallery Image 2 -->
               <div class="col-6 col-lg-3">
                 <figure class="img-scale rounded-4 mb-0">
@@ -372,7 +330,6 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                   />
                 </figure>
               </div>
-
               <!-- Gallery Image 3 -->
               <div class="col-6 col-lg-3">
                 <figure class="img-scale rounded-4 mb-0">
@@ -383,7 +340,6 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                   />
                 </figure>
               </div>
-
               <!-- Gallery Image 4 -->
               <div class="col-6 col-lg-3">
                 <figure class="img-scale rounded-4 mb-0">
@@ -399,70 +355,6 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
               <a href="/1/gallery" class="btn btn-lg btn-outline-leaf"
                 >View Full Gallery<i class="ri-arrow-right-line ms-2"></i></a
               >
-            </div>
-          </div>
-        </section>
-
-        <!-- Learn More Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <div class="row g-4">
-              <div class="col-lg-4">
-                <h5 class="fs-1 mb-2">Learn More</h5>
-                <p class="mb-0">
-                  Discover more about our community and how you can get involved. Lorem ipsum dolor
-                  sit amet consectetur adipisicing elit.
-                </p>
-              </div>
-              <div class="col-sm-6 col-lg-4">
-                <div class="card border h-100 p-0">
-                  <figure class="mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-5.jpg"
-                      class="card-img-top"
-                      style="object-fit: cover; height: 200px;"
-                      alt="Amenities"
-                    />
-                  </figure>
-                  <div class="card-body p-3">
-                    <h5 class="card-title fs-5">
-                      <a href="/1/amenities" class="text-decoration-none text-body">Amenities</a>
-                    </h5>
-
-                    <p class="card-text mb-2">
-                      Discover the amenities available to our residents, including a pool, clubhouse
-                      and more.
-                    </p>
-                    <a href="/1/amenities" class="link-leaf text-decoration-none"
-                      >Explore Amenities<i class="ri-arrow-right-line ms-1"></i></a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-4">
-                <div class="card border h-100 p-0">
-                  <figure class="mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/hero-1.jpg"
-                      class="card-img-top"
-                      style="object-fit: cover; height: 200px;"
-                      alt="History"
-                    />
-                  </figure>
-                  <div class="card-body p-3">
-                    <h5 class="card-title fs-5">
-                      <a href="/1/history" class="text-decoration-none text-body">Our History</a>
-                    </h5>
-                    <p class="card-text mb-2">
-                      Learn about the roots of Longhorn Heights and how our community has grown over
-                      the years.
-                    </p>
-                    <a href="/1/history" class="link-leaf text-decoration-none"
-                      >Read Our Story<i class="ri-arrow-right-line ms-1"></i></a
-                    >
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
