@@ -1,0 +1,521 @@
+---
+import Head from '../../../html/layouts/front/partials/_head.astro'
+import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head />
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Page Content -->
+      <div class="content-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
+          <div class="container">
+            <!-- Brand Logo or Text -->
+            <a class="navbar-brand d-flex align-items-center" href="/1/home">
+              <img
+                src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
+                alt="Logo"
+                class="me-2"
+                style="height: 32px;"
+              />
+            </a>
+
+            <!-- Offcanvas Toggler -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+              <div class="offcanvas-header">
+                <a class="navbar-brand d-flex align-items-center" href="/1/home">
+                  <img
+                    src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
+                    alt="Logo"
+                    class="me-2"
+                    style="height: 32px;"
+                  />
+                </a>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+                <ul
+                  class="navbar-nav flex-grow-1 pe-3 justify-content-start justify-content-lg-center"
+                >
+                  <!-- Home -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/1/home">Home</a>
+                  </li>
+
+                  <!-- About Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="aboutDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      About
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                      <li><a class="dropdown-item" href="/1/about">About Us</a></li>
+                      <li>
+                        <a class="dropdown-item" href="/1/amenities">Amenities</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/1/history">History</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/1/faq">FAQs</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- Community Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="communityDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Community
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="communityDropdown">
+                      <li>
+                        <a class="dropdown-item active" aria-current="page" href="/1/board-members"
+                          >Board Members</a
+                        >
+                      </li>
+                      <li><a class="dropdown-item" href="/1/events">Events</a></li>
+                      <li><a class="dropdown-item" href="/1/news">News</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Facilities -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/1/facilities">Facilities</a>
+                  </li>
+
+                  <!-- Gallery -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/1/gallery">Gallery</a>
+                  </li>
+
+                  <!-- Contact -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/1/contact">Contact</a>
+                  </li>
+                </ul>
+
+                <!-- Bottom Section -->
+                <div class="d-block d-lg-none mt-4">
+                  <a href="tel:+12345678901" class="btn btn-outline-leaf rounded w-100 mb-2">
+                    <i class="ri-phone-fill me-2"></i>Book Consultation
+                  </a>
+                  <a class="btn btn-leaf rounded w-100" href="#"
+                    ><i class="ri-sparkling-2-fill me-2"></i> Get Started Now</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="d-none d-lg-flex align-items-center gap-3">
+              <div class="text-start">
+                <small class="text-muted d-block">Book Consultation</small>
+                <a href="tel:+12345678901" class="text-decoration-none text-body fw-medium">
+                  +1 (234) 567-8901
+                </a>
+              </div>
+
+              <a class="btn btn-lg btn-leaf rounded" href="#">Get Started</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section
+          class="position-relative text-light text-center"
+          style="background-image: url('/dist/assets/img/theme-images/hero-1.jpg'); background-size: cover; background-position: center; height: 400px;"
+        >
+          <!-- Overlay -->
+          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+          <!-- Content -->
+          <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                <h1 class="display-4 fw-semibold mb-2">Board Members</h1>
+                <p class="fs-4 mb-0">
+                  Get to know the dedicated residents who lead our community, make key decisions,
+                  and ensure Longhorn Heights thrives year-round.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Meet the Board Section -->
+        <section class="bg-body py-5">
+          <div class="container">
+            <h2 class="fs-1 text-center mb-4">Meet the Current Board</h2>
+            <div class="row g-4">
+              <!-- Member 1 -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Jane Doe</h5>
+                    <p class="card-text mb-2">President</p>
+                    <a href="mailto:jane.doe@email.com" class="text-leaf text-decoration-none">
+                      <i class="ri-mail-fill me-2"></i>jane.doe@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Member 2 -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Mark Smith</h5>
+                    <p class="card-text mb-2">Vice President</p>
+                    <a href="mailto:mark.smith@email.com" class="text-leaf text-decoration-none">
+                      <i class="ri-mail-fill me-2"></i>mark.smith@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Member 3 -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Lisa Johnson</h5>
+                    <p class="card-text mb-2">Treasurer</p>
+                    <a href="mailto:lisa.j@email.com" class="text-leaf text-decoration-none">
+                      <i class="ri-mail-fill me-2"></i>lisa.j@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Member 4 -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Carlos Rivera</h5>
+                    <p class="card-text mb-2">Secretary</p>
+                    <a href="mailto:carlos.r@email.com" class="text-leaf text-decoration-none">
+                      <i class="ri-mail-fill me-2"></i>carlos.r@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Member 5 -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Emily Chen</h5>
+                    <p class="card-text mb-2">Events Coordinator</p>
+                    <a href="mailto:emily.chen@email.com" class="text-leaf text-decoration-none">
+                      <i class="ri-mail-fill me-2"></i>emily.chen@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Member 6 -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">David Patel</h5>
+                    <p class="card-text mb-2">Maintenance Chair</p>
+                    <a href="mailto:david.patel@email.com" class="text-leaf text-decoration-none">
+                      <i class="ri-mail-fill me-2"></i>david.patel@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Member 7 -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Angela Brooks</h5>
+                    <p class="card-text mb-2">Landscaping Lead</p>
+                    <a href="mailto:angela.b@email.com" class="text-leaf text-decoration-none">
+                      <i class="ri-mail-fill me-2"></i>angela.b@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Member 8 -->
+              <div class="col-sm-6 col-lg-3">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Thomas Nguyen</h5>
+                    <p class="card-text mb-2">Member-at-Large</p>
+                    <a href="mailto:thomas.n@email.com" class="text-leaf text-decoration-none">
+                      <i class="ri-mail-fill me-2"></i>thomas.n@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Elections Section -->
+        <section class="bg-body pb-5">
+          <div class="container">
+            <h2 class="fs-1 text-center mb-4">Board Elections</h2>
+            <div class="row justify-content-center">
+              <div class="col-md-10">
+                <div class="p-4 border rounded-4">
+                  <p>
+                    Board members are elected by HOA members during our annual community meeting.
+                    Each household has one vote, and terms last for two years. Nominations open 30
+                    days before the election.
+                  </p>
+                  <ul class="list-group list-group-flush mt-3">
+                    <li class="list-group-item">
+                      <i class="ri-checkbox-circle-line text-leaf me-2"></i>Nominations open in
+                      October
+                    </li>
+                    <li class="list-group-item">
+                      <i class="ri-checkbox-circle-line text-leaf me-2"></i>Annual elections held in
+                      November
+                    </li>
+                    <li class="list-group-item">
+                      <i class="ri-checkbox-circle-line text-leaf me-2"></i>Each household may vote
+                      once
+                    </li>
+                    <li class="list-group-item">
+                      <i class="ri-checkbox-circle-line text-leaf me-2"></i>Results shared via email
+                      & posted online
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Meetings Section -->
+        <section class="bg-body pb-5">
+          <div class="container">
+            <h2 class="fs-1 text-center mb-4">Board Meetings</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card bg-leaf-pale border">
+                  <div class="card-body">
+                    <h5 class="card-title fs-5">
+                      <i class="ri-calendar-event-fill me-2"></i>Next Meeting
+                    </h5>
+                    <p class="card-text mb-2">Tuesday, June 18, 2025</p>
+                    <p class="card-text mb-2">6:00 PM at the Clubhouse</p>
+                    <p class="card-text">
+                      <i class="ri-map-pin-line me-1"></i>123 Longhorn Heights, Austin, TX
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mt-4 mt-md-0">
+                <h5>What to Expect:</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <i class="ri-discuss-fill text-leaf me-2"></i>Community Updates
+                  </li>
+                  <li class="list-group-item">
+                    <i class="ri-clipboard-fill text-leaf me-2"></i>Financial Reports
+                  </li>
+                  <li class="list-group-item">
+                    <i class="ri-user-voice-fill text-leaf me-2"></i>Open Forum for Residents
+                  </li>
+                  <li class="list-group-item">
+                    <i class="ri-calendar-check-fill text-leaf me-2"></i>Upcoming Events & Planning
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="text-bg-leaf py-5">
+          <div class="container text-center">
+            <!-- Heading and Intro -->
+            <h2 class="fs-1 mb-2">Stay Connected</h2>
+            <p class="mb-4">
+              Sign up for updates about community news, upcoming events, and important HOA
+              announcements.
+            </p>
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2">
+                <!-- Form -->
+                <form class="row g-4 justify-content-center">
+                  <!-- Name Field -->
+                  <div class="col-12 col-md-6">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <!-- Phone Field -->
+                  <div class="col-12 col-md-6">
+                    <input
+                      type="tel"
+                      class="form-control form-control-lg"
+                      placeholder="Phone Number"
+                      pattern="[0-9\-+()\s]{7,15}"
+                      required
+                    />
+                  </div>
+                  <!-- Email Field -->
+                  <div class="col-12">
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      placeholder="Email Address"
+                      required
+                    />
+                  </div>
+                  <!-- Submit Button -->
+                  <div class="col-12 col-md-auto">
+                    <button type="submit" class="btn btn-lg btn-dark w-100">
+                      Subscribe<i class="ri-arrow-right-line ms-2"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-body">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 px-3 px-lg-5 pt-5 pb-4">
+            <div class="col mb-3">
+              <a
+                href="/"
+                class="d-inline-flex align-items-center text-decoration-none mb-3"
+                aria-label="Your Company Logo"
+              >
+                <img
+                  src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
+                  alt="Logo"
+                  style="height: 32px;"
+                  class="me-2"
+                />
+              </a>
+              <p class="text-body-secondary mb-3">
+                Stay connected with our community—subscribe to updates and never miss important news
+                or events!
+              </p>
+              <button class="btn btn-lg btn-leaf">Get in touch</button>
+            </div>
+
+            <div class="col mb-3"></div>
+
+            <div class="col mb-3">
+              <nav aria-label="Quick Links">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="/1/home" class="nav-link p-0 text-body-secondary">Home</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/1/about" class="nav-link p-0 text-body-secondary">About</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/1/news" class="nav-link p-0 text-body-secondary">News</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="/1/contact" class="nav-link p-0 text-body-secondary">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="col mb-3">
+              <nav aria-label="Legal">
+                <h5 class="mb-3">Legal</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary">Cookies Policy</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="col mb-3">
+              <h5 class="mb-3">Contact</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2 text-body-secondary">
+                  <i class="ri-phone-fill text-leaf me-2"></i>
+                  <a
+                    href="tel:+12345678901"
+                    class="text-body-secondary text-decoration-none text-break">+1 (234) 567-8901</a
+                  >
+                </li>
+                <li class="nav-item mb-2 text-body-secondary">
+                  <i class="ri-mail-fill text-leaf me-2"></i>
+                  <a
+                    href="mailto:hello@email.com"
+                    class="text-body-secondary text-decoration-none text-break">hello@email.com</a
+                  >
+                </li>
+                <li class="nav-item mb-2 text-body-secondary">
+                  <address class="text-body-secondary">
+                    <i class="ri-map-pin-fill text-leaf me-2"></i>
+                    123 Longhorn Heights, Austin, TX
+                  </address>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-center text-bg-dark py-4">
+            <p class="mb-0">© 2025 Company, Inc. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+
+      <!-- All Scripts -->
+      <Scripts />
+    </main>
+  </body>
+</html>
