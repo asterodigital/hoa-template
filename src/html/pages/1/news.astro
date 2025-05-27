@@ -104,12 +104,14 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="communityDropdown">
                       <li>
-                        <a class="dropdown-item active" aria-current="page" href="/1/board-members"
-                          >Board Members</a
-                        >
+                        <a class="dropdown-item" href="/1/board-members">Board Members</a>
                       </li>
-                      <li><a class="dropdown-item" href="/1/events">Events</a></li>
-                      <li><a class="dropdown-item" href="/1/news">News</a></li>
+                      <li>
+                        <a class="dropdown-item" href="/1/events">Events</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item active" aria-current="page" href="/1/news">News</a>
+                      </li>
                     </ul>
                   </li>
 
@@ -165,200 +167,95 @@ import Scripts from '../../../html/layouts/front/partials/_scripts.astro'
           <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
             <div class="row">
               <div class="col-lg-6 offset-lg-3">
-                <h1 class="display-4 fw-semibold mb-2">Board Members</h1>
+                <h1 class="display-4 fw-semibold mb-2">News</h1>
                 <p class="fs-4 mb-0">
-                  Get to know the dedicated residents who lead our community, make key decisions,
-                  and ensure Longhorn Heights thrives year-round.
+                  Stay informed with the latest updates, announcements, and neighborhood happenings
+                  at Longhorn Heights.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Meet the Board Section -->
+        <!-- News Section -->
         <section class="bg-body py-5">
           <div class="container">
-            <h2 class="fs-1 text-center mb-4">Meet the Current Board</h2>
+            <h2 class="fs-1 text-center mb-4">Community News</h2>
             <div class="row g-4">
-              <!-- Member 1 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Jane Doe</h5>
-                    <p class="card-text mb-2">President</p>
-                    <a href="mailto:jane.doe@email.com" class="text-leaf text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>jane.doe@email.com
+              <!-- News Item 1 -->
+              <div class="col-md-8 offset-md-2">
+                <div class="card h-100 border p-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-4.jpg"
+                    class="card-img-top img-fluid"
+                    style="height: 200px; object-fit: cover;"
+                    alt="News Image"
+                  />
+                  <div class="card-body p-3">
+                    <a href="#" class="text-decoration-none text-body">
+                      <h5 class="card-title fs-5">New Playground Installation Completed</h5>
                     </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member 2 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Mark Smith</h5>
-                    <p class="card-text mb-2">Vice President</p>
-                    <a href="mailto:mark.smith@email.com" class="text-leaf text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>mark.smith@email.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member 3 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Lisa Johnson</h5>
-                    <p class="card-text mb-2">Treasurer</p>
-                    <a href="mailto:lisa.j@email.com" class="text-leaf text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>lisa.j@email.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member 4 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Carlos Rivera</h5>
-                    <p class="card-text mb-2">Secretary</p>
-                    <a href="mailto:carlos.r@email.com" class="text-leaf text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>carlos.r@email.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member 5 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Emily Chen</h5>
-                    <p class="card-text mb-2">Events Coordinator</p>
-                    <a href="mailto:emily.chen@email.com" class="text-leaf text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>emily.chen@email.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member 6 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">David Patel</h5>
-                    <p class="card-text mb-2">Maintenance Chair</p>
-                    <a href="mailto:david.patel@email.com" class="text-leaf text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>david.patel@email.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member 7 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Angela Brooks</h5>
-                    <p class="card-text mb-2">Landscaping Lead</p>
-                    <a href="mailto:angela.b@email.com" class="text-leaf text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>angela.b@email.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member 8 -->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Thomas Nguyen</h5>
-                    <p class="card-text mb-2">Member-at-Large</p>
-                    <a href="mailto:thomas.n@email.com" class="text-leaf text-decoration-none">
-                      <i class="ri-mail-fill me-2"></i>thomas.n@email.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Elections Section -->
-        <section class="bg-body pb-5">
-          <div class="container">
-            <h2 class="fs-1 text-center mb-4">Board Elections</h2>
-            <div class="row justify-content-center">
-              <div class="col-md-10">
-                <div class="p-4 border rounded-4">
-                  <p>
-                    Board members are elected by HOA members during our annual community meeting.
-                    Each household has one vote, and terms last for two years. Nominations open 30
-                    days before the election.
-                  </p>
-                  <ul class="list-group list-group-flush mt-3">
-                    <li class="list-group-item">
-                      <i class="ri-checkbox-circle-line text-leaf me-2"></i>Nominations open in
-                      October
-                    </li>
-                    <li class="list-group-item">
-                      <i class="ri-checkbox-circle-line text-leaf me-2"></i>Annual elections held in
-                      November
-                    </li>
-                    <li class="list-group-item">
-                      <i class="ri-checkbox-circle-line text-leaf me-2"></i>Each household may vote
-                      once
-                    </li>
-                    <li class="list-group-item">
-                      <i class="ri-checkbox-circle-line text-leaf me-2"></i>Results shared via email
-                      & posted online
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Meetings Section -->
-        <section class="bg-body pb-5">
-          <div class="container">
-            <h2 class="fs-1 text-center mb-4">Board Meetings</h2>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card bg-leaf-pale border">
-                  <div class="card-body">
-                    <h5 class="card-title fs-5">
-                      <i class="ri-calendar-event-fill me-2"></i>Next Meeting
-                    </h5>
-                    <p class="card-text mb-2">Tuesday, June 18, 2025</p>
-                    <p class="card-text mb-2">6:00 PM at the Clubhouse</p>
-                    <p class="card-text">
-                      <i class="ri-map-pin-line me-1"></i>123 Longhorn Heights, Austin, TX
+                    <p class="text-muted mb-2">
+                      <i class="ri-calendar-line me-1"></i>May 20, 2025 ·
+                      <i class="ri-user-line ms-2 me-1"></i>By HOA Admin
                     </p>
+                    <p class="card-text mb-2">
+                      Our upgraded playground area is now open! It features new equipment, benches,
+                      and shaded areas for families to enjoy.
+                    </p>
+                    <a href="#" class="link-leaf text-decoration-none">Read More</a>
                   </div>
                 </div>
               </div>
-
-              <div class="col-md-6 mt-4 mt-md-0">
-                <h5>What to Expect:</h5>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <i class="ri-discuss-fill text-leaf me-2"></i>Community Updates
-                  </li>
-                  <li class="list-group-item">
-                    <i class="ri-clipboard-fill text-leaf me-2"></i>Financial Reports
-                  </li>
-                  <li class="list-group-item">
-                    <i class="ri-user-voice-fill text-leaf me-2"></i>Open Forum for Residents
-                  </li>
-                  <li class="list-group-item">
-                    <i class="ri-calendar-check-fill text-leaf me-2"></i>Upcoming Events & Planning
-                  </li>
-                </ul>
+              <!-- News Item 2 -->
+              <div class="col-md-8 offset-md-2">
+                <div class="card h-100 border p-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-2.jpg"
+                    class="card-img-top img-fluid"
+                    style="height: 200px; object-fit: cover;"
+                    alt="News Image"
+                  />
+                  <div class="card-body p-3">
+                    <a href="#" class="text-decoration-none text-body">
+                      <h5 class="card-title fs-5">Reminder: Pool Safety Guidelines</h5>
+                    </a>
+                    <p class="text-muted mb-2">
+                      <i class="ri-calendar-line me-1"></i>May 10, 2025 ·
+                      <i class="ri-user-line ms-2 me-1"></i>By Safety Committee
+                    </p>
+                    <p class="card-text mb-2">
+                      As summer kicks off, please review the HOA’s pool safety rules to ensure a
+                      safe and fun season for all.
+                    </p>
+                    <a href="#" class="link-leaf text-decoration-none">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <!-- News Item 3 -->
+              <div class="col-md-8 offset-md-2">
+                <div class="card h-100 border p-0">
+                  <img
+                    src="/dist/assets/img/theme-images/img-5.jpg"
+                    class="card-img-top img-fluid"
+                    style="height: 200px; object-fit: cover;"
+                    alt="News Image"
+                  />
+                  <div class="card-body p-3">
+                    <a href="#" class="text-decoration-none text-body">
+                      <h5 class="card-title fs-5">New Jogging Path Now Open Along Greenbelt</h5>
+                    </a>
+                    <p class="text-muted mb-2">
+                      <i class="ri-calendar-line me-1"></i>Apr 15, 2025 ·
+                      <i class="ri-user-line ms-2 me-1"></i>By Emily Chen
+                    </p>
+                    <p class="card-text mb-2">
+                      Residents can now enjoy a newly paved jogging and walking path that winds
+                      through the Longhorn Heights greenbelt.
+                    </p>
+                    <a href="#" class="link-leaf text-decoration-none">Read More</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
