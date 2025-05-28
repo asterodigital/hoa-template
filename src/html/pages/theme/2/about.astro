@@ -1,0 +1,782 @@
+---
+import Head from '../../../../html/layouts/front/partials/_head.astro'
+import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head />
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Page Content -->
+      <div class="content-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
+          <div class="container">
+            <!-- Brand Logo or Text -->
+            <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
+              <img
+                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
+                alt="Logo"
+                class="me-2"
+                style="height: 32px;"
+              />
+            </a>
+
+            <!-- Offcanvas Toggler -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+              <div class="offcanvas-header">
+                <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
+                  <img
+                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
+                    alt="Logo"
+                    class="me-2"
+                    style="height: 32px;"
+                  />
+                </a>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+                <ul class="navbar-nav flex-grow-1 justify-content-center d-none d-lg-flex pe-3">
+                  <!-- Home -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/home">Home</a>
+                  </li>
+
+                  <!-- About Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="aboutDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      About
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                      <li>
+                        <a class="dropdown-item active" aria-current="page" href="/theme/2/about"
+                          >About Us</a
+                        >
+                      </li>
+                      <li><a class="dropdown-item" href="/theme/2/amenities">Amenities</a></li>
+                      <li><a class="dropdown-item" href="/theme/2/history">History</a></li>
+                      <li><a class="dropdown-item" href="/theme/2/faq">FAQs</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Community Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="communityDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Community
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="communityDropdown">
+                      <li>
+                        <a class="dropdown-item" href="/theme/2/board-members">Board Members</a>
+                      </li>
+                      <li><a class="dropdown-item" href="/theme/2/events">Events</a></li>
+                      <li><a class="dropdown-item" href="/theme/2/news">News</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Facilities -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/facilities">Facilities</a>
+                  </li>
+
+                  <!-- Gallery -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/gallery">Gallery</a>
+                  </li>
+
+                  <!-- Contact -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/contact">Contact</a>
+                  </li>
+                </ul>
+
+                <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start d-flex d-lg-none">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/theme/2/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/amenities">Amenities</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/board-members">Board Members</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/events">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/facilities">Facilities</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/faq">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/history">History</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/news">News</a>
+                  </li>
+                </ul>
+
+                <!-- Bottom Section -->
+                <div class="d-block d-lg-none mt-4">
+                  <a
+                    href="mailto:hello@email.com"
+                    class="btn btn-outline-primary rounded w-100 mb-2"
+                  >
+                    <i class="ri-mail-fill me-2"></i>Email Us
+                  </a>
+                  <a href="tel:+12345678901" class="btn btn-primary rounded w-100">
+                    <i class="ri-phone-fill me-2"></i>Call Us
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-none d-lg-flex align-items-center gap-3">
+              <div class="text-start">
+                <small class="text-muted d-block">Get in Touch</small>
+                <a href="mailto:hello@email.com" class="text-decoration-none text-body fw-medium">
+                  hello@email.com
+                </a>
+              </div>
+              <a href="/theme/2/contact" class="btn btn-lg btn-primary rounded">Contact Us</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Banner Section -->
+        <section class="text-bg-primary py-5">
+          <div class="container">
+            <div class="row text-center text-md-start">
+              <div class="col-lg-7">
+                <h1 class="display-4 fw-semibold mb-2">About Longhorn Heights</h1>
+                <p class="fs-4 mb-4">
+                  Discover the story, values, and vision behind Longhorn Heights — where community
+                  comes first.
+                </p>
+                <div
+                  class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2"
+                >
+                  <a href="#" class="btn btn-lg btn-light">
+                    Explore Community<i class="ri-arrow-right-line ms-2"></i>
+                  </a>
+                  <a href="/theme/2/contact" class="btn btn-lg btn-outline-light">
+                    Contact Us<i class="ri-arrow-right-line ms-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Our Community Section -->
+        <section class="bg-body py-5">
+          <div class="container">
+            <h2 class="fs-1 text-md-center mb-2">Our Community</h2>
+            <p class="lead text-md-center mb-4">
+              Discover the history, spirit, and growth of Longhorn Heights.
+            </p>
+            <div class="row">
+              <div class="col-lg-6 pe-lg-5">
+                <h3 class="mb-3">Our History</h3>
+                <p class="lead">
+                  Longhorn Heights was established in the early 1980s with a vision to create a
+                  close-knit, family-friendly neighborhood in the heart of Austin. What began as a
+                  modest development soon grew into a thriving community grounded in shared values,
+                  safety, and natural beauty.
+                </p>
+                <p class="lead mb-0">
+                  Over the years, Longhorn Heights has become a beloved Austin neighborhood,
+                  cherished for its friendly residents and beautiful homes.
+                </p>
+              </div>
+              <div class="col-lg-6 mt-4 mt-lg-0">
+                <h3 class="mb-3">Stats</h3>
+                <div class="card text-center border p-4">
+                  <div class="row row-cols-2 g-4">
+                    <!-- Stat 1 -->
+                    <div class="col">
+                      <div>
+                        <h4 class="fs-2 text-primary mb-0">350+</h4>
+                        <div>Living Families</div>
+                      </div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="col">
+                      <div>
+                        <h4 class="fs-2 text-primary mb-0">45+</h4>
+                        <div>Years Established</div>
+                      </div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="col">
+                      <div>
+                        <h4 class="fs-2 text-primary mb-0">10+</h4>
+                        <div>Community Events</div>
+                      </div>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="col">
+                      <div>
+                        <h4 class="fs-2 text-primary mb-0">5</h4>
+                        <div>Neighborhood Parks</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section class="bg-body pt-3 pb-5">
+          <div class="container">
+            <div class="row text-center g-4">
+              <div class="col-md-4">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <i class="ri-focus-3-line text-primary display-5"></i>
+                    <h5 class="card-title fs-5 my-2">Our Vision</h5>
+                    <p class="card-text mb-0">
+                      To foster a vibrant, safe, and connected community where every resident of
+                      Longhorn Heights feels valued, heard, and proud to call home.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <i class="ri-treasure-map-line text-primary display-5"></i>
+                    <h5 class="card-title fs-5 my-2">Our Mission</h5>
+                    <p class="card-text mb-0">
+                      To enhance the quality of life in Longhorn Heights by maintaining our
+                      neighborhood’s beauty and always encouraging resident engagement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <i class="ri-hand-heart-line text-primary display-5"></i>
+                    <h5 class="card-title fs-5 my-2">Our Values</h5>
+                    <p class="card-text mb-0">
+                      We believe in the strength of neighborly connections and shared
+                      responsibility. And we operate with honesty and consistent communication.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Board of Directors Section -->
+        <section class="bg-body pt-3 pb-5">
+          <div class="container">
+            <h2 class="fs-1 text-md-center mb-2">Board of Directors</h2>
+            <p class="lead text-md-center mb-4">
+              Get to know the dedicated residents who lead our community.
+            </p>
+            <div class="row g-4 mb-4">
+              <div class="col-md-6 col-lg-4">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Alex Ramirez</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="badge text-bg-primary">President</span>
+                    </h6>
+                    <p class="card-text">
+                      Alex has lived in Longhorn Heights for over a decade and brings a strong
+                      background in leadership.
+                    </p>
+                    <p class="mb-1">
+                      <i class="ri-mail-fill me-2"></i>
+                      <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                        >hello@email.com</a
+                      >
+                    </p>
+                    <p class="mb-0">
+                      <i class="ri-phone-fill me-2"></i>
+                      <a href="tel:1234567890" class="text-muted text-decoration-none"
+                        >(123) 456-7890</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Samantha Lee</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="badge text-bg-primary">Vice President</span>
+                    </h6>
+                    <p class="card-text">
+                      Samantha is passionate about neighborhood safety and sustainability
+                      initiatives in the Austin area.
+                    </p>
+                    <p class="mb-1">
+                      <i class="ri-mail-fill me-2"></i>
+                      <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                        >hello@email.com</a
+                      >
+                    </p>
+                    <p class="mb-0">
+                      <i class="ri-phone-fill me-2"></i>
+                      <a href="tel:1234567890" class="text-muted text-decoration-none"
+                        >(123) 456-7890</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Marcus Chen</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="badge text-bg-primary">Treasurer</span>
+                    </h6>
+                    <p class="card-text">
+                      Marcus oversees the HOA’s finances and works to ensure responsible and
+                      transparent budgeting.
+                    </p>
+                    <p class="mb-1">
+                      <i class="ri-mail-fill me-2"></i>
+                      <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                        >hello@email.com</a
+                      >
+                    </p>
+                    <p class="mb-0">
+                      <i class="ri-phone-fill me-2"></i>
+                      <a href="tel:1234567890" class="text-muted text-decoration-none"
+                        >(123) 456-7890</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Linda Patel</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="badge text-bg-primary">Secretary</span>
+                    </h6>
+                    <p class="card-text">
+                      Linda manages records and communication for the HOA, keeping residents
+                      informed and engaged.
+                    </p>
+                    <p class="mb-1">
+                      <i class="ri-mail-fill me-2"></i>
+                      <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                        >hello@email.com</a
+                      >
+                    </p>
+                    <p class="mb-0">
+                      <i class="ri-phone-fill me-2"></i>
+                      <a href="tel:1234567890" class="text-muted text-decoration-none"
+                        >(123) 456-7890</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">David Nguyen</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="badge text-bg-primary">Member at Large</span>
+                    </h6>
+                    <p class="card-text">
+                      David helps coordinate neighborhood events and brings a fresh perspective to
+                      community projects.
+                    </p>
+                    <p class="mb-1">
+                      <i class="ri-mail-fill me-2"></i>
+                      <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                        >hello@email.com</a
+                      >
+                    </p>
+                    <p class="mb-0">
+                      <i class="ri-phone-fill me-2"></i>
+                      <a href="tel:1234567890" class="text-muted text-decoration-none"
+                        >(123) 456-7890</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4">
+                <div class="card border h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Rachel Kim</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="badge text-bg-primary">Community Liaison</span>
+                    </h6>
+                    <p class="card-text">
+                      Rachel serves as the bridge between residents and the board, focusing on
+                      outreach and inclusion.
+                    </p>
+                    <p class="mb-1">
+                      <i class="ri-mail-fill me-2"></i>
+                      <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                        >hello@email.com</a
+                      >
+                    </p>
+                    <p class="mb-0">
+                      <i class="ri-phone-fill me-2"></i>
+                      <a href="tel:1234567890" class="text-muted text-decoration-none"
+                        >(123) 456-7890</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <a href="#" class="btn btn-lg btn-light border"
+                >Contact the Board<i class="ri-arrow-right-line ms-2"></i></a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Management Company Section -->
+        <section class="bg-body pt-3 pb-5">
+          <div class="container">
+            <h2 class="fs-1 text-md-center mb-4">Management Company</h2>
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                <div class="card border">
+                  <div class="card-body">
+                    <h5 class="card-title fs-5">Lone Star Property Management</h5>
+                    <p class="card-text">
+                      Longhorn Heights is proudly managed by <strong
+                        >Lone Star Property Management</strong
+                      >, a locally based firm with extensive experience supporting Austin-area
+                      communities.
+                    </p>
+
+                    <div class="mb-3">
+                      <h6>Contact Information</h6>
+                      <p class="mb-1 text-muted">
+                        <i class="ri-mail-fill text-primary me-2"></i>
+                        <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                          >hello@email.com</a
+                        >
+                      </p>
+                      <p class="mb-1 text-muted">
+                        <i class="ri-phone-fill text-primary me-2"></i>
+                        <a href="tel:2345678901" class="text-muted text-decoration-none"
+                          >(234) 567-8901</a
+                        >
+                      </p>
+                      <p class="mb-0 text-muted">
+                        <i class="ri-map-pin-line text-primary me-2"></i>
+                        1234 Heritage Parkway, Suite 200, Austin, TX 78701
+                      </p>
+                    </div>
+
+                    <div class="mb-3">
+                      <h6>Office Hours</h6>
+                      <p class="text-muted mb-0">
+                        Monday – Friday: 9:00 AM – 5:00 PM<br />
+                        Closed on weekends and public holidays
+                      </p>
+                    </div>
+
+                    <div>
+                      <h6>Website</h6>
+                      <a href="#" target="_blank" class="text-primary text-decoration-none">
+                        www.example.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Community Committees Section -->
+        <section class="bg-body pt-3 pb-5">
+          <div class="container">
+            <h2 class="fs-1 text-md-center mb-2">Community Committees</h2>
+            <p class="lead text-md-center mb-4">
+              Our committees are the heart of resident involvement at Longhorn Heights.
+            </p>
+
+            <div class="row g-4">
+              <!-- Architectural Review Committee -->
+              <div class="col-md-6">
+                <div class="card border h-100 position-relative">
+                  <span class="badge text-bg-light border position-absolute top-0 end-0 m-4"
+                    >5 Members</span
+                  >
+                  <div class="card-body">
+                    <h5 class="card-title fs-5">Architectural Review</h5>
+                    <p class="card-text">
+                      Ensures that all home modifications and construction comply with community
+                      standards and HOA guidelines.
+                    </p>
+                    <ul class="list-unstyled text-muted mb-2">
+                      <li><strong>Chair:</strong> Dana Keller</li>
+                      <li><strong>Meets:</strong> 1st Thursday of each month</li>
+                    </ul>
+                    <a href="mailto:hello@email.com" class="text-decoration-none text-muted">
+                      <i class="ri-mail-line me-1"></i>hello@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Landscaping Committee -->
+              <div class="col-md-6">
+                <div class="card border h-100 position-relative">
+                  <span class="badge text-bg-light border position-absolute top-0 end-0 m-4"
+                    >7 Members</span
+                  >
+                  <div class="card-body">
+                    <h5 class="card-title fs-5">Landscaping</h5>
+                    <p class="card-text">
+                      Focuses on the upkeep of green spaces, seasonal planting, and overall
+                      neighborhood beautification projects.
+                    </p>
+                    <ul class="list-unstyled text-muted mb-2">
+                      <li><strong>Chair:</strong> Miguel Alvarez</li>
+                      <li><strong>Meets:</strong> Quarterly</li>
+                    </ul>
+                    <a href="mailto:hello@email.com" class="text-decoration-none text-muted">
+                      <i class="ri-mail-line me-1"></i>hello@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social & Events Committee -->
+              <div class="col-md-6">
+                <div class="card border h-100 position-relative">
+                  <span class="badge text-bg-light border position-absolute top-0 end-0 m-4"
+                    >6 Members</span
+                  >
+                  <div class="card-body">
+                    <h5 class="card-title fs-5">Social & Events</h5>
+                    <p class="card-text">
+                      Plans and organizes neighborhood events including block parties, holiday
+                      celebrations, and community meetups.
+                    </p>
+                    <ul class="list-unstyled text-muted mb-2">
+                      <li><strong>Chair:</strong> Jenna Thomas</li>
+                      <li><strong>Meets:</strong> Monthly</li>
+                    </ul>
+                    <a href="mailto:hello@email.com" class="text-decoration-none text-muted">
+                      <i class="ri-mail-line me-1"></i>hello@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Safety & Security Committee -->
+              <div class="col-md-6">
+                <div class="card border h-100 position-relative">
+                  <span class="badge text-bg-light border position-absolute top-0 end-0 m-4"
+                    >4 Members</span
+                  >
+                  <div class="card-body">
+                    <h5 class="card-title fs-5">Safety & Security</h5>
+                    <p class="card-text">
+                      Works to keep Longhorn Heights safe by coordinating with local authorities and
+                      promoting community awareness.
+                    </p>
+                    <ul class="list-unstyled text-muted mb-2">
+                      <li><strong>Chair:</strong> Robert Lang</li>
+                      <li><strong>Meets:</strong> Every other month</li>
+                    </ul>
+                    <a href="mailto:hello@email.com" class="text-decoration-none text-muted">
+                      <i class="ri-mail-line me-1"></i>hello@email.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="bg-body pt-3 pb-5">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                <h2 class="fs-1 mb-3">Get Involved</h2>
+                <p class="lead mb-4">
+                  Longhorn Heights thrives because of residents like you. Whether it's joining a
+                  committee, attending an event, or volunteering your skills, there's a place for
+                  everyone to contribute.
+                </p>
+                <a href="#" class="btn btn-lg btn-light border">Join a Committee</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-body border-top">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 pt-5 pb-4">
+              <div class="col mb-3">
+                <a
+                  href="/"
+                  class="d-inline-flex align-items-center text-decoration-none mb-3"
+                  aria-label="Your Company Logo"
+                >
+                  <img
+                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
+                    alt="Logo"
+                    style="height: 32px;"
+                    class="me-2"
+                  />
+                </a>
+                <p class="text-body-secondary mb-3">
+                  Stay connected with our community—subscribe to updates and never miss important
+                  news or events!
+                </p>
+                <a href="/theme/2/contact" class="btn btn-lg btn-primary">Get in touch</a>
+              </div>
+
+              <div class="col mb-3"></div>
+
+              <div class="col mb-3">
+                <nav aria-label="Quick Links">
+                  <h5 class="mb-3">Quick Links</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/home" class="nav-link p-0 text-body-secondary">Home</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/about" class="nav-link p-0 text-body-secondary">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/news" class="nav-link p-0 text-body-secondary">News</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/contact" class="nav-link p-0 text-body-secondary">Contact</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="col mb-3">
+                <nav aria-label="Legal">
+                  <h5 class="mb-3">Legal</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Cookies Policy</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="col mb-3">
+                <h5 class="mb-3">Contact</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <i class="ri-phone-fill text-primary me-2"></i>
+                    <a
+                      href="tel:+12345678901"
+                      class="text-body-secondary text-decoration-none text-break"
+                      >+1 (234) 567-8901</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <i class="ri-mail-fill text-primary me-2"></i>
+                    <a
+                      href="mailto:hello@email.com"
+                      class="text-body-secondary text-decoration-none text-break">hello@email.com</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <address class="text-body-secondary">
+                      <i class="ri-map-pin-fill text-primary me-2"></i>
+                      123 Longhorn Heights, Austin, TX
+                    </address>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-bg-dark py-4">
+            <p class="mb-0">© 2025 Company, Inc. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+
+      <!-- All Scripts -->
+      <Scripts />
+    </main>
+  </body>
+</html>
