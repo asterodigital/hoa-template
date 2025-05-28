@@ -19,7 +19,7 @@ import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
             <!-- Brand Logo or Text -->
             <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
               <img
-                src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
+                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
                 alt="Logo"
                 class="me-2"
                 style="height: 32px;"
@@ -43,7 +43,7 @@ import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
               <div class="offcanvas-header">
                 <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
                   <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
+                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
                     alt="Logo"
                     class="me-2"
                     style="height: 32px;"
@@ -56,9 +56,7 @@ import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
                   aria-label="Close"></button>
               </div>
               <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
-                <ul
-                  class="navbar-nav flex-grow-1 pe-3 justify-content-start justify-content-lg-center"
-                >
+                <ul class="navbar-nav flex-grow-1 justify-content-center d-none d-lg-flex pe-3">
                   <!-- Home -->
                   <li class="nav-item">
                     <a class="nav-link" href="/theme/1/home">Home</a>
@@ -78,15 +76,9 @@ import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
                       <li><a class="dropdown-item" href="/theme/1/about">About Us</a></li>
-                      <li>
-                        <a class="dropdown-item" href="/theme/1/amenities">Amenities</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="/theme/1/history">History</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="/theme/1/faq">FAQs</a>
-                      </li>
+                      <li><a class="dropdown-item" href="/theme/1/amenities">Amenities</a></li>
+                      <li><a class="dropdown-item" href="/theme/1/history">History</a></li>
+                      <li><a class="dropdown-item" href="/theme/1/faq">FAQs</a></li>
                     </ul>
                   </li>
 
@@ -131,27 +123,65 @@ import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
                   </li>
                 </ul>
 
+                <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start d-flex d-lg-none">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/1/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/1/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/1/amenities">Amenities</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/1/board-members">Board Members</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/1/contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/theme/1/events">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/1/facilities">Facilities</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/1/faq">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/1/gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/1/history">History</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/1/news">News</a>
+                  </li>
+                </ul>
+
                 <!-- Bottom Section -->
                 <div class="d-block d-lg-none mt-4">
-                  <a href="tel:+12345678901" class="btn btn-outline-primary rounded w-100 mb-2">
-                    <i class="ri-phone-fill me-2"></i>Book Consultation
-                  </a>
-                  <a class="btn btn-primary rounded w-100" href="#"
-                    ><i class="ri-sparkling-2-fill me-2"></i> Get Started Now</a
+                  <a
+                    href="mailto:hello@email.com"
+                    class="btn btn-outline-primary rounded w-100 mb-2"
                   >
+                    <i class="ri-mail-fill me-2"></i>Email Us
+                  </a>
+                  <a href="tel:+12345678901" class="btn btn-primary rounded w-100">
+                    <i class="ri-phone-fill me-2"></i>Call Us
+                  </a>
                 </div>
               </div>
             </div>
 
             <div class="d-none d-lg-flex align-items-center gap-3">
               <div class="text-start">
-                <small class="text-muted d-block">Book Consultation</small>
-                <a href="tel:+12345678901" class="text-decoration-none text-body fw-medium">
-                  +1 (234) 567-8901
+                <small class="text-muted d-block">Get in Touch</small>
+                <a href="mailto:hello@email.com" class="text-decoration-none text-body fw-medium">
+                  hello@email.com
                 </a>
               </div>
-
-              <a class="btn btn-lg btn-primary rounded" href="#">Get Started</a>
+              <a href="tel:+12345678901" class="btn btn-lg btn-primary rounded">Contact Us</a>
             </div>
           </div>
         </nav>
@@ -360,7 +390,7 @@ import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
                   aria-label="Your Company Logo"
                 >
                   <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-288.svg"
+                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
                     alt="Logo"
                     style="height: 32px;"
                     class="me-2"
