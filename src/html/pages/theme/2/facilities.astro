@@ -1,0 +1,574 @@
+---
+import Head from '../../../../html/layouts/front/partials/_head.astro'
+import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head />
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Page Content -->
+      <div class="content-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
+          <div class="container">
+            <!-- Brand Logo or Text -->
+            <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
+              <img
+                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
+                alt="Logo"
+                class="me-2"
+                style="height: 32px;"
+              />
+            </a>
+
+            <!-- Offcanvas Toggler -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+              <div class="offcanvas-header">
+                <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
+                  <img
+                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
+                    alt="Logo"
+                    class="me-2"
+                    style="height: 32px;"
+                  />
+                </a>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+                <ul class="navbar-nav flex-grow-1 justify-content-center d-none d-lg-flex pe-3">
+                  <!-- Home -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/home">Home</a>
+                  </li>
+
+                  <!-- About Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="aboutDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      About
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                      <li>
+                        <a class="dropdown-item" href="/theme/2/about">About Us</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/theme/2/amenities">Amenities</a>
+                      </li>
+                      <li><a class="dropdown-item" href="/theme/2/history">History</a></li>
+                      <li><a class="dropdown-item" href="/theme/2/faq">FAQs</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Community Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="communityDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Community
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="communityDropdown">
+                      <li>
+                        <a class="dropdown-item" href="/theme/2/board-members">Board Members</a>
+                      </li>
+                      <li><a class="dropdown-item" href="/theme/2/events">Events</a></li>
+                      <li><a class="dropdown-item" href="/theme/2/news">News</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Facilities -->
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/theme/2/facilities"
+                      >Facilities</a
+                    >
+                  </li>
+
+                  <!-- Gallery -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/gallery">Gallery</a>
+                  </li>
+
+                  <!-- Contact -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/contact">Contact</a>
+                  </li>
+                </ul>
+
+                <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start d-flex d-lg-none">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/amenities">Amenities</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/board-members">Board Members</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/events">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/theme/2/facilities"
+                      >Facilities</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/faq">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/history">History</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/news">News</a>
+                  </li>
+                </ul>
+
+                <!-- Bottom Section -->
+                <div class="d-block d-lg-none mt-4">
+                  <a
+                    href="mailto:hello@email.com"
+                    class="btn btn-outline-primary rounded w-100 mb-2"
+                  >
+                    <i class="ri-mail-fill me-2"></i>Email Us
+                  </a>
+                  <a href="tel:+12345678901" class="btn btn-primary rounded w-100">
+                    <i class="ri-phone-fill me-2"></i>Call Us
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-none d-lg-flex align-items-center gap-3">
+              <div class="text-start">
+                <small class="text-muted d-block">Get in Touch</small>
+                <a href="mailto:hello@email.com" class="text-decoration-none text-body fw-medium">
+                  hello@email.com
+                </a>
+              </div>
+              <a href="/theme/2/contact" class="btn btn-lg btn-primary rounded">Contact Us</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Banner Section -->
+        <section class="text-bg-primary py-5">
+          <div class="container">
+            <div class="row text-center text-md-start">
+              <div class="col-lg-7">
+                <h1 class="display-4 fw-semibold mb-2">Facilities</h1>
+                <p class="fs-4 mb-4">
+                  Discover the essential facilities that support everyday living and keep Longhorn
+                  Heights running smoothly and efficiently.
+                </p>
+                <div
+                  class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2"
+                >
+                  <a href="#" class="btn btn-lg btn-light">
+                    Explore Community<i class="ri-arrow-right-line ms-2"></i>
+                  </a>
+                  <a href="/theme/2/contact" class="btn btn-lg btn-outline-light">
+                    Contact Us<i class="ri-arrow-right-line ms-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section class="bg-body py-5">
+          <div class="container">
+            <h2 class="fs-1 text-md-center mb-2">Essential Facilities</h2>
+            <p class="lead text-md-center mb-4">
+              Discover the essential facilities that support everyday living and keep Longhorn
+              Heights running smoothly and efficiently.
+            </p>
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <div class="card card-expand border p-0">
+                  <figure class="mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-1.jpg"
+                      class="card-img-top"
+                      alt="Facility Image"
+                    />
+                  </figure>
+                  <div class="card-body p-3">
+                    <h5 class="card-title fs-5">
+                      <i class="ri-home-heart-fill text-primary me-2"></i>Reliable Utilities
+                    </h5>
+                    <span class="badge text-body bg-secondary-subtle border fs-6 mb-2"
+                      >Utilities</span
+                    >
+                    <p class="card-text">
+                      Consistent electricity, water, and waste management services keep your home
+                      comfortable and functional.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="card card-expand border p-0">
+                  <figure class="mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-8.jpg"
+                      class="card-img-top"
+                      alt="Facility Image"
+                    />
+                  </figure>
+                  <div class="card-body p-3">
+                    <h5 class="card-title fs-5">
+                      <i class="ri-lock-fill text-primary me-2"></i>Security & Surveillance
+                    </h5>
+                    <span class="badge text-body bg-secondary-subtle border fs-6 mb-2"
+                      >Security</span
+                    >
+                    <p class="card-text">
+                      24/7 gated security, patrols, and surveillance cameras help maintain a safe
+                      living environment for all residents.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="card card-expand border p-0">
+                  <figure class="mb-0">
+                    <img
+                      src="/dist/assets/img/theme-images/img-9.jpg"
+                      class="card-img-top"
+                      alt="Facility Image"
+                    />
+                  </figure>
+                  <div class="card-body p-3">
+                    <h5 class="card-title fs-5">
+                      <i class="ri-car-fill text-primary me-2"></i>Parking & Transportation
+                    </h5>
+                    <span class="badge text-body bg-secondary-subtle border fs-6 mb-2">Parking</span
+                    >
+                    <p class="card-text">
+                      Well-maintained visitor parking, bike racks, and easy access to public
+                      transportation routes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Facility Details Section -->
+        <section class="bg-body pt-3 pb-5">
+          <div class="container">
+            <!-- Tabs -->
+            <ul
+              class="nav nav-pills nav-fill flex-wrap justify-content-center gap-3 mb-3"
+              id="facilityTabs"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link nav-link-lg active border"
+                  id="utilities-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#utilities"
+                  type="button"
+                  role="tab">Reliable Utilities</button
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link nav-link-lg border"
+                  id="security-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#security"
+                  type="button"
+                  role="tab">Security & Surveillance</button
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link nav-link-lg border"
+                  id="parking-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#parking"
+                  type="button"
+                  role="tab">Parking & Transportation</button
+                >
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content border rounded-4 p-4">
+              <!-- Tab Pane 1 -->
+              <div class="tab-pane fade show active" id="utilities" role="tabpanel">
+                <div class="row g-4">
+                  <div class="col-md-6 ps-xl-3">
+                    <h3>Reliable Utilities</h3>
+                    <p>
+                      Consistent electricity, water, and waste management services keep your home
+                      comfortable and functional.
+                    </p>
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Consistent Electricity
+                      </li>
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Waste Management
+                      </li>
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Constant Water Supply
+                      </li>
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Essential Goods
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <img
+                      src="/dist/assets/img/theme-images/img-1.jpg"
+                      alt="Facility Image"
+                      style="max-height: 300px; width: 100%; object-fit:cover;"
+                      class="img-fluid rounded"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab Pane 2 -->
+              <div class="tab-pane fade" id="security" role="tabpanel">
+                <div class="row g-4">
+                  <div class="col-md-6 ps-xl-3">
+                    <h3>Security & Surveillance</h3>
+                    <p>
+                      24/7 gated security, patrols, and surveillance cameras help maintain a safe
+                      living environment for all residents.
+                    </p>
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>24/7 Security
+                      </li>
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Regular Patrols
+                      </li>
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Trained Personnel
+                      </li>
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Surveillance Cameras
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <img
+                      src="/dist/assets/img/theme-images/img-8.jpg"
+                      alt="Facility Image"
+                      style="max-height: 300px; width: 100%; object-fit:cover;"
+                      class="img-fluid rounded"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab Pane 3 -->
+              <div class="tab-pane fade" id="parking" role="tabpanel">
+                <div class="row g-4">
+                  <div class="col-md-6 ps-xl-3">
+                    <h3>Parking & Transportation</h3>
+                    <p>
+                      Well-maintained visitor parking, bike racks, and easy access to public
+                      transportation routes.
+                    </p>
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Easy Access to Routes
+                      </li>
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Safe Walkways
+                      </li>
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Visitor Parking
+                      </li>
+                      <li>
+                        <i class="ri-check-line text-success me-2"></i>Bike Racks
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <img
+                      src="/dist/assets/img/theme-images/img-9.jpg"
+                      alt="Facility Image"
+                      style="max-height: 300px; width: 100%; object-fit:cover;"
+                      class="img-fluid rounded mb-0"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Need Help Section -->
+        <section class="bg-body pt-3 pb-5">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                <h2 class="fs-1 mb-3">Need Help?</h2>
+                <p class="lead mb-4">
+                  Questions about facility access, reservations, or maintenance? We're here to
+                  assist you. Get in touch with the Longhorn Heights support team or explore our FAQ
+                  section for quick answers.
+                </p>
+                <a href="/theme/2/contact" class="btn btn-lg btn-primary">Contact Support</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-body border-top">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 pt-5 pb-4">
+              <div class="col mb-3">
+                <a
+                  href="/"
+                  class="d-inline-flex align-items-center text-decoration-none mb-3"
+                  aria-label="Your Company Logo"
+                >
+                  <img
+                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
+                    alt="Logo"
+                    style="height: 32px;"
+                    class="me-2"
+                  />
+                </a>
+                <p class="text-body-secondary mb-3">
+                  Stay connected with our community—subscribe to updates and never miss important
+                  news or events!
+                </p>
+                <a href="/theme/2/contact" class="btn btn-lg btn-primary">Get in touch</a>
+              </div>
+
+              <div class="col mb-3"></div>
+
+              <div class="col mb-3">
+                <nav aria-label="Quick Links">
+                  <h5 class="mb-3">Quick Links</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/home" class="nav-link p-0 text-body-secondary">Home</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/about" class="nav-link p-0 text-body-secondary">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/news" class="nav-link p-0 text-body-secondary">News</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/contact" class="nav-link p-0 text-body-secondary">Contact</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="col mb-3">
+                <nav aria-label="Legal">
+                  <h5 class="mb-3">Legal</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Cookies Policy</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="col mb-3">
+                <h5 class="mb-3">Contact</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <i class="ri-phone-fill text-primary me-2"></i>
+                    <a
+                      href="tel:+12345678901"
+                      class="text-body-secondary text-decoration-none text-break"
+                      >+1 (234) 567-8901</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <i class="ri-mail-fill text-primary me-2"></i>
+                    <a
+                      href="mailto:hello@email.com"
+                      class="text-body-secondary text-decoration-none text-break">hello@email.com</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <address class="text-body-secondary">
+                      <i class="ri-map-pin-fill text-primary me-2"></i>
+                      123 Longhorn Heights, Austin, TX
+                    </address>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-bg-dark py-4">
+            <p class="mb-0">© 2025 Company, Inc. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+
+      <!-- All Scripts -->
+      <Scripts />
+    </main>
+  </body>
+</html>
