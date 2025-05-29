@@ -1,0 +1,553 @@
+---
+import Head from '../../../../html/layouts/front/partials/_head.astro'
+import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head />
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Page Content -->
+      <div class="content-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
+          <div class="container">
+            <!-- Brand Logo or Text -->
+            <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
+              <img
+                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
+                alt="Logo"
+                class="me-2"
+                style="height: 32px;"
+              />
+            </a>
+
+            <!-- Offcanvas Toggler -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+              <div class="offcanvas-header">
+                <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
+                  <img
+                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
+                    alt="Logo"
+                    class="me-2"
+                    style="height: 32px;"
+                  />
+                </a>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+                <ul class="navbar-nav flex-grow-1 justify-content-center d-none d-lg-flex pe-3">
+                  <!-- Home -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/home">Home</a>
+                  </li>
+
+                  <!-- About Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="aboutDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      About
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                      <li>
+                        <a class="dropdown-item" href="/theme/2/about">About Us</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/theme/2/amenities">Amenities</a>
+                      </li>
+                      <li><a class="dropdown-item" href="/theme/2/history">History</a></li>
+                      <li><a class="dropdown-item" href="/theme/2/faq">FAQs</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Community Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="communityDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Community
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="communityDropdown">
+                      <li>
+                        <a class="dropdown-item" href="/theme/2/board-members">Board Members</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item active" aria-current="page" href="/theme/2/events"
+                          >Events</a
+                        >
+                      </li>
+                      <li><a class="dropdown-item" href="/theme/2/news">News</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Facilities -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/facilities">Facilities</a>
+                  </li>
+
+                  <!-- Gallery -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/gallery">Gallery</a>
+                  </li>
+
+                  <!-- Contact -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/contact">Contact</a>
+                  </li>
+                </ul>
+
+                <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start d-flex d-lg-none">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/amenities">Amenities</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/board-members">Board Members</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/theme/2/events">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/facilities">Facilities</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/faq">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/history">History</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/theme/2/news">News</a>
+                  </li>
+                </ul>
+
+                <!-- Bottom Section -->
+                <div class="d-block d-lg-none mt-4">
+                  <a
+                    href="mailto:hello@email.com"
+                    class="btn btn-outline-primary rounded w-100 mb-2"
+                  >
+                    <i class="ri-mail-fill me-2"></i>Email Us
+                  </a>
+                  <a href="tel:+12345678901" class="btn btn-primary rounded w-100">
+                    <i class="ri-phone-fill me-2"></i>Call Us
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-none d-lg-flex align-items-center gap-3">
+              <div class="text-start">
+                <small class="text-muted d-block">Get in Touch</small>
+                <a href="mailto:hello@email.com" class="text-decoration-none text-body fw-medium">
+                  hello@email.com
+                </a>
+              </div>
+              <a href="/theme/2/contact" class="btn btn-lg btn-primary rounded">Contact Us</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Banner Section -->
+        <section class="text-bg-primary py-5">
+          <div class="container">
+            <div class="row text-center text-md-start">
+              <div class="col-lg-7">
+                <h1 class="display-4 fw-semibold mb-2">Events</h1>
+                <p class="fs-4 mb-4">
+                  Stay connected with neighborhood events, from seasonal festivals to board meetings
+                  and community clean-up days.
+                </p>
+                <div
+                  class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2"
+                >
+                  <a href="#" class="btn btn-lg btn-light">
+                    Explore Community<i class="ri-arrow-right-line ms-2"></i>
+                  </a>
+                  <a href="/theme/2/contact" class="btn btn-lg btn-outline-light">
+                    Contact Us<i class="ri-arrow-right-line ms-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Event Stats -->
+        <section class="bg-body py-5">
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-6 col-md-3">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <h5 class="card-title text-primary fs-1 mb-0">10+</h5>
+                    <p class="card-text">Social Events</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <h5 class="card-title text-primary fs-1 mb-0">15+</h5>
+                    <p class="card-text">Recreational Events</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <h5 class="card-title text-primary fs-1 mb-0">5+</h5>
+                    <p class="card-text">Health/Fitness Events</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <h5 class="card-title text-primary fs-1 mb-0">10+</h5>
+                    <p class="card-text">HOA Meetings</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section class="bg-body pt-3 pb-5">
+          <div class="container">
+            <h2 class="fs-1 text-md-center mb-2">Upcoming Events</h2>
+            <p class="lead text-md-center mb-4">
+              Stay connected with neighborhood events, from seasonal festivals to board meetings and
+              community clean-up days.
+            </p>
+            <div class="row g-4">
+              <!-- Card 1 -->
+              <div class="col-lg-4">
+                <div class="card card-lift border position-relative h-100">
+                  <span
+                    class="badge text-body bg-secondary-subtle border position-absolute fs-6 top-0 end-0 m-4"
+                    >Social</span
+                  >
+                  <div class="card-body">
+                    <h5 class="card-title fs-5">Community BBQ</h5>
+                    <p class="text-muted mb-2"><i class="ri-calendar-line me-2"></i>Jun 10, 2025</p>
+                    <p class="text-muted mb-2">
+                      <i class="ri-time-line me-2"></i>4:00 PM - 6:00 PM
+                    </p>
+                    <p class="text-muted mb-2"><i class="ri-map-pin-line me-2"></i>Clubhouse</p>
+                    <p class="text-success mb-2">
+                      <i class="ri-group-3-line me-2"></i>70/100 Registered
+                    </p>
+                    <p>
+                      Fire up the grill and join neighbors for a casual afternoon of great food,
+                      games, and conversation.
+                    </p>
+                    <button class="btn btn-lg btn-primary w-100">Register</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="col-lg-4">
+                <div class="card card-lift border position-relative h-100">
+                  <span
+                    class="badge text-body bg-secondary-subtle border position-absolute fs-6 top-0 end-0 m-4"
+                    >Meeting</span
+                  >
+                  <div class="card-body">
+                    <h5 class="card-title fs-5">Board Meeting</h5>
+                    <p class="text-muted mb-2"><i class="ri-calendar-line me-2"></i>May 28, 2025</p>
+                    <p class="text-muted mb-2">
+                      <i class="ri-time-line me-2"></i>7:00 PM - 8:00 PM
+                    </p>
+                    <p class="text-muted mb-2"><i class="ri-map-pin-line me-2"></i>HOA Office</p>
+                    <p class="text-danger mb-2">
+                      <i class="ri-group-3-line me-2"></i>20/20 Registered
+                    </p>
+                    <p>
+                      Stay informed and involved. The HOA board meeting is your chance to hear
+                      updates, ask questions.
+                    </p>
+                    <button class="btn btn-lg btn-primary w-100">Register</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="col-lg-4">
+                <div class="card card-lift border position-relative h-100">
+                  <span
+                    class="badge text-body bg-secondary-subtle border position-absolute fs-6 top-0 end-0 m-4"
+                    >Fitness</span
+                  >
+                  <div class="card-body">
+                    <h5 class="card-title fs-5">Yoga Class</h5>
+                    <p class="text-muted mb-2"><i class="ri-calendar-line me-2"></i>Jun 4, 2025</p>
+                    <p class="text-muted mb-2">
+                      <i class="ri-time-line me-2"></i>7:00 AM - 9:00 AM
+                    </p>
+                    <p class="text-muted mb-2"><i class="ri-map-pin-line me-2"></i>Gym</p>
+                    <p class="text-success mb-2">
+                      <i class="ri-group-3-line me-2"></i>30/50 Registered
+                    </p>
+                    <p>
+                      Held in the green space, this session is open to all skill levels—just bring
+                      your mat and good vibes.
+                    </p>
+                    <button class="btn btn-lg btn-primary w-100">Register</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Event Organisers Section -->
+        <section class="bg-body pt-3 pb-5">
+          <div class="container">
+            <h2 class="fs-1 text-md-center mb-2">Event Organisers</h2>
+            <p class="lead text-md-center mb-4">
+              Meet the dedicated community leaders who plan and coordinate events that bring
+              Longhorn Heights together.
+            </p>
+
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <i class="ri-group-2-line text-primary fs-1"></i>
+                    <h5 class="card-title fs-5">Social Committee</h5>
+                    <p class="card-text">
+                      From seasonal parties to themed mixers, this team makes sure there’s something
+                      fun on the calendar.
+                    </p>
+                    <p class="text-muted mb-0">
+                      <strong>Chair:</strong> Jessica Moore
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <i class="ri-user-heart-line text-primary fs-1"></i>
+                    <h5 class="card-title fs-5">Wellness Committee</h5>
+                    <p class="card-text">
+                      Focused on well-being, this group organizes yoga classes, fitness walks, and
+                      wellness workshops.
+                    </p>
+                    <p class="text-muted mb-0">
+                      <strong>Chair:</strong> Daniel Kim
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card card-lift border h-100">
+                  <div class="card-body text-center">
+                    <i class="ri-user-community-line text-primary fs-1"></i>
+                    <h5 class="card-title fs-5">Engagement Committee</h5>
+                    <p class="card-text">
+                      Responsible for fostering connections through events and ensuring every
+                      resident feels welcome.
+                    </p>
+                    <p class="text-muted mb-0">
+                      <strong>Chair:</strong> Aisha Patel
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Event Guidelines Section -->
+        <section class="bg-body pt-3 pb-5">
+          <div class="container">
+            <h2 class="fs-1 text-md-center mb-2">Event Guidelines</h2>
+            <p class="lead text-md-center mb-3">
+              Please follow these simple guidelines to help keep community events welcoming, safe,
+              and fun for all.
+            </p>
+
+            <div class="mx-auto" style="max-width: 700px;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0 py-3">
+                  <i class="ri-checkbox-circle-line text-primary me-2 fs-5 align-middle"></i>
+                  <strong>RSVP in Advance:</strong> Let organizers know you're attending to help plan
+                  food, seating, and supplies.
+                </li>
+                <li class="list-group-item px-0 py-3">
+                  <i class="ri-group-line text-primary me-2 fs-5 align-middle"></i>
+                  <strong>All Are Welcome:</strong> Community events are inclusive—bring your family
+                  and meet your neighbors!
+                </li>
+                <li class="list-group-item px-0 py-3">
+                  <i class="ri-time-line text-primary me-2 fs-5 align-middle"></i>
+                  <strong>Be On Time:</strong> Arriving on time ensures you don’t miss out on planned
+                  activities or announcements.
+                </li>
+                <li class="list-group-item px-0 py-3">
+                  <i class="ri-recycle-line text-primary me-2 fs-5 align-middle"></i>
+                  <strong>Respect Shared Spaces:</strong> Kindly clean up after yourself and treat public
+                  areas with gentle care.
+                </li>
+                <li class="list-group-item px-0 py-3">
+                  <i class="ri-feedback-line text-primary me-2 fs-5 align-middle"></i>
+                  <strong>Share Feedback:</strong> We’re always looking to improve! Let us know what
+                  worked and what didn’t.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-body border-top">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 pt-5 pb-4">
+              <div class="col mb-3">
+                <a
+                  href="/"
+                  class="d-inline-flex align-items-center text-decoration-none mb-3"
+                  aria-label="Your Company Logo"
+                >
+                  <img
+                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
+                    alt="Logo"
+                    style="height: 32px;"
+                    class="me-2"
+                  />
+                </a>
+                <p class="text-body-secondary mb-3">
+                  Stay connected with our community—subscribe to updates and never miss important
+                  news or events!
+                </p>
+                <a href="/theme/2/contact" class="btn btn-lg btn-primary">Get in touch</a>
+              </div>
+
+              <div class="col mb-3"></div>
+
+              <div class="col mb-3">
+                <nav aria-label="Quick Links">
+                  <h5 class="mb-3">Quick Links</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/home" class="nav-link p-0 text-body-secondary">Home</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/about" class="nav-link p-0 text-body-secondary">About</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/news" class="nav-link p-0 text-body-secondary">News</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="/theme/2/contact" class="nav-link p-0 text-body-secondary">Contact</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="col mb-3">
+                <nav aria-label="Legal">
+                  <h5 class="mb-3">Legal</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                      <a href="#" class="nav-link p-0 text-body-secondary">Cookies Policy</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="col mb-3">
+                <h5 class="mb-3">Contact</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <i class="ri-phone-fill text-primary me-2"></i>
+                    <a
+                      href="tel:+12345678901"
+                      class="text-body-secondary text-decoration-none text-break"
+                      >+1 (234) 567-8901</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <i class="ri-mail-fill text-primary me-2"></i>
+                    <a
+                      href="mailto:hello@email.com"
+                      class="text-body-secondary text-decoration-none text-break">hello@email.com</a
+                    >
+                  </li>
+                  <li class="nav-item mb-2 text-body-secondary">
+                    <address class="text-body-secondary">
+                      <i class="ri-map-pin-fill text-primary me-2"></i>
+                      123 Longhorn Heights, Austin, TX
+                    </address>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-bg-dark py-4">
+            <p class="mb-0">© 2025 Company, Inc. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+
+      <!-- All Scripts -->
+      <Scripts />
+    </main>
+  </body>
+</html>
