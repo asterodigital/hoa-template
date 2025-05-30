@@ -111,3 +111,33 @@
     @extend .nav-link-xl;
   }
 }
+
+// ==========================================================================
+//   Hover Underline Effect (lg+ screens)
+// ==========================================================================
+
+@media (min-width: 992px) {
+  .navbar-underline {
+    .nav-link {
+      position: relative;
+      display: inline-block;
+      color: inherit;
+      text-decoration: none;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        content: '';
+        background-color: $primary;
+        transition: width 0.25s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
