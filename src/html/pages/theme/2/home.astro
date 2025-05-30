@@ -525,102 +525,140 @@ import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
         </section>
 
         <!-- Footer -->
-        <footer class="bg-body border-top">
+        <footer class="bg-body pt-5 pb-4 border-top">
           <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 pt-5 pb-4">
-              <div class="col mb-3">
-                <a
-                  href="/"
-                  class="d-inline-flex align-items-center text-decoration-none mb-3"
-                  aria-label="Your Company Logo"
-                >
-                  <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                    alt="Logo"
-                    style="height: 32px;"
-                    class="me-2"
-                  />
-                </a>
-                <p class="text-body-secondary mb-3">
-                  Stay connected with our community—subscribe to updates and never miss important
-                  news or events!
-                </p>
-                <a href="/theme/2/contact" class="btn btn-lg btn-primary">Get in touch</a>
-              </div>
-
-              <div class="col mb-3"></div>
-
-              <div class="col mb-3">
-                <nav aria-label="Quick Links">
-                  <h5 class="mb-3">Quick Links</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2">
-                      <a href="/theme/2/home" class="nav-link p-0 text-body-secondary">Home</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/2/about" class="nav-link p-0 text-body-secondary">About</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/2/news" class="nav-link p-0 text-body-secondary">News</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/2/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/2/contact" class="nav-link p-0 text-body-secondary">Contact</a
-                      >
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-
-              <div class="col mb-3">
-                <nav aria-label="Legal">
-                  <h5 class="mb-3">Legal</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">Cookies Policy</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-
-              <div class="col mb-3">
-                <h5 class="mb-3">Contact</h5>
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2 text-body-secondary">
-                    <i class="ri-phone-fill text-primary me-2"></i>
-                    <a
-                      href="tel:+12345678901"
-                      class="text-body-secondary text-decoration-none text-break"
-                      >+1 (234) 567-8901</a
-                    >
+            <div class="row gy-4">
+              <!-- Logo and Contact Info -->
+              <div class="col-lg-4 col-md-6">
+                <img
+                  src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
+                  alt="Logo"
+                  style="height: 32px;"
+                  class="mb-4"
+                />
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a href="tel:+12345678901" class="text-body text-decoration-none">
+                      <i class="ri-phone-fill text-primary me-2"></i>+1 (234) 567-8901
+                    </a>
                   </li>
-                  <li class="nav-item mb-2 text-body-secondary">
-                    <i class="ri-mail-fill text-primary me-2"></i>
-                    <a
-                      href="mailto:hello@email.com"
-                      class="text-body-secondary text-decoration-none text-break">hello@email.com</a
-                    >
+                  <li class="mb-2">
+                    <a href="mailto:hello@email.com" class="text-body text-decoration-none">
+                      <i class="ri-mail-fill text-primary me-2"></i>hello@email.com
+                    </a>
                   </li>
-                  <li class="nav-item mb-2 text-body-secondary">
-                    <address class="text-body-secondary">
-                      <i class="ri-map-pin-fill text-primary me-2"></i>
-                      123 Longhorn Heights, Austin, TX
-                    </address>
+                  <li>
+                    <i class="ri-map-pin-fill text-primary me-2"></i>123 Longhorn Heights, Austin,
+                    TX
                   </li>
                 </ul>
               </div>
+
+              <!-- Navigation Links -->
+              <div class="col-lg-4 col-md-6">
+                <div class="row">
+                  <div class="col-6">
+                    <h5 class="fs-5 mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="/theme/2/home" class="text-body text-decoration-none d-block mb-2"
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/theme/2/about" class="text-body text-decoration-none d-block mb-2"
+                          >About</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/theme/2/news" class="text-body text-decoration-none d-block mb-2"
+                          >News</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/theme/2/faq" class="text-body text-decoration-none d-block mb-2"
+                          >FAQs</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/theme/2/contact" class="text-body text-decoration-none d-block"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="fs-5 mb-3">Explore</h5>
+                    <ul class="list-unstyled">
+                      <li>
+                        <a
+                          href="/theme/2/amenities"
+                          class="text-body text-decoration-none d-block mb-2">Amenities</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/theme/2/board-members"
+                          class="text-body text-decoration-none d-block mb-2">Board</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/theme/2/events"
+                          class="text-body text-decoration-none d-block mb-2">Events</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/theme/2/facilities"
+                          class="text-body text-decoration-none d-block mb-2">Facilities</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/theme/2/gallery"
+                          class="text-body text-decoration-none d-block mb-2">Gallery</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/theme/2/history" class="text-body text-decoration-none d-block"
+                          >History</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Newsletter -->
+              <div class="col-lg-4">
+                <h5 class="fs-5 mb-2">Subscribe to our Newsletter</h5>
+                <p class="text-muted mb-3">
+                  Get community updates, event invites, and more—straight to your inbox.
+                </p>
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary w-100 d-flex align-items-center justify-content-center"
+                  >
+                    <i class="ri-send-plane-fill me-2"></i>Subscribe
+                  </button>
+                </form>
+              </div>
             </div>
-          </div>
-          <div class="text-center text-bg-dark py-4">
-            <p class="mb-0">© 2025 Company, Inc. All rights reserved.</p>
+
+            <!-- Footer Bottom -->
+            <div class="text-center pt-4 mt-4 border-top">
+              <p class="text-muted mb-0">&copy; 2025 Company, Inc. All rights reserved.</p>
+            </div>
           </div>
         </footer>
       </div>
