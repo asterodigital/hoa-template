@@ -1,0 +1,17 @@
+---
+interface Props {
+  pageScript?: string
+}
+
+const { pageScript } = Astro.props
+
+function getJS(filename: string) {
+  const isDev = import.meta.env.DEV
+  return isDev ? `/dist/js/${filename}.js` : `/js/${filename}.min.js`
+}
+---
+
+<!-- Main JS -->
+<script src={getJS('main')} type="module" is:inline></script>
+
+<!-- Page Script -->{pageScript && <Fragment set:html={pageScript} />}

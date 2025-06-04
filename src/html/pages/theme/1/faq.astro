@@ -1,556 +1,269 @@
 ---
-import Head from '../../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
+import Layout from './layout.astro'
+import { getAssetPrefix } from '../../../../utils/path.js'
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <Head />
-  </head>
-  <body>
-    <!-- Main Content -->
-    <main>
-      <!-- Page Content -->
-      <div class="content-wrapper">
-        <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
-          <div class="container">
-            <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
-              <img
-                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                alt="Logo"
-                class="me-2"
-                style="height: 32px;"
-              />
-            </a>
-
-            <!-- Offcanvas Toggler -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Offcanvas Menu -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
-              <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
-                  <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                    alt="Logo"
-                    class="me-2"
-                    style="height: 32px;"
-                  />
-                </a>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
-                <ul class="navbar-nav flex-grow-1 justify-content-center d-none d-lg-flex pe-3">
-                  <!-- Home -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/home">Home</a>
-                  </li>
-
-                  <!-- About Dropdown -->
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      id="aboutDropdown"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      About
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                      <li><a class="dropdown-item" href="/theme/1/about">About Us</a></li>
-                      <li><a class="dropdown-item" href="/theme/1/amenities">Amenities</a></li>
-                      <li><a class="dropdown-item" href="/theme/1/history">History</a></li>
-                      <li>
-                        <a class="dropdown-item active" aria-current="page" href="/theme/1/faq"
-                          >FAQs</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-
-                  <!-- Community Dropdown -->
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      id="communityDropdown"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Community
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="communityDropdown">
-                      <li>
-                        <a class="dropdown-item" href="/theme/1/board-members">Board Members</a>
-                      </li>
-                      <li><a class="dropdown-item" href="/theme/1/events">Events</a></li>
-                      <li><a class="dropdown-item" href="/theme/1/news">News</a></li>
-                    </ul>
-                  </li>
-
-                  <!-- Facilities -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/facilities">Facilities</a>
-                  </li>
-
-                  <!-- Gallery -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/gallery">Gallery</a>
-                  </li>
-
-                  <!-- Contact -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/contact">Contact</a>
-                  </li>
-                </ul>
-
-                <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start d-flex d-lg-none">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/amenities">Amenities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/board-members">Board Members</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/contact">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/events">Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/facilities">Facilities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/theme/1/faq">FAQs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/gallery">Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/history">History</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/news">News</a>
-                  </li>
-                </ul>
-
-                <!-- Bottom Section -->
-                <div class="d-block d-lg-none mt-4">
-                  <a
-                    href="mailto:hello@email.com"
-                    class="btn btn-outline-primary rounded w-100 mb-2"
-                  >
-                    <i class="ri-mail-fill me-2"></i>Email Us
-                  </a>
-                  <a href="tel:+12345678901" class="btn btn-primary rounded w-100">
-                    <i class="ri-phone-fill me-2"></i>Call Us
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="d-none d-lg-flex align-items-center gap-3">
-              <div class="text-start">
-                <small class="text-muted d-block">Get in Touch</small>
-                <a href="mailto:hello@email.com" class="text-decoration-none text-body fw-medium">
-                  hello@email.com
-                </a>
-              </div>
-              <a href="/theme/1/contact" class="btn btn-lg btn-primary rounded">Contact Us</a>
-            </div>
-          </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section
-          class="position-relative text-light text-center"
-          style="background-image: url('/dist/assets/img/theme-images/hero-1.jpg'); background-size: cover; background-position: center; height: 400px;"
-        >
-          <!-- Overlay -->
-          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-          <!-- Content -->
-          <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
-            <div class="row">
-              <div class="col-lg-6 offset-lg-3">
-                <h1 class="display-4 fw-semibold mb-2">Your Questions, Answered</h1>
-                <p class="fs-4 mb-0">
-                  Find answers to the most common questions about our homeowners association and
-                  community.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- FAQs Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <h2 class="fs-1 text-center mb-3">Frequently Asked Questions</h2>
-            <p class="mb-4 text-center">
-              Find answers to the most common questions about our homeowners association and
-              community. If you have any additional questions, please don't hesitate to reach out to
-              us.
-            </p>
-            <div class="row">
-              <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                <!-- Nav -->
-                <ul class="nav nav-tabs justify-content-center flex-wrap gap-2 mb-3">
-                  <li class="nav-item">
-                    <a class="nav-link text-body active" aria-current="page" href="#">General</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-body" href="#">Payments</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-body" href="#">Policies</a>
-                  </li>
-                </ul>
-
-                <div
-                  class="accordion accordion-flush"
-                  id="accordionFAQs"
-                  role="tablist"
-                  aria-multiselectable="true"
-                >
-                  <div class="accordion-item bg-transparent">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseOne"
-                      >
-                        When are homeowners association meetings held?
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseOne"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionFAQs"
-                    >
-                      <div class="accordion-body p-3 pt-0">
-                        HOA meetings are held quarterly at the clubhouse. Dates are posted on the
-                        community website and emailed to residents in advance.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item bg-transparent">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseTwo"
-                      >
-                        Who do I contact for maintenance issues in common areas?
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseTwo"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionFAQs"
-                    >
-                      <div class="accordion-body p-3 pt-0">
-                        Please report any maintenance concerns through the HOA contact form or by
-                        calling the property management company directly.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item bg-transparent">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseThree"
-                      >
-                        Are there rules about parking or street parking?
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseThree"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionFAQs"
-                    >
-                      <div class="accordion-body p-3 pt-0">
-                        Yes. Overnight street parking is limited in certain areas. Residents are
-                        encouraged to use driveways and garages when possible.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item bg-transparent">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseFour"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseFour"
-                      >
-                        How do I reserve the clubhouse for a private event?
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseFour"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionFAQs"
-                    >
-                      <div class="accordion-body p-3 pt-0">
-                        You can request a reservation through the resident portal or by contacting
-                        the HOA office. A deposit and cleaning fee may apply.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Contact Card -->
-        <section class="bg-body pb-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                <div class="card bg-primary-pale border">
-                  <div class="card-body">
-                    <h5 class="card-title fs-5">Didn't find your question?</h5>
-                    <p class="card-text mb-4">
-                      We're here to help! Reach out to us directly using the contact details below.
-                    </p>
-                    <div class="row g-3">
-                      <div class="col-md-6">
-                        <div class="d-flex align-items-start">
-                          <i class="ri-map-pin-line me-3 fs-4 text-primary"></i>
-                          <span>
-                            <strong>Address:</strong><br />
-                            123 Longhorn Heights, Austin, TX
-                          </span>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="d-flex align-items-start">
-                          <i class="ri-phone-line me-3 fs-4 text-primary"></i>
-                          <span>
-                            <strong>Phone:</strong><br />
-                            +1 (234) 567-8901
-                          </span>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="d-flex align-items-start">
-                          <i class="ri-mail-line me-3 fs-4 text-primary"></i>
-                          <span>
-                            <strong>Email:</strong><br />
-                            hello@email.com
-                          </span>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="d-flex align-items-start">
-                          <i class="ri-time-line me-3 fs-4 text-primary"></i>
-                          <span>
-                            <strong>Office Hours:</strong><br />
-                            Mon–Fri: 9:00 AM – 5:00 PM
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="text-bg-primary py-5">
-          <div class="container text-center">
-            <!-- Heading and Intro -->
-            <h2 class="fs-1 mb-2">Stay Connected</h2>
-            <p class="mb-4">
-              Sign up for updates about community news, upcoming events, and important HOA
-              announcements.
-            </p>
-            <div class="row">
-              <div class="col-lg-8 offset-lg-2">
-                <!-- Form -->
-                <form class="row g-4 justify-content-center">
-                  <!-- Name Field -->
-                  <div class="col-12 col-md-6">
-                    <input
-                      type="text"
-                      class="form-control form-control-lg"
-                      placeholder="Your Name"
-                      required
-                    />
-                  </div>
-                  <!-- Phone Field -->
-                  <div class="col-12 col-md-6">
-                    <input
-                      type="tel"
-                      class="form-control form-control-lg"
-                      placeholder="Phone Number"
-                      pattern="[0-9\-+()\s]{7,15}"
-                      required
-                    />
-                  </div>
-                  <!-- Email Field -->
-                  <div class="col-12">
-                    <input
-                      type="email"
-                      class="form-control form-control-lg"
-                      placeholder="Email Address"
-                      required
-                    />
-                  </div>
-                  <!-- Submit Button -->
-                  <div class="col-12 col-md-auto">
-                    <button type="submit" class="btn btn-lg btn-dark w-100">
-                      Subscribe<i class="ri-arrow-right-line ms-2"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-body">
-          <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 px-3 px-lg-5 pt-5 pb-4">
-              <div class="col mb-3">
-                <a
-                  href="/"
-                  class="d-inline-flex align-items-center text-decoration-none mb-3"
-                  aria-label="Your Company Logo"
-                >
-                  <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                    alt="Logo"
-                    style="height: 32px;"
-                    class="me-2"
-                  />
-                </a>
-                <p class="text-body-secondary mb-3">
-                  Stay connected with our community—subscribe to updates and never miss important
-                  news or events!
-                </p>
-                <a href="/theme/1/contact" class="btn btn-lg btn-primary">Get in touch</a>
-              </div>
-
-              <div class="col mb-3"></div>
-
-              <div class="col mb-3">
-                <nav aria-label="Quick Links">
-                  <h5 class="mb-3">Quick Links</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2">
-                      <a href="/theme/1/home" class="nav-link p-0 text-body-secondary">Home</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/1/about" class="nav-link p-0 text-body-secondary">About</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/1/news" class="nav-link p-0 text-body-secondary">News</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/1/contact" class="nav-link p-0 text-body-secondary">Contact</a
-                      >
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-
-              <div class="col mb-3">
-                <nav aria-label="Legal">
-                  <h5 class="mb-3">Legal</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">Cookies Policy</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-
-              <div class="col mb-3">
-                <h5 class="mb-3">Contact</h5>
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2 text-body-secondary">
-                    <i class="ri-phone-fill text-primary me-2"></i>
-                    <a
-                      href="tel:+12345678901"
-                      class="text-body-secondary text-decoration-none text-break"
-                      >+1 (234) 567-8901</a
-                    >
-                  </li>
-                  <li class="nav-item mb-2 text-body-secondary">
-                    <i class="ri-mail-fill text-primary me-2"></i>
-                    <a
-                      href="mailto:hello@email.com"
-                      class="text-body-secondary text-decoration-none text-break">hello@email.com</a
-                    >
-                  </li>
-                  <li class="nav-item mb-2 text-body-secondary">
-                    <address class="text-body-secondary">
-                      <i class="ri-map-pin-fill text-primary me-2"></i>
-                      123 Longhorn Heights, Austin, TX
-                    </address>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="text-center text-bg-dark py-4">
-            <p class="mb-0">© 2025 Company, Inc. All rights reserved.</p>
-          </div>
-        </footer>
+<Layout
+  title="FAQs"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Hero Section -->
+  <section
+    class="position-relative text-light text-center"
+    style={`background-image: url('${getAssetPrefix('/assets/img/theme-images/hero-1.jpg')}'); background-size: cover; background-position: center; height: 400px;`}
+  >
+    <!-- Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    <!-- Content -->
+    <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <h1 class="display-4 fw-semibold mb-2">Your Questions, Answered</h1>
+          <p class="fs-4 mb-0">
+            Find answers to the most common questions about our homeowners association and
+            community.
+          </p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- All Scripts -->
-      <Scripts />
-    </main>
-  </body>
-</html>
+  <!-- FAQs Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-1 text-center mb-3">Frequently Asked Questions</h2>
+      <p class="mb-4 text-center">
+        Find answers to the most common questions about our homeowners association and community. If
+        you have any additional questions, please don't hesitate to reach out to us.
+      </p>
+      <div class="row">
+        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+          <!-- Nav -->
+          <ul class="nav nav-tabs justify-content-center flex-wrap gap-2 mb-3">
+            <li class="nav-item">
+              <a class="nav-link text-body active" aria-current="page" href="#">General</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-body" href="#">Payments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-body" href="#">Policies</a>
+            </li>
+          </ul>
+
+          <div
+            class="accordion accordion-flush"
+            id="accordionFAQs"
+            role="tablist"
+            aria-multiselectable="true"
+          >
+            <div class="accordion-item bg-transparent">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  When are homeowners association meetings held?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFAQs"
+              >
+                <div class="accordion-body p-3 pt-0">
+                  HOA meetings are held quarterly at the clubhouse. Dates are posted on the
+                  community website and emailed to residents in advance.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Who do I contact for maintenance issues in common areas?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFAQs"
+              >
+                <div class="accordion-body p-3 pt-0">
+                  Please report any maintenance concerns through the HOA contact form or by calling
+                  the property management company directly.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Are there rules about parking or street parking?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFAQs"
+              >
+                <div class="accordion-body p-3 pt-0">
+                  Yes. Overnight street parking is limited in certain areas. Residents are
+                  encouraged to use driveways and garages when possible.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  How do I reserve the clubhouse for a private event?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFAQs"
+              >
+                <div class="accordion-body p-3 pt-0">
+                  You can request a reservation through the resident portal or by contacting the HOA
+                  office. A deposit and cleaning fee may apply.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Card -->
+  <section class="bg-body pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+          <div class="card bg-primary-pale border">
+            <div class="card-body">
+              <h5 class="card-title fs-5">Didn't find your question?</h5>
+              <p class="card-text mb-4">
+                We're here to help! Reach out to us directly using the contact details below.
+              </p>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="d-flex align-items-start">
+                    <i class="ri-map-pin-line me-3 fs-4 text-primary"></i>
+                    <span>
+                      <strong>Address:</strong><br />
+                      123 Longhorn Heights, Austin, TX
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex align-items-start">
+                    <i class="ri-phone-line me-3 fs-4 text-primary"></i>
+                    <span>
+                      <strong>Phone:</strong><br />
+                      +1 (234) 567-8901
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex align-items-start">
+                    <i class="ri-mail-line me-3 fs-4 text-primary"></i>
+                    <span>
+                      <strong>Email:</strong><br />
+                      hello@email.com
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="d-flex align-items-start">
+                    <i class="ri-time-line me-3 fs-4 text-primary"></i>
+                    <span>
+                      <strong>Office Hours:</strong><br />
+                      Mon–Fri: 9:00 AM – 5:00 PM
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="text-bg-primary py-5">
+    <div class="container text-center">
+      <!-- Heading and Intro -->
+      <h2 class="fs-1 mb-2">Stay Connected</h2>
+      <p class="mb-4">
+        Sign up for updates about community news, upcoming events, and important HOA announcements.
+      </p>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <!-- Form -->
+          <form class="row g-4 justify-content-center">
+            <!-- Name Field -->
+            <div class="col-12 col-md-6">
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <!-- Phone Field -->
+            <div class="col-12 col-md-6">
+              <input
+                type="tel"
+                class="form-control form-control-lg"
+                placeholder="Phone Number"
+                pattern="[0-9\-+()\s]{7,15}"
+                required
+              />
+            </div>
+            <!-- Email Field -->
+            <div class="col-12">
+              <input
+                type="email"
+                class="form-control form-control-lg"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <!-- Submit Button -->
+            <div class="col-12 col-md-auto">
+              <button type="submit" class="btn btn-lg btn-dark w-100">
+                Subscribe<i class="ri-arrow-right-line ms-2"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

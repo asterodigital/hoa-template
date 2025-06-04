@@ -1,506 +1,216 @@
 ---
-import Head from '../../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
+import Layout from './layout.astro'
+import { getAssetPrefix } from '../../../../utils/path.js'
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <Head />
-  </head>
-  <body>
-    <!-- Main Content -->
-    <main>
-      <!-- Page Content -->
-      <div class="content-wrapper">
-        <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
-          <div class="container">
-            <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
-              <img
-                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                alt="Logo"
-                class="me-2"
-                style="height: 32px;"
-              />
-            </a>
-
-            <!-- Offcanvas Toggler -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Offcanvas Menu -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
-              <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/theme/1/home">
-                  <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                    alt="Logo"
-                    class="me-2"
-                    style="height: 32px;"
-                  />
-                </a>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
-                <ul class="navbar-nav flex-grow-1 justify-content-center d-none d-lg-flex pe-3">
-                  <!-- Home -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/home">Home</a>
-                  </li>
-
-                  <!-- About Dropdown -->
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      id="aboutDropdown"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      About
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                      <li><a class="dropdown-item" href="/theme/1/about">About Us</a></li>
-                      <li>
-                        <a
-                          class="dropdown-item active"
-                          aria-current="page"
-                          href="/theme/1/amenities">Amenities</a
-                        >
-                      </li>
-                      <li><a class="dropdown-item" href="/theme/1/history">History</a></li>
-                      <li><a class="dropdown-item" href="/theme/1/faq">FAQs</a></li>
-                    </ul>
-                  </li>
-
-                  <!-- Community Dropdown -->
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      id="communityDropdown"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Community
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="communityDropdown">
-                      <li>
-                        <a class="dropdown-item" href="/theme/1/board-members">Board Members</a>
-                      </li>
-                      <li><a class="dropdown-item" href="/theme/1/events">Events</a></li>
-                      <li><a class="dropdown-item" href="/theme/1/news">News</a></li>
-                    </ul>
-                  </li>
-
-                  <!-- Facilities -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/facilities">Facilities</a>
-                  </li>
-
-                  <!-- Gallery -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/gallery">Gallery</a>
-                  </li>
-
-                  <!-- Contact -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/contact">Contact</a>
-                  </li>
-                </ul>
-
-                <ul class="navbar-nav flex-grow-1 pe-3 justify-content-start d-flex d-lg-none">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/theme/1/amenities"
-                      >Amenities</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/board-members">Board Members</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/contact">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/events">Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/facilities">Facilities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/faq">FAQs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/gallery">Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/history">History</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/1/news">News</a>
-                  </li>
-                </ul>
-
-                <!-- Bottom Section -->
-                <div class="d-block d-lg-none mt-4">
-                  <a
-                    href="mailto:hello@email.com"
-                    class="btn btn-outline-primary rounded w-100 mb-2"
-                  >
-                    <i class="ri-mail-fill me-2"></i>Email Us
-                  </a>
-                  <a href="tel:+12345678901" class="btn btn-primary rounded w-100">
-                    <i class="ri-phone-fill me-2"></i>Call Us
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="d-none d-lg-flex align-items-center gap-3">
-              <div class="text-start">
-                <small class="text-muted d-block">Get in Touch</small>
-                <a href="mailto:hello@email.com" class="text-decoration-none text-body fw-medium">
-                  hello@email.com
-                </a>
-              </div>
-              <a href="/theme/1/contact" class="btn btn-lg btn-primary rounded">Contact Us</a>
-            </div>
-          </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section
-          class="position-relative text-light text-center"
-          style="background-image: url('/dist/assets/img/theme-images/hero-1.jpg'); background-size: cover; background-position: center; height: 400px;"
-        >
-          <!-- Overlay -->
-          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-          <!-- Content -->
-          <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
-            <div class="row">
-              <div class="col-lg-6 offset-lg-3">
-                <h1 class="display-4 fw-semibold mb-2">Amenities</h1>
-                <p class="fs-4 mb-0">
-                  Explore the amenities that make life at Longhorn Heights comfortable, active, and
-                  connected to nature.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Pool Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8">
-                <h2 class="fs-1 mb-2">Resort-Style Pool</h2>
-                <p class="mb-3">
-                  Enjoy a relaxing day at our resort-style pool, featuring shaded seating, a shallow
-                  kids’ area, and poolside Wi-Fi access.
-                </p>
-                <div class="row">
-                  <div class="col-md-6">
-                    <ul class="list-unstyled mb-2">
-                      <li class="mb-2">
-                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Lounge Areas
-                      </li>
-                      <li><i class="ri-checkbox-circle-fill text-primary me-2"></i>Kids Zone</li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6">
-                    <ul class="list-unstyled mb-2">
-                      <li class="mb-2">
-                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Poolside Wi-Fi
-                      </li>
-                      <li>
-                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Outdoor Showers
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mt-4 mt-md-0">
-                <figure class="img-scale rounded-4 mb-0">
-                  <img
-                    src="/dist/assets/img/theme-images/img-2.jpg"
-                    class="img-fluid"
-                    alt="Amenities Image"
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Sports Section -->
-        <section class="bg-primary-pale py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 order-md-2 ps-lg-5">
-                <h2 class="fs-1 mb-2">Sports Facilities</h2>
-                <p class="mb-3">
-                  Stay active and energized with access to our multi-use sports court, perfect for
-                  tennis, basketball, and community games.
-                </p>
-                <div class="row">
-                  <div class="col-md-6">
-                    <ul class="list-unstyled mb-2">
-                      <li class="mb-2">
-                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Tennis Court
-                      </li>
-                      <li>
-                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Basketball Court
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6">
-                    <ul class="list-unstyled mb-2">
-                      <li class="mb-2">
-                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Shaded Seating
-                      </li>
-                      <li>
-                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Evening Lighting
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 order-md-1 mt-4 mt-md-0">
-                <figure class="img-scale rounded-4 mb-0">
-                  <img
-                    src="/dist/assets/img/theme-images/img-4.jpg"
-                    class="img-fluid"
-                    alt="Amenities Image"
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Clubhouse Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8">
-                <h2 class="fs-1 mb-2">Community Clubhouse</h2>
-                <p class="mb-3">
-                  Host private events or relax with neighbors in our clubhouse, complete with a
-                  kitchen, seating, and media lounge.
-                </p>
-                <div class="row">
-                  <div class="col-md-6">
-                    <ul class="list-unstyled mb-2">
-                      <li class="mb-2">
-                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Lounge Seating
-                      </li>
-                      <li><i class="ri-checkbox-circle-fill text-primary me-2"></i>Event Space</li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6">
-                    <ul class="list-unstyled mb-2">
-                      <li class="mb-2">
-                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Full Kitchen
-                      </li>
-                      <li>
-                        <i class="ri-checkbox-circle-fill text-primary me-2"></i>Big-Screen TV
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mt-4 mt-md-0">
-                <figure class="img-scale rounded-4 mb-0">
-                  <img
-                    src="/dist/assets/img/theme-images/img-3.jpg"
-                    class="img-fluid"
-                    alt="Amenities Image"
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="text-bg-primary py-5">
-          <div class="container text-center">
-            <!-- Heading and Intro -->
-            <h2 class="fs-1 mb-2">Stay Connected</h2>
-            <p class="mb-4">
-              Sign up for updates about community news, upcoming events, and important HOA
-              announcements.
-            </p>
-            <div class="row">
-              <div class="col-lg-8 offset-lg-2">
-                <!-- Form -->
-                <form class="row g-4 justify-content-center">
-                  <!-- Name Field -->
-                  <div class="col-12 col-md-6">
-                    <input
-                      type="text"
-                      class="form-control form-control-lg"
-                      placeholder="Your Name"
-                      required
-                    />
-                  </div>
-                  <!-- Phone Field -->
-                  <div class="col-12 col-md-6">
-                    <input
-                      type="tel"
-                      class="form-control form-control-lg"
-                      placeholder="Phone Number"
-                      pattern="[0-9\-+()\s]{7,15}"
-                      required
-                    />
-                  </div>
-                  <!-- Email Field -->
-                  <div class="col-12">
-                    <input
-                      type="email"
-                      class="form-control form-control-lg"
-                      placeholder="Email Address"
-                      required
-                    />
-                  </div>
-                  <!-- Submit Button -->
-                  <div class="col-12 col-md-auto">
-                    <button type="submit" class="btn btn-lg btn-dark w-100">
-                      Subscribe<i class="ri-arrow-right-line ms-2"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-body">
-          <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 px-3 px-lg-5 pt-5 pb-4">
-              <div class="col mb-3">
-                <a
-                  href="/"
-                  class="d-inline-flex align-items-center text-decoration-none mb-3"
-                  aria-label="Your Company Logo"
-                >
-                  <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                    alt="Logo"
-                    style="height: 32px;"
-                    class="me-2"
-                  />
-                </a>
-                <p class="text-body-secondary mb-3">
-                  Stay connected with our community—subscribe to updates and never miss important
-                  news or events!
-                </p>
-                <a href="/theme/1/contact" class="btn btn-lg btn-primary">Get in touch</a>
-              </div>
-
-              <div class="col mb-3"></div>
-
-              <div class="col mb-3">
-                <nav aria-label="Quick Links">
-                  <h5 class="mb-3">Quick Links</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2">
-                      <a href="/theme/1/home" class="nav-link p-0 text-body-secondary">Home</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/1/about" class="nav-link p-0 text-body-secondary">About</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/1/news" class="nav-link p-0 text-body-secondary">News</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/1/faq" class="nav-link p-0 text-body-secondary">FAQs</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="/theme/1/contact" class="nav-link p-0 text-body-secondary">Contact</a
-                      >
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-
-              <div class="col mb-3">
-                <nav aria-label="Legal">
-                  <h5 class="mb-3">Legal</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                      <a href="#" class="nav-link p-0 text-body-secondary">Cookies Policy</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-
-              <div class="col mb-3">
-                <h5 class="mb-3">Contact</h5>
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2 text-body-secondary">
-                    <i class="ri-phone-fill text-primary me-2"></i>
-                    <a
-                      href="tel:+12345678901"
-                      class="text-body-secondary text-decoration-none text-break"
-                      >+1 (234) 567-8901</a
-                    >
-                  </li>
-                  <li class="nav-item mb-2 text-body-secondary">
-                    <i class="ri-mail-fill text-primary me-2"></i>
-                    <a
-                      href="mailto:hello@email.com"
-                      class="text-body-secondary text-decoration-none text-break">hello@email.com</a
-                    >
-                  </li>
-                  <li class="nav-item mb-2 text-body-secondary">
-                    <address class="text-body-secondary">
-                      <i class="ri-map-pin-fill text-primary me-2"></i>
-                      123 Longhorn Heights, Austin, TX
-                    </address>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="text-center text-bg-dark py-4">
-            <p class="mb-0">© 2025 Company, Inc. All rights reserved.</p>
-          </div>
-        </footer>
+<Layout
+  title="Amenities"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Hero Section -->
+  <section
+    class="position-relative text-light text-center"
+    style={`background-image: url('${getAssetPrefix('/assets/img/theme-images/hero-1.jpg')}'); background-size: cover; background-position: center; height: 400px;`}
+  >
+    <!-- Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    <!-- Content -->
+    <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <h1 class="display-4 fw-semibold mb-2">Amenities</h1>
+          <p class="fs-4 mb-0">
+            Explore the amenities that make life at Longhorn Heights comfortable, active, and
+            connected to nature.
+          </p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- All Scripts -->
-      <Scripts />
-    </main>
-  </body>
-</html>
+  <!-- Pool Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2 class="fs-1 mb-2">Resort-Style Pool</h2>
+          <p class="mb-3">
+            Enjoy a relaxing day at our resort-style pool, featuring shaded seating, a shallow kids’
+            area, and poolside Wi-Fi access.
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-unstyled mb-2">
+                <li class="mb-2">
+                  <i class="ri-checkbox-circle-fill text-primary me-2"></i>Lounge Areas
+                </li>
+                <li><i class="ri-checkbox-circle-fill text-primary me-2"></i>Kids Zone</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled mb-2">
+                <li class="mb-2">
+                  <i class="ri-checkbox-circle-fill text-primary me-2"></i>Poolside Wi-Fi
+                </li>
+                <li>
+                  <i class="ri-checkbox-circle-fill text-primary me-2"></i>Outdoor Showers
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4 mt-md-0">
+          <figure class="img-scale rounded-4 mb-0">
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/img-2.jpg')}
+              class="img-fluid"
+              alt="Amenities Image"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sports Section -->
+  <section class="bg-primary-pale py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 order-md-2 ps-lg-5">
+          <h2 class="fs-1 mb-2">Sports Facilities</h2>
+          <p class="mb-3">
+            Stay active and energized with access to our multi-use sports court, perfect for tennis,
+            basketball, and community games.
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-unstyled mb-2">
+                <li class="mb-2">
+                  <i class="ri-checkbox-circle-fill text-primary me-2"></i>Tennis Court
+                </li>
+                <li>
+                  <i class="ri-checkbox-circle-fill text-primary me-2"></i>Basketball Court
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled mb-2">
+                <li class="mb-2">
+                  <i class="ri-checkbox-circle-fill text-primary me-2"></i>Shaded Seating
+                </li>
+                <li>
+                  <i class="ri-checkbox-circle-fill text-primary me-2"></i>Evening Lighting
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 order-md-1 mt-4 mt-md-0">
+          <figure class="img-scale rounded-4 mb-0">
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
+              class="img-fluid"
+              alt="Amenities Image"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clubhouse Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2 class="fs-1 mb-2">Community Clubhouse</h2>
+          <p class="mb-3">
+            Host private events or relax with neighbors in our clubhouse, complete with a kitchen,
+            seating, and media lounge.
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-unstyled mb-2">
+                <li class="mb-2">
+                  <i class="ri-checkbox-circle-fill text-primary me-2"></i>Lounge Seating
+                </li>
+                <li><i class="ri-checkbox-circle-fill text-primary me-2"></i>Event Space</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled mb-2">
+                <li class="mb-2">
+                  <i class="ri-checkbox-circle-fill text-primary me-2"></i>Full Kitchen
+                </li>
+                <li>
+                  <i class="ri-checkbox-circle-fill text-primary me-2"></i>Big-Screen TV
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4 mt-md-0">
+          <figure class="img-scale rounded-4 mb-0">
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/img-3.jpg')}
+              class="img-fluid"
+              alt="Amenities Image"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="text-bg-primary py-5">
+    <div class="container text-center">
+      <!-- Heading and Intro -->
+      <h2 class="fs-1 mb-2">Stay Connected</h2>
+      <p class="mb-4">
+        Sign up for updates about community news, upcoming events, and important HOA announcements.
+      </p>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <!-- Form -->
+          <form class="row g-4 justify-content-center">
+            <!-- Name Field -->
+            <div class="col-12 col-md-6">
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <!-- Phone Field -->
+            <div class="col-12 col-md-6">
+              <input
+                type="tel"
+                class="form-control form-control-lg"
+                placeholder="Phone Number"
+                pattern="[0-9\-+()\s]{7,15}"
+                required
+              />
+            </div>
+            <!-- Email Field -->
+            <div class="col-12">
+              <input
+                type="email"
+                class="form-control form-control-lg"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <!-- Submit Button -->
+            <div class="col-12 col-md-auto">
+              <button type="submit" class="btn btn-lg btn-dark w-100">
+                Subscribe<i class="ri-arrow-right-line ms-2"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
