@@ -1,329 +1,96 @@
 ---
-import Head from '../../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
+import Layout from './layout.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <Head />
-  </head>
-  <body>
-    <!-- Main Content -->
-    <main>
-      <!-- Page Content -->
-      <div class="content-wrapper">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-body shadow-sm sticky-top z-3">
-          <div class="container">
-            <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/theme/3/home">
-              <img
-                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                alt="Logo"
-                class="me-2"
-                style="height: 32px;"
-              />
-            </a>
-
-            <!-- Offcanvas Toggler -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Offcanvas Menu -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
-              <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/theme/3/home">
-                  <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                    alt="Logo"
-                    class="me-2"
-                    style="height: 32px;"
-                  />
-                </a>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
-                <ul class="navbar-nav navbar-underline justify-content-end">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/3/home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/theme/3/about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/3/amenities">Amenities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/3/board-members">Board</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/3/events">Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/3/facilities">Facilities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/3/faq">FAQs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/3/gallery">Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/3/history">History</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/3/news">News</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/3/contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section
-          class="position-relative text-light text-center text-lg-start"
-          style="background-image: url('/dist/assets/img/theme-images/hero-3.jpg'); background-size: cover; background-position: center; height: 400px;"
-        >
-          <!-- Overlay -->
-          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-          <!-- Content -->
-          <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
-            <div class="row">
-              <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-                <h1 class="display-2 fw-semibold lh-1 mb-2">About Us</h1>
-                <p class="fs-4 mb-3">
-                  Discover the story, values, and vision behind Longhorn Heights — where community
-                  comes first.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Info Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <div class="row justify-content-center text-center">
-              <div class="col-lg-10">
-                <h2 class="fs-1 mb-4">Our Community</h2>
-                <p class="fs-5 text-muted mb-0">
-                  Longhorn Heights was established in the early 1980s with a vision to create a
-                  close-knit, family-friendly neighborhood in the heart of Austin. What began as a
-                  modest development soon grew into a thriving community grounded in shared values.
-                  Over the years, Longhorn Heights has become a beloved Austin neighborhood,
-                  cherished for its friendly residents and beautiful homes.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section
-          class="position-relative text-light text-center"
-          style="background-image: url('/dist/assets/img/theme-images/hero-1.jpg'); background-size: cover; background-position: center;"
-        >
-          <!-- Overlay -->
-          <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-75"></div>
-          <!-- Content -->
-          <div class="container">
-            <div class="position-relative h-100">
-              <div class="row text-center py-5">
-                <div class="col-12 col-md-6 col-lg-3 py-3">
-                  <div>
-                    <h4 class="display-2 fw-semibold mb-0">
-                      350<span class="text-warning">+</span>
-                    </h4>
-                    <div class="fs-5">Living Families</div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 py-3">
-                  <div>
-                    <h4 class="display-2 fw-semibold mb-0">
-                      120<span class="text-warning">+</span>
-                    </h4>
-                    <div class="fs-5">New Homes</div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 py-3">
-                  <div>
-                    <h4 class="display-2 fw-semibold mb-0">
-                      50<span class="text-warning">+</span>
-                    </h4>
-                    <div class="fs-5">Amenities</div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 py-3">
-                  <div>
-                    <h4 class="display-2 fw-semibold mb-0">
-                      10<span class="text-warning">+</span>
-                    </h4>
-                    <div class="fs-5">Years in Business</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-body pt-5 pb-4 border-top">
-          <div class="container">
-            <div class="row gy-4">
-              <!-- Logo and Contact Info -->
-              <div class="col-lg-4 col-md-6">
-                <img
-                  src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                  alt="Logo"
-                  style="height: 32px;"
-                  class="mb-4"
-                />
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-                    <a href="tel:+12345678901" class="text-body text-decoration-none">
-                      <i class="ri-phone-fill text-primary me-2"></i>+1 (234) 567-8901
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="mailto:hello@email.com" class="text-body text-decoration-none">
-                      <i class="ri-mail-fill text-primary me-2"></i>hello@email.com
-                    </a>
-                  </li>
-                  <li>
-                    <i class="ri-map-pin-fill text-primary me-2"></i>123 Longhorn Heights, Austin,
-                    TX
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Navigation Links -->
-              <div class="col-lg-4 col-md-6">
-                <div class="row">
-                  <div class="col-6">
-                    <h5 class="fs-5 mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="/theme/3/home" class="text-body text-decoration-none d-block mb-2"
-                          >Home</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/3/about" class="text-body text-decoration-none d-block mb-2"
-                          >About</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/3/news" class="text-body text-decoration-none d-block mb-2"
-                          >News</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/3/faq" class="text-body text-decoration-none d-block mb-2"
-                          >FAQs</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/3/contact" class="text-body text-decoration-none d-block"
-                          >Contact</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-6">
-                    <h5 class="fs-5 mb-3">Explore</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a
-                          href="/theme/3/amenities"
-                          class="text-body text-decoration-none d-block mb-2">Amenities</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/3/board-members"
-                          class="text-body text-decoration-none d-block mb-2">Board</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/3/events"
-                          class="text-body text-decoration-none d-block mb-2">Events</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/3/facilities"
-                          class="text-body text-decoration-none d-block mb-2">Facilities</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/3/gallery"
-                          class="text-body text-decoration-none d-block mb-2">Gallery</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/3/history" class="text-body text-decoration-none d-block"
-                          >History</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Newsletter -->
-              <div class="col-lg-4">
-                <h5 class="fs-5 mb-2">Subscribe to our Newsletter</h5>
-                <p class="text-muted mb-3">
-                  Get community updates, event invites, and more—straight to your inbox.
-                </p>
-                <form>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      class="form-control form-control-lg"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn btn-primary w-100 d-flex align-items-center justify-content-center"
-                  >
-                    <i class="ri-send-plane-fill me-2"></i>Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="text-center pt-4 mt-4 border-top">
-              <p class="text-muted mb-0">&copy; 2025 Company, Inc. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+<Layout
+  title="About"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Hero Section -->
+  <section
+    class="position-relative text-light text-center text-lg-start"
+    style={`background-image: url('${getAssetPrefix('/assets/img/theme-images/hero-3.jpg')}'); background-size: cover; background-position: center; height: 400px;`}
+  >
+    <!-- Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    <!-- Content -->
+    <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+          <h1 class="display-2 fw-semibold lh-1 mb-2">About Us</h1>
+          <p class="fs-4 mb-3">
+            Discover the story, values, and vision behind Longhorn Heights — where community comes
+            first.
+          </p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- All Scripts -->
-      <Scripts />
-    </main>
-  </body>
-</html>
+  <!-- Info Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10">
+          <h2 class="fs-1 mb-4">Our Community</h2>
+          <p class="fs-5 text-muted mb-0">
+            Longhorn Heights was established in the early 1980s with a vision to create a
+            close-knit, family-friendly neighborhood in the heart of Austin. What began as a modest
+            development soon grew into a thriving community grounded in shared values. Over the
+            years, Longhorn Heights has become a beloved Austin neighborhood, cherished for its
+            friendly residents and beautiful homes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section
+    class="position-relative text-light text-center"
+    style={`background-image: url('${getAssetPrefix('/assets/img/theme-images/hero-1.jpg')}'); background-size: cover; background-position: center;`}
+  >
+    <!-- Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-75"></div>
+    <!-- Content -->
+    <div class="container">
+      <div class="position-relative h-100">
+        <div class="row text-center py-5">
+          <div class="col-12 col-md-6 col-lg-3 py-3">
+            <div>
+              <h4 class="display-2 fw-semibold mb-0">
+                350<span class="text-warning">+</span>
+              </h4>
+              <div class="fs-5">Living Families</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 py-3">
+            <div>
+              <h4 class="display-2 fw-semibold mb-0">
+                120<span class="text-warning">+</span>
+              </h4>
+              <div class="fs-5">New Homes</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 py-3">
+            <div>
+              <h4 class="display-2 fw-semibold mb-0">
+                50<span class="text-warning">+</span>
+              </h4>
+              <div class="fs-5">Amenities</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 py-3">
+            <div>
+              <h4 class="display-2 fw-semibold mb-0">
+                10<span class="text-warning">+</span>
+              </h4>
+              <div class="fs-5">Years in Business</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
