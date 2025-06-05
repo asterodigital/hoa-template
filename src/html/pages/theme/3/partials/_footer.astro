@@ -3,140 +3,39 @@ import { getPathPrefix } from '../../../../../utils/path.js'
 import Logo from './_topbar/_logo.astro'
 ---
 
-<!-- Footer -->
-<footer class="bg-body pt-5 pb-4 border-top">
-  <div class="container">
-    <div class="row gy-4">
-      <!-- Logo and Contact Info -->
-      <div class="col-lg-4 col-md-6">
+<footer class="container py-4 border-top">
+  <div class="row text-center text-lg-start align-items-center">
+    <!-- Logo (centered on mobile, middle column on desktop) -->
+    <div class="col-12 col-lg-4 order-1 order-lg-2 mb-3 mb-lg-0 d-flex justify-content-center">
+      <a href={getPathPrefix('/theme/3/home')} class="text-decoration-none">
         <Logo />
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2">
-            <a href="tel:+12345678901" class="text-body text-decoration-none">
-              <i class="ri-phone-fill text-primary me-2"></i>+1 (234) 567-8901
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="mailto:hello@email.com" class="text-body text-decoration-none">
-              <i class="ri-mail-fill text-primary me-2"></i>hello@email.com
-            </a>
-          </li>
-          <li>
-            <i class="ri-map-pin-fill text-primary me-2"></i>123 Longhorn Heights, Austin, TX
-          </li>
-        </ul>
-      </div>
-
-      <!-- Navigation Links -->
-      <div class="col-lg-4 col-md-6">
-        <div class="row">
-          <div class="col-6">
-            <h5 class="fs-5 mb-3">Quick Links</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/home')}
-                  class="text-body text-decoration-none d-block mb-2">Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/about')}
-                  class="text-body text-decoration-none d-block mb-2">About</a
-                >
-              </li>
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/news')}
-                  class="text-body text-decoration-none d-block mb-2">News</a
-                >
-              </li>
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/faq')}
-                  class="text-body text-decoration-none d-block mb-2">FAQs</a
-                >
-              </li>
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/contact')}
-                  class="text-body text-decoration-none d-block">Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-6">
-            <h5 class="fs-5 mb-3">Explore</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/amenities')}
-                  class="text-body text-decoration-none d-block mb-2">Amenities</a
-                >
-              </li>
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/board-members')}
-                  class="text-body text-decoration-none d-block mb-2">Board</a
-                >
-              </li>
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/events')}
-                  class="text-body text-decoration-none d-block mb-2">Events</a
-                >
-              </li>
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/facilities')}
-                  class="text-body text-decoration-none d-block mb-2">Facilities</a
-                >
-              </li>
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/gallery')}
-                  class="text-body text-decoration-none d-block mb-2">Gallery</a
-                >
-              </li>
-              <li>
-                <a
-                  href={getPathPrefix('/theme/3/history')}
-                  class="text-body text-decoration-none d-block">History</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Newsletter -->
-      <div class="col-lg-4">
-        <h5 class="fs-5 mb-2">Subscribe to our Newsletter</h5>
-        <p class="text-muted mb-3">
-          Get community updates, event invites, and more—straight to your inbox.
-        </p>
-        <form>
-          <div class="mb-3">
-            <input
-              type="email"
-              class="form-control form-control-lg"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            class="btn btn-primary w-100 d-flex align-items-center justify-content-center"
-          >
-            <i class="ri-send-plane-fill me-2"></i>Subscribe
-          </button>
-        </form>
-      </div>
+      </a>
     </div>
 
-    <!-- Footer Bottom -->
-    <div class="text-center pt-4 mt-4 border-top">
-      <p class="text-muted mb-0">&copy; 2025 Company, Inc. All rights reserved.</p>
-    </div>
+    <!-- Navigation Links -->
+    <ul
+      class="nav col-12 col-lg-4 order-2 order-lg-3 justify-content-center justify-content-lg-end mb-3 mb-lg-0"
+    >
+      <li class="nav-item">
+        <a href={getPathPrefix('/theme/3/home')} class="nav-link px-2 text-muted">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href={getPathPrefix('/theme/3/about')} class="nav-link px-2 text-muted">About</a>
+      </li>
+      <li class="nav-item">
+        <a href={getPathPrefix('/theme/3/news')} class="nav-link px-2 text-muted">News</a>
+      </li>
+      <li class="nav-item">
+        <a href={getPathPrefix('/theme/3/faq')} class="nav-link px-2 text-muted">FAQs</a>
+      </li>
+      <li class="nav-item">
+        <a href={getPathPrefix('/theme/3/contact')} class="nav-link px-2 text-muted">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Copyright -->
+    <p class="col-12 col-lg-4 order-3 order-lg-1 mb-0 text-muted text-center text-lg-start">
+      © 2025 Company, Inc.
+    </p>
   </div>
 </footer>
