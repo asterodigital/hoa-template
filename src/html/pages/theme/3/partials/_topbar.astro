@@ -7,164 +7,158 @@ import { getAssetPrefix, getPathPrefix } from '../../../../../utils/path'
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
   <div class="container">
     <!-- Brand Logo -->
-    <a class="navbar-brand d-flex align-items-center me-3" href="#">
+    <a class="navbar-brand d-flex align-items-center" href={getPathPrefix('/theme/3/home')}>
       <Logo />
     </a>
 
-    <!-- Navbar Toggler -->
+    <!-- Offcanvas Toggler -->
     <button
       class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavIcons"
-      aria-controls="navbarNavIcons"
-      aria-expanded="false"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navbar Links + Icons -->
-    <div class="collapse navbar-collapse" id="navbarNavIcons">
-      <ul class="navbar-nav me-auto d-none d-lg-flex">
-        <!-- Home -->
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/home')}>Home</a>
-        </li>
+    <!-- Offcanvas Content -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <a class="navbar-brand d-flex align-items-center" href={getPathPrefix('/theme/3/home')}>
+          <Logo />
+        </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+        <!-- Desktop Nav Links -->
+        <ul class="navbar-nav flex-grow-1 me-auto d-none d-lg-flex">
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/home')}>Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="aboutDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">About</a
+            >
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href={getPathPrefix('/theme/3/about')}>About Us</a></li>
+              <li>
+                <a class="dropdown-item" href={getPathPrefix('/theme/3/amenities')}>Amenities</a>
+              </li>
+              <li><a class="dropdown-item" href={getPathPrefix('/theme/3/history')}>History</a></li>
+              <li><a class="dropdown-item" href={getPathPrefix('/theme/3/faq')}>FAQs</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="communityDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">Community</a
+            >
+            <ul class="dropdown-menu" aria-labelledby="communityDropdown">
+              <li>
+                <a class="dropdown-item" href={getPathPrefix('/theme/3/board-members')}
+                  >Board Members</a
+                >
+              </li>
+              <li><a class="dropdown-item" href={getPathPrefix('/theme/3/events')}>Events</a></li>
+              <li><a class="dropdown-item" href={getPathPrefix('/theme/3/news')}>News</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/facilities')}>Facilities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/gallery')}>Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/contact')}>Contact</a>
+          </li>
+        </ul>
 
-        <!-- About Dropdown -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="aboutDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            About
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" href={getPathPrefix('/theme/3/about')}>About Us</a></li>
-            <li>
-              <a class="dropdown-item" href={getPathPrefix('/theme/3/amenities')}>Amenities</a>
-            </li>
-            <li><a class="dropdown-item" href={getPathPrefix('/theme/3/history')}>History</a></li>
-            <li><a class="dropdown-item" href={getPathPrefix('/theme/3/faq')}>FAQs</a></li>
-          </ul>
-        </li>
+        <!-- Mobile Nav Links -->
+        <ul class="navbar-nav d-lg-none mt-2">
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/home')}>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/about')}>About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/amenities')}>Amenities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/board-members')}>Board Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/contact')}>Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/events')}>Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/facilities')}>Facilities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/faq')}>FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/gallery')}>Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/history')}>History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/3/news')}>News</a>
+          </li>
 
-        <!-- Community Dropdown -->
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="communityDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Community
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="communityDropdown">
-            <li>
-              <a class="dropdown-item" href={getPathPrefix('/theme/3/board-members')}
-                >Board Members</a
-              >
-            </li>
-            <li><a class="dropdown-item" href={getPathPrefix('/theme/3/events')}>Events</a></li>
-            <li><a class="dropdown-item" href={getPathPrefix('/theme/3/news')}>News</a></li>
-          </ul>
-        </li>
-
-        <!-- Facilities -->
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/facilities')}>Facilities</a>
-        </li>
-
-        <!-- Gallery -->
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/gallery')}>Gallery</a>
-        </li>
-
-        <!-- Contact -->
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/contact')}>Contact</a>
-        </li>
-      </ul>
-
-      <ul class="navbar-nav flex-grow-1 pe-3 mt-2 justify-content-start d-flex d-lg-none">
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/home')}>Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/about')}>About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/amenities')}>Amenities</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/board-members')}>Board Members</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/contact')}>Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/events')}>Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/facilities')}>Facilities</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/faq')}>FAQs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/gallery')}>Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/history')}>History</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={getPathPrefix('/theme/3/news')}>News</a>
-        </li>
-      </ul>
-
-      <!-- Right-aligned Icons (Visible on lg+ screens) -->
-      <ul class="navbar-nav d-none d-lg-flex flex-row align-items-center gap-2">
-        <li class="nav-item">
-          <a class="nav-link" href="#" title="Notifications">
-            <i class="ri-notification-3-fill fs-5"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" title="Messages">
-            <i class="ri-mail-fill fs-5"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" title="Profile">
-            <img
-              src={getAssetPrefix('/assets/img/avatars/avatar2.jpg')}
-              alt="User Avatar"
-              class="rounded-circle"
-              style="width: 30px; height: 30px;"
-            />
-          </a>
-        </li>
-      </ul>
-
-      <!-- Icons for Mobile (inside collapsible menu) -->
-      <ul class="navbar-nav d-lg-none mt-2 border-top pt-2">
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="ri-notification-3-fill me-2"></i>Notifications</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="ri-mail-fill me-2"></i>Messages</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="ri-user-3-fill me-2"></i>Profile</a>
-        </li>
-      </ul>
+          <!-- Mobile-only Icons -->
+          <li class="nav-item mt-2 border-top pt-2">
+            <a class="nav-link" href="#"><i class="ri-notification-3-fill me-2"></i>Notifications</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-mail-fill me-2"></i>Messages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="ri-user-3-fill me-2"></i>Profile</a>
+          </li>
+        </ul>
+      </div>
     </div>
+
+    <!-- Right-aligned Icons for desktop -->
+    <ul class="navbar-nav d-none d-lg-flex flex-row align-items-center gap-2">
+      <li class="nav-item">
+        <a class="nav-link" href="#" title="Notifications">
+          <i class="ri-notification-3-fill fs-5"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" title="Messages">
+          <i class="ri-mail-fill fs-5"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" title="Profile">
+          <img
+            src={getAssetPrefix('/assets/img/avatars/avatar2.jpg')}
+            alt="User Avatar"
+            class="rounded-circle"
+            style="width: 30px; height: 30px;"
+          />
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>
