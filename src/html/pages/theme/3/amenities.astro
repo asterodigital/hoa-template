@@ -1,0 +1,293 @@
+---
+import Layout from './layout.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout
+  title="Amenities"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Hero Section -->
+  <section
+    class="position-relative text-light text-center text-lg-start"
+    style={`background-image: url('${getAssetPrefix('/assets/img/theme-images/hero-3.jpg')}'); background-size: cover; background-position: center; height: 400px;`}
+  >
+    <!-- Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    <!-- Content -->
+    <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+          <h1 class="display-2 fw-semibold lh-1 mb-2">Amenities</h1>
+          <p class="fs-4 mb-3">
+            Explore the amenities that make life at Longhorn Heights comfortable, active, and
+            connected to nature.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10">
+          <h2 class="fs-1 mb-4">Experience Life at Its Best</h2>
+          <p class="fs-5 text-muted mb-0">
+            Longhorn Heights offers more than just a place to live — it’s a community built around
+            comfort, wellness, and connection. Whether you're relaxing by the pool, hosting events
+            in the clubhouse, staying active on our sports courts, or enjoying peaceful walking
+            trails and nature retreats, there's something here for everyone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section 1 -->
+  <section class="text-bg-primary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 offset-lg-1 pe-lg-5 py-4 my-auto">
+          <i class="ri-group-3-fill fs-1"></i>
+          <h3 class="fs-1 mb-3">Community Clubhouse</h3>
+          <p class="fs-5 mb-4">
+            Host private events or relax with neighbors in our clubhouse, with a seating and media
+            lounge.
+          </p>
+          <button class="btn btn-lg btn-outline-light rounded-pill px-4">
+            Learn More<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+        </div>
+        <div class="col-md-6 p-0" style="min-height: 100%;">
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/img-3.jpg')}
+            style="width: 100%; height: 100%; object-fit: cover;"
+            alt="Amenity Image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section 2 -->
+  <section class="bg-primary-subtle">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 order-2 order-md-1 p-0" style="min-height: 100%;">
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
+            style="width: 100%; height: 100%; object-fit: cover;"
+            alt="Amenity Image"
+          />
+        </div>
+        <div class="col-md-6 col-lg-5 offset-lg-1 order-1 order-md-2 pe-lg-5 py-4 my-auto">
+          <i class="ri-basketball-fill text-primary fs-1"></i>
+          <h3 class="fs-1 mb-3">Sports Facilities</h3>
+          <p class="fs-5 mb-4">
+            Stay active and energized with access to our sports court, perfect for tennis and
+            community games.
+          </p>
+          <button class="btn btn-lg btn-outline-primary rounded-pill px-4">
+            Learn More<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section 3 -->
+  <section class="text-bg-primary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 offset-lg-1 pe-lg-5 py-4 my-auto">
+          <i class="ri-tree-fill fs-1"></i>
+          <h3 class="fs-1 mb-3">Walking Trails</h3>
+          <p class="fs-5 mb-4">
+            Explore the natural beauty of our community through a network of well-maintained walking
+            trails.
+          </p>
+          <button class="btn btn-lg btn-outline-light rounded-pill px-4">
+            Learn More<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+        </div>
+        <div class="col-md-6 p-0" style="min-height: 100%;">
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/img-5.jpg')}
+            style="width: 100%; height: 100%; object-fit: cover;"
+            alt="Amenity Image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section 4 -->
+  <section class="bg-primary-subtle">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 order-2 order-md-1 p-0" style="min-height: 100%;">
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/img-2.jpg')}
+            style="width: 100%; height: 100%; object-fit: cover;"
+            alt="Amenity Image"
+          />
+        </div>
+        <div class="col-md-6 col-lg-5 offset-lg-1 order-1 order-md-2 pe-lg-5 py-4 my-auto">
+          <i class="ri-contrast-drop-fill text-primary fs-1"></i>
+          <h3 class="fs-1 mb-3">Swimming Pool</h3>
+          <p class="fs-5 mb-4">
+            Cool off or soak up the sun in our sparkling pool, designed for both relaxation and lap
+            swimming.
+          </p>
+          <button class="btn btn-lg btn-outline-primary rounded-pill px-4">
+            Learn More<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section 5 -->
+  <section class="text-bg-primary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 offset-lg-1 pe-lg-5 py-4 my-auto">
+          <i class="ri-leaf-fill fs-1"></i>
+          <h3 class="fs-1 mb-3">Nature Retreat</h3>
+          <p class="fs-5 mb-4">
+            Find peace and mindfulness in our tranquil green space, perfect for yoga, reading, or
+            quiet reflection.
+          </p>
+          <button class="btn btn-lg btn-outline-light rounded-pill px-4">
+            Learn More<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+        </div>
+        <div class="col-md-6 p-0" style="min-height: 100%;">
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/img-1.jpg')}
+            style="width: 100%; height: 100%; object-fit: cover;"
+            alt="Amenity Image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section 6 -->
+  <section class="bg-primary-subtle">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 order-2 order-md-1 p-0" style="min-height: 100%;">
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/img-10.jpg')}
+            style="width: 100%; height: 100%; object-fit: cover;"
+            alt="Amenity Image"
+          />
+        </div>
+        <div class="col-md-6 col-lg-5 offset-lg-1 order-1 order-md-2 pe-lg-5 py-4 my-auto">
+          <i class="ri-macbook-fill text-primary fs-1"></i>
+          <h3 class="fs-1 mb-3">Coworking Lounge</h3>
+          <p class="fs-5 mb-4">
+            A modern, quiet space with fast Wi-Fi, ideal for remote work, study sessions, or virtual
+            meetings.
+          </p>
+          <button class="btn btn-lg btn-outline-primary rounded-pill px-4">
+            Learn More<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guidelines Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-4">Reservation &amp; Usage Guidelines</h2>
+      <div class="row g-4">
+        <!-- General Guidelines Card -->
+        <div class="col-md-6">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
+              <h5 class="card-title fs-5">
+                <i class="ri-shield-check-fill text-primary me-2"></i>General Guidelines
+              </h5>
+              <ul class="list-unstyled mt-3 mb-0">
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Respect noise levels and community
+                  quiet hours.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Children must be supervised at all
+                  times.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Clean up after use and dispose of
+                  trash properly.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>No smoking or alcohol in common
+                  areas unless authorized.
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Pets must be leashed and cleaned up
+                  after.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Reservation Policies Card -->
+        <div class="col-md-6">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
+              <h5 class="card-title fs-5">
+                <i class="ri-calendar-check-fill text-primary me-2"></i>Reservation Policies
+              </h5>
+              <ul class="list-unstyled mt-3 mb-0">
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Amenities must be reserved at least
+                  48 hours in advance.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Reservations are limited to 3 hours
+                  per household per day.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Events with more than 15 guests
+                  must receive HOA approval.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Security deposit may be required
+                  for clubhouse or pool events.
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Cancel reservations at least 24
+                  hours in advance if plans change.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="text-bg-primary py-5">
+    <div class="container">
+      <h2 class="mb-3">Stay Connected with Your Community</h2>
+      <p class="fs-5 mb-4">
+        Have questions, concerns, or suggestions? Reach out to Longhorn Heights HOA board — we're
+        here to help.
+      </p>
+      <a
+        href={getPathPrefix('/theme/3/contact')}
+        class="btn btn-lg btn-outline-light rounded-pill px-4"
+      >
+        Get in Touch<i class="ri-arrow-right-line ms-2"></i>
+      </a>
+    </div>
+  </section>
+</Layout>
