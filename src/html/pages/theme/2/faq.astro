@@ -1,734 +1,492 @@
 ---
-import Head from '../../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
+import Layout from './layout.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <Head />
-  </head>
-  <body>
-    <!-- Main Content -->
-    <main>
-      <!-- Page Content -->
-      <div class="content-wrapper">
-        <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
-          <div class="container">
-            <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
-              <img
-                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                alt="Logo"
-                class="me-2"
-                style="height: 32px;"
-              />
+<Layout
+  title="FAQs"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Banner Section -->
+  <section class="text-bg-primary py-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-lg-7">
+          <h1 class="display-4 fw-semibold mb-2">Frequently Asked Questions</h1>
+          <p class="fs-4 mb-4">
+            Find answers to the most common questions about our homeowners association and
+            community.
+          </p>
+          <div class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2">
+            <a href="#" class="btn btn-lg btn-light">
+              Explore Community<i class="ri-arrow-right-line ms-2"></i>
             </a>
-
-            <!-- Offcanvas Toggler -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Offcanvas Menu -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
-              <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
-                  <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                    alt="Logo"
-                    class="me-2"
-                    style="height: 32px;"
-                  />
-                </a>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
-                <ul class="navbar-nav navbar-underline justify-content-end">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/amenities">Amenities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/board-members">Board</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/events">Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/facilities">Facilities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/theme/2/faq">FAQs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/gallery">Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/history">History</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/news">News</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <a href={getPathPrefix('/theme/2/contact')} class="btn btn-lg btn-outline-light">
+              Contact Us<i class="ri-arrow-right-line ms-2"></i>
+            </a>
           </div>
-        </nav>
-
-        <!-- Banner Section -->
-        <section class="text-bg-primary py-5">
-          <div class="container">
-            <div class="row text-center text-md-start">
-              <div class="col-lg-7">
-                <h1 class="display-4 fw-semibold mb-2">Frequently Asked Questions</h1>
-                <p class="fs-4 mb-4">
-                  Find answers to the most common questions about our homeowners association and
-                  community.
-                </p>
-                <div
-                  class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2"
-                >
-                  <a href="#" class="btn btn-lg btn-light">
-                    Explore Community<i class="ri-arrow-right-line ms-2"></i>
-                  </a>
-                  <a href="/theme/2/contact" class="btn btn-lg btn-outline-light">
-                    Contact Us<i class="ri-arrow-right-line ms-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Search Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 offset-lg-2">
-                <input
-                  type="search"
-                  class="form-control form-control-lg mb-2"
-                  placeholder="Search FAQs..."
-                  aria-label="Search FAQs"
-                />
-                <p class="text-muted">
-                  Couldn't find what you were looking for?
-                  <a href="/theme/2/contact" class="text-decoration-none">Contact us</a>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- FAQs Section -->
-        <section class="bg-body pb-5">
-          <div class="container">
-            <h2 class="fs-1 text-md-center mb-2">Frequently Asked Questions</h2>
-            <p class="lead text-md-center mb-4">
-              Find quick answers about community living, policies, and amenities.
-            </p>
-            <div class="row">
-              <div class="col-lg-8 offset-lg-2">
-                <!-- Tabs Navigation -->
-                <ul
-                  class="nav nav-pills nav-fill flex-wrap justify-content-center gap-3 mb-3"
-                  id="faqTabs"
-                  role="tablist"
-                >
-                  <li class="nav-item" role="presentation">
-                    <button
-                      class="nav-link nav-link-lg active border"
-                      id="general-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#general"
-                      type="button"
-                      role="tab">General Info</button
-                    >
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button
-                      class="nav-link nav-link-lg border"
-                      id="amenities-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#amenities"
-                      type="button"
-                      role="tab">Amenities</button
-                    >
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button
-                      class="nav-link nav-link-lg border"
-                      id="policies-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#policies"
-                      type="button"
-                      role="tab">Rules & Policies</button
-                    >
-                  </li>
-                </ul>
-
-                <!-- Tab Content -->
-                <div class="tab-content" id="faqTabContent">
-                  <!-- General Info Tab -->
-                  <div
-                    class="tab-pane fade show active"
-                    id="general"
-                    role="tabpanel"
-                    aria-labelledby="general-tab"
-                  >
-                    <div class="accordion" id="accordionGeneral">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="gen-q1">
-                          <button
-                            class="accordion-button shadow-none"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#gen-a1"
-                            aria-expanded="true"
-                          >
-                            What is the HOA and what does it do?
-                          </button>
-                        </h2>
-                        <div
-                          id="gen-a1"
-                          class="accordion-collapse collapse show"
-                          data-bs-parent="#accordionGeneral"
-                        >
-                          <div class="accordion-body pt-0">
-                            The HOA manages community resources, enforces neighborhood rules, and
-                            ensures upkeep of common areas.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="gen-q2">
-                          <button
-                            class="accordion-button shadow-none collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#gen-a2"
-                          >
-                            How do I contact the HOA Board?
-                          </button>
-                        </h2>
-                        <div
-                          id="gen-a2"
-                          class="accordion-collapse collapse"
-                          data-bs-parent="#accordionGeneral"
-                        >
-                          <div class="accordion-body pt-0">
-                            Visit the Contact page or email us at hello@email.com. You can also
-                            attend monthly board meetings.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="gen-q3">
-                          <button
-                            class="accordion-button shadow-none collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#gen-a3"
-                          >
-                            How are HOA fees used?
-                          </button>
-                        </h2>
-                        <div
-                          id="gen-a3"
-                          class="accordion-collapse collapse"
-                          data-bs-parent="#accordionGeneral"
-                        >
-                          <div class="accordion-body pt-0">
-                            Fees go toward landscaping, pool maintenance, insurance, community
-                            events, and reserve funds.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="gen-q4">
-                          <button
-                            class="accordion-button shadow-none collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#gen-a4"
-                          >
-                            When are board meetings held?
-                          </button>
-                        </h2>
-                        <div
-                          id="gen-a4"
-                          class="accordion-collapse collapse"
-                          data-bs-parent="#accordionGeneral"
-                        >
-                          <div class="accordion-body pt-0">
-                            Meetings are typically held on the first Tuesday of each month in the
-                            Community Clubhouse.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Amenities Tab -->
-                  <div
-                    class="tab-pane fade"
-                    id="amenities"
-                    role="tabpanel"
-                    aria-labelledby="amenities-tab"
-                  >
-                    <div class="accordion" id="accordionAmenities">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="amen-q1">
-                          <button
-                            class="accordion-button shadow-none"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#amen-a1"
-                          >
-                            How do I reserve the clubhouse?
-                          </button>
-                        </h2>
-                        <div
-                          id="amen-a1"
-                          class="accordion-collapse collapse show"
-                          data-bs-parent="#accordionAmenities"
-                        >
-                          <div class="accordion-body pt-0">
-                            Reservations can be made through the HOA website or by contacting the
-                            management office.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="amen-q2">
-                          <button
-                            class="accordion-button shadow-none collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#amen-a2"
-                          >
-                            Are pets allowed in community parks?
-                          </button>
-                        </h2>
-                        <div
-                          id="amen-a2"
-                          class="accordion-collapse collapse"
-                          data-bs-parent="#accordionAmenities"
-                        >
-                          <div class="accordion-body pt-0">
-                            Yes, but pets must be leashed at all times and owners must clean up
-                            after them.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="amen-q3">
-                          <button
-                            class="accordion-button shadow-none collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#amen-a3"
-                          >
-                            Is the pool open year-round?
-                          </button>
-                        </h2>
-                        <div
-                          id="amen-a3"
-                          class="accordion-collapse collapse"
-                          data-bs-parent="#accordionAmenities"
-                        >
-                          <div class="accordion-body pt-0">
-                            The pool is open seasonally from May through September, weather
-                            permitting.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="amen-q4">
-                          <button
-                            class="accordion-button shadow-none collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#amen-a4"
-                          >
-                            Can I host a private event at a community space?
-                          </button>
-                        </h2>
-                        <div
-                          id="amen-a4"
-                          class="accordion-collapse collapse"
-                          data-bs-parent="#accordionAmenities"
-                        >
-                          <div class="accordion-body pt-0">
-                            Yes, with advance approval and signed agreement. Contact the HOA office
-                            for details.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Rules & Policies Tab -->
-                  <div
-                    class="tab-pane fade"
-                    id="policies"
-                    role="tabpanel"
-                    aria-labelledby="policies-tab"
-                  >
-                    <div class="accordion" id="accordionPolicies">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="pol-q1">
-                          <button
-                            class="accordion-button shadow-none"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#pol-a1"
-                          >
-                            What are the quiet hours in the neighborhood?
-                          </button>
-                        </h2>
-                        <div
-                          id="pol-a1"
-                          class="accordion-collapse collapse show"
-                          data-bs-parent="#accordionPolicies"
-                        >
-                          <div class="accordion-body pt-0">
-                            Quiet hours are from 10:00 PM to 7:00 AM daily. Please be respectful of
-                            neighbors.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="pol-q2">
-                          <button
-                            class="accordion-button shadow-none collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#pol-a2"
-                          >
-                            Are there restrictions on exterior home modifications?
-                          </button>
-                        </h2>
-                        <div
-                          id="pol-a2"
-                          class="accordion-collapse collapse"
-                          data-bs-parent="#accordionPolicies"
-                        >
-                          <div class="accordion-body pt-0">
-                            Yes, all exterior changes must be approved by the Architectural Review
-                            Committee.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="pol-q3">
-                          <button
-                            class="accordion-button shadow-none collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#pol-a3"
-                          >
-                            Can I park my RV or trailer in the driveway?
-                          </button>
-                        </h2>
-                        <div
-                          id="pol-a3"
-                          class="accordion-collapse collapse"
-                          data-bs-parent="#accordionPolicies"
-                        >
-                          <div class="accordion-body pt-0">
-                            RVs and trailers may not be parked in driveways for more than 48 hours
-                            without approval.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="pol-q4">
-                          <button
-                            class="accordion-button shadow-none collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#pol-a4"
-                          >
-                            What happens if I violate HOA rules?
-                          </button>
-                        </h2>
-                        <div
-                          id="pol-a4"
-                          class="accordion-collapse collapse"
-                          data-bs-parent="#accordionPolicies"
-                        >
-                          <div class="accordion-body pt-0">
-                            Violations may result in warnings, fines, or legal action based on HOA
-                            covenants.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Still Need Help Section -->
-        <section class="bg-body pt-3 pb-5">
-          <div class="container">
-            <h2 class="fs-1 text-md-center mb-2">Still Need Help?</h2>
-            <p class="lead text-md-center mb-4">
-              If your question wasn’t answered above, try one of the options below to get the
-              support you need.
-            </p>
-            <div class="row g-4">
-              <!-- Call Us -->
-              <div class="col-md-4">
-                <div class="card card-lift text-center border h-100">
-                  <div class="card-body">
-                    <div class="mb-2">
-                      <i class="ri-phone-fill display-5 text-primary"></i>
-                    </div>
-                    <h5 class="card-title fs-5">Call Us</h5>
-                    <p class="card-text">
-                      Speak directly with a board representative or our management company.
-                    </p>
-                    <p class="text-muted mb-2">
-                      <i class="ri-phone-fill me-2"></i>
-                      <a href="tel:+12345678901" class="text-decoration-none text-muted"
-                        >+1 (234) 567-8901</a
-                      >
-                    </p>
-                    <p class="text-muted mb-0">
-                      <i class="ri-time-fill me-2"></i>9:00 AM - 5:00 PM
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Email Us -->
-              <div class="col-md-4">
-                <div class="card card-lift text-center border h-100">
-                  <div class="card-body">
-                    <div class="mb-2">
-                      <i class="ri-mail-fill display-5 text-primary"></i>
-                    </div>
-                    <h5 class="card-title fs-5">Email Us</h5>
-                    <p class="card-text">
-                      Send us your question and we’ll get back to you within 24–48 hours.
-                    </p>
-                    <p class="text-muted mb-2">
-                      <i class="ri-mail-fill me-2"></i>
-                      <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
-                        >hello@email.com</a
-                      >
-                    </p>
-                    <p class="text-muted mb-0">
-                      <i class="ri-time-fill me-2"></i>Response within 24 hours
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Browse Documents -->
-              <div class="col-md-4">
-                <div class="card card-lift text-center border h-100">
-                  <div class="card-body">
-                    <div class="mb-2">
-                      <i class="ri-folder-info-fill display-5 text-primary"></i>
-                    </div>
-                    <h5 class="card-title fs-5">Browse Documents</h5>
-                    <p class="card-text">
-                      Review HOA policies, forms, and official documents in our resource library.
-                    </p>
-                    <a href="/theme/2/documents" class="btn btn-lg btn-outline-primary"
-                      >View Documents</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Suggest FAQ Section -->
-        <section class="bg-primary-subtle py-5">
-          <div class="container">
-            <div class="row g-4">
-              <div class="col-lg-8 offset-lg-2">
-                <h2 class="fs-1 text-center mb-2">Suggest a Question</h2>
-                <p class="lead text-center mb-4">
-                  We're missing out on a question? Let us know and we'll add it to the list!
-                </p>
-                <div class="text-center">
-                  <a href="/theme/2/contact" class="btn btn-lg btn-primary">Contact Us</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-body pt-5 pb-4 border-top">
-          <div class="container">
-            <div class="row gy-4">
-              <!-- Logo and Contact Info -->
-              <div class="col-lg-4 col-md-6">
-                <img
-                  src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                  alt="Logo"
-                  style="height: 32px;"
-                  class="mb-4"
-                />
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-                    <a href="tel:+12345678901" class="text-body text-decoration-none">
-                      <i class="ri-phone-fill text-primary me-2"></i>+1 (234) 567-8901
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="mailto:hello@email.com" class="text-body text-decoration-none">
-                      <i class="ri-mail-fill text-primary me-2"></i>hello@email.com
-                    </a>
-                  </li>
-                  <li>
-                    <i class="ri-map-pin-fill text-primary me-2"></i>123 Longhorn Heights, Austin,
-                    TX
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Navigation Links -->
-              <div class="col-lg-4 col-md-6">
-                <div class="row">
-                  <div class="col-6">
-                    <h5 class="fs-5 mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="/theme/2/home" class="text-body text-decoration-none d-block mb-2"
-                          >Home</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/about" class="text-body text-decoration-none d-block mb-2"
-                          >About</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/news" class="text-body text-decoration-none d-block mb-2"
-                          >News</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/faq" class="text-body text-decoration-none d-block mb-2"
-                          >FAQs</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/contact" class="text-body text-decoration-none d-block"
-                          >Contact</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-6">
-                    <h5 class="fs-5 mb-3">Explore</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a
-                          href="/theme/2/amenities"
-                          class="text-body text-decoration-none d-block mb-2">Amenities</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/board-members"
-                          class="text-body text-decoration-none d-block mb-2">Board</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/events"
-                          class="text-body text-decoration-none d-block mb-2">Events</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/facilities"
-                          class="text-body text-decoration-none d-block mb-2">Facilities</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/gallery"
-                          class="text-body text-decoration-none d-block mb-2">Gallery</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/history" class="text-body text-decoration-none d-block"
-                          >History</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Newsletter -->
-              <div class="col-lg-4">
-                <h5 class="fs-5 mb-2">Subscribe to our Newsletter</h5>
-                <p class="text-muted mb-3">
-                  Get community updates, event invites, and more—straight to your inbox.
-                </p>
-                <form>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      class="form-control form-control-lg"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn btn-primary w-100 d-flex align-items-center justify-content-center"
-                  >
-                    <i class="ri-send-plane-fill me-2"></i>Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="text-center pt-4 mt-4 border-top">
-              <p class="text-muted mb-0">&copy; 2025 Company, Inc. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- All Scripts -->
-      <Scripts />
-    </main>
-  </body>
-</html>
+  <!-- Search Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <input
+            type="search"
+            class="form-control form-control-lg mb-2"
+            placeholder="Search FAQs..."
+            aria-label="Search FAQs"
+          />
+          <p class="text-muted">
+            Couldn't find what you were looking for?
+            <a href={getPathPrefix('/theme/2/contact')} class="text-decoration-none">Contact us</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section class="bg-body pb-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-2">Frequently Asked Questions</h2>
+      <p class="lead text-md-center mb-4">
+        Find quick answers about community living, policies, and amenities.
+      </p>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <!-- Tabs Navigation -->
+          <ul
+            class="nav nav-pills nav-fill flex-wrap justify-content-center gap-3 mb-3"
+            id="faqTabs"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link nav-link-lg active border"
+                id="general-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#general"
+                type="button"
+                role="tab">General Info</button
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link nav-link-lg border"
+                id="amenities-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#amenities"
+                type="button"
+                role="tab">Amenities</button
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link nav-link-lg border"
+                id="policies-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#policies"
+                type="button"
+                role="tab">Rules & Policies</button
+              >
+            </li>
+          </ul>
+
+          <!-- Tab Content -->
+          <div class="tab-content" id="faqTabContent">
+            <!-- General Info Tab -->
+            <div
+              class="tab-pane fade show active"
+              id="general"
+              role="tabpanel"
+              aria-labelledby="general-tab"
+            >
+              <div class="accordion" id="accordionGeneral">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="gen-q1">
+                    <button
+                      class="accordion-button shadow-none"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#gen-a1"
+                      aria-expanded="true"
+                    >
+                      What is the HOA and what does it do?
+                    </button>
+                  </h2>
+                  <div
+                    id="gen-a1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionGeneral"
+                  >
+                    <div class="accordion-body pt-0">
+                      The HOA manages community resources, enforces neighborhood rules, and ensures
+                      upkeep of common areas.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="gen-q2">
+                    <button
+                      class="accordion-button shadow-none collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#gen-a2"
+                    >
+                      How do I contact the HOA Board?
+                    </button>
+                  </h2>
+                  <div
+                    id="gen-a2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionGeneral"
+                  >
+                    <div class="accordion-body pt-0">
+                      Visit the Contact page or email us at hello@email.com. You can also attend
+                      monthly board meetings.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="gen-q3">
+                    <button
+                      class="accordion-button shadow-none collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#gen-a3"
+                    >
+                      How are HOA fees used?
+                    </button>
+                  </h2>
+                  <div
+                    id="gen-a3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionGeneral"
+                  >
+                    <div class="accordion-body pt-0">
+                      Fees go toward landscaping, pool maintenance, insurance, community events, and
+                      reserve funds.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="gen-q4">
+                    <button
+                      class="accordion-button shadow-none collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#gen-a4"
+                    >
+                      When are board meetings held?
+                    </button>
+                  </h2>
+                  <div
+                    id="gen-a4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionGeneral"
+                  >
+                    <div class="accordion-body pt-0">
+                      Meetings are typically held on the first Tuesday of each month in the
+                      Community Clubhouse.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Amenities Tab -->
+            <div
+              class="tab-pane fade"
+              id="amenities"
+              role="tabpanel"
+              aria-labelledby="amenities-tab"
+            >
+              <div class="accordion" id="accordionAmenities">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="amen-q1">
+                    <button
+                      class="accordion-button shadow-none"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#amen-a1"
+                    >
+                      How do I reserve the clubhouse?
+                    </button>
+                  </h2>
+                  <div
+                    id="amen-a1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionAmenities"
+                  >
+                    <div class="accordion-body pt-0">
+                      Reservations can be made through the HOA website or by contacting the
+                      management office.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="amen-q2">
+                    <button
+                      class="accordion-button shadow-none collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#amen-a2"
+                    >
+                      Are pets allowed in community parks?
+                    </button>
+                  </h2>
+                  <div
+                    id="amen-a2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionAmenities"
+                  >
+                    <div class="accordion-body pt-0">
+                      Yes, but pets must be leashed at all times and owners must clean up after
+                      them.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="amen-q3">
+                    <button
+                      class="accordion-button shadow-none collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#amen-a3"
+                    >
+                      Is the pool open year-round?
+                    </button>
+                  </h2>
+                  <div
+                    id="amen-a3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionAmenities"
+                  >
+                    <div class="accordion-body pt-0">
+                      The pool is open seasonally from May through September, weather permitting.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="amen-q4">
+                    <button
+                      class="accordion-button shadow-none collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#amen-a4"
+                    >
+                      Can I host a private event at a community space?
+                    </button>
+                  </h2>
+                  <div
+                    id="amen-a4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionAmenities"
+                  >
+                    <div class="accordion-body pt-0">
+                      Yes, with advance approval and signed agreement. Contact the HOA office for
+                      details.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rules & Policies Tab -->
+            <div class="tab-pane fade" id="policies" role="tabpanel" aria-labelledby="policies-tab">
+              <div class="accordion" id="accordionPolicies">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="pol-q1">
+                    <button
+                      class="accordion-button shadow-none"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#pol-a1"
+                    >
+                      What are the quiet hours in the neighborhood?
+                    </button>
+                  </h2>
+                  <div
+                    id="pol-a1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionPolicies"
+                  >
+                    <div class="accordion-body pt-0">
+                      Quiet hours are from 10:00 PM to 7:00 AM daily. Please be respectful of
+                      neighbors.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="pol-q2">
+                    <button
+                      class="accordion-button shadow-none collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#pol-a2"
+                    >
+                      Are there restrictions on exterior home modifications?
+                    </button>
+                  </h2>
+                  <div
+                    id="pol-a2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionPolicies"
+                  >
+                    <div class="accordion-body pt-0">
+                      Yes, all exterior changes must be approved by the Architectural Review
+                      Committee.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="pol-q3">
+                    <button
+                      class="accordion-button shadow-none collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#pol-a3"
+                    >
+                      Can I park my RV or trailer in the driveway?
+                    </button>
+                  </h2>
+                  <div
+                    id="pol-a3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionPolicies"
+                  >
+                    <div class="accordion-body pt-0">
+                      RVs and trailers may not be parked in driveways for more than 48 hours without
+                      approval.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="pol-q4">
+                    <button
+                      class="accordion-button shadow-none collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#pol-a4"
+                    >
+                      What happens if I violate HOA rules?
+                    </button>
+                  </h2>
+                  <div
+                    id="pol-a4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionPolicies"
+                  >
+                    <div class="accordion-body pt-0">
+                      Violations may result in warnings, fines, or legal action based on HOA
+                      covenants.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Still Need Help Section -->
+  <section class="bg-body pt-3 pb-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-2">Still Need Help?</h2>
+      <p class="lead text-md-center mb-4">
+        If your question wasn’t answered above, try one of the options below to get the support you
+        need.
+      </p>
+      <div class="row g-4">
+        <!-- Call Us -->
+        <div class="col-md-4">
+          <div class="card card-lift text-center border h-100">
+            <div class="card-body">
+              <div class="mb-2">
+                <i class="ri-phone-fill display-5 text-primary"></i>
+              </div>
+              <h5 class="card-title fs-5">Call Us</h5>
+              <p class="card-text">
+                Speak directly with a board representative or our management company.
+              </p>
+              <p class="text-muted mb-2">
+                <i class="ri-phone-fill me-2"></i>
+                <a href="tel:+12345678901" class="text-decoration-none text-muted"
+                  >+1 (234) 567-8901</a
+                >
+              </p>
+              <p class="text-muted mb-0">
+                <i class="ri-time-fill me-2"></i>9:00 AM - 5:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Us -->
+        <div class="col-md-4">
+          <div class="card card-lift text-center border h-100">
+            <div class="card-body">
+              <div class="mb-2">
+                <i class="ri-mail-fill display-5 text-primary"></i>
+              </div>
+              <h5 class="card-title fs-5">Email Us</h5>
+              <p class="card-text">
+                Send us your question and we’ll get back to you within 24–48 hours.
+              </p>
+              <p class="text-muted mb-2">
+                <i class="ri-mail-fill me-2"></i>
+                <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                  >hello@email.com</a
+                >
+              </p>
+              <p class="text-muted mb-0">
+                <i class="ri-time-fill me-2"></i>Response within 24 hours
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Browse Documents -->
+        <div class="col-md-4">
+          <div class="card card-lift text-center border h-100">
+            <div class="card-body">
+              <div class="mb-2">
+                <i class="ri-folder-info-fill display-5 text-primary"></i>
+              </div>
+              <h5 class="card-title fs-5">Browse Documents</h5>
+              <p class="card-text">
+                Review HOA policies, forms, and official documents in our resource library.
+              </p>
+              <a href="#" class="btn btn-lg btn-outline-primary">View Documents</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Suggest FAQ Section -->
+  <section class="bg-primary-subtle py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-8 offset-lg-2">
+          <h2 class="fs-1 text-center mb-2">Suggest a Question</h2>
+          <p class="lead text-center mb-4">
+            We're missing out on a question? Let us know and we'll add it to the list!
+          </p>
+          <div class="text-center">
+            <a href={getPathPrefix('/theme/2/contact')} class="btn btn-lg btn-primary">Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

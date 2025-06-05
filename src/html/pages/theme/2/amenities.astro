@@ -1,871 +1,615 @@
 ---
-import Head from '../../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
+import Layout from './layout.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <Head />
-  </head>
-  <body>
-    <!-- Main Content -->
-    <main>
-      <!-- Page Content -->
-      <div class="content-wrapper">
-        <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
-          <div class="container">
-            <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
-              <img
-                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                alt="Logo"
-                class="me-2"
-                style="height: 32px;"
-              />
+<Layout
+  title="Amenities"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Banner Section -->
+  <section class="text-bg-primary py-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-lg-7">
+          <h1 class="display-4 fw-semibold mb-2">Amenities</h1>
+          <p class="fs-4 mb-4">
+            Explore the amenities that make life at Longhorn Heights comfortable, active, and
+            connected to nature.
+          </p>
+          <div class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2">
+            <a href="#" class="btn btn-lg btn-light">
+              Explore Community<i class="ri-arrow-right-line ms-2"></i>
             </a>
+            <a href={getPathPrefix('/theme/2/contact')} class="btn btn-lg btn-outline-light">
+              Contact Us<i class="ri-arrow-right-line ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <!-- Offcanvas Toggler -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Offcanvas Menu -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
-              <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
-                  <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                    alt="Logo"
-                    class="me-2"
-                    style="height: 32px;"
-                  />
-                </a>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
-                <ul class="navbar-nav navbar-underline justify-content-end">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/theme/2/amenities"
-                      >Amenities</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/board-members">Board</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/events">Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/facilities">Facilities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/faq">FAQs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/gallery">Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/history">History</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/news">News</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
+  <!-- Amenities Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-2">Premium Amenities</h2>
+      <p class="lead text-md-center mb-4">
+        Explore the amenities that make life at Longhorn Heights comfortable, active, and connected
+        to nature.
+      </p>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="card card-expand border p-0">
+            <figure class="mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-3.jpg')}
+                class="card-img-top"
+                alt="Amenity Image"
+              />
+            </figure>
+            <div class="card-body p-3 position-relative">
+              <span class="position-absolute top-0 end-0 m-3 fw-semibold">
+                <i class="ri-star-fill text-warning me-1"></i>4.9
+              </span>
+              <h5 class="card-title fs-5">
+                <i class="ri-group-3-fill text-primary me-2"></i>Clubhouse
+              </h5>
+              <span class="badge text-body bg-secondary-subtle border fs-6 mb-2">Recreation</span>
+              <p class="card-text">
+                Host private events or relax with neighbors in our clubhouse, with a seating and
+                media lounge.
+              </p>
+              <p class="text-muted mb-3">
+                <i class="ri-time-line me-1"></i>Open: 9:00 AM – 10:00 PM
+              </p>
+              <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
             </div>
           </div>
-        </nav>
+        </div>
 
-        <!-- Banner Section -->
-        <section class="text-bg-primary py-5">
-          <div class="container">
-            <div class="row text-center text-md-start">
-              <div class="col-lg-7">
-                <h1 class="display-4 fw-semibold mb-2">Amenities</h1>
-                <p class="fs-4 mb-4">
-                  Explore the amenities that make life at Longhorn Heights comfortable, active, and
-                  connected to nature.
-                </p>
-                <div
-                  class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2"
-                >
-                  <a href="#" class="btn btn-lg btn-light">
-                    Explore Community<i class="ri-arrow-right-line ms-2"></i>
-                  </a>
-                  <a href="/theme/2/contact" class="btn btn-lg btn-outline-light">
-                    Contact Us<i class="ri-arrow-right-line ms-2"></i>
-                  </a>
-                </div>
-              </div>
+        <div class="col-lg-4">
+          <div class="card card-expand border p-0">
+            <figure class="mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
+                class="card-img-top"
+                alt="Amenity Image"
+              />
+            </figure>
+            <div class="card-body p-3 position-relative">
+              <span class="position-absolute top-0 end-0 m-3 fw-semibold">
+                <i class="ri-star-fill text-warning me-1"></i>4.8
+              </span>
+              <h5 class="card-title fs-5">
+                <i class="ri-basketball-fill text-primary me-2"></i>Sports Facilities
+              </h5>
+              <span class="badge text-body bg-secondary-subtle border fs-6 mb-2">Fitness</span>
+              <p class="card-text">
+                Stay active and energized with access to our sports court, perfect for tennis and
+                community games.
+              </p>
+              <p class="text-muted mb-3">
+                <i class="ri-time-line me-1"></i>Open: 7:00 AM – 9:00 PM
+              </p>
+              <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
             </div>
           </div>
-        </section>
+        </div>
 
-        <!-- Amenities Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <h2 class="fs-1 text-md-center mb-2">Premium Amenities</h2>
-            <p class="lead text-md-center mb-4">
-              Explore the amenities that make life at Longhorn Heights comfortable, active, and
-              connected to nature.
-            </p>
-            <div class="row g-4">
-              <div class="col-lg-4">
-                <div class="card card-expand border p-0">
-                  <figure class="mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-3.jpg"
-                      class="card-img-top"
-                      alt="Amenity Image"
-                    />
-                  </figure>
-                  <div class="card-body p-3 position-relative">
-                    <span class="position-absolute top-0 end-0 m-3 fw-semibold">
-                      <i class="ri-star-fill text-warning me-1"></i>4.9
-                    </span>
-                    <h5 class="card-title fs-5">
-                      <i class="ri-group-3-fill text-primary me-2"></i>Clubhouse
-                    </h5>
-                    <span class="badge text-body bg-secondary-subtle border fs-6 mb-2"
-                      >Recreation</span
-                    >
-                    <p class="card-text">
-                      Host private events or relax with neighbors in our clubhouse, with a seating
-                      and media lounge.
-                    </p>
-                    <p class="text-muted mb-3">
-                      <i class="ri-time-line me-1"></i>Open: 9:00 AM – 10:00 PM
-                    </p>
-                    <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <div class="card card-expand border p-0">
-                  <figure class="mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-4.jpg"
-                      class="card-img-top"
-                      alt="Amenity Image"
-                    />
-                  </figure>
-                  <div class="card-body p-3 position-relative">
-                    <span class="position-absolute top-0 end-0 m-3 fw-semibold">
-                      <i class="ri-star-fill text-warning me-1"></i>4.8
-                    </span>
-                    <h5 class="card-title fs-5">
-                      <i class="ri-basketball-fill text-primary me-2"></i>Sports Facilities
-                    </h5>
-                    <span class="badge text-body bg-secondary-subtle border fs-6 mb-2">Fitness</span
-                    >
-                    <p class="card-text">
-                      Stay active and energized with access to our sports court, perfect for tennis
-                      and community games.
-                    </p>
-                    <p class="text-muted mb-3">
-                      <i class="ri-time-line me-1"></i>Open: 7:00 AM – 9:00 PM
-                    </p>
-                    <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <div class="card card-expand border p-0">
-                  <figure class="mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-5.jpg"
-                      class="card-img-top"
-                      alt="Amenity Image"
-                    />
-                  </figure>
-                  <div class="card-body p-3 position-relative">
-                    <span class="position-absolute top-0 end-0 m-3 fw-semibold">
-                      <i class="ri-star-fill text-warning me-1"></i>4.9
-                    </span>
-                    <h5 class="card-title fs-5">
-                      <i class="ri-tree-fill text-primary me-2"></i>Walking Trails
-                    </h5>
-                    <span class="badge text-body bg-secondary-subtle border fs-6 mb-2">Nature</span>
-                    <p class="card-text">
-                      Explore the natural beauty of our community through a network of
-                      well-maintained walking trails.
-                    </p>
-                    <p class="text-muted mb-3">
-                      <i class="ri-time-line me-1"></i>Open: Dawn to Dusk
-                    </p>
-                    <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <div class="card card-expand border p-0">
-                  <figure class="mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-2.jpg"
-                      class="card-img-top"
-                      alt="Amenity Image"
-                    />
-                  </figure>
-                  <div class="card-body p-3 position-relative">
-                    <span class="position-absolute top-0 end-0 m-3 fw-semibold">
-                      <i class="ri-star-fill text-warning me-1"></i>4.8
-                    </span>
-                    <h5 class="card-title fs-5">
-                      <i class="ri-contrast-drop-fill text-primary me-2"></i>Swimming Pool
-                    </h5>
-                    <span class="badge text-body bg-secondary-subtle border fs-6 mb-2"
-                      >Wellness</span
-                    >
-                    <p class="card-text">
-                      Cool off or soak up the sun in our sparkling pool, designed for both
-                      relaxation and lap swimming.
-                    </p>
-                    <p class="text-muted mb-3">
-                      <i class="ri-time-line me-1"></i>Open: 6:00 AM – 9:00 PM
-                    </p>
-                    <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <div class="card card-expand border p-0">
-                  <figure class="mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-1.jpg"
-                      class="card-img-top"
-                      alt="Nature Retreat"
-                    />
-                  </figure>
-                  <div class="card-body p-3 position-relative">
-                    <span class="position-absolute top-0 end-0 m-3 fw-semibold">
-                      <i class="ri-star-fill text-warning me-1"></i>5.0
-                    </span>
-                    <h5 class="card-title fs-5">
-                      <i class="ri-leaf-fill text-primary me-2"></i>Nature Retreat
-                    </h5>
-                    <span class="badge text-body bg-secondary-subtle border fs-6 mb-2">Nature</span>
-                    <p class="card-text">
-                      Find peace and mindfulness in our tranquil green space, perfect for yoga,
-                      reading, or quiet reflection.
-                    </p>
-                    <p class="text-muted mb-3">
-                      <i class="ri-time-line me-1"></i>Open: All Day
-                    </p>
-                    <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <div class="card card-expand border p-0">
-                  <figure class="mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-10.jpg"
-                      class="card-img-top"
-                      alt="Coworking Lounge"
-                    />
-                  </figure>
-                  <div class="card-body p-3 position-relative">
-                    <span class="position-absolute top-0 end-0 m-3 fw-semibold">
-                      <i class="ri-star-fill text-warning me-1"></i>4.7
-                    </span>
-                    <h5 class="card-title fs-5">
-                      <i class="ri-macbook-line text-primary me-2"></i>Coworking Lounge
-                    </h5>
-                    <span class="badge text-body bg-secondary-subtle border fs-6 mb-2"
-                      >Productivity</span
-                    >
-                    <p class="card-text">
-                      A modern, quiet space with fast Wi-Fi, ideal for remote work, study sessions,
-                      or virtual meetings.
-                    </p>
-                    <p class="text-muted mb-3">
-                      <i class="ri-time-line me-1"></i>Open: 8:00 AM – 8:00 PM
-                    </p>
-                    <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
-                  </div>
-                </div>
-              </div>
+        <div class="col-lg-4">
+          <div class="card card-expand border p-0">
+            <figure class="mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-5.jpg')}
+                class="card-img-top"
+                alt="Amenity Image"
+              />
+            </figure>
+            <div class="card-body p-3 position-relative">
+              <span class="position-absolute top-0 end-0 m-3 fw-semibold">
+                <i class="ri-star-fill text-warning me-1"></i>4.9
+              </span>
+              <h5 class="card-title fs-5">
+                <i class="ri-tree-fill text-primary me-2"></i>Walking Trails
+              </h5>
+              <span class="badge text-body bg-secondary-subtle border fs-6 mb-2">Nature</span>
+              <p class="card-text">
+                Explore the natural beauty of our community through a network of well-maintained
+                walking trails.
+              </p>
+              <p class="text-muted mb-3">
+                <i class="ri-time-line me-1"></i>Open: Dawn to Dusk
+              </p>
+              <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
             </div>
           </div>
-        </section>
+        </div>
 
-        <!-- Amenity Details Section -->
-        <section class="bg-body pt-3 pb-5">
-          <div class="container">
-            <!-- Tabs -->
-            <ul
-              class="nav nav-pills nav-fill flex-wrap justify-content-center gap-3 mb-3"
-              id="amenityTabs"
-              role="tablist"
-            >
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link nav-link-lg active border"
-                  id="clubhouse-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#clubhouse"
-                  type="button"
-                  role="tab">Community Clubhouse</button
-                >
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link nav-link-lg border"
-                  id="sports-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#sports"
-                  type="button"
-                  role="tab">Sports Facilities</button
-                >
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link nav-link-lg border"
-                  id="trails-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#trails"
-                  type="button"
-                  role="tab">Walking Trails</button
-                >
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link nav-link-lg border"
-                  id="pool-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#pool"
-                  type="button"
-                  role="tab">Swimming Pool</button
-                >
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link nav-link-lg border"
-                  id="retreat-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#retreat"
-                  type="button"
-                  role="tab">Nature Retreat</button
-                >
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link nav-link-lg border"
-                  id="cowork-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#cowork"
-                  type="button"
-                  role="tab">Coworking Lounge</button
-                >
-              </li>
-            </ul>
-
-            <!-- Tab Content -->
-            <div class="tab-content border rounded-4 p-3">
-              <!-- Community Clubhouse -->
-              <div class="tab-pane fade show active" id="clubhouse" role="tabpanel">
-                <div class="row g-4 align-items-center">
-                  <div class="col-md-6 ps-xl-5">
-                    <h3>Community Clubhouse</h3>
-                    <p>
-                      Our modern clubhouse offers a welcoming space for socializing, events, and
-                      relaxation.
-                    </p>
-                    <ul class="list-unstyled">
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Media lounge with large
-                        screen
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Comfortable indoor seating
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Private event reservation
-                        options
-                      </li>
-                    </ul>
-                    <p class="mb-2 text-muted">
-                      <i class="ri-time-line me-1"></i>Open: 9:00 AM – 10:00 PM
-                    </p>
-                    <p class="mb-0">
-                      <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="/dist/assets/img/theme-images/img-3.jpg"
-                      alt="Clubhouse"
-                      style="max-height: 300px; width: 100%; object-fit:cover;"
-                      class="img-fluid rounded mb-3"
-                    />
-
-                    <a href="#" class="btn btn-lg btn-primary w-100">Reserve the Clubhouse</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Sports Facilities -->
-              <div class="tab-pane fade" id="sports" role="tabpanel">
-                <div class="row g-4 align-items-center">
-                  <div class="col-md-6 ps-xl-5">
-                    <h3>Sports Facilities</h3>
-                    <p>Stay active with a dedicated area for sports and community games.</p>
-                    <ul class="list-unstyled">
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Tennis & multi-purpose court
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Night lighting available
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Open for casual and
-                        competitive play
-                      </li>
-                    </ul>
-                    <p class="mb-2 text-muted">
-                      <i class="ri-time-line me-1"></i>Open: 7:00 AM – 10:00 PM
-                    </p>
-                    <p class="mb-0">
-                      <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="/dist/assets/img/theme-images/img-4.jpg"
-                      alt="Sports Court"
-                      style="max-height: 300px; width: 100%; object-fit:cover;"
-                      class="img-fluid rounded mb-3"
-                    />
-                    <a href="#" class="btn btn-lg btn-primary w-100">Book the Court</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Walking Trails -->
-              <div class="tab-pane fade" id="trails" role="tabpanel">
-                <div class="row g-4 align-items-center">
-                  <div class="col-md-6 ps-xl-5">
-                    <h3>Walking Trails</h3>
-                    <p>Explore peaceful paths that connect you with nature and your neighbors.</p>
-                    <ul class="list-unstyled">
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Shaded, well-maintained
-                        trails
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Dog-friendly with waste
-                        stations
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Benches and scenic lookouts
-                      </li>
-                    </ul>
-                    <p class="mb-2 text-muted">
-                      <i class="ri-time-line me-1"></i>Open: Dawn to Dusk
-                    </p>
-                    <p class="mb-0">
-                      <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="/dist/assets/img/theme-images/img-5.jpg"
-                      alt="Walking Trails"
-                      style="max-height: 300px; width: 100%; object-fit:cover;"
-                      class="img-fluid rounded mb-3"
-                    />
-                    <a href="#" class="btn btn-lg btn-primary w-100">Explore Trails</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Swimming Pool -->
-              <div class="tab-pane fade" id="pool" role="tabpanel">
-                <div class="row g-4 align-items-center">
-                  <div class="col-md-6 ps-xl-5">
-                    <h3>Swimming Pool</h3>
-                    <p>A sparkling pool for lap swimming, family fun, and weekend relaxation.</p>
-                    <ul class="list-unstyled">
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Lap lanes & shallow play
-                        areas
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Sun loungers and shaded
-                        seating
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>On-duty lifeguard during peak
-                        hours
-                      </li>
-                    </ul>
-                    <p class="mb-2 text-muted">
-                      <i class="ri-time-line me-1"></i>Open: 6:00 AM – 9:00 PM
-                    </p>
-                    <p class="mb-0">
-                      <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="/dist/assets/img/theme-images/img-2.jpg"
-                      alt="Swimming Pool"
-                      style="max-height: 300px; width: 100%; object-fit:cover;"
-                      class="img-fluid rounded mb-3"
-                    />
-                    <a href="#" class="btn btn-lg btn-primary w-100">Pool Guidelines</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Nature Retreat -->
-              <div class="tab-pane fade" id="retreat" role="tabpanel">
-                <div class="row g-4 align-items-center">
-                  <div class="col-md-6 ps-xl-5">
-                    <h3>Nature Retreat</h3>
-                    <p>A calm oasis within the community for rest, reflection, and mindfulness.</p>
-                    <ul class="list-unstyled">
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Quiet garden paths and trees
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Yoga lawn & meditation
-                        benches
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Ideal for reading and
-                        relaxing
-                      </li>
-                    </ul>
-                    <p class="mb-2 text-muted">
-                      <i class="ri-time-line me-1"></i>Open: All Day
-                    </p>
-                    <p class="mb-0">
-                      <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="/dist/assets/img/theme-images/img-1.jpg"
-                      alt="Nature Retreat"
-                      style="max-height: 300px; width: 100%; object-fit:cover;"
-                      class="img-fluid rounded mb-3"
-                    />
-                    <a href="#" class="btn btn-lg btn-primary w-100">Visit Retreat</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Coworking Lounge -->
-              <div class="tab-pane fade" id="cowork" role="tabpanel">
-                <div class="row g-4 align-items-center">
-                  <div class="col-md-6 ps-xl-5">
-                    <h3>Coworking Lounge</h3>
-                    <p>
-                      A modern space with everything you need to work remotely or study comfortably.
-                    </p>
-                    <ul class="list-unstyled">
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>High-speed Wi-Fi & power
-                        outlets
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Quiet environment with shared
-                        tables
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Coffee station and soft
-                        seating
-                      </li>
-                    </ul>
-                    <p class="mb-2 text-muted">
-                      <i class="ri-time-line me-1"></i>Open: 8:00 AM – 8:00 PM
-                    </p>
-                    <p class="mb-0">
-                      <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="/dist/assets/img/theme-images/img-10.jpg"
-                      alt="Coworking Lounge"
-                      style="max-height: 300px; width: 100%; object-fit:cover;"
-                      class="img-fluid rounded mb-3"
-                    />
-                    <a href="#" class="btn btn-lg btn-primary w-100">Reserve Workspace</a>
-                  </div>
-                </div>
-              </div>
+        <div class="col-lg-4">
+          <div class="card card-expand border p-0">
+            <figure class="mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-2.jpg')}
+                class="card-img-top"
+                alt="Amenity Image"
+              />
+            </figure>
+            <div class="card-body p-3 position-relative">
+              <span class="position-absolute top-0 end-0 m-3 fw-semibold">
+                <i class="ri-star-fill text-warning me-1"></i>4.8
+              </span>
+              <h5 class="card-title fs-5">
+                <i class="ri-contrast-drop-fill text-primary me-2"></i>Swimming Pool
+              </h5>
+              <span class="badge text-body bg-secondary-subtle border fs-6 mb-2">Wellness</span>
+              <p class="card-text">
+                Cool off or soak up the sun in our sparkling pool, designed for both relaxation and
+                lap swimming.
+              </p>
+              <p class="text-muted mb-3">
+                <i class="ri-time-line me-1"></i>Open: 6:00 AM – 9:00 PM
+              </p>
+              <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
             </div>
           </div>
-        </section>
+        </div>
 
-        <!-- Reservation & Usage Guidelines Section -->
-        <section class="bg-body pt-3 pb-5">
-          <div class="container">
-            <div class="text-md-center mb-4">
-              <h2 class="fs-1 mb-2">Reservation & Usage Guidelines</h2>
-              <p class="lead mb-0">
-                Please review the following guidelines to ensure fair and respectful use of all
-                community amenities.
+        <div class="col-lg-4">
+          <div class="card card-expand border p-0">
+            <figure class="mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-1.jpg')}
+                class="card-img-top"
+                alt="Nature Retreat"
+              />
+            </figure>
+            <div class="card-body p-3 position-relative">
+              <span class="position-absolute top-0 end-0 m-3 fw-semibold">
+                <i class="ri-star-fill text-warning me-1"></i>5.0
+              </span>
+              <h5 class="card-title fs-5">
+                <i class="ri-leaf-fill text-primary me-2"></i>Nature Retreat
+              </h5>
+              <span class="badge text-body bg-secondary-subtle border fs-6 mb-2">Nature</span>
+              <p class="card-text">
+                Find peace and mindfulness in our tranquil green space, perfect for yoga, reading,
+                or quiet reflection.
+              </p>
+              <p class="text-muted mb-3">
+                <i class="ri-time-line me-1"></i>Open: All Day
+              </p>
+              <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card card-expand border p-0">
+            <figure class="mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-10.jpg')}
+                class="card-img-top"
+                alt="Coworking Lounge"
+              />
+            </figure>
+            <div class="card-body p-3 position-relative">
+              <span class="position-absolute top-0 end-0 m-3 fw-semibold">
+                <i class="ri-star-fill text-warning me-1"></i>4.7
+              </span>
+              <h5 class="card-title fs-5">
+                <i class="ri-macbook-line text-primary me-2"></i>Coworking Lounge
+              </h5>
+              <span class="badge text-body bg-secondary-subtle border fs-6 mb-2">Productivity</span>
+              <p class="card-text">
+                A modern, quiet space with fast Wi-Fi, ideal for remote work, study sessions, or
+                virtual meetings.
+              </p>
+              <p class="text-muted mb-3">
+                <i class="ri-time-line me-1"></i>Open: 8:00 AM – 8:00 PM
+              </p>
+              <a href="#" class="btn btn-lg btn-primary w-100">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenity Details Section -->
+  <section class="bg-body pt-3 pb-5">
+    <div class="container">
+      <!-- Tabs -->
+      <ul
+        class="nav nav-pills nav-fill flex-wrap justify-content-center gap-3 mb-3"
+        id="amenityTabs"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link nav-link-lg active border"
+            id="clubhouse-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#clubhouse"
+            type="button"
+            role="tab">Community Clubhouse</button
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link nav-link-lg border"
+            id="sports-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#sports"
+            type="button"
+            role="tab">Sports Facilities</button
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link nav-link-lg border"
+            id="trails-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#trails"
+            type="button"
+            role="tab">Walking Trails</button
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link nav-link-lg border"
+            id="pool-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#pool"
+            type="button"
+            role="tab">Swimming Pool</button
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link nav-link-lg border"
+            id="retreat-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#retreat"
+            type="button"
+            role="tab">Nature Retreat</button
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link nav-link-lg border"
+            id="cowork-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#cowork"
+            type="button"
+            role="tab">Coworking Lounge</button
+          >
+        </li>
+      </ul>
+
+      <!-- Tab Content -->
+      <div class="tab-content border rounded-4 p-3">
+        <!-- Community Clubhouse -->
+        <div class="tab-pane fade show active" id="clubhouse" role="tabpanel">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6 ps-xl-5">
+              <h3>Community Clubhouse</h3>
+              <p>
+                Our modern clubhouse offers a welcoming space for socializing, events, and
+                relaxation.
+              </p>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Media lounge with large screen
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Comfortable indoor seating
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Private event reservation options
+                </li>
+              </ul>
+              <p class="mb-2 text-muted">
+                <i class="ri-time-line me-1"></i>Open: 9:00 AM – 10:00 PM
+              </p>
+              <p class="mb-0">
+                <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
               </p>
             </div>
+            <div class="col-md-6">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-3.jpg')}
+                alt="Clubhouse"
+                style="max-height: 300px; width: 100%; object-fit:cover;"
+                class="img-fluid rounded mb-3"
+              />
 
-            <div class="row g-4">
-              <!-- General Guidelines Card -->
-              <div class="col-md-6">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title fs-5">
-                      <i class="ri-shield-check-fill text-primary me-2"></i>General Guidelines
-                    </h5>
-                    <ul class="list-unstyled mt-3 mb-0">
-                      <li class="mb-2">
-                        <i class="ri-check-line text-success me-2"></i>Respect noise levels and
-                        community quiet hours.
-                      </li>
-                      <li class="mb-2">
-                        <i class="ri-check-line text-success me-2"></i>Children must be supervised
-                        at all times.
-                      </li>
-                      <li class="mb-2">
-                        <i class="ri-check-line text-success me-2"></i>Clean up after use and
-                        dispose of trash properly.
-                      </li>
-                      <li class="mb-2">
-                        <i class="ri-check-line text-success me-2"></i>No smoking or alcohol in
-                        common areas unless authorized.
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Pets must be leashed and
-                        cleaned up after.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Reservation Policies Card -->
-              <div class="col-md-6">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <h5 class="card-title fs-5">
-                      <i class="ri-calendar-check-fill text-primary me-2"></i>Reservation Policies
-                    </h5>
-                    <ul class="list-unstyled mt-3 mb-0">
-                      <li class="mb-2">
-                        <i class="ri-check-line text-success me-2"></i>Amenities must be reserved at
-                        least 48 hours in advance.
-                      </li>
-                      <li class="mb-2">
-                        <i class="ri-check-line text-success me-2"></i>Reservations are limited to 3
-                        hours per household per day.
-                      </li>
-                      <li class="mb-2">
-                        <i class="ri-check-line text-success me-2"></i>Events with more than 15
-                        guests must receive HOA approval.
-                      </li>
-                      <li class="mb-2">
-                        <i class="ri-check-line text-success me-2"></i>Security deposit may be
-                        required for clubhouse or pool events.
-                      </li>
-                      <li>
-                        <i class="ri-check-line text-success me-2"></i>Cancel reservations at least
-                        24 hours in advance if plans change.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <a href="#" class="btn btn-lg btn-primary w-100">Reserve the Clubhouse</a>
             </div>
           </div>
-        </section>
+        </div>
 
-        <!-- Need Help Section -->
-        <section class="bg-body pt-3 pb-5">
-          <div class="container text-center">
-            <div class="row">
-              <div class="col-lg-6 offset-lg-3">
-                <h2 class="fs-1 mb-3">Need Help?</h2>
-                <p class="lead mb-4">
-                  Questions about community rules, amenities, or your HOA account? We're here to
-                  assist you. Get in touch with the Longhorn Heights support team or check out our
-                  FAQ section.
-                </p>
-                <a href="/theme/2/contact" class="btn btn-lg btn-primary">Contact Support</a>
-              </div>
+        <!-- Sports Facilities -->
+        <div class="tab-pane fade" id="sports" role="tabpanel">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6 ps-xl-5">
+              <h3>Sports Facilities</h3>
+              <p>Stay active with a dedicated area for sports and community games.</p>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Tennis & multi-purpose court
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Night lighting available
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Open for casual and competitive
+                  play
+                </li>
+              </ul>
+              <p class="mb-2 text-muted">
+                <i class="ri-time-line me-1"></i>Open: 7:00 AM – 10:00 PM
+              </p>
+              <p class="mb-0">
+                <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
+                alt="Sports Court"
+                style="max-height: 300px; width: 100%; object-fit:cover;"
+                class="img-fluid rounded mb-3"
+              />
+              <a href="#" class="btn btn-lg btn-primary w-100">Book the Court</a>
             </div>
           </div>
-        </section>
+        </div>
 
-        <!-- Footer -->
-        <footer class="bg-body pt-5 pb-4 border-top">
-          <div class="container">
-            <div class="row gy-4">
-              <!-- Logo and Contact Info -->
-              <div class="col-lg-4 col-md-6">
-                <img
-                  src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                  alt="Logo"
-                  style="height: 32px;"
-                  class="mb-4"
-                />
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-                    <a href="tel:+12345678901" class="text-body text-decoration-none">
-                      <i class="ri-phone-fill text-primary me-2"></i>+1 (234) 567-8901
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="mailto:hello@email.com" class="text-body text-decoration-none">
-                      <i class="ri-mail-fill text-primary me-2"></i>hello@email.com
-                    </a>
-                  </li>
-                  <li>
-                    <i class="ri-map-pin-fill text-primary me-2"></i>123 Longhorn Heights, Austin,
-                    TX
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Navigation Links -->
-              <div class="col-lg-4 col-md-6">
-                <div class="row">
-                  <div class="col-6">
-                    <h5 class="fs-5 mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="/theme/2/home" class="text-body text-decoration-none d-block mb-2"
-                          >Home</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/about" class="text-body text-decoration-none d-block mb-2"
-                          >About</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/news" class="text-body text-decoration-none d-block mb-2"
-                          >News</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/faq" class="text-body text-decoration-none d-block mb-2"
-                          >FAQs</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/contact" class="text-body text-decoration-none d-block"
-                          >Contact</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-6">
-                    <h5 class="fs-5 mb-3">Explore</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a
-                          href="/theme/2/amenities"
-                          class="text-body text-decoration-none d-block mb-2">Amenities</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/board-members"
-                          class="text-body text-decoration-none d-block mb-2">Board</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/events"
-                          class="text-body text-decoration-none d-block mb-2">Events</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/facilities"
-                          class="text-body text-decoration-none d-block mb-2">Facilities</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/gallery"
-                          class="text-body text-decoration-none d-block mb-2">Gallery</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/history" class="text-body text-decoration-none d-block"
-                          >History</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Newsletter -->
-              <div class="col-lg-4">
-                <h5 class="fs-5 mb-2">Subscribe to our Newsletter</h5>
-                <p class="text-muted mb-3">
-                  Get community updates, event invites, and more—straight to your inbox.
-                </p>
-                <form>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      class="form-control form-control-lg"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn btn-primary w-100 d-flex align-items-center justify-content-center"
-                  >
-                    <i class="ri-send-plane-fill me-2"></i>Subscribe
-                  </button>
-                </form>
-              </div>
+        <!-- Walking Trails -->
+        <div class="tab-pane fade" id="trails" role="tabpanel">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6 ps-xl-5">
+              <h3>Walking Trails</h3>
+              <p>Explore peaceful paths that connect you with nature and your neighbors.</p>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Shaded, well-maintained trails
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Dog-friendly with waste stations
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Benches and scenic lookouts
+                </li>
+              </ul>
+              <p class="mb-2 text-muted">
+                <i class="ri-time-line me-1"></i>Open: Dawn to Dusk
+              </p>
+              <p class="mb-0">
+                <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
+              </p>
             </div>
-
-            <!-- Footer Bottom -->
-            <div class="text-center pt-4 mt-4 border-top">
-              <p class="text-muted mb-0">&copy; 2025 Company, Inc. All rights reserved.</p>
+            <div class="col-md-6">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-5.jpg')}
+                alt="Walking Trails"
+                style="max-height: 300px; width: 100%; object-fit:cover;"
+                class="img-fluid rounded mb-3"
+              />
+              <a href="#" class="btn btn-lg btn-primary w-100">Explore Trails</a>
             </div>
           </div>
-        </footer>
+        </div>
+
+        <!-- Swimming Pool -->
+        <div class="tab-pane fade" id="pool" role="tabpanel">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6 ps-xl-5">
+              <h3>Swimming Pool</h3>
+              <p>A sparkling pool for lap swimming, family fun, and weekend relaxation.</p>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Lap lanes & shallow play areas
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Sun loungers and shaded seating
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>On-duty lifeguard during peak hours
+                </li>
+              </ul>
+              <p class="mb-2 text-muted">
+                <i class="ri-time-line me-1"></i>Open: 6:00 AM – 9:00 PM
+              </p>
+              <p class="mb-0">
+                <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-2.jpg')}
+                alt="Swimming Pool"
+                style="max-height: 300px; width: 100%; object-fit:cover;"
+                class="img-fluid rounded mb-3"
+              />
+              <a href="#" class="btn btn-lg btn-primary w-100">Pool Guidelines</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nature Retreat -->
+        <div class="tab-pane fade" id="retreat" role="tabpanel">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6 ps-xl-5">
+              <h3>Nature Retreat</h3>
+              <p>A calm oasis within the community for rest, reflection, and mindfulness.</p>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Quiet garden paths and trees
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Yoga lawn & meditation benches
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Ideal for reading and relaxing
+                </li>
+              </ul>
+              <p class="mb-2 text-muted">
+                <i class="ri-time-line me-1"></i>Open: All Day
+              </p>
+              <p class="mb-0">
+                <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-1.jpg')}
+                alt="Nature Retreat"
+                style="max-height: 300px; width: 100%; object-fit:cover;"
+                class="img-fluid rounded mb-3"
+              />
+              <a href="#" class="btn btn-lg btn-primary w-100">Visit Retreat</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coworking Lounge -->
+        <div class="tab-pane fade" id="cowork" role="tabpanel">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6 ps-xl-5">
+              <h3>Coworking Lounge</h3>
+              <p>A modern space with everything you need to work remotely or study comfortably.</p>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>High-speed Wi-Fi & power outlets
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Quiet environment with shared
+                  tables
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Coffee station and soft seating
+                </li>
+              </ul>
+              <p class="mb-2 text-muted">
+                <i class="ri-time-line me-1"></i>Open: 8:00 AM – 8:00 PM
+              </p>
+              <p class="mb-0">
+                <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-10.jpg')}
+                alt="Coworking Lounge"
+                style="max-height: 300px; width: 100%; object-fit:cover;"
+                class="img-fluid rounded mb-3"
+              />
+              <a href="#" class="btn btn-lg btn-primary w-100">Reserve Workspace</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation & Usage Guidelines Section -->
+  <section class="bg-body pt-3 pb-5">
+    <div class="container">
+      <div class="text-md-center mb-4">
+        <h2 class="fs-1 mb-2">Reservation & Usage Guidelines</h2>
+        <p class="lead mb-0">
+          Please review the following guidelines to ensure fair and respectful use of all community
+          amenities.
+        </p>
       </div>
 
-      <!-- All Scripts -->
-      <Scripts />
-    </main>
-  </body>
-</html>
+      <div class="row g-4">
+        <!-- General Guidelines Card -->
+        <div class="col-md-6">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
+              <h5 class="card-title fs-5">
+                <i class="ri-shield-check-fill text-primary me-2"></i>General Guidelines
+              </h5>
+              <ul class="list-unstyled mt-3 mb-0">
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Respect noise levels and community
+                  quiet hours.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Children must be supervised at all
+                  times.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Clean up after use and dispose of
+                  trash properly.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>No smoking or alcohol in common
+                  areas unless authorized.
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Pets must be leashed and cleaned up
+                  after.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reservation Policies Card -->
+        <div class="col-md-6">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
+              <h5 class="card-title fs-5">
+                <i class="ri-calendar-check-fill text-primary me-2"></i>Reservation Policies
+              </h5>
+              <ul class="list-unstyled mt-3 mb-0">
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Amenities must be reserved at least
+                  48 hours in advance.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Reservations are limited to 3 hours
+                  per household per day.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Events with more than 15 guests
+                  must receive HOA approval.
+                </li>
+                <li class="mb-2">
+                  <i class="ri-check-line text-success me-2"></i>Security deposit may be required
+                  for clubhouse or pool events.
+                </li>
+                <li>
+                  <i class="ri-check-line text-success me-2"></i>Cancel reservations at least 24
+                  hours in advance if plans change.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Need Help Section -->
+  <section class="bg-body pt-3 pb-5">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <h2 class="fs-1 mb-3">Need Help?</h2>
+          <p class="lead mb-4">
+            Questions about community rules, amenities, or your HOA account? We're here to assist
+            you. Get in touch with the Longhorn Heights support team or check out our FAQ section.
+          </p>
+          <a href={getPathPrefix('/theme/2/contact')} class="btn btn-lg btn-primary"
+            >Contact Support</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

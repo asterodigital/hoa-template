@@ -1,0 +1,76 @@
+---
+import Logo from './_topbar/_logo.astro'
+import { getPathPrefix } from '../../../../../utils/path'
+---
+
+<!-- Navbar -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
+  <div class="container">
+    <!-- Brand Logo or Text -->
+    <a class="navbar-brand d-flex align-items-center" href={getPathPrefix('/theme/2/home')}>
+      <Logo />
+    </a>
+
+    <!-- Offcanvas Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <a class="navbar-brand d-flex align-items-center" href={getPathPrefix('/theme/2/home')}>
+          <Logo />
+        </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+        <ul class="navbar-nav navbar-underline justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href={getPathPrefix('/theme/2/home')}
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/2/about')}>About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/2/amenities')}>Amenities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/2/board-members')}>Board</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/2/events')}>Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/2/facilities')}>Facilities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/2/faq')}>FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/2/gallery')}>Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/2/history')}>History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/2/news')}>News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={getPathPrefix('/theme/2/contact')}>Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

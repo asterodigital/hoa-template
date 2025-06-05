@@ -1,504 +1,258 @@
 ---
-import Head from '../../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
+import Layout from './layout.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <Head />
-  </head>
-  <body>
-    <!-- Main Content -->
-    <main>
-      <!-- Page Content -->
-      <div class="content-wrapper">
-        <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
-          <div class="container">
-            <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
-              <img
-                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                alt="Logo"
-                class="me-2"
-                style="height: 32px;"
-              />
+<Layout
+  title="Gallery"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Banner Section -->
+  <section class="text-bg-primary py-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-lg-7">
+          <h1 class="display-4 fw-semibold mb-2">Gallery</h1>
+          <p class="fs-4 mb-4">
+            A glimpse into life at Longhorn Heights — explore moments, milestones, and memories
+            captured throughout our vibrant community.
+          </p>
+          <div class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2">
+            <a href="#" class="btn btn-lg btn-light">
+              Explore Community<i class="ri-arrow-right-line ms-2"></i>
             </a>
-
-            <!-- Offcanvas Toggler -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Offcanvas Menu -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
-              <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
-                  <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                    alt="Logo"
-                    class="me-2"
-                    style="height: 32px;"
-                  />
-                </a>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
-                <ul class="navbar-nav navbar-underline justify-content-end">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/amenities">Amenities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/board-members">Board</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/events">Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/facilities">Facilities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/faq">FAQs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/theme/2/gallery"
-                      >Gallery</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/history">History</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/news">News</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <a href={getPathPrefix('/theme/2/contact')} class="btn btn-lg btn-outline-light">
+              Contact Us<i class="ri-arrow-right-line ms-2"></i>
+            </a>
           </div>
-        </nav>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Banner Section -->
-        <section class="text-bg-primary py-5">
-          <div class="container">
-            <div class="row text-center text-md-start">
-              <div class="col-lg-7">
-                <h1 class="display-4 fw-semibold mb-2">Gallery</h1>
-                <p class="fs-4 mb-4">
-                  A glimpse into life at Longhorn Heights — explore moments, milestones, and
-                  memories captured throughout our vibrant community.
-                </p>
-                <div
-                  class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2"
-                >
-                  <a href="#" class="btn btn-lg btn-light">
-                    Explore Community<i class="ri-arrow-right-line ms-2"></i>
-                  </a>
-                  <a href="/theme/2/contact" class="btn btn-lg btn-outline-light">
-                    Contact Us<i class="ri-arrow-right-line ms-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+  <!-- Gallery Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-2">Explore Our Gallery</h2>
+      <p class="lead text-md-center mb-4">
+        A glimpse into life at Longhorn Heights — explore moments, milestones, and memories captured
+        throughout our vibrant community.
+      </p>
 
-        <!-- Gallery Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <h2 class="fs-1 text-md-center mb-2">Explore Our Gallery</h2>
-            <p class="lead text-md-center mb-4">
-              A glimpse into life at Longhorn Heights — explore moments, milestones, and memories
-              captured throughout our vibrant community.
-            </p>
+      <div class="row g-4">
+        <!-- Gallery Image 1 -->
+        <div class="col-6 col-lg-3">
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img-src={getAssetPrefix('/assets/img/theme-images/img-2.jpg')}
+          >
+            <figure class="img-scale rounded-4 mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-2.jpg')}
+                class="img-fluid"
+                alt="Gallery Image"
+              />
+            </figure>
+          </a>
+        </div>
+        <!-- Gallery Image 2 -->
+        <div class="col-6 col-lg-3">
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img-src={getAssetPrefix('/assets/img/theme-images/img-1.jpg')}
+          >
+            <figure class="img-scale rounded-4 mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-1.jpg')}
+                class="img-fluid"
+                alt="Gallery Image"
+              />
+            </figure>
+          </a>
+        </div>
+        <!-- Gallery Image 3 -->
+        <div class="col-6 col-lg-3">
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img-src={getAssetPrefix('/assets/img/theme-images/img-3.jpg')}
+          >
+            <figure class="img-scale rounded-4 mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-3.jpg')}
+                class="img-fluid"
+                alt="Gallery Image"
+              />
+            </figure>
+          </a>
+        </div>
+        <!-- Gallery Image 4 -->
+        <div class="col-6 col-lg-3">
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img-src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
+          >
+            <figure class="img-scale rounded-4 mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
+                class="img-fluid"
+                alt="Gallery Image"
+              />
+            </figure>
+          </a>
+        </div>
+        <!-- Gallery Image 5 -->
+        <div class="col-6 col-lg-3">
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img-src={getAssetPrefix('/assets/img/theme-images/img-5.jpg')}
+          >
+            <figure class="img-scale rounded-4 mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-5.jpg')}
+                class="img-fluid"
+                alt="Gallery Image"
+              />
+            </figure>
+          </a>
+        </div>
+        <!-- Gallery Image 6 -->
+        <div class="col-6 col-lg-3">
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img-src={getAssetPrefix('/assets/img/theme-images/img-8.jpg')}
+          >
+            <figure class="img-scale rounded-4 mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-8.jpg')}
+                class="img-fluid"
+                alt="Gallery Image"
+              />
+            </figure>
+          </a>
+        </div>
+        <!-- Gallery Image 7 -->
+        <div class="col-6 col-lg-3">
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img-src={getAssetPrefix('/assets/img/theme-images/img-10.jpg')}
+          >
+            <figure class="img-scale rounded-4 mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-10.jpg')}
+                class="img-fluid"
+                alt="Gallery Image"
+              />
+            </figure>
+          </a>
+        </div>
+        <!-- Gallery Image 8 -->
+        <div class="col-6 col-lg-3">
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-img-src={getAssetPrefix('/assets/img/theme-images/img-9.jpg')}
+          >
+            <figure class="img-scale rounded-4 mb-0">
+              <img
+                src={getAssetPrefix('/assets/img/theme-images/img-9.jpg')}
+                class="img-fluid"
+                alt="Gallery Image"
+              />
+            </figure>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="row g-4">
-              <!-- Gallery Image 1 -->
-              <div class="col-6 col-lg-3">
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  data-img-src="/dist/assets/img/theme-images/img-2.jpg"
-                >
-                  <figure class="img-scale rounded-4 mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-2.jpg"
-                      class="img-fluid"
-                      alt="Gallery Image"
-                    />
-                  </figure>
-                </a>
-              </div>
-              <!-- Gallery Image 2 -->
-              <div class="col-6 col-lg-3">
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  data-img-src="/dist/assets/img/theme-images/img-1.jpg"
-                >
-                  <figure class="img-scale rounded-4 mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-1.jpg"
-                      class="img-fluid"
-                      alt="Gallery Image"
-                    />
-                  </figure>
-                </a>
-              </div>
-              <!-- Gallery Image 3 -->
-              <div class="col-6 col-lg-3">
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  data-img-src="/dist/assets/img/theme-images/img-3.jpg"
-                >
-                  <figure class="img-scale rounded-4 mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-3.jpg"
-                      class="img-fluid"
-                      alt="Gallery Image"
-                    />
-                  </figure>
-                </a>
-              </div>
-              <!-- Gallery Image 4 -->
-              <div class="col-6 col-lg-3">
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  data-img-src="/dist/assets/img/theme-images/img-4.jpg"
-                >
-                  <figure class="img-scale rounded-4 mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-4.jpg"
-                      class="img-fluid"
-                      alt="Gallery Image"
-                    />
-                  </figure>
-                </a>
-              </div>
-              <!-- Gallery Image 5 -->
-              <div class="col-6 col-lg-3">
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  data-img-src="/dist/assets/img/theme-images/img-5.jpg"
-                >
-                  <figure class="img-scale rounded-4 mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-5.jpg"
-                      class="img-fluid"
-                      alt="Gallery Image"
-                    />
-                  </figure>
-                </a>
-              </div>
-              <!-- Gallery Image 6 -->
-              <div class="col-6 col-lg-3">
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  data-img-src="/dist/assets/img/theme-images/img-8.jpg"
-                >
-                  <figure class="img-scale rounded-4 mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-8.jpg"
-                      class="img-fluid"
-                      alt="Gallery Image"
-                    />
-                  </figure>
-                </a>
-              </div>
-              <!-- Gallery Image 7 -->
-              <div class="col-6 col-lg-3">
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  data-img-src="/dist/assets/img/theme-images/img-10.jpg"
-                >
-                  <figure class="img-scale rounded-4 mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-10.jpg"
-                      class="img-fluid"
-                      alt="Gallery Image"
-                    />
-                  </figure>
-                </a>
-              </div>
-              <!-- Gallery Image 8 -->
-              <div class="col-6 col-lg-3">
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  data-img-src="/dist/assets/img/theme-images/img-9.jpg"
-                >
-                  <figure class="img-scale rounded-4 mb-0">
-                    <img
-                      src="/dist/assets/img/theme-images/img-9.jpg"
-                      class="img-fluid"
-                      alt="Gallery Image"
-                    />
-                  </figure>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img id="modalImage" src="" class="img-fluid rounded-4 w-100" alt="Full Size Image" />
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- Image Modal -->
-        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-transparent border-0">
-              <div class="modal-body p-0">
-                <img
-                  id="modalImage"
-                  src=""
-                  class="img-fluid rounded-4 w-100"
-                  alt="Full Size Image"
-                />
+  <!-- Testimonials Section -->
+  <section class="bg-body pt-3 pb-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-2">What Our Residents Say</h2>
+      <p class="lead text-md-center mb-4">
+        Hear from members of the Longhorn Heights community about what makes living here special.
+      </p>
+      <div class="row g-4 mb-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4">
+          <div class="card card-lift text-center border p-3 h-100">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2 text-warning">
+                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"
+                ></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
               </div>
+              <p class="card-text mb-3">
+                “The peaceful atmosphere make every evening stroll a joy. We love being part of this
+                community.”
+              </p>
+              <h6 class="mb-0 fw-semibold text-muted">— Sarah W.</h6>
             </div>
           </div>
         </div>
-
-        <!-- Testimonials Section -->
-        <section class="bg-body pt-3 pb-5">
-          <div class="container">
-            <h2 class="fs-1 text-md-center mb-2">What Our Residents Say</h2>
-            <p class="lead text-md-center mb-4">
-              Hear from members of the Longhorn Heights community about what makes living here
-              special.
-            </p>
-            <div class="row g-4 mb-4">
-              <!-- Testimonial 1 -->
-              <div class="col-md-4">
-                <div class="card card-lift text-center border p-3 h-100">
-                  <div class="card-body d-flex flex-column">
-                    <div class="mb-2 text-warning">
-                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                        class="ri-star-half-fill"></i>
-                    </div>
-                    <p class="card-text mb-3">
-                      “The peaceful atmosphere make every evening stroll a joy. We love being part
-                      of this community.”
-                    </p>
-                    <h6 class="mb-0 fw-semibold text-muted">— Sarah W.</h6>
-                  </div>
-                </div>
+        <!-- Testimonial 2 -->
+        <div class="col-md-4">
+          <div class="card card-lift text-center border p-3 h-100">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2 text-warning">
+                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"
+                ></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
               </div>
-              <!-- Testimonial 2 -->
-              <div class="col-md-4">
-                <div class="card card-lift text-center border p-3 h-100">
-                  <div class="card-body d-flex flex-column">
-                    <div class="mb-2 text-warning">
-                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"
-                      ></i>
-                    </div>
-                    <p class="card-text mb-3">
-                      “The clubhouse events bring everyone together. It's more than a neighborhood —
-                      it's a family.”
-                    </p>
-                    <h6 class="mb-0 fw-semibold text-muted">— James R.</h6>
-                  </div>
-                </div>
-              </div>
-              <!-- Testimonial 3 -->
-              <div class="col-md-4">
-                <div class="card card-lift text-center border p-3 h-100">
-                  <div class="card-body d-flex flex-column">
-                    <div class="mb-2 text-warning">
-                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                        class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                        class="ri-star-half-fill"></i>
-                    </div>
-                    <p class="card-text mb-3">
-                      “Longhorn Heights has everything we were looking for — from friendly neighbors
-                      to amazing amenities.”
-                    </p>
-                    <h6 class="mb-0 fw-semibold text-muted">— Anita K.</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="text-center">
-              <a href="/theme/2/testimonials" class="btn btn-lg btn-primary">
-                Read More Testimonials <i class="ri-arrow-right-line ms-2"></i>
-              </a>
+              <p class="card-text mb-3">
+                “The clubhouse events bring everyone together. It's more than a neighborhood — it's
+                a family.”
+              </p>
+              <h6 class="mb-0 fw-semibold text-muted">— James R.</h6>
             </div>
           </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-body pt-5 pb-4 border-top">
-          <div class="container">
-            <div class="row gy-4">
-              <!-- Logo and Contact Info -->
-              <div class="col-lg-4 col-md-6">
-                <img
-                  src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                  alt="Logo"
-                  style="height: 32px;"
-                  class="mb-4"
-                />
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-                    <a href="tel:+12345678901" class="text-body text-decoration-none">
-                      <i class="ri-phone-fill text-primary me-2"></i>+1 (234) 567-8901
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="mailto:hello@email.com" class="text-body text-decoration-none">
-                      <i class="ri-mail-fill text-primary me-2"></i>hello@email.com
-                    </a>
-                  </li>
-                  <li>
-                    <i class="ri-map-pin-fill text-primary me-2"></i>123 Longhorn Heights, Austin,
-                    TX
-                  </li>
-                </ul>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="col-md-4">
+          <div class="card card-lift text-center border p-3 h-100">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2 text-warning">
+                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"
+                ></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
               </div>
-
-              <!-- Navigation Links -->
-              <div class="col-lg-4 col-md-6">
-                <div class="row">
-                  <div class="col-6">
-                    <h5 class="fs-5 mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="/theme/2/home" class="text-body text-decoration-none d-block mb-2"
-                          >Home</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/about" class="text-body text-decoration-none d-block mb-2"
-                          >About</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/news" class="text-body text-decoration-none d-block mb-2"
-                          >News</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/faq" class="text-body text-decoration-none d-block mb-2"
-                          >FAQs</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/contact" class="text-body text-decoration-none d-block"
-                          >Contact</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-6">
-                    <h5 class="fs-5 mb-3">Explore</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a
-                          href="/theme/2/amenities"
-                          class="text-body text-decoration-none d-block mb-2">Amenities</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/board-members"
-                          class="text-body text-decoration-none d-block mb-2">Board</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/events"
-                          class="text-body text-decoration-none d-block mb-2">Events</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/facilities"
-                          class="text-body text-decoration-none d-block mb-2">Facilities</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/gallery"
-                          class="text-body text-decoration-none d-block mb-2">Gallery</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/history" class="text-body text-decoration-none d-block"
-                          >History</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Newsletter -->
-              <div class="col-lg-4">
-                <h5 class="fs-5 mb-2">Subscribe to our Newsletter</h5>
-                <p class="text-muted mb-3">
-                  Get community updates, event invites, and more—straight to your inbox.
-                </p>
-                <form>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      class="form-control form-control-lg"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn btn-primary w-100 d-flex align-items-center justify-content-center"
-                  >
-                    <i class="ri-send-plane-fill me-2"></i>Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="text-center pt-4 mt-4 border-top">
-              <p class="text-muted mb-0">&copy; 2025 Company, Inc. All rights reserved.</p>
+              <p class="card-text mb-3">
+                “Longhorn Heights has everything we were looking for — from friendly neighbors to
+                amazing amenities.”
+              </p>
+              <h6 class="mb-0 fw-semibold text-muted">— Anita K.</h6>
             </div>
           </div>
-        </footer>
+        </div>
       </div>
-
-      <!-- All Scripts -->
-      <Scripts />
-    </main>
-  </body>
-</html>
+      <div class="text-center">
+        <a href="#" class="btn btn-lg btn-primary">
+          Read More Testimonials <i class="ri-arrow-right-line ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

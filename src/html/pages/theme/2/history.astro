@@ -1,388 +1,151 @@
 ---
-import Head from '../../../../html/layouts/front/partials/_head.astro'
-import Scripts from '../../../../html/layouts/front/partials/_scripts.astro'
+import Layout from './layout.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <Head />
-  </head>
-  <body>
-    <!-- Main Content -->
-    <main>
-      <!-- Page Content -->
-      <div class="content-wrapper">
-        <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-3">
-          <div class="container">
-            <!-- Brand Logo or Text -->
-            <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
-              <img
-                src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                alt="Logo"
-                class="me-2"
-                style="height: 32px;"
-              />
+<Layout
+  title="History"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Banner Section -->
+  <section class="text-bg-primary py-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-lg-7">
+          <h1 class="display-4 fw-semibold mb-2">Our History</h1>
+          <p class="fs-4 mb-4">
+            Discover the roots of Longhorn Heights and how our vibrant Austin community came to
+            life.
+          </p>
+          <div class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2">
+            <a href="#" class="btn btn-lg btn-light">
+              Explore Community<i class="ri-arrow-right-line ms-2"></i>
             </a>
-
-            <!-- Offcanvas Toggler -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Offcanvas Menu -->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
-              <div class="offcanvas-header">
-                <a class="navbar-brand d-flex align-items-center" href="/theme/2/home">
-                  <img
-                    src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                    alt="Logo"
-                    class="me-2"
-                    style="height: 32px;"
-                  />
-                </a>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
-                <ul class="navbar-nav navbar-underline justify-content-end">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/amenities">Amenities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/board-members">Board</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/events">Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/facilities">Facilities</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/faq">FAQs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/gallery">Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/theme/2/history"
-                      >History</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/news">News</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/theme/2/contact">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <a href={getPathPrefix('/theme/2/contact')} class="btn btn-lg btn-outline-light">
+              Contact Us<i class="ri-arrow-right-line ms-2"></i>
+            </a>
           </div>
-        </nav>
-
-        <!-- Banner Section -->
-        <section class="text-bg-primary py-5">
-          <div class="container">
-            <div class="row text-center text-md-start">
-              <div class="col-lg-7">
-                <h1 class="display-4 fw-semibold mb-2">Our History</h1>
-                <p class="fs-4 mb-4">
-                  Discover the roots of Longhorn Heights and how our vibrant Austin community came
-                  to life.
-                </p>
-                <div
-                  class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2"
-                >
-                  <a href="#" class="btn btn-lg btn-light">
-                    Explore Community<i class="ri-arrow-right-line ms-2"></i>
-                  </a>
-                  <a href="/theme/2/contact" class="btn btn-lg btn-outline-light">
-                    Contact Us<i class="ri-arrow-right-line ms-2"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- History Section -->
-        <section class="bg-body py-5">
-          <div class="container">
-            <h2 class="fs-1 text-md-center mb-2">The Beginning</h2>
-            <p class="lead text-md-center mb-4">
-              Discover the history, spirit, and growth of Longhorn Heights.
-            </p>
-            <div class="row">
-              <div class="col-lg-6 pe-lg-5">
-                <h3 class="mb-3">How it all started</h3>
-                <p class="lead">
-                  Longhorn Heights was established in the early 1980s with a vision to create a
-                  close-knit, family-friendly neighborhood in the heart of Austin. What began as a
-                  modest development soon grew into a thriving community grounded in shared values,
-                  safety, and natural beauty.
-                </p>
-                <p class="lead mb-0">
-                  Over the years, Longhorn Heights has become a beloved Austin neighborhood,
-                  cherished for its friendly residents and beautiful homes.
-                </p>
-              </div>
-              <div class="col-lg-6 mt-4 mt-lg-0">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item lead px-0 py-2">
-                    <i class="ri-building-2-line text-primary me-2 fs-5 align-middle"></i>
-                    <strong>1950s</strong> - Longhorn Heights began as open ranchland near Austin.
-                  </li>
-                  <li class="list-group-item lead px-0 py-2">
-                    <i class="ri-seedling-line text-primary me-2 fs-5 align-middle"></i>
-                    <strong>1970s</strong> - Zoning allowed housing while preserving green space.
-                  </li>
-                  <li class="list-group-item lead px-0 py-2">
-                    <i class="ri-home-2-line text-primary me-2 fs-5 align-middle"></i>
-                    <strong>1982</strong> - First homes were built and some families moved in.
-                  </li>
-                  <li class="list-group-item lead px-0 py-2">
-                    <i class="ri-community-line text-primary me-2 fs-5 align-middle"></i>
-                    <strong>2000</strong> - Community grew to 100+ families, hosting elections.
-                  </li>
-                  <li class="list-group-item lead px-0 py-2">
-                    <i class="ri-leaf-line text-primary me-2 fs-5 align-middle"></i>
-                    <strong>2012</strong> - HOA launched green efforts: water-saving and solar.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Images Section -->
-        <section class="bg-body pt-3 pb-5">
-          <div class="container">
-            <div class="row text-center g-4">
-              <div class="col-md-4 offset-md-2">
-                <figure class="img-scale rounded-4 mb-0">
-                  <img
-                    src="/dist/assets/img/theme-images/img-7.jpg"
-                    class="img-fluid"
-                    alt="The Beginning"
-                  />
-                </figure>
-              </div>
-              <div class="col-md-4">
-                <figure class="img-scale rounded-4 mb-0">
-                  <img
-                    src="/dist/assets/img/theme-images/img-6.jpg"
-                    class="img-fluid"
-                    alt="The Beginning - Map"
-                  />
-                </figure>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Cards Section -->
-        <section class="bg-body pt-2 pb-5">
-          <div class="container">
-            <div class="row text-center g-4">
-              <div class="col-md-4">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <i class="ri-focus-3-line text-primary display-5"></i>
-                    <h5 class="card-title fs-5 my-2">Our Vision</h5>
-                    <p class="card-text mb-0">
-                      To foster a vibrant, safe, and connected community where every resident of
-                      Longhorn Heights feels valued, heard, and proud to call home.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <i class="ri-treasure-map-line text-primary display-5"></i>
-                    <h5 class="card-title fs-5 my-2">Our Mission</h5>
-                    <p class="card-text mb-0">
-                      To enhance the quality of life in Longhorn Heights by maintaining our
-                      neighborhood’s beauty and always encouraging resident engagement.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card card-lift border h-100">
-                  <div class="card-body">
-                    <i class="ri-hand-heart-line text-primary display-5"></i>
-                    <h5 class="card-title fs-5 my-2">Our Values</h5>
-                    <p class="card-text mb-0">
-                      We believe in the strength of neighborly connections and shared
-                      responsibility. And we operate with honesty and consistent communication.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-body pt-5 pb-4 border-top">
-          <div class="container">
-            <div class="row gy-4">
-              <!-- Logo and Contact Info -->
-              <div class="col-lg-4 col-md-6">
-                <img
-                  src="/dist/assets/img/placeholder-logos/logoipsum-334.svg"
-                  alt="Logo"
-                  style="height: 32px;"
-                  class="mb-4"
-                />
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-                    <a href="tel:+12345678901" class="text-body text-decoration-none">
-                      <i class="ri-phone-fill text-primary me-2"></i>+1 (234) 567-8901
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="mailto:hello@email.com" class="text-body text-decoration-none">
-                      <i class="ri-mail-fill text-primary me-2"></i>hello@email.com
-                    </a>
-                  </li>
-                  <li>
-                    <i class="ri-map-pin-fill text-primary me-2"></i>123 Longhorn Heights, Austin,
-                    TX
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Navigation Links -->
-              <div class="col-lg-4 col-md-6">
-                <div class="row">
-                  <div class="col-6">
-                    <h5 class="fs-5 mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="/theme/2/home" class="text-body text-decoration-none d-block mb-2"
-                          >Home</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/about" class="text-body text-decoration-none d-block mb-2"
-                          >About</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/news" class="text-body text-decoration-none d-block mb-2"
-                          >News</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/faq" class="text-body text-decoration-none d-block mb-2"
-                          >FAQs</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/contact" class="text-body text-decoration-none d-block"
-                          >Contact</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-6">
-                    <h5 class="fs-5 mb-3">Explore</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a
-                          href="/theme/2/amenities"
-                          class="text-body text-decoration-none d-block mb-2">Amenities</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/board-members"
-                          class="text-body text-decoration-none d-block mb-2">Board</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/events"
-                          class="text-body text-decoration-none d-block mb-2">Events</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/facilities"
-                          class="text-body text-decoration-none d-block mb-2">Facilities</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="/theme/2/gallery"
-                          class="text-body text-decoration-none d-block mb-2">Gallery</a
-                        >
-                      </li>
-                      <li>
-                        <a href="/theme/2/history" class="text-body text-decoration-none d-block"
-                          >History</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Newsletter -->
-              <div class="col-lg-4">
-                <h5 class="fs-5 mb-2">Subscribe to our Newsletter</h5>
-                <p class="text-muted mb-3">
-                  Get community updates, event invites, and more—straight to your inbox.
-                </p>
-                <form>
-                  <div class="mb-3">
-                    <input
-                      type="email"
-                      class="form-control form-control-lg"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn btn-primary w-100 d-flex align-items-center justify-content-center"
-                  >
-                    <i class="ri-send-plane-fill me-2"></i>Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="text-center pt-4 mt-4 border-top">
-              <p class="text-muted mb-0">&copy; 2025 Company, Inc. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- All Scripts -->
-      <Scripts />
-    </main>
-  </body>
-</html>
+  <!-- History Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-2">The Beginning</h2>
+      <p class="lead text-md-center mb-4">
+        Discover the history, spirit, and growth of Longhorn Heights.
+      </p>
+      <div class="row">
+        <div class="col-lg-6 pe-lg-5">
+          <h3 class="mb-3">How it all started</h3>
+          <p class="lead">
+            Longhorn Heights was established in the early 1980s with a vision to create a
+            close-knit, family-friendly neighborhood in the heart of Austin. What began as a modest
+            development soon grew into a thriving community grounded in shared values, safety, and
+            natural beauty.
+          </p>
+          <p class="lead mb-0">
+            Over the years, Longhorn Heights has become a beloved Austin neighborhood, cherished for
+            its friendly residents and beautiful homes.
+          </p>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item lead px-0 py-2">
+              <i class="ri-building-2-line text-primary me-2 fs-5 align-middle"></i>
+              <strong>1950s</strong> - Longhorn Heights began as open ranchland near Austin.
+            </li>
+            <li class="list-group-item lead px-0 py-2">
+              <i class="ri-seedling-line text-primary me-2 fs-5 align-middle"></i>
+              <strong>1970s</strong> - Zoning allowed housing while preserving green space.
+            </li>
+            <li class="list-group-item lead px-0 py-2">
+              <i class="ri-home-2-line text-primary me-2 fs-5 align-middle"></i>
+              <strong>1982</strong> - First homes were built and some families moved in.
+            </li>
+            <li class="list-group-item lead px-0 py-2">
+              <i class="ri-community-line text-primary me-2 fs-5 align-middle"></i>
+              <strong>2000</strong> - Community grew to 100+ families, hosting elections.
+            </li>
+            <li class="list-group-item lead px-0 py-2">
+              <i class="ri-leaf-line text-primary me-2 fs-5 align-middle"></i>
+              <strong>2012</strong> - HOA launched green efforts: water-saving and solar.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Images Section -->
+  <section class="bg-body pt-3 pb-5">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md-4 offset-md-2">
+          <figure class="img-scale rounded-4 mb-0">
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/img-7.jpg')}
+              class="img-fluid"
+              alt="The Beginning"
+            />
+          </figure>
+        </div>
+        <div class="col-md-4">
+          <figure class="img-scale rounded-4 mb-0">
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/img-6.jpg')}
+              class="img-fluid"
+              alt="The Beginning - Map"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="bg-body pt-2 pb-5">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md-4">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
+              <i class="ri-focus-3-line text-primary display-5"></i>
+              <h5 class="card-title fs-5 my-2">Our Vision</h5>
+              <p class="card-text mb-0">
+                To foster a vibrant, safe, and connected community where every resident of Longhorn
+                Heights feels valued, heard, and proud to call home.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
+              <i class="ri-treasure-map-line text-primary display-5"></i>
+              <h5 class="card-title fs-5 my-2">Our Mission</h5>
+              <p class="card-text mb-0">
+                To enhance the quality of life in Longhorn Heights by maintaining our neighborhood’s
+                beauty and always encouraging resident engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
+              <i class="ri-hand-heart-line text-primary display-5"></i>
+              <h5 class="card-title fs-5 my-2">Our Values</h5>
+              <p class="card-text mb-0">
+                We believe in the strength of neighborly connections and shared responsibility. And
+                we operate with honesty and consistent communication.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
