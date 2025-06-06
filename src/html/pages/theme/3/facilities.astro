@@ -1,0 +1,179 @@
+---
+import Layout from './layout.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout
+  title="Facilities"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Hero Section -->
+  <section
+    class="position-relative text-light text-center text-lg-start"
+    style={`background-image: url('${getAssetPrefix('/assets/img/theme-images/hero-3.jpg')}'); background-size: cover; background-position: center; height: 400px;`}
+  >
+    <!-- Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    <!-- Content -->
+    <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+          <h1 class="display-2 fw-semibold lh-1 mb-2">Facilities</h1>
+          <p class="fs-4 mb-3">
+            Discover the facilities that support everyday living and keep Longhorn Heights running
+            smoothly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row justify-content-center text-md-center">
+        <div class="col-lg-10">
+          <h2 class="fs-1 mb-4">Seamless Community Living</h2>
+          <p class="fs-5 text-muted mb-0">
+            At Longhorn Heights, we believe that a vibrant community is built upon shared spaces
+            that cater to every resident's needs. Our thoughtfully designed facilities are more than
+            just physical spaces—they are the heartbeats of our neighborhood, fostering connections,
+            promoting well-being, and elevating daily life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section 1 -->
+  <section class="text-bg-primary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 offset-lg-1 pe-lg-5 py-4 my-auto">
+          <i class="ri-home-heart-fill fs-1"></i>
+          <h3 class="fs-1 mb-3">Reliable Utilities</h3>
+          <p class="fs-5 mb-4">
+            Consistent electricity, water, and waste management services keep your home comfortable
+            and functional.
+          </p>
+          <button class="btn btn-lg btn-outline-light rounded-pill px-4">
+            Learn More<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+        </div>
+        <div class="col-md-6 p-0" style="min-height: 100%;">
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/img-1.jpg')}
+            style="width: 100%; height: 100%; object-fit: cover;"
+            alt="Facility Image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section 2 -->
+  <section class="bg-primary-subtle">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 order-2 order-md-1 p-0" style="min-height: 100%;">
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/img-8.jpg')}
+            style="width: 100%; height: 100%; object-fit: cover;"
+            alt="Facility Image"
+          />
+        </div>
+        <div class="col-md-6 col-lg-5 offset-lg-1 order-1 order-md-2 pe-lg-5 py-4 my-auto">
+          <i class="ri-lock-fill text-primary fs-1"></i>
+          <h3 class="fs-1 mb-3">Security & Surveillance</h3>
+          <p class="fs-5 mb-4">
+            24/7 gated security, patrols, and surveillance cameras help maintain a safe living
+            environment for all residents.
+          </p>
+          <button class="btn btn-lg btn-outline-primary rounded-pill px-4">
+            Learn More<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section 3 -->
+  <section class="text-bg-primary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 offset-lg-1 pe-lg-5 py-4 my-auto">
+          <i class="ri-car-fill fs-1"></i>
+          <h3 class="fs-1 mb-3">Parking & Transportation</h3>
+          <p class="fs-5 mb-4">
+            Well-maintained visitor parking, bike racks, and easy access to public transportation
+            routes.
+          </p>
+          <button class="btn btn-lg btn-outline-light rounded-pill px-4">
+            Learn More<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+        </div>
+        <div class="col-md-6 p-0" style="min-height: 100%;">
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/img-9.jpg')}
+            style="width: 100%; height: 100%; object-fit: cover;"
+            alt="Facility Image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance & Operations Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-4">Maintenance & Operations</h2>
+      <div class="p-4 border rounded-4">
+        <p>
+          Keeping Longhorn Heights functional and safe requires consistent attention to maintenance
+          and day-to-day operations. Our dedicated team ensures that all community facilities are
+          inspected, serviced, and updated as needed—minimizing disruptions and maximizing
+          reliability.
+        </p>
+        <ul class="list-group list-group-flush mt-3">
+          <li class="list-group-item">
+            <i class="ri-checkbox-circle-line text-primary me-2"></i>Routine inspections of shared
+            infrastructure
+          </li>
+          <li class="list-group-item">
+            <i class="ri-checkbox-circle-line text-primary me-2"></i>Timely repairs of lighting,
+            gates, and roads
+          </li>
+          <li class="list-group-item">
+            <i class="ri-checkbox-circle-line text-primary me-2"></i>24/7 emergency maintenance
+            support
+          </li>
+          <li class="list-group-item">
+            <i class="ri-checkbox-circle-line text-primary me-2"></i>Landscaping and irrigation
+            upkeep
+          </li>
+          <li class="list-group-item">
+            <i class="ri-checkbox-circle-line text-primary me-2"></i>Seasonal updates and facility
+            improvements
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="text-bg-primary py-5">
+    <div class="container">
+      <h2 class="mb-3">Stay Connected with Your Community</h2>
+      <p class="fs-5 mb-4">
+        Have questions, concerns, or suggestions? Reach out to Longhorn Heights HOA board — we're
+        here to help.
+      </p>
+      <a
+        href={getPathPrefix('/theme/3/contact')}
+        class="btn btn-lg btn-outline-light rounded-pill px-4"
+      >
+        Get in Touch<i class="ri-arrow-right-line ms-2"></i>
+      </a>
+    </div>
+  </section>
+</Layout>

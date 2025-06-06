@@ -1,0 +1,325 @@
+---
+import Layout from './layout.astro'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout
+  title="Contact"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Hero Section -->
+  <section
+    class="position-relative text-light text-center text-lg-start"
+    style={`background-image: url('${getAssetPrefix('/assets/img/theme-images/hero-3.jpg')}'); background-size: cover; background-position: center; height: 400px;`}
+  >
+    <!-- Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    <!-- Content -->
+    <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+          <h1 class="display-2 fw-semibold lh-1 mb-2">Contact Us</h1>
+          <p class="fs-4 mb-3">
+            We’d love to hear from you! Whether you have questions about us, or just want to say
+            hello — we’re here to help and happy to chat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-4">Send us a Message</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card border">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    id="name"
+                    placeholder="Full Name"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Your Email</label>
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    id="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number (optional)</label>
+                  <input
+                    type="tel"
+                    class="form-control form-control-lg"
+                    id="phone"
+                    placeholder="(123) 456-7890"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea
+                    class="form-control form-control-lg"
+                    id="message"
+                    rows="3"
+                    placeholder="Type your message here..."
+                    required></textarea>
+                </div>
+
+                <div class="alert alert-primary d-flex align-items-center" role="alert">
+                  <i class="ri-time-line me-2 fs-5 text-primary"></i>
+                  <div>
+                    Please note: Response times may vary depending on the nature of your request.
+                    Most inquiries are answered within <strong>24–48 hours</strong>.
+                  </div>
+                </div>
+
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card border overflow-hidden h-100 p-0" style="min-height: 350px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6891.918314633661!2d-97.74639088460376!3d30.26674489620698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX%2C%20USA!5e0!3m2!1sen!2sin!4v1748249504404!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Board Members Section  -->
+  <section class="bg-body pt-2 pb-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-4">Board Members</h2>
+      <div class="row gy-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-lift border h-100">
+            <img
+              src={getAssetPrefix('/assets/img/avatars/avatar7.jpg')}
+              alt="Avatar"
+              class="rounded-circle mb-3"
+              width="80"
+              height="80"
+            />
+            <h5 class="mb-1">Nguyen Minh</h5>
+            <p class="text-muted mb-3">President</p>
+            <p class="text-muted mb-1">
+              <i class="ri-mail-fill me-2"></i>
+              <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                >hello@email.com</a
+              >
+            </p>
+            <p class="text-muted mb-0">
+              <i class="ri-phone-fill me-2"></i>
+              <a href="tel:1234567890" class="text-muted text-decoration-none">(123) 456-7890</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-lift border h-100">
+            <img
+              src={getAssetPrefix('/assets/img/avatars/avatar6.jpg')}
+              alt="Avatar"
+              class="rounded-circle mb-3"
+              width="80"
+              height="80"
+            />
+            <h5 class="mb-1">Rahul Mehta</h5>
+            <p class="text-muted mb-3">Vice President</p>
+            <p class="text-muted mb-1">
+              <i class="ri-mail-fill me-2"></i>
+              <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                >hello@email.com</a
+              >
+            </p>
+            <p class="text-muted mb-0">
+              <i class="ri-phone-fill me-2"></i>
+              <a href="tel:1234567890" class="text-muted text-decoration-none">(123) 456-7890</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-lift border h-100">
+            <img
+              src={getAssetPrefix('/assets/img/avatars/avatar3.jpg')}
+              alt="Avatar"
+              class="rounded-circle mb-3"
+              width="80"
+              height="80"
+            />
+            <h5 class="mb-1">Neha Gupta</h5>
+            <p class="text-muted mb-3">Treasurer</p>
+            <p class="text-muted mb-1">
+              <i class="ri-mail-fill me-2"></i>
+              <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                >hello@email.com</a
+              >
+            </p>
+            <p class="text-muted mb-0">
+              <i class="ri-phone-fill me-2"></i>
+              <a href="tel:1234567890" class="text-muted text-decoration-none">(123) 456-7890</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-lift border h-100">
+            <img
+              src={getAssetPrefix('/assets/img/avatars/avatar1.jpg')}
+              alt="Avatar"
+              class="rounded-circle mb-3"
+              width="80"
+              height="80"
+            />
+            <h5 class="mb-1">Jane Smith</h5>
+            <p class="text-muted mb-3">Secretary</p>
+            <p class="text-muted mb-1">
+              <i class="ri-mail-fill me-2"></i>
+              <a href="mailto:hello@email.com" class="text-muted text-decoration-none"
+                >hello@email.com</a
+              >
+            </p>
+            <p class="text-muted mb-0">
+              <i class="ri-phone-fill me-2"></i>
+              <a href="tel:1234567890" class="text-muted text-decoration-none">(123) 456-7890</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Contacts Section -->
+  <section class="bg-body pt-2 pb-5">
+    <div class="container">
+      <h2 class="fs-1 text-md-center mb-4">Key Contacts</h2>
+      <div class="row g-4">
+        <!-- HOA Office Contact -->
+        <div class="col-md-4">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
+              <i class="ri-building-line text-primary fs-1"></i>
+              <h5 class="card-title fs-5">HOA Office</h5>
+              <p class="card-text">
+                For general inquiries, community questions, or document requests.
+              </p>
+              <p class="text-muted mb-1">
+                <i class="ri-phone-fill me-2"></i>
+                <a href="tel:+12345678901" class="text-decoration-none text-muted"
+                  >+1 (234) 567-8901</a
+                >
+              </p>
+              <p class="text-muted mb-1">
+                <i class="ri-mail-fill me-2"></i>
+                <a href="mailto:hello@email.com" class="text-decoration-none text-muted"
+                  >hello@email.com</a
+                >
+              </p>
+              <p class="text-muted mb-0">
+                <i class="ri-time-fill me-2"></i>Mon–Fri: 9:00 AM – 5:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Management Company Contact -->
+        <div class="col-md-4">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
+              <i class="ri-group-3-line text-primary fs-1"></i>
+              <h5 class="card-title fs-5">Management Company</h5>
+              <p class="card-text">
+                For billing, assessments, or account assistance or management queries.
+              </p>
+              <p class="text-muted mb-1">
+                <i class="ri-phone-fill me-2"></i>
+                <a href="tel:+12345678901" class="text-decoration-none text-muted"
+                  >+1 (234) 567-8901</a
+                >
+              </p>
+              <p class="text-muted mb-1">
+                <i class="ri-mail-fill me-2"></i>
+                <a href="mailto:hello@email.com" class="text-decoration-none text-muted"
+                  >hello@email.com</a
+                >
+              </p>
+              <p class="text-muted mb-0">
+                <i class="ri-time-fill me-2"></i>Mon–Fri: 8:00 AM – 6:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency Maintenance Contact -->
+        <div class="col-md-4">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
+              <i class="ri-hammer-line text-primary fs-1"></i>
+              <h5 class="card-title fs-5">Emergency Maintenance</h5>
+              <p class="card-text">
+                For urgent issues outside business hours (e.g., plumbing, power).
+              </p>
+              <p class="text-muted mb-1">
+                <i class="ri-phone-fill me-2"></i>
+                <a href="tel:+12345678901" class="text-decoration-none text-muted"
+                  >+1 (234) 567-8901</a
+                >
+              </p>
+              <p class="text-muted mb-1">
+                <i class="ri-mail-fill me-2"></i>
+                <a href="mailto:hello@email.com" class="text-decoration-none text-muted"
+                  >hello@email.com</a
+                >
+              </p>
+              <p class="text-muted mb-0">
+                <i class="ri-time-fill me-2"></i>Available 24/7
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="text-bg-primary py-5">
+    <div class="container">
+      <h2 class="mb-3">Stay Connected with Your Community</h2>
+      <p class="fs-5 mb-4">
+        Have questions, concerns, or suggestions? Reach out to Longhorn Heights HOA board — we're
+        here to help.
+      </p>
+      <a
+        href={getPathPrefix('/theme/3/contact')}
+        class="btn btn-lg btn-outline-light rounded-pill px-4"
+      >
+        Get in Touch<i class="ri-arrow-right-line ms-2"></i>
+      </a>
+    </div>
+  </section>
+</Layout>
