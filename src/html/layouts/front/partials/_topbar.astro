@@ -5,95 +5,226 @@ import { getPathPrefix } from '../../../../utils/path'
 ---
 
 <!-- Top Navigation -->
-<div class="container">
-  <header
-    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3"
-  >
-    <a
-      href="/"
-      class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
-    >
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
       <Logo />
     </a>
 
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="#" class="nav-link px-2">Home</a></li>
-      <li><a href="#" class="nav-link px-2">About</a></li>
-      <li><a href="#" class="nav-link px-2">Features</a></li>
-      <li><a href="#" class="nav-link px-2">Pricing</a></li>
-      <li><a href="#" class="nav-link px-2">FAQs</a></li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle px-2"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Blocks
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/about-us')}>About Us</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/blog')}>Blog</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/call-to-action')}
-              >Call to Action</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/clients')}>Clients</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/contact')}>Contact</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/facts')}>Facts</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/faq')}>FAQs</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/features')}>Features</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/footer')}>Footer</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/hero')}>Hero</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/navbar')}>Navbar</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/portfolio')}>Portfolio</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/pricing')}>Pricing</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/process')}>Process</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/team')}>Team</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href={getPathPrefix('/docs/components/testimonials')}
-              >Testimonials</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li><a href="/docs" class="nav-link px-2">Documentation</a></li>
-    </ul>
-    <div class="col-md-3 text-end">
-      <button type="button" class="btn btn-outline-primary me-2">Login</button>
-      <button type="button" class="btn btn-primary">Sign-up</button>
+    <!-- Mobile Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links and Buttons -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <!-- Center Links (Regular Screens) -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-none d-lg-flex">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQs</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Blocks
+          </a>
+          <ul class="dropdown-menu mega-menu" role="menu" aria-labelledby="blocksDropdown">
+            <div class="row g-4">
+              <div class="col-md-3">
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/about-us')}
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/blog')}>Blog</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/call-to-action')}
+                    >Call to Action</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/clients')}
+                    >Clients</a
+                  >
+                </li>
+              </div>
+              <div class="col-md-3">
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/contact')}
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/facts')}>Facts</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/faq')}>FAQs</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/features')}
+                    >Features</a
+                  >
+                </li>
+              </div>
+              <div class="col-md-3">
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/footer')}>Footer</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/hero')}>Hero</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/navbar')}>Navbar</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/portfolio')}
+                    >Portfolio</a
+                  >
+                </li>
+              </div>
+              <div class="col-md-3">
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/pricing')}
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/process')}
+                    >Process</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/team')}>Team</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href={getPathPrefix('/docs/components/testimonials')}
+                    >Testimonials</a
+                  >
+                </li>
+              </div>
+            </div>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs')}>Documentation</a>
+        </li>
+      </ul>
+
+      <!-- Center Links (Smaller Screens) -->
+      <ul class="navbar-nav mx-auto mb-2 d-flex d-lg-none">
+        <h6 class="text-uppercase text-muted fw-semibold mt-3 mb-2">Quick Links</h6>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs')}>Documentation</a>
+        </li>
+
+        <h6 class="text-uppercase text-muted fw-semibold mt-3 mb-2">Blocks</h6>
+
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/about-us')}>About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/blog')}>Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/call-to-action')}
+            >Call to Action</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/clients')}>Clients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/contact')}>Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/facts')}>Facts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/faq')}>FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/features')}>Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/footer')}>Footer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/hero')}>Hero</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/navbar')}>Navbar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/portfolio')}>Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/pricing')}>Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/process')}>Process</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/team')}>Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={getPathPrefix('/docs/components/testimonials')}>Testimonials</a>
+        </li>
+      </ul>
+
+      <!-- Right-side Buttons -->
+      <div class="d-flex gap-2 mb-2 mb-lg-0">
+        <a href="#" class="btn btn-lg btn-outline-primary">Login</a>
+        <a href="#" class="btn btn-lg btn-primary">Sign Up</a>
+      </div>
     </div>
-  </header>
-</div>
+  </div>
+</nav>
