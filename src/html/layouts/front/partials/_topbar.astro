@@ -8,7 +8,7 @@ import { getPathPrefix } from '../../../../utils/path'
 <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
   <div class="container">
     <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center" href="#">
+    <a class="navbar-brand d-flex align-items-center" href={getPathPrefix('/')}>
       <Logo />
     </a>
 
@@ -30,7 +30,7 @@ import { getPathPrefix } from '../../../../utils/path'
       <!-- Center Links (Regular Screens) -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-none d-lg-flex">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href={getPathPrefix('/')}>Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
