@@ -7,6 +7,9 @@ export function getCSS(isDev) {
   return isDev ? `/dist/css/style.css` : `/css/style.min.css`
 }
 
+export function getSkinCSS(isDev) {
+  return isDev ? `/dist/assets/vendor/css/skin.css` : `/assets/vendor/css/skin.css`
+}
 /**
  * Get the JavaScript file path based on filename and development mode
  * @param {string} filename - The JavaScript file name
@@ -58,6 +61,7 @@ export function createIframeContent({ bgColor, component, cssCode, jsCode, isDev
   </script>
 
   <link href="${getCSS(isDev)}" rel="stylesheet">
+  <link href="${getSkinCSS(isDev)}" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
 
   <!-- Source Sans 3 from Google Fonts -->

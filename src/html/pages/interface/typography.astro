@@ -60,7 +60,7 @@ const iconList = `<ul class="icon-list success">
 </ul>
 `
 
-const dropcap = `<p class="dropcap primary">Lorem ipsum dolor sit amet, consect adipis elit. Sed euismod nisl eget ultrics tincid nunc nisl aliqua nisl eget aliqua nisl nisl eget nisl.</p>
+const dropcap = `<p class="dropcap primary">Lorem ipsum dolor sit amet, consect adipis elit. Sed euismod nisl eget ultrics tincid nunc nisl aliqua nisl eget aliqua nisl nisl eget nisl.consect adipis elit. Sed euismod nisl eget ultrics tincid nunc nisl aliqua nisl eget aliqua nisl nisl eget nisl.consect adipis elit. Sed euismod nisl eget ultrics tincid nunc nisl aliqua nisl eget aliqua nisl nisl eget nisl.</p>
 `
 
 const linkOpacity = `<p><a class="link-opacity-10" href="#">Link opacity 10</a></p>
@@ -127,6 +127,11 @@ const previewConfig = {
         <div class="col-12">
           <div class="my-3">
             <h3 id="headings">Headings</h3>
+            <p class="text-muted mb-3">
+              Standard HTML headings from h1 to h6. Use these to create a clear hierarchy of
+              content. h1 is the largest and most important, while h6 is the smallest. Each heading
+              has default Bootstrap styling with appropriate font sizes and spacing.
+            </p>
 
             <ComponentPreview
               title="Headings"
@@ -138,6 +143,11 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 id="uppercase-headings">Uppercase Headings</h3>
+            <p class="text-muted mb-3">
+              Transform any heading to uppercase using the <code>.text-uppercase</code> utility class.
+              This is useful for creating emphasis or matching specific design requirements while maintaining
+              semantic heading structure.
+            </p>
 
             <ComponentPreview
               title="Uppercase Headings"
@@ -149,6 +159,11 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 id="small-headings">Small Headings</h3>
+            <p class="text-muted mb-3">
+              Create smaller headings by combining <code>.text-uppercase</code> with font size utilities
+              like <code>.fs-6</code>. Perfect for section labels, captions, or when you need a
+              heading that doesn't dominate the visual hierarchy.
+            </p>
 
             <ComponentPreview
               title="Small Headings"
@@ -160,6 +175,13 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 id="display-headings">Display Headings</h3>
+            <p class="text-muted mb-3">
+              Display headings are larger, more prominent headings designed for hero sections,
+              landing pages, or when you need maximum visual impact. Use classes <code
+                >.display-1</code
+              >
+              through <code>.display-6</code>, where display-1 is the largest.
+            </p>
 
             <ComponentPreview
               title="Display Headings"
@@ -171,6 +193,12 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 id="lead-text">Lead Text</h3>
+            <p class="text-muted mb-3">
+              Lead text makes a paragraph stand out by increasing its font size and weight. Use the <code
+                >.lead</code
+              > class for introductory paragraphs, article summaries, or any text that should draw the
+              reader's attention.
+            </p>
 
             <ComponentPreview
               title="Lead Text"
@@ -182,6 +210,12 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 id="lists">Lists</h3>
+            <p class="text-muted mb-3">
+              Styled lists with custom bullet points and colors. The <code>.unordered-list</code>
+              class with color variants (primary, secondary, etc.) creates colored bullet points. The
+              <code>.icon-list</code> class replaces bullets with checkmark icons, perfect for feature
+              lists or completed tasks.
+            </p>
 
             <ComponentPreview
               title="Unordered List"
@@ -201,6 +235,11 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 id="dropcap">Dropcap</h3>
+            <p class="text-muted mb-3">
+              A dropcap is a large initial letter that drops below the first line of a paragraph.
+              Use the <code>.dropcap</code> class with color variants to create an elegant, magazine-style
+              opening for articles or important content sections.
+            </p>
 
             <ComponentPreview
               title="Dropcap"
@@ -212,6 +251,12 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 id="links">Links</h3>
+            <p class="text-muted mb-3">
+              Control link opacity for subtle text effects. Use <code>.link-opacity-*</code> classes
+              for static opacity (10, 25, 50, 75, 100) or <code>.link-opacity-*-hover</code> classes
+              for opacity changes on hover. Great for creating secondary navigation or subtle call-to-action
+              links.
+            </p>
 
             <ComponentPreview
               title="Link Opacity"
@@ -231,6 +276,12 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 id="link-underlines">Link Underlines</h3>
+            <p class="text-muted mb-3">
+              Customize link underlines with color and opacity. Use <code>.link-underline-*</code>
+              classes to match underline colors with your theme colors. Combine with
+              <code>.link-underline-opacity-*</code> classes to control underline visibility. Perfect
+              for creating sophisticated link styling that matches your design system.
+            </p>
 
             <ComponentPreview
               title="Link Underline Color"
@@ -250,6 +301,11 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 id="link-color">Link Color</h3>
+            <p class="text-muted mb-3">
+              Apply theme colors to links using <code>.link-*</code> classes (primary, secondary, success,
+              danger, warning). These examples combine colored links with subtle underlines that become
+              more prominent on hover, creating an elegant interactive effect.
+            </p>
 
             <ComponentPreview
               title="Link Color"

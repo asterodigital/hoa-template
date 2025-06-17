@@ -15,7 +15,7 @@
 
 .form-label.required::after {
   font-weight: 700;
-  color: #dc3545;
+  color: var(--bs-danger);
   content: ' *';
 }
 
@@ -33,19 +33,19 @@
     right: 0.5rem;
     z-index: 10;
     padding: 0.25rem;
-    color: #6c757d;
+    color: var(--bs-secondary);
     background: transparent;
     border: 0;
     transform: translateY(-50%);
     @include transition(border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out);
 
     &:hover {
-      color: #495057;
+      color: var(--bs-secondary);
     }
   }
 }
 
 /* Adjust invalid styles for password toggle */
 .form-control.is-invalid ~ .password-toggle {
-  color: #dc3545;
+  color: var(--bs-danger);
 }

@@ -310,6 +310,11 @@ window.PreviewManager = class PreviewManager {
     return isDev ? '/dist/css/style.css' : '/css/style.min.css'
   }
 
+  static getSkinCSSPath() {
+    const isDev = window.location.port === '1234'
+    return isDev ? '/dist/assets/vendor/css/skin.css' : '/assets/vendor/css/skin.css'
+  }
+
   static getJSPath(filename) {
     const isDev = window.location.port === '4321'
     return isDev ? `/dist/js/${filename}.js` : `/js/${filename}.min.js`
@@ -352,6 +357,7 @@ window.PreviewManager = class PreviewManager {
         </script>
 
         <link href="${this.getCSSPath()}" rel="stylesheet">
+        <link href="${this.getSkinCSSPath()}" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
         <!-- Source Sans 3 from Google Fonts -->
         <link

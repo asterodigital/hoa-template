@@ -14,129 +14,558 @@ const pageHeaderProps = {
   ]
 }
 
-// Basic progress bar examples with different completion percentages
-const basicProgressExamples = `<div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 0%"></div>
+// Basic progress bar examples with realistic scenarios
+const basicProgressExamples = `<!-- File Upload Progress -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">File Upload</small>
+    <small class="text-muted">0%</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="File upload progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 0%"></div>
+  </div>
 </div>
-<div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 25%"></div>
+
+<!-- Loading Progress -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">Loading...</small>
+    <small class="text-muted">25%</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Loading progress" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 25%"></div>
+  </div>
 </div>
-<div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 50%"></div>
+
+<!-- Installation Progress -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">Installing packages...</small>
+    <small class="text-muted">50%</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Installation progress" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 50%"></div>
+  </div>
 </div>
-<div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 75%"></div>
+
+<!-- Download Progress -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">Downloading update...</small>
+    <small class="text-muted">75%</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Download progress" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" style="width: 75%"></div>
+  </div>
 </div>
-<div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width: 100%"></div>
+
+<!-- Completed -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-success">
+      <i class="bi bi-check-circle-fill me-1"></i>
+      Process completed
+    </small>
+    <small class="text-success">100%</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Process completed" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 100%"></div>
+  </div>
 </div>
 `
 
-// Example using utility class for width
-const utilityWidthExample = `<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar w-75"></div>
-</div>
-`
+// Interactive progress bar with JavaScript
+const interactiveProgressExample = `<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <label for="interactive-progress" class="form-label mb-0">Simulated File Upload</label>
+    <span id="progress-text" class="text-muted">0%</span>
+  </div>
+  <div class="progress mb-3" role="progressbar" aria-label="Interactive progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div id="interactive-progress" class="progress-bar" style="width: 0%"></div>
+  </div>
+  <div class="d-flex gap-2">
+    <button class="btn btn-primary btn-sm" onclick="startProgress()">
+      <i class="bi bi-play-fill me-1"></i>Start Upload
+    </button>
+    <button class="btn btn-outline-secondary btn-sm" onclick="pauseProgress()">
+      <i class="bi bi-pause-fill me-1"></i>Pause
+    </button>
+    <button class="btn btn-outline-danger btn-sm" onclick="resetProgress()">
+      <i class="bi bi-arrow-clockwise me-1"></i>Reset
+    </button>
+  </div>
+</div>`
 
-// Examples with different height variations
-const heightVariationExamples = `<div class="progress mb-3" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>
-`
+const interactiveProgressJS = `let progressInterval;
+let currentProgress = 0;
+let isPaused = false;
 
-// Example with basic label
+function startProgress() {
+  if (progressInterval) return; // Already running
+
+  progressInterval = setInterval(() => {
+    if (!isPaused && currentProgress < 100) {
+      currentProgress += Math.random() * 3; // Random increment for realistic feel
+      if (currentProgress > 100) currentProgress = 100;
+
+      updateProgressDisplay(currentProgress);
+
+      if (currentProgress >= 100) {
+        clearInterval(progressInterval);
+        progressInterval = null;
+        document.getElementById('progress-text').innerHTML =
+          '<i class="bi bi-check-circle-fill text-success me-1"></i>Complete!';
+      }
+    }
+  }, 100);
+}
+
+function pauseProgress() {
+  isPaused = !isPaused;
+  const btn = event.target.closest('button');
+  const icon = btn.querySelector('i');
+
+  if (isPaused) {
+    icon.className = 'bi bi-play-fill me-1';
+    btn.innerHTML = '<i class="bi bi-play-fill me-1"></i>Resume';
+  } else {
+    icon.className = 'bi bi-pause-fill me-1';
+    btn.innerHTML = '<i class="bi bi-pause-fill me-1"></i>Pause';
+  }
+}
+
+function resetProgress() {
+  clearInterval(progressInterval);
+  progressInterval = null;
+  currentProgress = 0;
+  isPaused = false;
+  updateProgressDisplay(0);
+
+  // Reset button text
+  const pauseBtn = document.querySelector('button[onclick="pauseProgress()"]');
+  pauseBtn.innerHTML = '<i class="bi bi-pause-fill me-1"></i>Pause';
+}
+
+function updateProgressDisplay(progress) {
+  const progressBar = document.getElementById('interactive-progress');
+  const progressText = document.getElementById('progress-text');
+
+  progressBar.style.width = progress + '%';
+  progressBar.setAttribute('aria-valuenow', Math.round(progress));
+  progressText.textContent = Math.round(progress) + '%';
+
+  // Change color based on progress
+  if (progress >= 100) {
+    progressBar.className = 'progress-bar bg-success';
+  } else if (progress >= 75) {
+    progressBar.className = 'progress-bar bg-info';
+  } else if (progress >= 50) {
+    progressBar.className = 'progress-bar bg-warning';
+  } else {
+    progressBar.className = 'progress-bar';
+  }
+}`
+
+// Example using utility class for width with better labels
+const utilityWidthExample = `<!-- Using Bootstrap utility classes for quick implementation -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">Quick Progress Example</small>
+    <small class="text-muted">75%</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Quick progress example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar w-75"></div>
+  </div>
+</div>
+
+<!-- Pro tip: Combine with data attributes for JavaScript integration -->
+<div class="progress" role="progressbar" aria-label="Data-driven progress" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" data-progress="60">
+  <div class="progress-bar" style="width: 60%">
+    <small>60% Complete</small>
+  </div>
+</div>`
+
+// Examples with different height variations and use cases
+const heightVariationExamples = `<!-- Thin progress for subtle indicators -->
+<div class="mb-3">
+  <small class="text-muted d-block mb-1">Minimal Progress (Page Loading)</small>
+  <div class="progress" role="progressbar" aria-label="Page loading" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="height: 2px">
+    <div class="progress-bar bg-primary" style="width: 45%"></div>
+  </div>
+</div>
+
+<!-- Standard height for forms -->
+<div class="mb-3">
+  <small class="text-muted d-block mb-1">Standard Progress (Form Completion)</small>
+  <div class="progress" role="progressbar" aria-label="Form completion" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 66%">
+      Step 2 of 3
+    </div>
+  </div>
+</div>
+
+<!-- Large progress for prominent displays -->
+<div class="mb-3">
+  <small class="text-muted d-block mb-1">Large Progress (Dashboard Widget)</small>
+  <div class="progress" role="progressbar" aria-label="Dashboard metric" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 24px">
+    <div class="progress-bar bg-gradient d-flex align-items-center justify-content-center fw-bold" style="width: 85%">
+      <i class="bi bi-graph-up me-2"></i>
+      85% Goal Achieved
+    </div>
+  </div>
+</div>`
+
+// Example with detailed labels and better UX
+const detailedLabelExample = `<!-- Progress with detailed status information -->
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h6 class="mb-0">
+      <i class="bi bi-cloud-upload text-primary me-2"></i>
+      Uploading presentation.pdf
+    </h6>
+    <div class="text-end">
+      <div class="text-muted small">2.3 MB / 5.1 MB</div>
+      <div class="text-muted small">~30s remaining</div>
+    </div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="File upload: presentation.pdf" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-primary" style="width: 45%">
+      45%
+    </div>
+  </div>
+</div>
+
+<!-- Progress with error state -->
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h6 class="mb-0 text-danger">
+      <i class="bi bi-exclamation-triangle me-2"></i>
+      Upload failed: large-file.zip
+    </h6>
+    <small class="text-muted">Failed at 23%</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Failed upload" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-danger" style="width: 23%"></div>
+  </div>
+  <small class="text-danger mt-1 d-block">
+    <i class="bi bi-info-circle me-1"></i>
+    File too large. Maximum size is 10MB.
+  </small>
+</div>`
+
+// Examples with contextual colors and real scenarios
+const contextualColorExamples = `<!-- System Health Dashboard -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">
+      <i class="bi bi-cpu me-1"></i> CPU Usage
+    </small>
+    <small class="text-success">25% - Normal</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="CPU usage" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success" style="width: 25%"></div>
+  </div>
+</div>
+
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">
+      <i class="bi bi-memory me-1"></i> Memory Usage
+    </small>
+    <small class="text-info">50% - Good</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Memory usage" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info" style="width: 50%"></div>
+  </div>
+</div>
+
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">
+      <i class="bi bi-hdd me-1"></i> Disk Usage
+    </small>
+    <small class="text-warning">75% - Warning</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Disk usage" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-warning" style="width: 75%"></div>
+  </div>
+</div>
+
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">
+      <i class="bi bi-thermometer-half me-1"></i> Temperature
+    </small>
+    <small class="text-danger">95% - Critical</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="System temperature" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-danger" style="width: 95%"></div>
+  </div>
+</div>`
+
+// Example with project management stacked progress
+const projectStackedExample = `<!-- Project Timeline with Multiple Phases -->
+<div class="mb-3">
+  <h6 class="mb-2">
+    <i class="bi bi-kanban me-2"></i>
+    Project Development Progress
+  </h6>
+  <div class="progress-stacked mb-2">
+    <div class="progress" role="progressbar" aria-label="Planning phase" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+      <div class="progress-bar bg-info" data-bs-toggle="tooltip" title="Planning: 15%">
+      </div>
+    </div>
+    <div class="progress" role="progressbar" aria-label="Development phase" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+      <div class="progress-bar bg-primary" data-bs-toggle="tooltip" title="Development: 35%">
+      </div>
+    </div>
+    <div class="progress" role="progressbar" aria-label="Testing phase" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+      <div class="progress-bar bg-warning" data-bs-toggle="tooltip" title="Testing: 20%">
+      </div>
+    </div>
+    <div class="progress" role="progressbar" aria-label="Deployment phase" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+      <div class="progress-bar bg-success" data-bs-toggle="tooltip" title="Deployment: 10%">
+      </div>
+    </div>
+  </div>
+  <div class="row small text-muted">
+    <div class="col-3">
+      <i class="bi bi-circle-fill text-info me-1"></i>Planning (15%)
+    </div>
+    <div class="col-3">
+      <i class="bi bi-circle-fill text-primary me-1"></i>Development (35%)
+    </div>
+    <div class="col-3">
+      <i class="bi bi-circle-fill text-warning me-1"></i>Testing (20%)
+    </div>
+    <div class="col-3">
+      <i class="bi bi-circle-fill text-success me-1"></i>Deployment (10%)
+    </div>
+  </div>
+  <div class="mt-2 small text-muted">
+    Total Progress: 80% • Estimated completion: 2 weeks
+  </div>
+</div>`
+
+// Enhanced striped progress with real-world applications
+const stripedProgressExamples = `<!-- Data Processing with Striped Animation -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">
+      <i class="bi bi-database me-1"></i> Processing Records
+    </small>
+    <small class="text-muted">1,247 / 10,000</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Data processing" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 12%"></div>
+  </div>
+</div>
+
+<!-- Backup Progress -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">
+      <i class="bi bi-archive me-1"></i> Creating Backup
+    </small>
+    <small class="text-success">45% Complete</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Backup creation" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-success" style="width: 45%"></div>
+  </div>
+</div>
+
+<!-- Network Transfer -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">
+      <i class="bi bi-wifi me-1"></i> Syncing Data
+    </small>
+    <small class="text-info">78% Synced</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Data synchronization" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-info" style="width: 78%"></div>
+  </div>
+</div>
+
+<!-- Critical Process -->
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-center mb-1">
+    <small class="text-muted">
+      <i class="bi bi-exclamation-triangle me-1"></i> System Update
+    </small>
+    <small class="text-warning">Do not power off - 90%</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="System update" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-warning" style="width: 90%"></div>
+  </div>
+</div>`
+
+// Real-time animated loading states
+const animatedStripesExample = `<!-- Real-time Data Loading -->
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h6 class="mb-0">
+      <i class="bi bi-arrow-repeat spin me-2"></i>
+      Loading Dashboard Data
+    </h6>
+    <div class="spinner-border spinner-border-sm text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div class="progress mb-1" role="progressbar" aria-label="Dashboard loading" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width: 75%">
+      Loading...
+    </div>
+  </div>
+  <div class="small text-muted">
+    <i class="bi bi-clock me-1"></i>
+    Fetching latest analytics data...
+  </div>
+</div>
+
+<!-- AI Processing Animation -->
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h6 class="mb-0">
+      <i class="bi bi-robot me-2"></i>
+      AI Analysis in Progress
+    </h6>
+    <span class="badge bg-info">Processing</span>
+  </div>
+  <div class="progress" role="progressbar" aria-label="AI analysis" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-gradient" style="width: 60%">
+      <i class="bi bi-cpu me-2"></i>
+      Analyzing patterns...
+    </div>
+  </div>
+</div>`
+
+// Custom styled progress with CSS
+const customStyledExample = `<!-- Modern Progress with Custom Styling -->
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h6 class="mb-0">Skill Level Assessment</h6>
+    <span class="badge bg-primary">Expert</span>
+  </div>
+  <div class="progress custom-progress" role="progressbar" aria-label="Skill assessment" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 12px; border-radius: 10px; background-color: #e9ecef;">
+    <div class="progress-bar" style="width: 90%; background: linear-gradient(45deg, #007bff, #0056b3); border-radius: 10px; box-shadow: 0 2px 4px rgba(0,123,255,0.3);">
+    </div>
+  </div>
+  <div class="d-flex justify-content-between mt-1 small text-muted">
+    <span>Beginner</span>
+    <span>Intermediate</span>
+    <span>Expert</span>
+  </div>
+</div>
+
+<!-- Glassmorphism Style Progress -->
+<div class="mb-4 p-3" style="background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); backdrop-filter: blur(10px); border-radius: 15px; border: 1px solid rgba(255,255,255,0.2);">
+  <div class="mb-2">
+    <h6 class="text-white mb-0">Download Progress</h6>
+    <small class="text-white-50">game-installer.exe</small>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Download progress" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="height: 8px; background: rgba(255,255,255,0.2); border-radius: 10px;">
+    <div class="progress-bar" style="width: 67%; background: linear-gradient(90deg, #00d4ff, #0099cc); border-radius: 10px; box-shadow: 0 0 20px rgba(0,212,255,0.5);">
+    </div>
+  </div>
+  <div class="mt-2 d-flex justify-content-between">
+    <small class="text-white-50">234 MB / 350 MB</small>
+    <small class="text-white">67%</small>
+  </div>
+</div>`
+
+// Accessibility and best practices
+const accessibilityExample = `<!-- Fully Accessible Progress Example -->
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <label for="accessible-progress" class="form-label mb-0">
+      <i class="bi bi-universal-access me-2"></i>
+      Form Completion Progress
+    </label>
+    <div class="text-end">
+      <div class="fw-bold">Step 3 of 5</div>
+      <div class="small text-muted">60% Complete</div>
+    </div>
+  </div>
+  <div
+    id="accessible-progress"
+    class="progress"
+    role="progressbar"
+    aria-label="Form completion progress: step 3 of 5, 60 percent complete"
+    aria-valuenow="60"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-describedby="progress-description"
+  >
+    <div class="progress-bar bg-primary" style="width: 60%">
+      <span class="visually-hidden">60% complete</span>
+    </div>
+  </div>
+  <div id="progress-description" class="small text-muted mt-1">
+    Complete all required fields to proceed to the next step
+  </div>
+</div>
+
+<!-- Live Region for Screen Readers -->
+<div class="mb-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h6 class="mb-0">
+      <i class="bi bi-cloud-arrow-up me-2"></i>
+      File Upload with Live Updates
+    </h6>
+    <button class="btn btn-sm btn-outline-primary" onclick="simulateUpload()">
+      Start Upload
+    </button>
+  </div>
+  <div
+    class="progress"
+    role="progressbar"
+    aria-label="File upload progress"
+    aria-valuenow="0"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-live="polite"
+    aria-atomic="true"
+  >
+    <div id="live-progress" class="progress-bar" style="width: 0%"></div>
+  </div>
+  <div id="upload-status" class="small text-muted mt-1" aria-live="polite">
+    Ready to upload
+  </div>
+</div>`
+
+const accessibilityJS = `function simulateUpload() {
+   let progress = 0;
+   const progressBar = document.getElementById('live-progress');
+   const statusDiv = document.getElementById('upload-status');
+   const progressContainer = progressBar.closest('.progress');
+
+   const interval = setInterval(() => {
+     progress += Math.random() * 10;
+     if (progress > 100) progress = 100;
+
+     // Update visual progress
+     progressBar.style.width = progress + '%';
+     progressContainer.setAttribute('aria-valuenow', Math.round(progress));
+
+     // Update status for screen readers
+     if (progress < 100) {
+       statusDiv.textContent = \`Uploading... \${Math.round(progress)}% complete\`;
+       progressContainer.setAttribute(
+         'aria-label', \`File upload progress: \${Math.round(progress)} percent complete\`);
+     } else {
+       statusDiv.innerHTML = '<i class="bi bi-check-circle text-success me-1"></i>Upload completed successfully';
+       progressContainer.setAttribute('aria-label', 'File upload completed');
+       progressBar.classList.add('bg-success');
+       clearInterval(interval);
+     }
+   }, 200);
+ }`
+
+// Legacy examples for backward compatibility
 const basicLabelExample = `<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
   <div class="progress-bar" style="width: 25%">25%</div>
-</div>
-`
-
-// Example with overflow label
-const overflowLabelExample = `<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar overflow-visible text-dark" style="width: 10%">
-    <i class="ri-information-line me-1"></i>Processing data... (10% complete)
-  </div>
-</div>
-`
-
-// Examples with contextual colors
-const contextualColorExamples = `<div class="progress mb-3" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-success" style="width: 25%">
-    <i class="ri-check-line me-1"></i>Success
-  </div>
-</div>
-<div class="progress mb-3" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-info" style="width: 50%">
-    <i class="ri-information-line me-1"></i>Info
-  </div>
-</div>
-<div class="progress mb-3" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-warning" style="width: 75%">
-    <i class="ri-alert-line me-1"></i>Warning
-  </div>
-</div>
-<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-danger" style="width: 100%">
-    <i class="ri-error-warning-line me-1"></i>Danger
-  </div>
-</div>
-`
-
-// Example with stacked progress bars
-const stackedProgressExample = `<div class="progress-stacked">
-  <div class="progress" role="progressbar" aria-label="Completed tasks" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-    <div class="progress-bar">
-      <i class="ri-check-double-line me-1"></i>Done
-    </div>
-  </div>
-  <div class="progress" role="progressbar" aria-label="In progress tasks" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-    <div class="progress-bar bg-success">
-      <i class="ri-time-line me-1"></i>In Progress
-    </div>
-  </div>
-  <div class="progress" role="progressbar" aria-label="Pending tasks" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-    <div class="progress-bar bg-info">
-      <i class="ri-loader-line me-1"></i>Pending
-    </div>
-  </div>
-</div>
-`
-
-// Examples with striped variations
-const stripedProgressExamples = `<div class="progress mb-3" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
-</div>
-<div class="progress mb-3" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped bg-success" style="width: 25%"></div>
-</div>
-<div class="progress mb-3" role="progressbar" aria-label="Info striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped bg-info" style="width: 50%"></div>
-</div>
-<div class="progress mb-3" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped bg-warning" style="width: 75%"></div>
-</div>
-<div class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
-</div>
-`
-
-// Example with animated stripes
-const animatedStripesExample = `<div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">
-    <i class="ri-loader-4-line me-1"></i>Loading...
-  </div>
-</div>
-`
-
-// Example with gradient background
-const gradientProgressExample = `<div class="progress" role="progressbar" aria-label="Gradient progress example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-gradient" style="width: 60%; background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);">
-    <i class="ri-palette-line me-1"></i>60%
-  </div>
-</div>
-`
+</div>`
 ---
 
 <AdminLayout
@@ -172,12 +601,29 @@ const gradientProgressExample = `<div class="progress" role="progressbar" aria-l
             </p>
 
             <ComponentPreview
-              title="Basic Progress Examples"
-              height="250px"
+              title="Real-world Progress Examples"
+              height="380px"
               component={basicProgressExamples}
               htmlCode={basicProgressExamples}
               cssCode={``}
               jsCode={``}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="interactive-progress">Interactive Progress</h3>
+            <p class="py-2">
+              Create dynamic progress bars that respond to user interactions and update in
+              real-time. This example demonstrates how to control progress programmatically with
+              JavaScript, including start, pause, and reset functionality.
+            </p>
+
+            <ComponentPreview
+              title="Interactive Progress with Controls"
+              height="180px"
+              component={interactiveProgressExample}
+              htmlCode={interactiveProgressExample}
+              cssCode={``}
+              jsCode={`<script>${interactiveProgressJS}</script>`}
             />
           </div>
           <div class="my-3">
@@ -194,7 +640,7 @@ const gradientProgressExample = `<div class="progress" role="progressbar" aria-l
 
             <ComponentPreview
               title="Width with Utility Class"
-              height="100px"
+              height="200px"
               component={utilityWidthExample}
               htmlCode={utilityWidthExample}
               cssCode={``}
@@ -211,7 +657,7 @@ const gradientProgressExample = `<div class="progress" role="progressbar" aria-l
 
             <ComponentPreview
               title="Height Variations"
-              height="150px"
+              height="250px"
               component={heightVariationExamples}
               htmlCode={heightVariationExamples}
               cssCode={``}
@@ -219,46 +665,42 @@ const gradientProgressExample = `<div class="progress" role="progressbar" aria-l
             />
           </div>
           <div class="my-3">
-            <h3 class="mb-0" id="labels">Labels</h3>
+            <h3 class="mb-0" id="labels">Detailed Labels & Status</h3>
             <p class="py-2">
-              Add labels inside progress bars to provide explicit progress information. Labels can
-              include text, icons, or both to enhance visual communication.
+              Enhance progress bars with comprehensive status information, file details, time
+              estimates, and error states. These examples show best practices for providing
+              meaningful feedback to users during long-running operations.
             </p>
 
             <ComponentPreview
-              title="Basic Label"
+              title="Detailed Progress with File Information"
+              height="250px"
+              component={detailedLabelExample}
+              htmlCode={detailedLabelExample}
+              cssCode={``}
+              jsCode={``}
+            />
+
+            <ComponentPreview
+              title="Basic Label (Simple)"
               height="100px"
               component={basicLabelExample}
               htmlCode={basicLabelExample}
               cssCode={``}
               jsCode={``}
             />
-
-            <p class="py-2">
-              For longer labels, use <code>overflow-visible</code> to allow text to extend beyond the
-              progress bar. The <code>text-dark</code> class ensures readability against lighter backgrounds.
-            </p>
-
-            <ComponentPreview
-              title="Overflow Label with Icon"
-              height="100px"
-              component={overflowLabelExample}
-              htmlCode={overflowLabelExample}
-              cssCode={``}
-              jsCode={``}
-            />
           </div>
           <div class="my-3">
-            <h3 class="mb-0" id="backgrounds">Contextual Backgrounds</h3>
+            <h3 class="mb-0" id="backgrounds">System Monitoring Dashboard</h3>
             <p class="py-2">
-              Use Bootstrap's background utility classes (<code>bg-*</code>) to convey meaning
-              through color. Each contextual class is paired with an appropriate icon for enhanced
-              visual feedback.
+              Use contextual colors to create meaningful system monitoring interfaces. This example
+              demonstrates how to build a real-world system health dashboard with CPU, memory, disk,
+              and temperature monitoring using appropriate color coding and status indicators.
             </p>
 
             <ComponentPreview
-              title="Contextual Colors with Icons"
-              height="200px"
+              title="System Health Monitoring"
+              height="250px"
               component={contextualColorExamples}
               htmlCode={contextualColorExamples}
               cssCode={``}
@@ -266,32 +708,33 @@ const gradientProgressExample = `<div class="progress" role="progressbar" aria-l
             />
           </div>
           <div class="my-3">
-            <h3 class="mb-0" id="multiple-bars">Multiple Bars</h3>
+            <h3 class="mb-0" id="multiple-bars">Project Management Progress</h3>
             <p class="py-2">
-              Stack multiple progress bars using <code>progress-stacked</code> to show different aspects
-              or stages of a process. Each segment can have its own style, width, and label.
+              Create sophisticated project tracking interfaces using stacked progress bars. This
+              example shows how to visualize different project phases, include tooltips for detailed
+              information, and provide comprehensive project status with completion estimates.
             </p>
 
             <ComponentPreview
-              title="Stacked Progress with Labels"
-              height="100px"
-              component={stackedProgressExample}
-              htmlCode={stackedProgressExample}
+              title="Project Development Timeline"
+              height="180px"
+              component={projectStackedExample}
+              htmlCode={projectStackedExample}
               cssCode={``}
               jsCode={``}
             />
           </div>
           <div class="my-3">
-            <h3 class="mb-0" id="striped-bars">Striped Bars</h3>
+            <h3 class="mb-0" id="striped-bars">Data Processing & Operations</h3>
             <p class="py-2">
-              Add visual texture with <code>progress-bar-striped</code> class. Striped progress bars
-              can help distinguish between different types of progress or draw attention to specific
-              progress indicators.
+              Use striped progress bars for ongoing operations like data processing, backups, and
+              synchronization. The striped pattern indicates active processing and helps users
+              understand that work is being performed, even when progress appears slow.
             </p>
 
             <ComponentPreview
-              title="Striped Progress Variations"
-              height="200px"
+              title="Background Operations Progress"
+              height="300px"
               component={stripedProgressExamples}
               htmlCode={stripedProgressExamples}
               cssCode={``}
@@ -299,15 +742,16 @@ const gradientProgressExample = `<div class="progress" role="progressbar" aria-l
             />
           </div>
           <div class="my-3">
-            <h3 class="mb-0" id="animated-stripes">Animated Stripes</h3>
+            <h3 class="mb-0" id="animated-stripes">Real-time Loading States</h3>
             <p class="py-2">
-              Combine <code>progress-bar-striped</code> and <code>progress-bar-animated</code> classes
-              to create an animated effect, perfect for indicating active processes or loading states.
+              Create engaging loading experiences with animated progress bars. These examples show
+              how to combine progress indicators with spinners, status badges, and descriptive text
+              to create comprehensive loading states for dashboards and AI processing.
             </p>
 
             <ComponentPreview
-              title="Animated Progress"
-              height="100px"
+              title="Advanced Loading States"
+              height="250px"
               component={animatedStripesExample}
               htmlCode={animatedStripesExample}
               cssCode={``}
@@ -315,20 +759,122 @@ const gradientProgressExample = `<div class="progress" role="progressbar" aria-l
             />
           </div>
           <div class="my-3">
-            <h3 class="mb-0" id="gradient-progress">Gradient Progress</h3>
+            <h3 class="mb-0" id="custom-styling">Custom Styling & Modern Design</h3>
             <p class="py-2">
-              Create visually appealing progress bars using CSS gradients. This can add a modern
-              touch to your progress indicators while maintaining functionality.
+              Create stunning progress bars with custom CSS styling, gradients, glassmorphism
+              effects, and modern design patterns. These examples show how to extend Bootstrap's
+              progress component with contemporary visual effects while maintaining accessibility.
             </p>
 
             <ComponentPreview
-              title="Gradient Progress Bar"
-              height="100px"
-              component={gradientProgressExample}
-              htmlCode={gradientProgressExample}
+              title="Modern Custom Progress Designs"
+              height="250px"
+              component={customStyledExample}
+              htmlCode={customStyledExample}
               cssCode={``}
               jsCode={``}
             />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="accessibility">Accessibility Best Practices</h3>
+            <p class="py-2">
+              Implement fully accessible progress bars with proper ARIA attributes, screen reader
+              support, live regions, and descriptive labels. These examples demonstrate how to
+              create progress indicators that work for all users, including those using assistive
+              technologies.
+            </p>
+
+            <ComponentPreview
+              title="Accessible Progress Examples"
+              height="300px"
+              component={accessibilityExample}
+              htmlCode={accessibilityExample}
+              cssCode={``}
+              jsCode={`<script>${accessibilityJS}</script>`}
+            />
+          </div>
+          <div class="my-3">
+            <h3 id="developer-tips">Developer Tips & Best Practices</h3>
+            <div class="alert alert-info">
+              <h4 class="alert-heading">
+                <i class="bi bi-lightbulb me-2"></i>
+                Pro Tips for Progress Bars
+              </h4>
+              <ul class="mb-0">
+                <li>
+                  <strong>Performance:</strong> Use <code>transform: translateX()</code> instead of width
+                  changes for smoother animations
+                </li>
+                <li>
+                  <strong>Accessibility:</strong> Always include <code>aria-label</code>, <code
+                    >aria-valuenow</code
+                  >, and <code>role="progressbar"</code>
+                </li>
+                <li>
+                  <strong>UX:</strong> Provide time estimates and cancellation options for long operations
+                </li>
+                <li>
+                  <strong>Responsive:</strong> Test progress bars on mobile devices - consider larger
+                  touch targets for interactive elements
+                </li>
+                <li>
+                  <strong>States:</strong> Handle error states, network failures, and edge cases gracefully
+                </li>
+                <li>
+                  <strong>Animation:</strong> Use <code>prefers-reduced-motion</code> media query to
+                  respect user preferences
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-warning">
+              <h4 class="alert-heading">
+                <i class="bi bi-exclamation-triangle me-2"></i>
+                Common Pitfalls to Avoid
+              </h4>
+              <ul class="mb-0">
+                <li>Don't update progress bars too frequently (causes visual jitter)</li>
+                <li>Avoid progress bars that move backwards unexpectedly</li>
+                <li>
+                  Don't use progress bars for indeterminate operations without clear end times
+                </li>
+                <li>
+                  Never use progress bars as decoration - they should represent actual progress
+                </li>
+                <li>Don't forget to handle edge cases (100% completion, errors, timeouts)</li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success">
+              <h4 class="alert-heading">
+                <i class="bi bi-code-square me-2"></i>
+                JavaScript Integration Example
+              </h4>
+              <p class="mb-2">Here's a reusable progress bar class for your projects:</p>
+              <pre><code>{`class ProgressManager {
+  constructor(element) {
+    this.element = element;
+    this.progressBar = element.querySelector('.progress-bar');
+    this.statusElement = element.querySelector('[data-progress-status]');
+  }
+
+  update(percentage, status = '') {
+    this.progressBar.style.width = percentage + '%';
+    this.element.setAttribute('aria-valuenow', percentage);
+    if (this.statusElement) this.statusElement.textContent = status;
+  }
+
+  complete(message = 'Complete!') {
+    this.update(100, message);
+    this.progressBar.classList.add('bg-success');
+  }
+
+  error(message = 'Error occurred') {
+    this.progressBar.classList.add('bg-danger');
+    if (this.statusElement) this.statusElement.textContent = message;
+  }
+}`}</code></pre>
+            </div>
           </div>
         </div>
       </div>
@@ -336,3 +882,185 @@ const gradientProgressExample = `<div class="progress" role="progressbar" aria-l
     <Toc />
   </div>
 </AdminLayout>
+
+<script>
+  // Interactive Progress Bar Functions
+
+  // Extend window interface for TypeScript
+  declare global {
+    interface Window {
+      startProgress: () => void
+      pauseProgress: (event: Event) => void
+      resetProgress: () => void
+      simulateUpload: () => void
+    }
+  }
+
+  let progressInterval: NodeJS.Timeout | null = null
+  let currentProgress = 0
+  let isPaused = false
+
+  window.startProgress = function () {
+    if (progressInterval) return // Already running
+
+    progressInterval = setInterval(() => {
+      if (!isPaused && currentProgress < 100) {
+        currentProgress += Math.random() * 3 // Random increment for realistic feel
+        if (currentProgress > 100) currentProgress = 100
+
+        updateProgressDisplay(currentProgress)
+
+        if (currentProgress >= 100) {
+          clearInterval(progressInterval!)
+          progressInterval = null
+          const progressTextEl = document.getElementById('progress-text')
+          if (progressTextEl) {
+            progressTextEl.innerHTML =
+              '<i class="bi bi-check-circle-fill text-success me-1"></i>Complete!'
+          }
+        }
+      }
+    }, 100)
+  }
+
+  window.pauseProgress = function (event: Event) {
+    isPaused = !isPaused
+    const btn = (event?.target as HTMLElement)?.closest('button')
+    const icon = btn?.querySelector('i')
+
+    if (!btn || !icon) return
+
+    if (isPaused) {
+      icon.className = 'bi bi-play-fill me-1'
+      btn.innerHTML = '<i class="bi bi-play-fill me-1"></i>Resume'
+    } else {
+      icon.className = 'bi bi-pause-fill me-1'
+      btn.innerHTML = '<i class="bi bi-pause-fill me-1"></i>Pause'
+    }
+  }
+
+  window.resetProgress = function () {
+    if (progressInterval) {
+      clearInterval(progressInterval)
+    }
+    progressInterval = null
+    currentProgress = 0
+    isPaused = false
+    updateProgressDisplay(0)
+
+    // Reset button text
+    const pauseBtn = document.querySelector('button[onclick*="pauseProgress"]')
+    if (pauseBtn) {
+      pauseBtn.innerHTML = '<i class="bi bi-pause-fill me-1"></i>Pause'
+    }
+  }
+
+  function updateProgressDisplay(progress: number) {
+    const progressBar = document.getElementById('interactive-progress')
+    const progressText = document.getElementById('progress-text')
+
+    if (!progressBar || !progressText) return
+
+    progressBar.style.width = progress + '%'
+    progressBar.setAttribute('aria-valuenow', Math.round(progress).toString())
+    progressText.textContent = Math.round(progress) + '%'
+
+    // Change color based on progress
+    if (progress >= 100) {
+      progressBar.className = 'progress-bar bg-success'
+    } else if (progress >= 75) {
+      progressBar.className = 'progress-bar bg-info'
+    } else if (progress >= 50) {
+      progressBar.className = 'progress-bar bg-warning'
+    } else {
+      progressBar.className = 'progress-bar'
+    }
+  }
+
+  // Accessibility Upload Simulation Function
+  window.simulateUpload = function () {
+    let progress = 0
+    const progressBar = document.getElementById('live-progress')
+    const statusDiv = document.getElementById('upload-status')
+    const progressContainer = progressBar?.closest('.progress')
+
+    if (!progressBar || !statusDiv || !progressContainer) return
+
+    const interval = setInterval(() => {
+      progress += Math.random() * 10
+      if (progress > 100) progress = 100
+
+      // Update visual progress
+      progressBar.style.width = progress + '%'
+      progressContainer.setAttribute('aria-valuenow', Math.round(progress).toString())
+
+      // Update status for screen readers
+      if (progress < 100) {
+        statusDiv.textContent = `Uploading... ${Math.round(progress)}% complete`
+        progressContainer.setAttribute(
+          'aria-label',
+          `File upload progress: ${Math.round(progress)} percent complete`
+        )
+      } else {
+        statusDiv.innerHTML =
+          '<i class="bi bi-check-circle text-success me-1"></i>Upload completed successfully'
+        progressContainer.setAttribute('aria-label', 'File upload completed')
+        progressBar.classList.add('bg-success')
+        clearInterval(interval)
+      }
+    }, 200)
+  }
+
+  // Initialize tooltips for project progress example
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Bootstrap tooltips if available
+    if (typeof (window as any).bootstrap !== 'undefined' && (window as any).bootstrap.Tooltip) {
+      const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new (window as any).bootstrap.Tooltip(tooltipTriggerEl)
+      })
+    }
+  })
+</script>
+
+<style>
+  /* CSS for spinning icon animation */
+  .spin {
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Custom progress bar styling */
+  .custom-progress {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Glassmorphism background for dark theme */
+  .progress-glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Smooth transitions for progress updates */
+  .progress-bar {
+    transition: width 0.3s ease-in-out;
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .progress-bar,
+    .spin {
+      animation: none;
+      transition: none;
+    }
+  }
+</style>

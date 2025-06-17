@@ -74,14 +74,14 @@
     &:hover {
       color: var(--bs-primary);
       text-decoration: none;
-      background-color: rgba(var(--bs-primary-rgb), 0.05);
+      background-color: rgb(var(--bs-primary-rgb), 0.05);
     }
 
     // Active state
     &.active {
       font-weight: 500;
       color: var(--bs-primary);
-      background-color: rgba(var(--bs-primary-rgb), 0.05);
+      background-color: rgb(var(--bs-primary-rgb), 0.05);
       border-left-color: var(--bs-primary);
 
       &::before {
@@ -154,11 +154,11 @@
   .toc {
     .nav-link {
       &:hover {
-        background-color: rgba(var(--bs-primary-rgb), 0.15);
+        background-color: rgb(var(--bs-primary-rgb), 0.15);
       }
 
       &.active {
-        background-color: rgba(var(--bs-primary-rgb), 0.15);
+        background-color: rgb(var(--bs-primary-rgb), 0.15);
       }
 
       &[data-level='3'],

@@ -85,6 +85,7 @@ const example2Js = `<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd
   })
 </script>
 `
+
 const example3Html = `<h2>
   Front theme is a powerful theme with <span class="text-primary ms-2">
     <span class="fade-animation">flexibility</span>
@@ -101,10 +102,10 @@ let currentIndex = 0;
 function fadeText() {
   // Reset all texts to be hidden
   texts.forEach(text => text.classList.remove('active'));
-  
+
   // Show the current text with the fade-in effect
   texts[currentIndex].classList.add('active');
-  
+
   // Move to the next index for the next iteration
   currentIndex = (currentIndex + 1) % texts.length;
 }
@@ -117,11 +118,144 @@ fadeText();
 </script>
 `
 
-// Shared preview configuration for consistent component display
-const previewConfig = {
-  cssCode: '',
-  jsCode: ''
+const example4Html = `<h2 class="slide-text-container">
+  Experience the power of <span class="text-primary slide-text">innovation</span>
+</h2>
+`
+
+const example4Css = `.slide-text-container {
+  overflow: hidden;
 }
+
+.slide-text {
+  display: inline-block;
+  transform: translateX(-100%);
+  animation: slideIn 2s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+`
+
+const example4Js = `<script>
+// Restart animation on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const slideText = document.querySelector('.slide-text');
+  if (slideText) {
+    slideText.style.animation = 'none';
+    slideText.offsetHeight; // Trigger reflow
+    slideText.style.animation = 'slideIn 2s ease-out forwards';
+  }
+});
+</script>
+`
+
+const example5Html = `<h2>
+  Get ready for <span class="text-primary bounce-text">amazing results</span>
+</h2>
+`
+
+const example5Css = `.bounce-text {
+  display: inline-block;
+  animation: bounceIn 1.5s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+`
+
+const example5Js = `<script>
+// Restart animation on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const bounceText = document.querySelector('.bounce-text');
+  if (bounceText) {
+    bounceText.style.animation = 'none';
+    bounceText.offsetHeight; // Trigger reflow
+    bounceText.style.animation = 'bounceIn 1.5s ease-out';
+  }
+});
+</script>
+`
+
+const example6Html = `<h2>
+  Discover the <span class="text-primary char-reveal">future of web development</span>
+</h2>
+`
+
+const example6Css = `.char-reveal .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealChar 0.6s ease-out forwards;
+}
+
+@keyframes revealChar {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+`
+
+const example6Js = `<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const charRevealElement = document.querySelector('.char-reveal');
+  if (charRevealElement) {
+    const text = charRevealElement.textContent;
+    charRevealElement.innerHTML = '';
+
+    text.split('').forEach((char, index) => {
+      const span = document.createElement('span');
+      span.className = 'char';
+      span.textContent = char === ' ' ? '\u00A0' : char; // Use non-breaking space
+      span.style.animationDelay = \`\${index * 0.05}s\`;
+      charRevealElement.appendChild(span);
+    });
+  }
+});
+</script>
+`
+
+const example7Html = `<h2>
+  <span class="text-primary glow-text">Illuminate your ideas</span>
+</h2>
+`
+
+const example7Css = `.glow-text {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  to {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
+  }
+}
+`
+
+const example7Js = `<script>
+// No JavaScript needed for this pure CSS animation
+</script>
+`
 ---
 
 <AdminLayout
@@ -145,9 +279,14 @@ const previewConfig = {
         <div class="col-12">
           <div class="my-3">
             <h3 class="mb-0" id="typer">Typer</h3>
-            <p class="py-2">
-              This creates a typing effect where each letter of the text appears one by one,
-              mimicking the process of typing on a keyboard.
+            <p class="text-muted mb-3">
+              Creates a realistic typing effect using the Typed.js library. Perfect for hero
+              sections, landing pages, or anywhere you want to draw attention to key messages.
+              Configure typing speed with <code>data-type-speed</code>, backspace speed with <code
+                >data-back-speed</code
+              >, and multiple strings with <code>data-strings</code> (comma-separated). Set
+              <code>data-loop="false"</code> to type once or <code>data-loop="true"</code> for continuous
+              cycling.
             </p>
 
             <ComponentPreview
@@ -160,9 +299,11 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 class="mb-0" id="typer-with-loop">Typer with loop</h3>
-            <p class="py-2">
-              A continuous version of the typing effect, where text is typed out, then erased, and
-              retyped in a looping cycle.
+            <p class="text-muted mb-3">
+              A continuous version of the typing effect that cycles through multiple phrases. The
+              text types out completely, pauses briefly, then backspaces and starts the next phrase.
+              Ideal for showcasing multiple features, benefits, or concepts in a dynamic way. The
+              loop creates an engaging, ever-changing message that keeps users' attention.
             </p>
 
             <ComponentPreview
@@ -175,9 +316,12 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 class="mb-0" id="text-fade">Text fade</h3>
-            <p class="py-2">
-              Multiple text strings appear one by one, with each string fading in smoothly, staying
-              visible for a moment, and then fading out before the next string appears.
+            <p class="text-muted mb-3">
+              Smooth fade transitions between different text phrases. Each text string appears with
+              a gentle fade-in effect, remains visible for a few seconds, then fades out before the
+              next string appears. This creates a subtle, elegant way to cycle through multiple
+              messages without the mechanical feel of typing effects. Perfect for testimonials,
+              feature highlights, or rotating taglines.
             </p>
 
             <ComponentPreview
@@ -186,6 +330,80 @@ const previewConfig = {
               component={example3Html}
               htmlCode={example3Html}
               jsCode={example3Js}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="slide-text">Slide Text</h3>
+            <p class="text-muted mb-3">
+              Text slides in from the left side of the container, creating a dynamic entrance
+              effect. Uses CSS transforms and animations for smooth motion. Great for revealing
+              important information or creating visual interest when content loads. The sliding
+              motion draws the eye and creates a sense of movement and energy on the page.
+            </p>
+
+            <ComponentPreview
+              title="Slide Text"
+              height="200px"
+              component={example4Html}
+              htmlCode={example4Html}
+              cssCode={example4Css}
+              jsCode={example4Js}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="bounce-text">Bounce Text</h3>
+            <p class="text-muted mb-3">
+              Text appears with a playful bounce effect, starting small and scaling up with a slight
+              overshoot before settling into place. This animation adds personality and energy to
+              your content, making it feel more dynamic and engaging. Perfect for call-to-action
+              text, announcements, or any content that should feel exciting and energetic.
+            </p>
+
+            <ComponentPreview
+              title="Bounce Text"
+              height="200px"
+              component={example5Html}
+              htmlCode={example5Html}
+              cssCode={example5Css}
+              jsCode={example5Js}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="char-reveal">Character Reveal</h3>
+            <p class="text-muted mb-3">
+              Each character appears individually with a staggered animation, creating a wave-like
+              reveal effect across the text. Characters slide up from below while fading in, with
+              each letter delayed slightly from the previous one. This creates an elegant,
+              sophisticated animation that's perfect for headlines, important announcements, or any
+              text that deserves special attention.
+            </p>
+
+            <ComponentPreview
+              title="Character Reveal"
+              height="200px"
+              component={example6Html}
+              htmlCode={example6Html}
+              cssCode={example6Css}
+              jsCode={example6Js}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-0" id="glow-text">Glow Text</h3>
+            <p class="text-muted mb-3">
+              Text pulses with a glowing effect that alternates between subtle and intense
+              illumination. Uses CSS text-shadow to create the glow effect, which continuously
+              animates to draw attention. Perfect for highlighting special offers, important
+              announcements, or creating a futuristic, high-tech aesthetic. The glow effect works
+              especially well with primary or accent colors.
+            </p>
+
+            <ComponentPreview
+              title="Glow Text"
+              height="200px"
+              component={example7Html}
+              htmlCode={example7Html}
+              cssCode={example7Css}
+              jsCode={example7Js}
             />
           </div>
         </div>
