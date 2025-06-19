@@ -14,6 +14,7 @@ body {
   min-width: $min-viewport-width;
   min-height: $min-viewport-height;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .wrapper {

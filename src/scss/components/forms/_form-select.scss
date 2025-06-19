@@ -2,7 +2,8 @@
 //   Form Select Variables
 // ==========================================================================
 
-$form-select-padding: 0.275rem 0.5rem !default;
+// Use shared button/input padding for consistency
+$form-select-padding: $input-btn-padding-y $input-btn-padding-x !default;
 
 // ==========================================================================
 //   Form Select Base
@@ -10,7 +11,9 @@ $form-select-padding: 0.275rem 0.5rem !default;
 
 .form-select {
   box-sizing: border-box;
+  height: $input-btn-minheight;
   padding: $form-select-padding;
+  line-height: 1.2;
   border: 1px solid var(--bs-border-color);
   transition: border-color 0.15s ease-in-out;
 
@@ -27,6 +30,12 @@ $form-select-padding: 0.275rem 0.5rem !default;
   &:focus {
     border-color: var(--bs-primary);
   }
+
+  &[multiple] {
+    height: auto;
+    min-height: 100px;
+    padding: 0.5rem;
+  }
 }
 
 // ==========================================================================
@@ -34,17 +43,33 @@ $form-select-padding: 0.275rem 0.5rem !default;
 // ==========================================================================
 
 .form-select-xs {
-  @include form-control-size($input-btn-minheight-xs, $input-btn-padding-xs, $font-size-xs);
+  @include form-control-size(
+    $input-btn-minheight-xs,
+    $input-btn-padding-xs,
+    $input-btn-font-size-xs
+  );
 }
 
 .form-select-sm {
-  @include form-control-size($input-btn-minheight-sm, $input-btn-padding-sm, $font-size-sm);
+  @include form-control-size(
+    $input-btn-minheight-sm,
+    $input-btn-padding-sm,
+    $input-btn-font-size-sm
+  );
 }
 
 .form-select-lg {
-  @include form-control-size($input-btn-minheight-lg, $input-btn-padding-lg, $font-size-lg);
+  @include form-control-size(
+    $input-btn-minheight-lg,
+    $input-btn-padding-lg,
+    $input-btn-font-size-lg
+  );
 }
 
 .form-select-xl {
-  @include form-control-size($input-btn-minheight-xl, $input-btn-padding-xl, $font-size-xl);
+  @include form-control-size(
+    $input-btn-minheight-xl,
+    $input-btn-padding-xl,
+    $input-btn-font-size-xl
+  );
 }

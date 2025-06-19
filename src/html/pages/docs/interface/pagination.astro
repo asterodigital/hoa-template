@@ -65,29 +65,126 @@ const statesPaginationExample = `<nav aria-label="Pagination with states">
 </nav>
 `
 
-// Large-sized pagination example
-const largePaginationExample = `<nav aria-label="Large pagination example">
-  <ul class="pagination pagination-lg">
-    <li class="page-item active" aria-current="page">
-      <span class="page-link">1</span>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-  </ul>
-</nav>
-`
+// All pagination sizes in one example
+const allSizesPaginationExample = `<!-- Extra Large Pagination (56px height / 20px font) -->
+<div class="mb-4">
+  <h6 class="mb-2">Extra Large - Hero sections, landing pages, primary CTAs</h6>
+  <nav aria-label="Extra large pagination example">
+    <ul class="pagination pagination-xl">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Go to previous page">
+          <i class="ri-arrow-left-line"></i>
+        </a>
+      </li>
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">1</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Go to next page">
+          <i class="ri-arrow-right-line"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
-// Small-sized pagination example
-const smallPaginationExample = `<nav aria-label="Small pagination example">
-  <ul class="pagination pagination-sm">
-    <li class="page-item active" aria-current="page">
-      <span class="page-link">1</span>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-  </ul>
-</nav>
-`
+<!-- Large Pagination (46px height / 18px font) -->
+<div class="mb-4">
+  <h6 class="mb-2">Large - Important navigation, primary actions</h6>
+  <nav aria-label="Large pagination example">
+    <ul class="pagination pagination-lg">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Go to previous page">
+          <i class="ri-arrow-left-line"></i>
+        </a>
+      </li>
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">1</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Go to next page">
+          <i class="ri-arrow-right-line"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Default Pagination (38px height / 16px font) -->
+<div class="mb-4">
+  <h6 class="mb-2">Default - Standard UI elements, most use cases</h6>
+  <nav aria-label="Default pagination example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Go to previous page">
+          <i class="ri-arrow-left-line"></i>
+        </a>
+      </li>
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">1</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Go to next page">
+          <i class="ri-arrow-right-line"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Small Pagination (30px height / 13px font) -->
+<div class="mb-4">
+  <h6 class="mb-2">Small - Dense layouts, sidebar navigation</h6>
+  <nav aria-label="Small pagination example">
+    <ul class="pagination pagination-sm">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Go to previous page">
+          <i class="ri-arrow-left-line"></i>
+        </a>
+      </li>
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">1</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Go to next page">
+          <i class="ri-arrow-right-line"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Extra Small Pagination (24px height / 12px font) -->
+<div class="mb-4">
+  <h6 class="mb-2">Extra Small - Compact tables, data grids</h6>
+  <nav aria-label="Extra small pagination example">
+    <ul class="pagination pagination-xs">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Go to previous page">
+          <i class="ri-arrow-left-line"></i>
+        </a>
+      </li>
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">1</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Go to next page">
+          <i class="ri-arrow-right-line"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>`
 
 // Centered pagination example
 const centeredPaginationExample = `<nav aria-label="Centered pagination example">
@@ -218,26 +315,47 @@ const roundedPaginationExample = `<nav aria-label="Rounded pagination example">
           <div class="my-3">
             <h3 class="mb-0" id="sizing">Size Variations</h3>
             <p class="py-2">
-              Adjust pagination size to match your design needs using <code>pagination-lg</code> for
-              larger controls or
-              <code>pagination-sm</code> for more compact displays. These modifiers affect the padding
-              and font size of pagination items.
+              Our pagination component follows a consistent sizing system with five size variants,
+              each optimized for different interface contexts. The sizing system uses proportionally
+              scaled font sizes that maintain optimal readability at each height. All sizes follow
+              the same design system as buttons, form controls, and other interactive elements for
+              visual consistency.
             </p>
 
-            <ComponentPreview
-              title="Large Pagination"
-              height="100px"
-              component={largePaginationExample}
-              htmlCode={largePaginationExample}
-              cssCode={``}
-              jsCode={``}
-            />
+            <div class="alert alert-info mb-4">
+              <h5 class="alert-heading">
+                <i class="ri-information-line me-2"></i>
+                Sizing Guidelines
+              </h5>
+              <ul class="mb-0">
+                <li>
+                  <strong>Extra Large (56px)</strong> - Perfect for hero sections, landing pages, and
+                  primary call-to-actions
+                </li>
+                <li>
+                  <strong>Large (46px)</strong> - Ideal for important navigation, primary actions, and
+                  prominent interfaces
+                </li>
+                <li>
+                  <strong>Default (38px)</strong> - Standard size for most pagination needs, optimal
+                  for general use
+                </li>
+                <li>
+                  <strong>Small (30px)</strong> - Great for dense layouts, sidebar navigation, and secondary
+                  actions
+                </li>
+                <li>
+                  <strong>Extra Small (24px)</strong> - Perfect for compact tables, data grids, and space-constrained
+                  areas
+                </li>
+              </ul>
+            </div>
 
             <ComponentPreview
-              title="Small Pagination"
-              height="100px"
-              component={smallPaginationExample}
-              htmlCode={smallPaginationExample}
+              title="All Pagination Sizes"
+              height="550px"
+              component={allSizesPaginationExample}
+              htmlCode={allSizesPaginationExample}
               cssCode={``}
               jsCode={``}
             />

@@ -7,6 +7,7 @@ import { initNavigation } from './layout/nav-handler.js'
 import { dropdownHover } from './layout/dropdown-hover.js'
 import { initPasswordWrapper } from './components/password.js'
 import { imageModal } from './layout/image-modal.js'
+import { initSkin, updateSkin } from './components/skin.js'
 
 // Expose bootstrap and simplebar globally for inline scripts
 window.bootstrap = bootstrap
@@ -53,6 +54,10 @@ const AsteroAdmin = (function () {
       initPasswordWrapper()
       initBootstrap()
       initSimpleBar()
+
+      // Initialize skin system
+      initSkin()
+
       initialized = true
     } catch (error) {
       console.error('Error during initialization:', error)
@@ -62,7 +67,8 @@ const AsteroAdmin = (function () {
   // Public API
   return {
     init: initializeAll,
-    isInitialized: () => initialized
+    isInitialized: () => initialized,
+    updateSkin: updateSkin
   }
 })()
 

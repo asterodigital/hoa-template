@@ -4,12 +4,14 @@ import { dirname, join } from 'path'
 import chalk from 'chalk'
 import fs from 'fs'
 import open from 'open'
+import { createServer } from 'http'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 const app = express()
-const PORT = process.env.PORT || 3000
+const startPort = process.env.PORT || 3000
+let currentPort = startPort
 const DIST_DIR = join(__dirname, '../dist')
 
 // Custom middleware to handle URLs without .html extension
@@ -38,15 +40,33 @@ app.get('*', (req, res) => {
   res.sendFile(join(DIST_DIR, 'index.html'))
 })
 
-app.listen(PORT, async () => {
-  console.log(chalk.green(`✓ Server running at http://localhost:${PORT}`))
-  console.log(chalk.blue('  Serving files from: dist/'))
+// Function to try starting server with auto port increment if needed
+function startServer(port) {
+  const server = createServer(app)
 
-  // Open dashboard in default browser
-  try {
-    await open(`http://localhost:${PORT}/pages/dashboard`)
-    console.log(chalk.green('✓ Dashboard opened in your default browser'))
-  } catch {
-    console.log(chalk.yellow('! Could not automatically open the browser'))
-  }
-})
+  server.on('error', (error) => {
+    if (error.code === 'EADDRINUSE') {
+      console.log(chalk.yellow(`Port ${port} is already in use, trying port ${port + 1}`))
+      currentPort = port + 1
+      startServer(currentPort)
+    } else {
+      console.error('Server error:', error)
+    }
+  })
+
+  server.listen(port, async () => {
+    console.log(chalk.green(`✓ Server running at http://localhost:${port}`))
+    console.log(chalk.blue('  Serving files from: dist/'))
+
+    // Open dashboard in default browser
+    try {
+      await open(`http://localhost:${port}/pages/dashboard`)
+      console.log(chalk.green('✓ Dashboard opened in your default browser'))
+    } catch {
+      console.log(chalk.yellow('! Could not automatically open the browser'))
+    }
+  })
+}
+
+// Start the server
+startServer(currentPort)

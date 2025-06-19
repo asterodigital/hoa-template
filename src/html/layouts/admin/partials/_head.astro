@@ -33,6 +33,11 @@ function getCSS() {
   return isDev ? `/dist/css/style.css` : `/css/style.min.css`
 }
 
+function getSkinCSS() {
+  const isDev = import.meta.env.DEV
+  return isDev ? `/dist/assets/vendor/css/skin.css` : `/assets/vendor/css/skin.css`
+}
+
 function getRtlCSS() {
   const isDev = import.meta.env.DEV
   return isDev ? `/dist/css/style.rtl.css` : `/css/style.rtl.min.css`
@@ -70,6 +75,7 @@ function getRtlCSS() {
 
 <!-- Astero Admin CSS -->
 {isRtl ? <link href={getRtlCSS()} rel="stylesheet" /> : <link href={getCSS()} rel="stylesheet" />}
+<link href={getSkinCSS()} rel="stylesheet" />
 
 <!-- Remix Icons -->
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
@@ -96,3 +102,14 @@ function getRtlCSS() {
     </>
   )
 }
+
+<style>
+  /* You can also set custom colors inline in head */
+  /* :root,
+  [data-bs-theme='light'] {
+    --bs-primary: #7533f9;
+    --bs-primary-rgb: 117, 51, 249;
+    --bs-secondary: #efb907;
+    --bs-secondary-rgb: 239, 185, 7;
+  } */
+</style>

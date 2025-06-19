@@ -35,7 +35,7 @@
   "sass": "src/scss/style.scss",
   "repository": {
     "type": "git",
-    "url": "git:github.com/asterodigital/bootstrap-admin-template.git"
+    "url": "https://github.com/asterodigital/bootstrap-admin-template.git"
   },
   "bugs": {
     "url": "https://github.com/asterodigital/bootstrap-admin-template/issues"

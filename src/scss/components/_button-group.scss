@@ -102,32 +102,32 @@
 
   // Extra Small
   &.btn-group-xs > .btn {
-    min-height: $input-btn-minheight-xs;
+    height: $input-btn-minheight-xs;
     padding: $input-btn-padding-xs;
-    font-size: $font-size-xs;
+    font-size: $input-btn-font-size-xs;
   }
 
   // Small (already exists in Bootstrap)
   &.btn-group-sm > .btn {
-    min-height: $input-btn-minheight-sm;
+    height: $input-btn-minheight-sm;
     padding: $input-btn-padding-sm;
-    font-size: $font-size-sm;
+    font-size: $input-btn-font-size-sm;
   }
 
   // Default size is handled by Bootstrap
 
   // Large (already exists in Bootstrap)
   &.btn-group-lg > .btn {
-    min-height: $input-btn-minheight-lg;
+    height: $input-btn-minheight-lg;
     padding: $input-btn-padding-lg;
-    font-size: $font-size-lg;
+    font-size: $input-btn-font-size-lg;
   }
 
   // Extra Large
   &.btn-group-xl > .btn {
-    min-height: $input-btn-minheight-xl;
+    height: $input-btn-minheight-xl;
     padding: $input-btn-padding-xl;
-    font-size: $font-size-xl;
+    font-size: $input-btn-font-size-xl;
   }
 }
 
