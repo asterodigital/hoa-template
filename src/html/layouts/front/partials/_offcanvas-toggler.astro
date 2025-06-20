@@ -1,0 +1,96 @@
+---
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path'
+---
+
+<!-- Round Fixed Settings Button -->
+<button
+  class="btn btn-primary rounded-circle shadow d-flex align-items-center justify-content-center"
+  style="position: fixed; right: 1rem; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; z-index: 100;"
+  type="button"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#settingsOffcanvas"
+  aria-controls="settingsOffcanvas"
+>
+  <i class="ri-settings-3-line fs-4"></i>
+</button>
+
+<!-- Offcanvas -->
+<div
+  class="offcanvas offcanvas-end bg-light"
+  tabindex="-1"
+  id="settingsOffcanvas"
+  aria-labelledby="settingsOffcanvasLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="settingsOffcanvasLabel">
+      <i class="ri-settings-3-line text-muted me-1"></i>Settings
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-flex gap-2 mb-3">
+      <a href={getPathPrefix('/')} class="btn btn-primary w-100"
+        ><i class="ri-home-2-line me-1"></i>Home</a
+      >
+      <a href={getPathPrefix('/docs')} class="btn btn-secondary w-100"
+        ><i class="ri-folder-2-line me-1"></i>Docs</a
+      >
+    </div>
+    <div>
+      <div class="card border h-100 p-0 mb-3">
+        <a href={getPathPrefix('/theme/1/home')}>
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/hero-1.jpg')}
+            class="card-img-top"
+            style="max-height: 100px; object-fit: cover;"
+            alt="Theme Image"
+          />
+        </a>
+        <div class="card-body p-3">
+          <h5 class="card-title">
+            <a href={getPathPrefix('/theme/1/home')} class="text-decoration-none">Theme 1</a>
+          </h5>
+          <p class="mb-0">
+            Clean layout with timeless structure built for clear community communication.
+          </p>
+        </div>
+      </div>
+      <div class="card border h-100 p-0 mb-3">
+        <a href={getPathPrefix('/theme/2/home')}>
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/hero-2.jpg')}
+            class="card-img-top"
+            style="max-height: 100px; object-fit: cover;"
+            alt="Theme Image"
+          />
+        </a>
+        <div class="card-body p-3">
+          <h5 class="card-title">
+            <a href={getPathPrefix('/theme/2/home')} class="text-decoration-none">Theme 2</a>
+          </h5>
+          <p class="mb-0">
+            Welcoming design with soft aesthetics, ideal for community-focused websites.
+          </p>
+        </div>
+      </div>
+      <div class="card border h-100 p-0">
+        <a href={getPathPrefix('/theme/3/home')}>
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/hero-3.jpg')}
+            class="card-img-top"
+            style="max-height: 100px; object-fit: cover;"
+            alt="Theme Image"
+          />
+        </a>
+        <div class="card-body p-3">
+          <h5 class="card-title">
+            <a href={getPathPrefix('/theme/3/home')} class="text-decoration-none">Theme 3</a>
+          </h5>
+          <p class="mb-0">
+            Sleek design with bold visuals and streamlined resident-friendly navigation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
