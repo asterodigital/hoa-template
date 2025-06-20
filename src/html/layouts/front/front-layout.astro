@@ -1,7 +1,7 @@
 ---
 import Head from './partials/_head.astro'
 import TopNav from './partials/_topbar.astro'
-import OffcanvasToggler from './partials/_offcanvas-toggler.astro'
+import QuickLinks from './partials/_quick-links.astro'
 import Footer from './partials/_footer.astro'
 import Scripts from './partials/_scripts.astro'
 
@@ -35,7 +35,7 @@ const pageSeo = {
       <div class="content-wrapper py-4">
         <div class="container">
           <slot />
-          <OffcanvasToggler />
+          <QuickLinks />
         </div>
       </div>
       <Footer />

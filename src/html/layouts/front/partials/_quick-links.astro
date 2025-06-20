@@ -2,14 +2,14 @@
 import { getAssetPrefix, getPathPrefix } from '../../../../utils/path'
 ---
 
-<!-- Round Fixed Settings Button -->
+<!-- Round Fixed Button -->
 <button
-  class="btn btn-primary rounded-circle shadow d-flex align-items-center justify-content-center"
+  class="btn btn-primary rounded-circle shadow-sm d-flex align-items-center justify-content-center"
   style="position: fixed; right: 1rem; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; z-index: 100;"
   type="button"
   data-bs-toggle="offcanvas"
-  data-bs-target="#settingsOffcanvas"
-  aria-controls="settingsOffcanvas"
+  data-bs-target="#quickLinksOffcanvas"
+  aria-controls="quickLinksOffcanvas"
 >
   <i class="ri-settings-3-line fs-4"></i>
 </button>
@@ -18,16 +18,16 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path'
 <div
   class="offcanvas offcanvas-end bg-light"
   tabindex="-1"
-  id="settingsOffcanvas"
-  aria-labelledby="settingsOffcanvasLabel"
+  id="quickLinksOffcanvas"
+  aria-labelledby="quickLinksOffcanvasLabel"
 >
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="settingsOffcanvasLabel">
-      <i class="ri-settings-3-line text-muted me-1"></i>Settings
+    <h5 class="offcanvas-title" id="quickLinksOffcanvasLabel">
+      <i class="ri-link text-muted me-1"></i>Quick Links
     </h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-body pt-2">
     <div class="d-flex gap-2 mb-3">
       <a href={getPathPrefix('/')} class="btn btn-primary w-100"
         ><i class="ri-home-2-line me-1"></i>Home</a
