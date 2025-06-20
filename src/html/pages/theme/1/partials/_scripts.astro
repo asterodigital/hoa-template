@@ -15,3 +15,8 @@ function getJS(filename: string) {
 <script src={getJS('main')} type="module" is:inline></script>
 
 <!-- Page Script -->{pageScript && <Fragment set:html={pageScript} />}
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
+<script is:inline>
+  AOS.init()
+</script>
