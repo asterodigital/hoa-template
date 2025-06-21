@@ -2,6 +2,7 @@
 import Head from './partials/_head.astro'
 import TopNav from './partials/_topbar.astro'
 import Sidebar from './partials/_sidebar.astro'
+import QuickLinks from '../front/partials/_quick-links.astro'
 import Footer from './partials/_footer.astro'
 import Scripts from './partials/_scripts.astro'
 
@@ -52,6 +53,7 @@ const componentStatus = {
         <div class="content-wrapper py-4">
           <div class="container">
             <slot />
+            <QuickLinks />
           </div>
         </div>
         <Footer />
