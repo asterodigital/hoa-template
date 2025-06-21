@@ -12,12 +12,19 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
     <div class="container">
       <div class="row text-center text-md-start">
         <div class="col-lg-7">
-          <h1 class="display-4 fw-semibold mb-2">Amenities</h1>
-          <p class="fs-4 mb-4">
+          <h1 class="display-4 fw-semibold mb-2" data-aos="fade-up" data-aos-duration="1000">
+            Amenities
+          </h1>
+          <p class="fs-4 mb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             Explore the amenities that make life at Longhorn Heights comfortable, active, and
             connected to nature.
           </p>
-          <div class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2">
+          <div
+            class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2 mb-2"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+          >
             <a href="#" class="btn btn-lg btn-light">
               Explore Community<i class="ri-arrow-right-line ms-2"></i>
             </a>
@@ -33,13 +40,20 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
   <!-- Amenities Section -->
   <section class="bg-body py-5">
     <div class="container">
-      <h2 class="fs-1 text-md-center mb-2">Premium Amenities</h2>
-      <p class="lead text-md-center mb-4">
+      <h2 class="fs-1 text-md-center mb-2" data-aos="fade-up" data-aos-duration="800">
+        Premium Amenities
+      </h2>
+      <p
+        class="lead text-md-center mb-4"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="800"
+      >
         Explore the amenities that make life at Longhorn Heights comfortable, active, and connected
         to nature.
       </p>
       <div class="row g-4">
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
           <div class="card card-expand border p-0">
             <figure class="mb-0">
               <img
@@ -68,7 +82,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
           <div class="card card-expand border p-0">
             <figure class="mb-0">
               <img
@@ -97,7 +111,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
           <div class="card card-expand border p-0">
             <figure class="mb-0">
               <img
@@ -126,7 +140,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
           <div class="card card-expand border p-0">
             <figure class="mb-0">
               <img
@@ -155,7 +169,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
           <div class="card card-expand border p-0">
             <figure class="mb-0">
               <img
@@ -184,7 +198,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="800">
           <div class="card card-expand border p-0">
             <figure class="mb-0">
               <img
@@ -224,6 +238,8 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
         class="nav nav-pills nav-fill flex-wrap justify-content-center gap-3 mb-3"
         id="amenityTabs"
         role="tablist"
+        data-aos="fade-up"
+        data-aos-duration="800"
       >
         <li class="nav-item" role="presentation">
           <button
@@ -288,11 +304,16 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
       </ul>
 
       <!-- Tab Content -->
-      <div class="tab-content border rounded-4 p-3">
+      <div
+        class="tab-content border rounded-4 p-3"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="800"
+      >
         <!-- Community Clubhouse -->
         <div class="tab-pane fade show active" id="clubhouse" role="tabpanel">
           <div class="row g-4 align-items-center">
-            <div class="col-md-6 ps-xl-5">
+            <div class="col-md-6 ps-xl-5" data-aos="fade-right" data-aos-duration="800">
               <h3>Community Clubhouse</h3>
               <p>
                 Our modern clubhouse offers a welcoming space for socializing, events, and
@@ -316,7 +337,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
                 <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
               </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
               <img
                 src={getAssetPrefix('/assets/img/theme-images/img-3.jpg')}
                 alt="Clubhouse"
@@ -332,7 +353,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
         <!-- Sports Facilities -->
         <div class="tab-pane fade" id="sports" role="tabpanel">
           <div class="row g-4 align-items-center">
-            <div class="col-md-6 ps-xl-5">
+            <div class="col-md-6 ps-xl-5" data-aos="fade-right" data-aos-duration="800">
               <h3>Sports Facilities</h3>
               <p>Stay active with a dedicated area for sports and community games.</p>
               <ul class="list-unstyled">
@@ -354,7 +375,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
                 <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
               </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
               <img
                 src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
                 alt="Sports Court"
@@ -369,7 +390,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
         <!-- Walking Trails -->
         <div class="tab-pane fade" id="trails" role="tabpanel">
           <div class="row g-4 align-items-center">
-            <div class="col-md-6 ps-xl-5">
+            <div class="col-md-6 ps-xl-5" data-aos="fade-right" data-aos-duration="800">
               <h3>Walking Trails</h3>
               <p>Explore peaceful paths that connect you with nature and your neighbors.</p>
               <ul class="list-unstyled">
@@ -390,7 +411,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
                 <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
               </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
               <img
                 src={getAssetPrefix('/assets/img/theme-images/img-5.jpg')}
                 alt="Walking Trails"
@@ -405,7 +426,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
         <!-- Swimming Pool -->
         <div class="tab-pane fade" id="pool" role="tabpanel">
           <div class="row g-4 align-items-center">
-            <div class="col-md-6 ps-xl-5">
+            <div class="col-md-6 ps-xl-5" data-aos="fade-right" data-aos-duration="800">
               <h3>Swimming Pool</h3>
               <p>A sparkling pool for lap swimming, family fun, and weekend relaxation.</p>
               <ul class="list-unstyled">
@@ -426,7 +447,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
                 <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
               </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
               <img
                 src={getAssetPrefix('/assets/img/theme-images/img-2.jpg')}
                 alt="Swimming Pool"
@@ -441,7 +462,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
         <!-- Nature Retreat -->
         <div class="tab-pane fade" id="retreat" role="tabpanel">
           <div class="row g-4 align-items-center">
-            <div class="col-md-6 ps-xl-5">
+            <div class="col-md-6 ps-xl-5" data-aos="fade-right" data-aos-duration="800">
               <h3>Nature Retreat</h3>
               <p>A calm oasis within the community for rest, reflection, and mindfulness.</p>
               <ul class="list-unstyled">
@@ -462,7 +483,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
                 <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
               </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
               <img
                 src={getAssetPrefix('/assets/img/theme-images/img-1.jpg')}
                 alt="Nature Retreat"
@@ -477,7 +498,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
         <!-- Coworking Lounge -->
         <div class="tab-pane fade" id="cowork" role="tabpanel">
           <div class="row g-4 align-items-center">
-            <div class="col-md-6 ps-xl-5">
+            <div class="col-md-6 ps-xl-5" data-aos="fade-right" data-aos-duration="800">
               <h3>Coworking Lounge</h3>
               <p>A modern space with everything you need to work remotely or study comfortably.</p>
               <ul class="list-unstyled">
@@ -499,7 +520,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
                 <i class="ri-star-fill text-warning me-1"></i><strong>4.9</strong> (50 Reviews)
               </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
               <img
                 src={getAssetPrefix('/assets/img/theme-images/img-10.jpg')}
                 alt="Coworking Lounge"
@@ -518,8 +539,10 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
   <section class="bg-body pt-3 pb-5">
     <div class="container">
       <div class="text-md-center mb-4">
-        <h2 class="fs-1 mb-2">Reservation & Usage Guidelines</h2>
-        <p class="lead mb-0">
+        <h2 class="fs-1 mb-2" data-aos="fade-up" data-aos-duration="800">
+          Reservation & Usage Guidelines
+        </h2>
+        <p class="lead mb-0" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
           Please review the following guidelines to ensure fair and respectful use of all community
           amenities.
         </p>
@@ -527,7 +550,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 
       <div class="row g-4">
         <!-- General Guidelines Card -->
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="flip-up" data-aos-delay="100" data-aos-duration="600">
           <div class="card card-lift border h-100">
             <div class="card-body">
               <h5 class="card-title fs-5">
@@ -560,7 +583,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
         </div>
 
         <!-- Reservation Policies Card -->
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="flip-up" data-aos-delay="200" data-aos-duration="600">
           <div class="card card-lift border h-100">
             <div class="card-body">
               <h5 class="card-title fs-5">
@@ -599,7 +622,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
   <section class="bg-body pt-3 pb-5">
     <div class="container text-center">
       <div class="row">
-        <div class="col-lg-6 offset-lg-3">
+        <div class="col-lg-6 offset-lg-3" data-aos="fade-up" data-aos-duration="800">
           <h2 class="fs-1 mb-3">Need Help?</h2>
           <p class="lead mb-4">
             Questions about community rules, amenities, or your HOA account? We're here to assist
