@@ -1,6 +1,7 @@
 ---
 import Head from './partials/_head.astro'
 import TopNav from './partials/_topbar.astro'
+import QuickLinks from '../../../layouts/front/partials/_quick-links.astro'
 import Footer from './partials/_footer.astro'
 import Scripts from './partials/_scripts.astro'
 
@@ -33,6 +34,7 @@ const pageSeo = {
       <!-- Page Content -->
       <div class="content-wrapper bg-body">
         <slot />
+        <QuickLinks />
       </div>
       <Footer />
     </main>
