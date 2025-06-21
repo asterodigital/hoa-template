@@ -18,8 +18,10 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
     <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
       <div class="row">
         <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-          <h1 class="display-2 fw-semibold lh-1 mb-2">News</h1>
-          <p class="fs-4 mb-3">
+          <h1 class="display-2 fw-semibold lh-1 mb-2" data-aos="fade-up" data-aos-duration="1000">
+            News
+          </h1>
+          <p class="fs-4 mb-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             Stay informed with the latest updates, announcements, and neighborhood happenings at
             Longhorn Heights.
           </p>
@@ -75,10 +77,17 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
   <!-- News Section -->
   <section class="bg-body py-5">
     <div class="container">
-      <h3 class="fs-1 text-md-center mb-4">Community News</h3>
+      <h3 class="fs-1 text-md-center mb-4" data-aos="fade-up" data-aos-duration="800">
+        Community News
+      </h3>
       <div class="row g-4">
         <div class="col-lg-4">
-          <div class="card h-100 border p-0">
+          <div
+            class="card h-100 border p-0"
+            data-aos="flip-up"
+            data-aos-delay="100"
+            data-aos-duration="600"
+          >
             <img
               src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
               class="card-img-top img-fluid"
@@ -102,7 +111,12 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="card h-100 border p-0">
+          <div
+            class="card h-100 border p-0"
+            data-aos="flip-up"
+            data-aos-delay="200"
+            data-aos-duration="600"
+          >
             <img
               src={getAssetPrefix('/assets/img/theme-images/img-2.jpg')}
               class="card-img-top img-fluid"
@@ -118,7 +132,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
                 <i class="ri-user-line ms-2 me-1"></i>By Safety Committee
               </p>
               <p class="card-text mb-2">
-                As summer kicks off, please make sure to review the HOA’s pool safety rules to
+                As summer kicks off, please make sure to review the HOA's pool safety rules to
                 ensure a safe and fun season for everyone.
               </p>
               <a href="#" class="link-primary text-decoration-none">Read More</a>
@@ -126,7 +140,12 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="card h-100 border p-0">
+          <div
+            class="card h-100 border p-0"
+            data-aos="flip-up"
+            data-aos-delay="300"
+            data-aos-duration="600"
+          >
             <img
               src={getAssetPrefix('/assets/img/theme-images/img-5.jpg')}
               class="card-img-top img-fluid"
@@ -155,7 +174,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 
   <!-- CTA Section -->
   <section class="text-bg-primary py-5">
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-duration="800">
       <h2 class="mb-3">Stay Connected with Your Community</h2>
       <p class="fs-5 mb-4">
         Have questions, concerns, or suggestions? Reach out to Longhorn Heights HOA board — we're

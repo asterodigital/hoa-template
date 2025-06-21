@@ -18,8 +18,10 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
     <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
       <div class="row">
         <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-          <h1 class="display-2 fw-semibold lh-1 mb-2">About Us</h1>
-          <p class="fs-4 mb-3">
+          <h1 class="display-2 fw-semibold lh-1 mb-2" data-aos="fade-up" data-aos-duration="1000">
+            About Us
+          </h1>
+          <p class="fs-4 mb-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             Discover the story, values, and vision behind Longhorn Heights — where community comes
             first.
           </p>
@@ -33,8 +35,13 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
     <div class="container">
       <div class="row justify-content-center text-md-center">
         <div class="col-lg-10">
-          <h2 class="fs-1 mb-4">Our Community</h2>
-          <p class="fs-5 text-muted mb-0">
+          <h2 class="fs-1 mb-4" data-aos="fade-up" data-aos-duration="800">Our Community</h2>
+          <p
+            class="fs-5 text-muted mb-0"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
             Longhorn Heights was established in the early 1980s with a vision to create a
             close-knit, family-friendly neighborhood in the heart of Austin. What began as a modest
             development soon grew into a thriving community grounded in shared values. Over the
@@ -58,7 +65,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
       <div class="position-relative h-100">
         <div class="row text-center py-5">
           <div class="col-12 col-md-6 col-lg-3 py-3">
-            <div>
+            <div data-aos="flip-up" data-aos-delay="100" data-aos-duration="600">
               <h4 class="display-2 fw-semibold mb-0">
                 350<span class="text-warning">+</span>
               </h4>
@@ -66,7 +73,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-3 py-3">
-            <div>
+            <div data-aos="flip-up" data-aos-delay="200" data-aos-duration="600">
               <h4 class="display-2 fw-semibold mb-0">
                 120<span class="text-warning">+</span>
               </h4>
@@ -74,7 +81,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-3 py-3">
-            <div>
+            <div data-aos="flip-up" data-aos-delay="300" data-aos-duration="600">
               <h4 class="display-2 fw-semibold mb-0">
                 50<span class="text-warning">+</span>
               </h4>
@@ -82,7 +89,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-3 py-3">
-            <div>
+            <div data-aos="flip-up" data-aos-delay="400" data-aos-duration="600">
               <h4 class="display-2 fw-semibold mb-0">
                 10<span class="text-warning">+</span>
               </h4>
@@ -97,10 +104,17 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
   <!-- Board of Directors Section  -->
   <section class="bg-body py-5">
     <div class="container">
-      <h2 class="fs-1 text-md-center mb-4">Board of Directors</h2>
+      <h2 class="fs-1 text-md-center mb-4" data-aos="fade-up" data-aos-duration="800">
+        Board of Directors
+      </h2>
       <div class="row gy-4">
         <div class="col-md-6 col-lg-3">
-          <div class="card card-lift border h-100">
+          <div
+            class="card card-lift border h-100"
+            data-aos="flip-up"
+            data-aos-delay="100"
+            data-aos-duration="600"
+          >
             <img
               src={getAssetPrefix('/assets/img/avatars/avatar7.jpg')}
               alt="Avatar"
@@ -124,7 +138,12 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="card card-lift border h-100">
+          <div
+            class="card card-lift border h-100"
+            data-aos="flip-up"
+            data-aos-delay="200"
+            data-aos-duration="600"
+          >
             <img
               src={getAssetPrefix('/assets/img/avatars/avatar6.jpg')}
               alt="Avatar"
@@ -148,7 +167,12 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="card card-lift border h-100">
+          <div
+            class="card card-lift border h-100"
+            data-aos="flip-up"
+            data-aos-delay="300"
+            data-aos-duration="600"
+          >
             <img
               src={getAssetPrefix('/assets/img/avatars/avatar3.jpg')}
               alt="Avatar"
@@ -172,7 +196,12 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="card card-lift border h-100">
+          <div
+            class="card card-lift border h-100"
+            data-aos="flip-up"
+            data-aos-delay="400"
+            data-aos-duration="600"
+          >
             <img
               src={getAssetPrefix('/assets/img/avatars/avatar1.jpg')}
               alt="Avatar"
@@ -202,7 +231,11 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
   <section class="text-bg-primary">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 col-lg-5 offset-lg-1 pe-lg-5 py-4 my-auto">
+        <div
+          class="col-md-6 col-lg-5 offset-lg-1 pe-lg-5 py-4 my-auto"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        >
           <i class="ri-focus-3-line fs-1"></i>
           <h3 class="fs-1 mb-3">Our Vision</h3>
           <p class="fs-5 mb-0">
@@ -210,7 +243,12 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
             Heights feels valued, heard, and proud to call home.
           </p>
         </div>
-        <div class="col-md-6 p-0" style="min-height: 100%;">
+        <div
+          class="col-md-6 p-0"
+          style="min-height: 100%;"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        >
           <img
             src={getAssetPrefix('/assets/img/theme-images/img-1.jpg')}
             style="width: 100%; height: 100%; object-fit: cover;"
@@ -225,18 +263,27 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
   <section class="bg-primary-subtle">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 order-2 order-md-1 p-0" style="min-height: 100%;">
+        <div
+          class="col-md-6 order-2 order-md-1 p-0"
+          style="min-height: 100%;"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        >
           <img
             src={getAssetPrefix('/assets/img/theme-images/img-3.jpg')}
             style="width: 100%; height: 100%; object-fit: cover;"
             alt="HOA Image"
           />
         </div>
-        <div class="col-md-6 col-lg-5 offset-lg-1 order-1 order-md-2 pe-lg-5 py-4 my-auto">
+        <div
+          class="col-md-6 col-lg-5 offset-lg-1 order-1 order-md-2 pe-lg-5 py-4 my-auto"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        >
           <i class="ri-treasure-map-line text-primary fs-1"></i>
           <h3 class="fs-1 mb-3">Our Mission</h3>
           <p class="fs-5 mb-0">
-            To enhance the quality of life in Longhorn Heights by maintaining our neighborhood’s
+            To enhance the quality of life in Longhorn Heights by maintaining our neighborhood's
             beauty and always encouraging resident engagement.
           </p>
         </div>
@@ -248,7 +295,11 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
   <section class="text-bg-primary">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 col-lg-5 offset-lg-1 pe-lg-5 py-4 my-auto">
+        <div
+          class="col-md-6 col-lg-5 offset-lg-1 pe-lg-5 py-4 my-auto"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        >
           <i class="ri-hand-heart-line fs-1"></i>
           <h3 class="fs-1 mb-3">Our Values</h3>
           <p class="fs-5 mb-0">
@@ -256,7 +307,12 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
             operate with honesty and consistent communication.
           </p>
         </div>
-        <div class="col-md-6 p-0" style="min-height: 100%;">
+        <div
+          class="col-md-6 p-0"
+          style="min-height: 100%;"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        >
           <img
             src={getAssetPrefix('/assets/img/theme-images/img-5.jpg')}
             style="width: 100%; height: 100%; object-fit: cover;"
@@ -270,10 +326,12 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
   <!-- Managemeny Company Section -->
   <section class="bg-body py-5">
     <div class="container">
-      <h2 class="fs-1 text-md-center mb-4">Management Company</h2>
+      <h2 class="fs-1 text-md-center mb-4" data-aos="fade-up" data-aos-duration="800">
+        Management Company
+      </h2>
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
-          <div class="card border">
+          <div class="card border" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
             <div class="card-body">
               <h5 class="card-title fs-5">Lone Star Property Management</h5>
               <p class="card-text">
@@ -321,7 +379,7 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 
   <!-- CTA Section -->
   <section class="text-bg-primary py-5">
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-duration="800">
       <h2 class="mb-3">Stay Connected with Your Community</h2>
       <p class="fs-5 mb-4">
         Have questions, concerns, or suggestions? Reach out to Longhorn Heights HOA board — we're
