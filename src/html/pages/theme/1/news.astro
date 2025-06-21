@@ -18,8 +18,10 @@ import { getAssetPrefix } from '../../../../utils/path.js'
     <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
-          <h1 class="display-4 fw-semibold mb-2">News</h1>
-          <p class="fs-4 mb-0">
+          <h1 class="display-4 fw-semibold mb-2" data-aos="fade-up" data-aos-duration="1000">
+            News
+          </h1>
+          <p class="fs-4 mb-0" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             Stay informed with the latest updates, announcements, and neighborhood happenings at
             Longhorn Heights.
           </p>
@@ -31,10 +33,17 @@ import { getAssetPrefix } from '../../../../utils/path.js'
   <!-- News Section -->
   <section class="bg-body py-5">
     <div class="container">
-      <h2 class="fs-1 text-center mb-4">Community News</h2>
+      <h2 class="fs-1 text-center mb-4" data-aos="fade-up" data-aos-duration="800">
+        Community News
+      </h2>
       <div class="row g-4">
         <!-- News Item 1 -->
-        <div class="col-md-8 offset-md-2">
+        <div
+          class="col-md-8 offset-md-2"
+          data-aos="flip-up"
+          data-aos-delay="100"
+          data-aos-duration="800"
+        >
           <div class="card h-100 border p-0">
             <img
               src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
@@ -59,7 +68,12 @@ import { getAssetPrefix } from '../../../../utils/path.js'
           </div>
         </div>
         <!-- News Item 2 -->
-        <div class="col-md-8 offset-md-2">
+        <div
+          class="col-md-8 offset-md-2"
+          data-aos="flip-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
           <div class="card h-100 border p-0">
             <img
               src={getAssetPrefix('/assets/img/theme-images/img-2.jpg')}
@@ -76,7 +90,7 @@ import { getAssetPrefix } from '../../../../utils/path.js'
                 <i class="ri-user-line ms-2 me-1"></i>By Safety Committee
               </p>
               <p class="card-text mb-2">
-                As summer kicks off, please review the HOA’s pool safety rules to ensure a safe and
+                As summer kicks off, please review the HOA's pool safety rules to ensure a safe and
                 fun season for all.
               </p>
               <a href="#" class="link-primary text-decoration-none">Read More</a>
@@ -84,7 +98,12 @@ import { getAssetPrefix } from '../../../../utils/path.js'
           </div>
         </div>
         <!-- News Item 3 -->
-        <div class="col-md-8 offset-md-2">
+        <div
+          class="col-md-8 offset-md-2"
+          data-aos="flip-up"
+          data-aos-delay="300"
+          data-aos-duration="800"
+        >
           <div class="card h-100 border p-0">
             <img
               src={getAssetPrefix('/assets/img/theme-images/img-5.jpg')}
@@ -116,14 +135,19 @@ import { getAssetPrefix } from '../../../../utils/path.js'
   <section class="text-bg-primary py-5">
     <div class="container text-center">
       <!-- Heading and Intro -->
-      <h2 class="fs-1 mb-2">Stay Connected</h2>
-      <p class="mb-4">
+      <h2 class="fs-1 mb-2" data-aos="fade-up" data-aos-duration="800">Stay Connected</h2>
+      <p class="mb-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
         Sign up for updates about community news, upcoming events, and important HOA announcements.
       </p>
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <!-- Form -->
-          <form class="row g-4 justify-content-center">
+          <form
+            class="row g-4 justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
             <!-- Name Field -->
             <div class="col-12 col-md-6">
               <input
