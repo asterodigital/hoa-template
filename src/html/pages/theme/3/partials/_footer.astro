@@ -3,11 +3,16 @@ import { getPathPrefix } from '../../../../../utils/path.js'
 import Logo from './_topbar/_logo.astro'
 ---
 
-<footer class="bg-primary-subtle border-top py-4">
+<footer class="bg-primary-subtle border-top py-4" data-aos="slide-up" data-aos-duration="800">
   <div class="container">
     <div class="row text-center text-lg-start align-items-center">
       <!-- Logo (centered on mobile, middle column on desktop) -->
-      <div class="col-12 col-lg-4 order-1 order-lg-2 mb-3 mb-lg-0 d-flex justify-content-center">
+      <div
+        class="col-12 col-lg-4 order-1 order-lg-2 mb-3 mb-lg-0 d-flex justify-content-center"
+        data-aos="slide-up"
+        data-aos-delay="200"
+        data-aos-duration="800"
+      >
         <a href={getPathPrefix('/theme/3/home')} class="text-decoration-none">
           <Logo />
         </a>
@@ -16,6 +21,9 @@ import Logo from './_topbar/_logo.astro'
       <!-- Navigation Links -->
       <ul
         class="nav col-12 col-lg-4 order-2 order-lg-3 justify-content-center justify-content-lg-end mb-3 mb-lg-0"
+        data-aos="slide-up"
+        data-aos-delay="300"
+        data-aos-duration="800"
       >
         <li class="nav-item">
           <a href={getPathPrefix('/theme/3/home')} class="nav-link px-2 text-muted">Home</a>
@@ -35,7 +43,12 @@ import Logo from './_topbar/_logo.astro'
       </ul>
 
       <!-- Copyright -->
-      <p class="col-12 col-lg-4 order-3 order-lg-1 mb-0 text-muted text-center text-lg-start">
+      <p
+        class="col-12 col-lg-4 order-3 order-lg-1 mb-0 text-muted text-center text-lg-start"
+        data-aos="slide-up"
+        data-aos-delay="100"
+        data-aos-duration="800"
+      >
         © 2025 Company, Inc.
       </p>
     </div>
