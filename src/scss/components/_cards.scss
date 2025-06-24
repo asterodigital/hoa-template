@@ -61,7 +61,7 @@
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 
   &:hover {
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 8px 10px rgb(0, 0, 0, 0.075);
     transform: translateY(-8px);
   }
 }
