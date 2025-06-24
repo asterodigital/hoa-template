@@ -143,6 +143,37 @@
 }
 
 // ==========================================================================
+//   Navbar Highlight Effect (lg+ screens)
+// ==========================================================================
+
+@media (min-width: 992px) {
+  .navbar-highlight {
+    .nav-item {
+      border-radius: var(--bs-border-radius);
+      transition: background-color 0.25s ease;
+
+      &:hover {
+        color: var(--bs-primary);
+        background-color: var(--bs-primary-bg-subtle);
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: inherit;
+
+        &.active {
+          color: var(--bs-primary);
+        }
+      }
+    }
+
+    .dropdown-item {
+      font-weight: 500;
+    }
+  }
+}
+
+// ==========================================================================
 //   Mega Menu
 // ==========================================================================
 
