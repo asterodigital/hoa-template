@@ -16,9 +16,39 @@ function getJS(filename: string) {
 
 <!-- Page Script -->{pageScript && <Fragment set:html={pageScript} />}
 
+<!-- Animate on Scroll (AOS) Script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
 <script is:inline>
   AOS.init({
     once: true
+  })
+</script>
+
+<!-- Typer Script -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" is:inline></script>
+<script is:inline>
+  // Wait for the DOM to be ready before running the script
+  document.addEventListener('DOMContentLoaded', function () {
+    // Select all elements with the class 'typer'
+    const typers = document.querySelectorAll('.typer')
+
+    typers.forEach(function (typer) {
+      // Get the configuration values from data attributes
+      const typeSpeed = typer.getAttribute('data-type-speed') || 50
+      const backSpeed = typer.getAttribute('data-back-speed') || 50
+      const strings = typer.getAttribute('data-strings')
+        ? typer.getAttribute('data-strings').split(',')
+        : []
+      const loop = typer.getAttribute('data-loop') === 'true'
+
+      // Initialize the Typed.js instance with the custom options
+      new Typed(typer.querySelector('.text-primary'), {
+        strings: strings,
+        typeSpeed: parseInt(typeSpeed, 10),
+        backSpeed: parseInt(backSpeed, 10),
+        loop: loop,
+        backDelay: 1000 // Add a slight delay before the text starts backspacing
+      })
+    })
   })
 </script>

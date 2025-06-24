@@ -9,23 +9,31 @@ import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 >
   <!-- Hero Section -->
   <section
-    class="position-relative text-light text-center"
+    class="position-relative text-light text-start"
     style={`background-image: url('${getAssetPrefix('/assets/img/theme-images/hero-1.jpg')}'); background-size: cover; background-position: center; height: 85vh;`}
   >
     <!-- Overlay -->
-    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
     <!-- Content -->
     <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
       <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <h1 class="display-4 fw-semibold mb-2" data-aos="fade-up" data-aos-duration="1600">
-            Welcome to Longhorn Heights
+        <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+          <h1
+            class="typer display-5 fw-semibold mb-2"
+            data-aos="fade-up"
+            data-aos-duration="1600"
+            data-type-speed="50"
+            data-back-speed="50"
+            data-loop="true"
+            data-strings="friendship,community,belonging"
+          >
+            Life at Longhorn Heights means <span id="headingTyper" class="text-primary"></span>
           </h1>
           <p class="fs-4 mb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1600">
             Bringing neighbors together through shared spaces, events, and community spirit.
           </p>
           <div
-            class="d-flex justify-content-center flex-wrap gap-2 mb-2"
+            class="d-flex justify-content-start flex-wrap gap-2 mb-2"
             data-aos="fade-up"
             data-aos-delay="400"
             data-aos-duration="1600"
