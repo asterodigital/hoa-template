@@ -31,13 +31,9 @@ const pageSeo = {
     <!-- Main Content -->
     <main>
       <TopNav />
-      <!-- Page Content -->
-      <div class="content-wrapper py-4">
-        <div class="container">
-          <slot />
-          <QuickLinks />
-        </div>
-      </div>
+      <!-- Page Content - No wrapper containers for full-width sections -->
+      <slot />
+      <QuickLinks />
       <Footer />
     </main>
     <!-- All Scripts -->

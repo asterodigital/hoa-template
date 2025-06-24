@@ -16,132 +16,593 @@ const pageHeaderProps = {
 <AdminLayout
   currentPath="docs/faq"
   title="Frequently Asked Questions"
-  description="Find answers to common questions about developing your site."
+  description="Find answers to common questions about the HOA template package, including setup, features, customization, and support."
 >
   <PageHeader {...pageHeaderProps} />
 
   <div class="row">
     <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
-      <h2 class="h3 mb-2" id="faq">Frequently Asked Questions</h2>
-      <p class="mb-4">
-        Have questions? We've got answers. Browse through the most commonly asked questions to
-        quickly find solutions, tips, and guidance for getting the most out of your project.
-      </p>
-      <div class="mb-4">
-        <div class="accordion" id="faqAccordion">
+      <h2 class="h3 mb-2" id="general">General Questions</h2>
+      <p class="mb-4">Common questions about purchasing and using the HOA template package.</p>
+      <div class="mb-5">
+        <div class="accordion" id="generalAccordion">
           <div class="accordion-item">
-            <p class="accordion-header" id="faq1">
+            <h3 class="accordion-header" id="general1">
               <button
                 class="accordion-button"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#answer1"
+                data-bs-target="#generalAnswer1"
                 aria-expanded="true"
-                aria-controls="answer1"
+                aria-controls="generalAnswer1"
               >
-                What is Astro?
+                What exactly do I get when I purchase this HOA template?
               </button>
-            </p>
+            </h3>
             <div
-              id="answer1"
+              id="generalAnswer1"
               class="accordion-collapse collapse show"
-              aria-labelledby="faq1"
-              data-bs-parent="#faqAccordion"
+              aria-labelledby="general1"
+              data-bs-parent="#generalAccordion"
             >
               <div class="accordion-body">
-                Astro is a modern static site builder that uses island architecture to optimize
-                performance. It lets you use your favorite frontend frameworks with zero JavaScript
-                by default.
+                <p>When you purchase our HOA template package, you receive:</p>
+                <ul>
+                  <li><strong>3 Complete Themes:</strong> Classic, Modern, and Premium designs</li>
+                  <li><strong>25+ HTML Pages:</strong> All essential pages for HOA websites</li>
+                  <li>
+                    <strong>Admin Dashboard:</strong> Complete backend interface with user management
+                  </li>
+                  <li><strong>Source Files:</strong> HTML, CSS/SCSS, JavaScript, and all assets</li>
+                  <li>
+                    <strong>Documentation:</strong> Comprehensive setup and customization guide
+                  </li>
+                  <li><strong>Free Updates:</strong> Future improvements and new features</li>
+                  <li><strong>Support:</strong> 6 months of email support included</li>
+                </ul>
               </div>
             </div>
           </div>
 
           <div class="accordion-item">
-            <p class="accordion-header" id="faq2">
+            <h3 class="accordion-header" id="general2">
               <button
                 class="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#answer2"
+                data-bs-target="#generalAnswer2"
                 aria-expanded="false"
-                aria-controls="answer2"
+                aria-controls="generalAnswer2"
               >
-                How do I add a new page?
+                Is this template suitable for my HOA size?
               </button>
-            </p>
+            </h3>
             <div
-              id="answer2"
+              id="generalAnswer2"
               class="accordion-collapse collapse"
-              aria-labelledby="faq2"
-              data-bs-parent="#faqAccordion"
+              aria-labelledby="general2"
+              data-bs-parent="#generalAccordion"
             >
               <div class="accordion-body">
-                To add a new page, create a new `.astro` file in the `src/pages/` directory. The
-                filename becomes the route, e.g., `about.astro` becomes `/about`.
+                <p>Yes! Our template is designed to scale with communities of all sizes:</p>
+                <ul>
+                  <li>
+                    <strong>Small Communities (10-50 homes):</strong> Perfect for basic communication
+                    and announcements
+                  </li>
+                  <li>
+                    <strong>Medium Communities (50-200 homes):</strong> Ideal for amenity management
+                    and resident portals
+                  </li>
+                  <li>
+                    <strong>Large Communities (200+ homes):</strong> Handles complex user management
+                    and extensive features
+                  </li>
+                </ul>
+                <p>
+                  The admin panel includes user management tools that can handle hundreds of
+                  residents, and the design scales beautifully regardless of your community size.
+                </p>
               </div>
             </div>
           </div>
 
           <div class="accordion-item">
-            <p class="accordion-header" id="faq3">
+            <h3 class="accordion-header" id="general3">
               <button
                 class="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#answer3"
+                data-bs-target="#generalAnswer3"
                 aria-expanded="false"
-                aria-controls="answer3"
+                aria-controls="generalAnswer3"
               >
-                Can I use Bootstrap with Astro?
+                Can I use this template for multiple HOA communities?
               </button>
-            </p>
+            </h3>
             <div
-              id="answer3"
+              id="generalAnswer3"
               class="accordion-collapse collapse"
-              aria-labelledby="faq3"
-              data-bs-parent="#faqAccordion"
+              aria-labelledby="general3"
+              data-bs-parent="#generalAccordion"
             >
               <div class="accordion-body">
-                Yes! You can include Bootstrap via CDN or npm. Just make sure you import the CSS in
-                your layout or individual pages as needed.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <p class="accordion-header" id="faq4">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#answer4"
-                aria-expanded="false"
-                aria-controls="answer4"
-              >
-                How do I deploy my site?
-              </button>
-            </p>
-            <div
-              id="answer4"
-              class="accordion-collapse collapse"
-              aria-labelledby="faq4"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Astro supports deployment to many platforms including Vercel, Netlify, and GitHub
-                Pages. Run <code>npm run build</code> and follow the hosting provider’s instructions
-                for deploying static sites.
+                <p>Our licensing allows you to use the template for multiple projects:</p>
+                <ul>
+                  <li><strong>Single License:</strong> Use for one HOA community website</li>
+                  <li>
+                    <strong>Extended License:</strong> Use for multiple communities or client projects
+                  </li>
+                  <li>
+                    <strong>Developer License:</strong> Unlimited usage for web development agencies
+                  </li>
+                </ul>
+                <p>
+                  Each license includes the same features and support - choose based on your usage
+                  needs. Contact us if you need a custom licensing arrangement.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <h2 class="h3 mb-2" id="technical">Technical Questions</h2>
+      <p class="mb-4">Technical requirements and customization information.</p>
+      <div class="mb-5">
+        <div class="accordion" id="technicalAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="tech1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#techAnswer1"
+                aria-expanded="false"
+                aria-controls="techAnswer1"
+              >
+                What are the technical requirements to use this template?
+              </button>
+            </h3>
+            <div
+              id="techAnswer1"
+              class="accordion-collapse collapse"
+              aria-labelledby="tech1"
+              data-bs-parent="#technicalAccordion"
+            >
+              <div class="accordion-body">
+                <p><strong>For Development:</strong></p>
+                <ul>
+                  <li>Node.js (version 16 or higher)</li>
+                  <li>Code editor (VS Code, Sublime, etc.)</li>
+                  <li>Basic knowledge of HTML/CSS</li>
+                  <li>Web browser for testing</li>
+                </ul>
+                <p><strong>For Hosting:</strong></p>
+                <ul>
+                  <li>Any modern web hosting service</li>
+                  <li>Support for static files or Node.js hosting</li>
+                  <li>SSL certificate (recommended)</li>
+                  <li>Domain name for your HOA</li>
+                </ul>
+                <p>
+                  The template works with popular hosting services like Netlify, Vercel, AWS, and
+                  traditional shared hosting.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="tech2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#techAnswer2"
+                aria-expanded="false"
+                aria-controls="techAnswer2"
+              >
+                How do I customize the colors and branding?
+              </button>
+            </h3>
+            <div
+              id="techAnswer2"
+              class="accordion-collapse collapse"
+              aria-labelledby="tech2"
+              data-bs-parent="#technicalAccordion"
+            >
+              <div class="accordion-body">
+                <p>Customizing the template is straightforward with our SCSS variable system:</p>
+                <ol>
+                  <li>
+                    <strong>Colors:</strong> Edit the variables in <code
+                      >src/scss/variables/_colors.scss</code
+                    >
+                  </li>
+                  <li>
+                    <strong>Fonts:</strong> Update font imports and variables in <code
+                      >src/scss/variables/_typography.scss</code
+                    >
+                  </li>
+                  <li>
+                    <strong>Logo:</strong> Replace logo files in <code>src/assets/img/</code> folder
+                  </li>
+                  <li>
+                    <strong>Theme:</strong> Choose from 3 pre-built themes or customize further
+                  </li>
+                </ol>
+                <p>
+                  Our documentation includes a complete customization guide with examples and best
+                  practices.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="tech3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#techAnswer3"
+                aria-expanded="false"
+                aria-controls="techAnswer3"
+              >
+                Is the template mobile-responsive?
+              </button>
+            </h3>
+            <div
+              id="techAnswer3"
+              class="accordion-collapse collapse"
+              aria-labelledby="tech3"
+              data-bs-parent="#technicalAccordion"
+            >
+              <div class="accordion-body">
+                <p>Yes! The template is fully responsive and optimized for all devices:</p>
+                <ul>
+                  <li><strong>Mobile First:</strong> Designed starting with mobile devices</li>
+                  <li><strong>Bootstrap 5:</strong> Built on the latest responsive framework</li>
+                  <li>
+                    <strong>Touch Friendly:</strong> Optimized touch targets for mobile interaction
+                  </li>
+                  <li>
+                    <strong>Fast Loading:</strong> Optimized images and assets for mobile networks
+                  </li>
+                  <li>
+                    <strong>Cross-Device Testing:</strong> Tested on phones, tablets, and desktops
+                  </li>
+                </ul>
+                <p>
+                  The admin panel is also fully responsive, allowing board members to manage the
+                  community from any device.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="tech4">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#techAnswer4"
+                aria-expanded="false"
+                aria-controls="techAnswer4"
+              >
+                Can I integrate this with my existing HOA management software?
+              </button>
+            </h3>
+            <div
+              id="techAnswer4"
+              class="accordion-collapse collapse"
+              aria-labelledby="tech4"
+              data-bs-parent="#technicalAccordion"
+            >
+              <div class="accordion-body">
+                <p>The template is designed to be flexible and integrate with various systems:</p>
+                <ul>
+                  <li>
+                    <strong>API Ready:</strong> Built with modern JavaScript for easy API integration
+                  </li>
+                  <li>
+                    <strong>Database Agnostic:</strong> Can work with any backend database system
+                  </li>
+                  <li>
+                    <strong>Form Integration:</strong> Easy to connect forms to your existing systems
+                  </li>
+                  <li>
+                    <strong>Third-party Services:</strong> Compatible with payment processors, email
+                    services, etc.
+                  </li>
+                </ul>
+                <p>
+                  Our support team can provide guidance on specific integrations during your support
+                  period.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h3 mb-2" id="customization">Customization & Features</h2>
+      <p class="mb-4">Questions about setting up and extending the template functionality.</p>
+      <div class="mb-5">
+        <div class="accordion" id="customizationAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="custom1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#customAnswer1"
+                aria-expanded="false"
+                aria-controls="customAnswer1"
+              >
+                How do I set up the admin panel and user accounts?
+              </button>
+            </h3>
+            <div
+              id="customAnswer1"
+              class="accordion-collapse collapse"
+              aria-labelledby="custom1"
+              data-bs-parent="#customizationAccordion"
+            >
+              <div class="accordion-body">
+                <p>Setting up the admin panel involves these steps:</p>
+                <ol>
+                  <li>
+                    <strong>Initial Setup:</strong> Follow our quick start guide to configure the admin
+                    area
+                  </li>
+                  <li><strong>Admin Account:</strong> Create the first administrator account</li>
+                  <li>
+                    <strong>User Roles:</strong> Set up different permission levels (Admin, Board Member,
+                    Resident)
+                  </li>
+                  <li>
+                    <strong>Resident Import:</strong> Bulk import resident data or add manually
+                  </li>
+                  <li>
+                    <strong>Customize Settings:</strong> Configure community-specific settings and preferences
+                  </li>
+                </ol>
+                <p>
+                  The documentation includes detailed screenshots and step-by-step instructions for
+                  the entire setup process.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="custom2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#customAnswer2"
+                aria-expanded="false"
+                aria-controls="customAnswer2"
+              >
+                Can I add my own pages and sections?
+              </button>
+            </h3>
+            <div
+              id="customAnswer2"
+              class="accordion-collapse collapse"
+              aria-labelledby="custom2"
+              data-bs-parent="#customizationAccordion"
+            >
+              <div class="accordion-body">
+                <p>Absolutely! The template is designed for easy extension:</p>
+                <ul>
+                  <li>
+                    <strong>Component Library:</strong> Use existing components to build new pages quickly
+                  </li>
+                  <li>
+                    <strong>Page Templates:</strong> Follow established patterns for consistent design
+                  </li>
+                  <li>
+                    <strong>Navigation:</strong> Easy to add new menu items and navigation links
+                  </li>
+                  <li>
+                    <strong>Content Sections:</strong> Modular design allows mixing and matching sections
+                  </li>
+                  <li>
+                    <strong>Examples Included:</strong> Multiple page layouts to use as starting points
+                  </li>
+                </ul>
+                <p>
+                  Common additions include: Rules & Regulations pages, Community Calendar, Photo
+                  Gallery, and Board Meeting Minutes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="custom3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#customAnswer3"
+                aria-expanded="false"
+                aria-controls="customAnswer3"
+              >
+                How does the amenity booking system work?
+              </button>
+            </h3>
+            <div
+              id="customAnswer3"
+              class="accordion-collapse collapse"
+              aria-labelledby="custom3"
+              data-bs-parent="#customizationAccordion"
+            >
+              <div class="accordion-body">
+                <p>The amenity booking system includes:</p>
+                <ul>
+                  <li>
+                    <strong>Amenity Management:</strong> Add pools, tennis courts, clubhouse, etc.
+                  </li>
+                  <li>
+                    <strong>Availability Calendar:</strong> Visual calendar showing available time slots
+                  </li>
+                  <li>
+                    <strong>Booking Rules:</strong> Set advance booking limits, maximum duration, etc.
+                  </li>
+                  <li>
+                    <strong>Approval Process:</strong> Option for automatic or manual booking approval
+                  </li>
+                  <li>
+                    <strong>Email Notifications:</strong> Automatic confirmations and reminders
+                  </li>
+                  <li><strong>Resident Portal:</strong> Easy booking interface for residents</li>
+                </ul>
+                <p>Admins can view all bookings, manage conflicts, and generate usage reports.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h3 mb-2" id="support">Support & Updates</h2>
+      <p class="mb-4">Information about support services and template updates.</p>
+      <div class="mb-5">
+        <div class="accordion" id="supportAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="support1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#supportAnswer1"
+                aria-expanded="false"
+                aria-controls="supportAnswer1"
+              >
+                What kind of support do you provide?
+              </button>
+            </h3>
+            <div
+              id="supportAnswer1"
+              class="accordion-collapse collapse"
+              aria-labelledby="support1"
+              data-bs-parent="#supportAccordion"
+            >
+              <div class="accordion-body">
+                <p>We provide comprehensive support for all customers:</p>
+                <ul>
+                  <li>
+                    <strong>6 Months Email Support:</strong> Direct access to our development team
+                  </li>
+                  <li>
+                    <strong>Setup Assistance:</strong> Help with initial installation and configuration
+                  </li>
+                  <li><strong>Customization Guidance:</strong> Advice on template modifications</li>
+                  <li><strong>Bug Fixes:</strong> Quick resolution of any issues you encounter</li>
+                  <li><strong>Best Practices:</strong> Recommendations for optimal usage</li>
+                </ul>
+                <p>
+                  <strong>Response Times:</strong> We typically respond within 24 hours on business days.
+                  Urgent issues are prioritized.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="support2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#supportAnswer2"
+                aria-expanded="false"
+                aria-controls="supportAnswer2"
+              >
+                Do you provide free updates?
+              </button>
+            </h3>
+            <div
+              id="supportAnswer2"
+              class="accordion-collapse collapse"
+              aria-labelledby="support2"
+              data-bs-parent="#supportAccordion"
+            >
+              <div class="accordion-body">
+                <p>Yes! All customers receive free updates including:</p>
+                <ul>
+                  <li><strong>Security Updates:</strong> Important security patches and fixes</li>
+                  <li><strong>Browser Compatibility:</strong> Updates for new browser versions</li>
+                  <li><strong>Bug Fixes:</strong> Resolution of reported issues</li>
+                  <li><strong>New Features:</strong> Additional components and functionality</li>
+                  <li>
+                    <strong>Framework Updates:</strong> Updates to Bootstrap and other dependencies
+                  </li>
+                </ul>
+                <p>
+                  Updates are delivered via email with detailed changelog and upgrade instructions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="support3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#supportAnswer3"
+                aria-expanded="false"
+                aria-controls="supportAnswer3"
+              >
+                What if I need custom development work?
+              </button>
+            </h3>
+            <div
+              id="supportAnswer3"
+              class="accordion-collapse collapse"
+              aria-labelledby="support3"
+              data-bs-parent="#supportAccordion"
+            >
+              <div class="accordion-body">
+                <p>We offer custom development services for additional requirements:</p>
+                <ul>
+                  <li>
+                    <strong>Custom Features:</strong> Build specific functionality for your community
+                  </li>
+                  <li>
+                    <strong>Third-party Integrations:</strong> Connect with payment systems, management
+                    software
+                  </li>
+                  <li>
+                    <strong>Design Customization:</strong> Major design changes beyond the included themes
+                  </li>
+                  <li><strong>Backend Development:</strong> Custom server-side functionality</li>
+                  <li>
+                    <strong>Migration Services:</strong> Help moving from your current website
+                  </li>
+                </ul>
+                <p>Contact our team for a custom quote based on your specific requirements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div>
         <p class="mb-3">
           If you don't find your question listed above, you can always reach out to us with your
           queries.
         </p>
-        <a href="/contact" class="btn btn-outline-primary">Get in Touch</a>
+        <a href="mailto:support@example.com" class="btn btn-outline-primary">
+          <i class="ri-mail-line me-2"></i>Contact Support
+        </a>
       </div>
     </div>
     <Toc />
