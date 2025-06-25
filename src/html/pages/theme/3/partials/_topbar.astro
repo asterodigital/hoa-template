@@ -9,7 +9,13 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
 <nav class="navbar navbar-expand-lg navbar-light bg-body shadow-sm sticky-top z-4">
   <div class="container">
     <!-- Brand Logo -->
-    <a class="navbar-brand d-flex align-items-center" href={getPathPrefix('/theme/3/home')}>
+    <a
+      class="navbar-brand d-flex align-items-center"
+      href={getPathPrefix('/theme/3/home')}
+      data-aos="slide-right"
+      data-aos-delay="200"
+      data-aos-duration="800"
+    >
       <Logo />
     </a>
 
@@ -21,6 +27,9 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
       data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar"
       aria-label="Toggle navigation"
+      data-aos="slide-left"
+      data-aos-delay="300"
+      data-aos-duration="800"
     >
       <span class="navbar-toggler-icon"></span>
     </button>

@@ -1,5 +1,4 @@
 ---
-// import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 import Logo from './_topbar/_logo.astro'
 import { getPathPrefix } from '../../../../utils/path'
 ---
@@ -33,16 +32,10 @@ import { getPathPrefix } from '../../../../utils/path'
           <a class="nav-link" href={getPathPrefix('/')}>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href={getPathPrefix('/features')}>Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">FAQs</a>
+          <a class="nav-link" href={getPathPrefix('/faq')}>FAQs</a>
         </li>
 
         <!-- Dropdown -->
@@ -148,19 +141,13 @@ import { getPathPrefix } from '../../../../utils/path'
         <h6 class="text-uppercase text-muted fw-semibold mt-3 mb-2">Quick Links</h6>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href={getPathPrefix('/')}>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href={getPathPrefix('/features')}>Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">FAQs</a>
+          <a class="nav-link" href={getPathPrefix('/faq')}>FAQs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href={getPathPrefix('/docs')}>Documentation</a>
@@ -222,8 +209,9 @@ import { getPathPrefix } from '../../../../utils/path'
 
       <!-- Right-side Buttons -->
       <div class="d-flex gap-2 mb-2 mb-lg-0">
-        <a href="#" class="btn btn-lg btn-outline-primary">Login</a>
-        <a href="#" class="btn btn-lg btn-primary">Sign Up</a>
+        <a href="#" class="btn btn-lg btn-primary">
+          <i class="ri-shopping-cart-line me-2"></i>Purchase
+        </a>
       </div>
     </div>
   </div>
