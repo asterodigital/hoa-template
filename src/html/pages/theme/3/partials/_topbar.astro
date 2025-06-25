@@ -6,7 +6,11 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
 ---
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-body shadow-sm sticky-top z-4">
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-body shadow-sm sticky-top z-4"
+  data-aos="slide-down"
+  data-aos-duration="800"
+>
   <div class="container">
     <!-- Brand Logo -->
     <a
@@ -46,7 +50,12 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
       <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
         <div class="d-flex w-100 align-items-center">
           <!-- Desktop Nav Links -->
-          <ul class="navbar-nav navbar-highlight d-none d-lg-flex ms-auto">
+          <ul
+            class="navbar-nav navbar-highlight d-none d-lg-flex ms-auto"
+            data-aos="slide-down"
+            data-aos-delay="400"
+            data-aos-duration="800"
+          >
             <li class="nav-item">
               <a
                 class={`nav-link${currentPath === '/theme/3/home' ? ' active' : ''}`}
