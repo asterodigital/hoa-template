@@ -6,17 +6,13 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
 ---
 
 <!-- Navbar -->
-<nav
-  class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-4"
-  data-aos="slide-down"
-  data-aos-duration="800"
->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-body shadow-sm z-4">
   <div class="container">
     <!-- Brand Logo or Text -->
     <a
       class="navbar-brand d-flex align-items-center"
       href={getPathPrefix('/theme/1/home')}
-      data-aos="slide-right"
+      data-aos="fade-right"
       data-aos-delay="200"
       data-aos-duration="800"
     >
@@ -31,7 +27,7 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
       data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar"
       aria-label="Toggle navigation"
-      data-aos="slide-left"
+      data-aos="fade-left"
       data-aos-delay="300"
       data-aos-duration="800"
     >
@@ -49,8 +45,8 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
       </div>
       <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
         <ul
-          class="navbar-nav flex-grow-1 justify-content-center d-none d-lg-flex pe-3"
-          data-aos="slide-down"
+          class="navbar-nav navbar-highlight flex-grow-1 justify-content-center d-none d-lg-flex pe-3"
+          data-aos="fade-down"
           data-aos-delay="400"
           data-aos-duration="800"
         >
@@ -89,6 +85,12 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
               </li>
               <li>
                 <a
+                  class={`dropdown-item${currentPath === '/theme/1/facilities' ? ' active' : ''}`}
+                  href={getPathPrefix('/theme/1/facilities')}>Facilities</a
+                >
+              </li>
+              <li>
+                <a
                   class={`dropdown-item${currentPath === '/theme/1/history' ? ' active' : ''}`}
                   href={getPathPrefix('/theme/1/history')}>History</a
                 >
@@ -123,6 +125,12 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
               </li>
               <li>
                 <a
+                  class={`dropdown-item${currentPath === '/theme/1/gallery' ? ' active' : ''}`}
+                  href={getPathPrefix('/theme/1/gallery')}>Gallery</a
+                >
+              </li>
+              <li>
+                <a
                   class={`dropdown-item${currentPath === '/theme/1/events' ? ' active' : ''}`}
                   href={getPathPrefix('/theme/1/events')}>Events</a
                 >
@@ -136,28 +144,56 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
             </ul>
           </li>
 
-          <!-- Facilities -->
-          <li class="nav-item">
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
             <a
-              class={`nav-link${currentPath === '/theme/1/facilities' ? ' active' : ''}`}
-              href={getPathPrefix('/theme/1/facilities')}>Facilities</a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="blogDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
             >
-          </li>
-
-          <!-- Gallery -->
-          <li class="nav-item">
-            <a
-              class={`nav-link${currentPath === '/theme/1/gallery' ? ' active' : ''}`}
-              href={getPathPrefix('/theme/1/gallery')}>Gallery</a
-            >
-          </li>
-
-          <!-- Contact -->
-          <li class="nav-item">
-            <a
-              class={`nav-link${currentPath === '/theme/1/contact' ? ' active' : ''}`}
-              href={getPathPrefix('/theme/1/contact')}>Contact</a
-            >
+              Blog
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+              <li>
+                <a
+                  class={`dropdown-item${currentPath === '/theme/1/blog-1' ? ' active' : ''}`}
+                  href={getPathPrefix('/theme/1/blog-1')}>Blog – No Sidebar</a
+                >
+              </li>
+              <li>
+                <a
+                  class={`dropdown-item${currentPath === '/theme/1/blog-2' ? ' active' : ''}`}
+                  href={getPathPrefix('/theme/1/blog-2')}>Blog – Left Sidebar</a
+                >
+              </li>
+              <li>
+                <a
+                  class={`dropdown-item${currentPath === '/theme/1/blog-3' ? ' active' : ''}`}
+                  href={getPathPrefix('/theme/1/blog-3')}>Blog – Right Sidebar</a
+                >
+              </li>
+              <li>
+                <a
+                  class={`dropdown-item${currentPath === '/theme/1/post-1' ? ' active' : ''}`}
+                  href={getPathPrefix('/theme/1/post-1')}>Blog Post – No Sidebar</a
+                >
+              </li>
+              <li>
+                <a
+                  class={`dropdown-item${currentPath === '/theme/1/post-2' ? ' active' : ''}`}
+                  href={getPathPrefix('/theme/1/post-2')}>Blog Post – Left Sidebar</a
+                >
+              </li>
+              <li>
+                <a
+                  class={`dropdown-item${currentPath === '/theme/1/post-3' ? ' active' : ''}`}
+                  href={getPathPrefix('/theme/1/post-3')}>Blog Post – Right Sidebar</a
+                >
+              </li>
+            </ul>
           </li>
         </ul>
 
@@ -184,6 +220,42 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
             <a
               class={`nav-link${currentPath === '/theme/1/board-members' ? ' active' : ''}`}
               href={getPathPrefix('/theme/1/board-members')}>Board Members</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class={`nav-link${currentPath === '/theme/1/blog-1' ? ' active' : ''}`}
+              href={getPathPrefix('/theme/1/blog-1')}>Blog – 1</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class={`nav-link${currentPath === '/theme/1/blog-2' ? ' active' : ''}`}
+              href={getPathPrefix('/theme/1/blog-2')}>Blog – 2</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class={`nav-link${currentPath === '/theme/1/blog-3' ? ' active' : ''}`}
+              href={getPathPrefix('/theme/1/blog-3')}>Blog – 3</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class={`nav-link${currentPath === '/theme/1/post-1' ? ' active' : ''}`}
+              href={getPathPrefix('/theme/1/post-1')}>Blog Post – 1</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class={`nav-link${currentPath === '/theme/1/post-2' ? ' active' : ''}`}
+              href={getPathPrefix('/theme/1/post-2')}>Blog Post – 2</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class={`nav-link${currentPath === '/theme/1/post-3' ? ' active' : ''}`}
+              href={getPathPrefix('/theme/1/post-3')}>Blog Post – 3</a
             >
           </li>
           <li class="nav-item">
@@ -244,7 +316,7 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
 
     <div
       class="d-none d-lg-flex align-items-center gap-3"
-      data-aos="slide-left"
+      data-aos="fade-left"
       data-aos-delay="500"
       data-aos-duration="800"
     >
