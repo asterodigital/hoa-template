@@ -2,10 +2,9 @@
    Dropdown Styles
    ========================================================================== */
 
-/* Enhanced dropdown menu with Bootstrap's shadow */
+/* Enhanced dropdown menu with shadow */
 .dropdown-menu {
-  // Base styles inherited from Bootstrap
-  @extend .shadow-sm;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   margin-top: 0;
   overflow: visible !important;
   border: 0;
@@ -280,7 +279,7 @@
   margin-top: -0.25rem !important;
   margin-left: 0.25rem !important;
   border: 1px solid rgb(0, 0, 0, 0.05);
-  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
 /* Better spacing for nested menus */
