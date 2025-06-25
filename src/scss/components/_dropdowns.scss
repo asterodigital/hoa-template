@@ -4,10 +4,10 @@
 
 /* Enhanced dropdown menu with shadow */
 .dropdown-menu {
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   margin-top: 0;
   overflow: visible !important;
   border: 0;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 
   // Simple fade transition
   opacity: 0;
