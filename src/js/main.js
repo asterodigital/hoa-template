@@ -1,6 +1,6 @@
 import * as bootstrap from 'bootstrap/dist/js/bootstrap.esm.js'
 import SimpleBar from 'simplebar'
-import { darkMode } from './layout/dark-mode.js'
+// import { darkMode } from './layout/dark-mode.js'
 import { initSidebar } from './layout/sidebar-handler.js'
 import { initSidebarMini } from './layout/sidebar-mini-handler.js'
 import { initNavigation } from './layout/nav-handler.js'
@@ -45,7 +45,7 @@ const AsteroAdmin = (function () {
     }
 
     try {
-      darkMode()
+      // darkMode()
       initSidebar()
       initSidebarMini()
       initNavigation()
