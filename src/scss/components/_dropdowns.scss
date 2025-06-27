@@ -7,7 +7,7 @@
   margin-top: 0;
   overflow: visible !important;
   border: 0;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem rgb(0, 0, 0, 0.1);
 
   // Simple fade transition
   opacity: 0;
@@ -279,7 +279,7 @@
   margin-top: -0.25rem !important;
   margin-left: 0.25rem !important;
   border: 1px solid rgb(0, 0, 0, 0.05);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem rgb(0, 0, 0, 0.1);
 }
 
 /* Better spacing for nested menus */
