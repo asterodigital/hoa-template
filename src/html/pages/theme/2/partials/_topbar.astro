@@ -323,12 +323,6 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
             </li>
             <li class="nav-item">
               <a
-                class={`nav-link${currentPath === '/theme/2/contact' ? ' active' : ''}`}
-                href={getPathPrefix('/theme/2/contact')}>Contact</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
                 class={`nav-link${currentPath === '/theme/2/events' ? ' active' : ''}`}
                 href={getPathPrefix('/theme/2/events')}>Events</a
               >
@@ -361,6 +355,12 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
               <a
                 class={`nav-link${currentPath === '/theme/2/news' ? ' active' : ''}`}
                 href={getPathPrefix('/theme/2/news')}>News</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/2/contact' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/2/contact')}>Contact</a
               >
             </li>
           </ul>
