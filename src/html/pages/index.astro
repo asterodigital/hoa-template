@@ -105,7 +105,7 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
       <div class="row g-4">
         <!-- Theme 1 -->
         <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1400">
-          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden">
+          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden p-0">
             <div class="position-relative">
               <img
                 src={getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}
@@ -139,7 +139,7 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
 
         <!-- Theme 2 -->
         <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1400">
-          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden">
+          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden p-0">
             <div class="position-relative">
               <img
                 src={getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}
@@ -173,7 +173,7 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
 
         <!-- Theme 3 -->
         <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1400">
-          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden">
+          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden p-0">
             <div class="position-relative">
               <img
                 src={getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}
@@ -438,7 +438,10 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
   </section>
 
   <!-- Admin Panel Features -->
-  <section class="py-5 bg-primary text-white">
+  <section
+    class="py-5 text-white"
+    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
+  >
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1600">
@@ -493,7 +496,7 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
           <img
             src={getAssetPrefix('/assets/img/placeholder-images/placeholder-image-740x200.png')}
             alt="Admin Panel Preview"
-            class="img-fluid rounded-4 shadow-lg"
+            class="img-fluid rounded-4"
           />
         </div>
       </div>
@@ -520,8 +523,8 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
       </div>
       <div class="row g-4">
         <div class="col-md-4" data-aos="flip-up" data-aos-delay="100" data-aos-duration="1400">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body p-4">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
               <div class="d-flex gap-1 text-warning mb-3">
                 <i class="ri-star-fill"></i>
                 <i class="ri-star-fill"></i>
@@ -550,8 +553,8 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
           </div>
         </div>
         <div class="col-md-4" data-aos="flip-up" data-aos-delay="200" data-aos-duration="1400">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body p-4">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
               <div class="d-flex gap-1 text-warning mb-3">
                 <i class="ri-star-fill"></i>
                 <i class="ri-star-fill"></i>
@@ -580,8 +583,8 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
           </div>
         </div>
         <div class="col-md-4" data-aos="flip-up" data-aos-delay="300" data-aos-duration="1400">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body p-4">
+          <div class="card card-lift border h-100">
+            <div class="card-body">
               <div class="d-flex gap-1 text-warning mb-3">
                 <i class="ri-star-fill"></i>
                 <i class="ri-star-fill"></i>
@@ -648,7 +651,7 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
             </a>
           </div>
           <div class="mt-4">
-            <small class="text-white-75">
+            <small class="text-light fw-light">
               <i class="ri-shield-check-line me-1"></i>
               30-day money-back guarantee • Free updates • Premium support
             </small>
