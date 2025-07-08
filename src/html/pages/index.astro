@@ -92,7 +92,7 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
       <div class="row">
         <div class="col-lg-8 mx-auto text-center mb-5">
           <h2 class="display-5 fw-bold mb-3" data-aos="fade-up" data-aos-duration="1400">
-            Choose Your Perfect Design
+            Demos for All HOA Communities
           </h2>
           <p
             class="lead text-muted"
@@ -120,13 +120,17 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
                 class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex align-items-center justify-content-center opacity-0 transition-opacity"
                 style="transition: opacity 0.3s ease;"
               >
-                <a href={getPathPrefix('/theme/1/home')} class="btn btn-light btn-lg rounded-pill">
+                <a
+                  href={getPathPrefix('/theme/1/home')}
+                  target="_blank"
+                  class="btn btn-light btn-lg rounded-pill"
+                >
                   <i class="ri-external-link-line me-2"></i>Live Preview
                 </a>
               </div>
             </div>
             <div class="card-body border-top p-4">
-              <h4 class="card-title fw-bold">Theme 1 - Classic</h4>
+              <h4 class="card-title fw-bold">Demo 1 - Classic</h4>
               <p class="card-text text-muted">
                 Clean, timeless design with elegant typography and sophisticated color scheme.
                 Perfect for established communities.
@@ -154,13 +158,17 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
                 class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex align-items-center justify-content-center opacity-0"
                 style="transition: opacity 0.3s ease;"
               >
-                <a href={getPathPrefix('/theme/2/home')} class="btn btn-light btn-lg rounded-pill">
+                <a
+                  href={getPathPrefix('/theme/2/home')}
+                  target="_blank"
+                  class="btn btn-light btn-lg rounded-pill"
+                >
                   <i class="ri-external-link-line me-2"></i>Live Preview
                 </a>
               </div>
             </div>
             <div class="card-body border-top p-4">
-              <h4 class="card-title fw-bold">Theme 2 - Modern</h4>
+              <h4 class="card-title fw-bold">Demo 2 - Modern</h4>
               <p class="card-text text-muted">
                 Contemporary design with video backgrounds and dynamic elements. Great for
                 progressive communities.
@@ -188,13 +196,17 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
                 class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex align-items-center justify-content-center opacity-0 transition-opacity"
                 style="transition: opacity 0.3s ease;"
               >
-                <a href={getPathPrefix('/theme/3/home')} class="btn btn-light btn-lg rounded-pill">
+                <a
+                  href={getPathPrefix('/theme/3/home')}
+                  target="_blank"
+                  class="btn btn-light btn-lg rounded-pill"
+                >
                   <i class="ri-external-link-line me-2"></i>Live Preview
                 </a>
               </div>
             </div>
             <div class="card-body border-top p-4">
-              <h4 class="card-title fw-bold">Theme 3 - Premium</h4>
+              <h4 class="card-title fw-bold">Demo 3 - Premium</h4>
               <p class="card-text text-muted">
                 Sleek design with bold visuals and streamlined navigation. Perfect for luxury
                 communities.
@@ -364,13 +376,13 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
     </div>
   </section>
 
-  <!-- What's Included Section -->
-  <section class="py-5">
+  <!-- Theme Features Section -->
+  <section class="py-5 bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center mb-5">
           <h2 class="display-5 fw-bold mb-3" data-aos="fade-up" data-aos-duration="1400">
-            What's Included
+            Theme Features
           </h2>
           <p
             class="lead text-muted"
@@ -378,59 +390,239 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
             data-aos-delay="200"
             data-aos-duration="1400"
           >
-            Everything you need to launch your HOA website professionally.
+            Comprehensive backend functionality for managing your HOA community effectively.
+          </p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div
+          class="col-md-6 col-lg-3"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="1600"
+        >
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+              <i class="ri-user-settings-line text-primary fs-1 mb-3"></i>
+              <h5 class="fw-bold">Resident Management</h5>
+              <p class="text-muted mb-0">
+                Add, edit, and manage resident profiles with contact information and property
+                details.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-3"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1600"
+        >
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+              <i class="ri-calendar-check-line text-primary fs-1 mb-3"></i>
+              <h5 class="fw-bold">Amenity Booking</h5>
+              <p class="text-muted mb-0">
+                Complete reservation system for pools, courts, clubhouse, and other community
+                amenities.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-3"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1600"
+        >
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+              <i class="ri-megaphone-line text-primary fs-1 mb-3"></i>
+              <h5 class="fw-bold">Announcements</h5>
+              <p class="text-muted mb-0">
+                Create and manage community announcements with priority levels and scheduling
+                options.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-3"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="1600"
+        >
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+              <i class="ri-file-chart-line text-primary fs-1 mb-3"></i>
+              <h5 class="fw-bold">Financial Reports</h5>
+              <p class="text-muted mb-0">
+                Track HOA dues, expenses, and generate financial reports for board meetings.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-3"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1600"
+        >
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+              <i class="ri-shield-user-line text-primary fs-1 mb-3"></i>
+              <h5 class="fw-bold">Role Permissions</h5>
+              <p class="text-muted mb-0">
+                Granular permission system to control what different user types can access and
+                modify.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-3"
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="1600"
+        >
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+              <i class="ri-table-line text-primary fs-1 mb-3"></i>
+              <h5 class="fw-bold">Data Tables</h5>
+              <p class="text-muted mb-0">
+                Advanced data tables with sorting, filtering, and pagination for managing large
+                datasets.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-3"
+          data-aos="fade-up"
+          data-aos-delay="700"
+          data-aos-duration="1600"
+        >
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+              <i class="ri-mail-send-line text-primary fs-1 mb-3"></i>
+              <h5 class="fw-bold">Email System</h5>
+              <p class="text-muted mb-0">
+                Built-in email templates and notification system for community communications.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-3"
+          data-aos="fade-up"
+          data-aos-delay="800"
+          data-aos-duration="1600"
+        >
+          <div class="card border-0 shadow-sm text-center h-100">
+            <div class="card-body p-4">
+              <i class="ri-settings-3-line text-primary fs-1 mb-3"></i>
+              <h5 class="fw-bold">System Settings</h5>
+              <p class="text-muted mb-0">
+                Configure site settings, themes, and customize the platform to match your community.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specifications -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3" data-aos="fade-up" data-aos-duration="1400">
+            Technical Specifications
+          </h2>
+          <p
+            class="lead text-muted"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1400"
+          >
+            Built with modern web technologies and following industry best practices.
           </p>
         </div>
       </div>
       <div class="row g-4">
         <div class="col-md-6" data-aos="fade-right" data-aos-duration="1600">
-          <div class="d-flex gap-3">
+          <div class="d-flex gap-3 mb-4">
             <div class="flex-shrink-0">
-              <i class="ri-file-code-line text-primary fs-2"></i>
+              <i class="ri-bootstrap-line text-primary fs-2"></i>
             </div>
             <div>
-              <h5 class="fw-bold">HTML Files</h5>
+              <h5 class="fw-bold">Bootstrap 5</h5>
               <p class="text-muted mb-0">
-                25+ carefully crafted HTML pages including all essential pages for HOA websites.
+                Latest version of Bootstrap framework ensuring modern, responsive layouts and
+                extensive component library.
               </p>
             </div>
           </div>
-        </div>
-        <div class="col-md-6" data-aos="fade-left" data-aos-duration="1600">
-          <div class="d-flex gap-3">
+          <div class="d-flex gap-3 mb-4">
             <div class="flex-shrink-0">
-              <i class="ri-css3-line text-primary fs-2"></i>
+              <i class="ri-html5-line text-primary fs-2"></i>
             </div>
             <div>
-              <h5 class="fw-bold">CSS & SCSS</h5>
+              <h5 class="fw-bold">HTML5 & CSS3</h5>
               <p class="text-muted mb-0">
-                Organized SCSS files with variables and mixins for easy customization.
+                Semantic HTML5 markup and modern CSS3 features for clean, accessible, and
+                maintainable code.
               </p>
             </div>
           </div>
-        </div>
-        <div class="col-md-6" data-aos="fade-right" data-aos-duration="1600">
-          <div class="d-flex gap-3">
+          <div class="d-flex gap-3 mb-4">
             <div class="flex-shrink-0">
               <i class="ri-javascript-line text-primary fs-2"></i>
             </div>
             <div>
-              <h5 class="fw-bold">JavaScript</h5>
+              <h5 class="fw-bold">Modern JavaScript</h5>
               <p class="text-muted mb-0">
-                Interactive components and functionality powered by modern JavaScript.
+                ES6+ JavaScript with modular components and interactive functionality throughout the
+                platform.
               </p>
             </div>
           </div>
         </div>
         <div class="col-md-6" data-aos="fade-left" data-aos-duration="1600">
-          <div class="d-flex gap-3">
+          <div class="d-flex gap-3 mb-4">
             <div class="flex-shrink-0">
-              <i class="ri-file-text-line text-primary fs-2"></i>
+              <i class="ri-css3-line text-primary fs-2"></i>
             </div>
             <div>
-              <h5 class="fw-bold">Documentation</h5>
+              <h5 class="fw-bold">SCSS/Sass</h5>
               <p class="text-muted mb-0">
-                Comprehensive documentation with setup instructions and customization guide.
+                Organized Sass architecture with variables, mixins, and partials for easy
+                customization and maintenance.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 mb-4">
+            <div class="flex-shrink-0">
+              <i class="ri-remixicon-line text-primary fs-2"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold">Remix Icons</h5>
+              <p class="text-muted mb-0">
+                Complete icon set with over 2000+ icons covering all common use cases for HOA
+                websites.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 mb-4">
+            <div class="flex-shrink-0">
+              <i class="ri-tools-line text-primary fs-2"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold">Build Tools</h5>
+              <p class="text-muted mb-0">
+                Modern build system with Astro, PostCSS, and automated optimization for production
+                deployment.
               </p>
             </div>
           </div>
@@ -447,59 +639,205 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1600">
-          <h2 class="display-5 fw-bold mb-4">Powerful Admin Panel</h2>
+          <h2 class="display-5 fw-bold mb-4">Perfect for All Types of HOA Users</h2>
           <p class="lead mb-4">
-            Complete backend interface for managing your HOA community with intuitive controls and
-            comprehensive features.
+            From board members to property managers, our templates make launching a beautiful,
+            functional HOA website effortless.
           </p>
           <div class="row g-3">
             <div class="col-sm-6">
               <div class="d-flex align-items-center gap-2">
                 <i class="ri-check-line text-warning fs-4"></i>
-                <span>User Management</span>
+                <span>Board Members</span>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="d-flex align-items-center gap-2">
                 <i class="ri-check-line text-warning fs-4"></i>
-                <span>Amenity Booking</span>
+                <span>Property Managers</span>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="d-flex align-items-center gap-2">
                 <i class="ri-check-line text-warning fs-4"></i>
-                <span>Announcement System</span>
+                <span>Self-Managed Communities</span>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="d-flex align-items-center gap-2">
                 <i class="ri-check-line text-warning fs-4"></i>
-                <span>Financial Reports</span>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="ri-check-line text-warning fs-4"></i>
-                <span>Role Permissions</span>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="ri-check-line text-warning fs-4"></i>
-                <span>Data Tables</span>
+                <span>HOA Software Resellers</span>
               </div>
             </div>
           </div>
-          <a href={getPathPrefix('/docs')} class="btn btn-light btn-lg mt-4 rounded-pill px-4">
-            <i class="ri-eye-line me-2"></i>View Admin Demo
+          <a href="#" class="btn btn-light btn-lg mt-4 rounded-pill px-4">
+            <i class="ri-download-line me-2"></i>Purchase Now - $49
           </a>
         </div>
         <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-duration="1600">
           <img
-            src={getAssetPrefix('/assets/img/placeholder-images/placeholder-image-740x200.png')}
+            src={getAssetPrefix('/assets/img/theme-images/hero-3.jpg')}
             alt="Admin Panel Preview"
             class="img-fluid rounded-4"
           />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faq" class="py-5">
+    <div class="container">
+      <!-- General Questions -->
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2
+            class="display-5 fw-bold mb-4 text-center"
+            data-aos="fade-up"
+            data-aos-duration="1400"
+          >
+            General Questions
+          </h2>
+
+          <div class="accordion accordion-flush" id="generalAccordion">
+            <!-- FAQ 1 -->
+            <div
+              class="accordion-item border rounded-3 mb-3"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1400"
+            >
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#general1"
+                  aria-expanded="false"
+                  aria-controls="general1"
+                >
+                  What exactly do I get when I purchase this HOA template?
+                </button>
+              </h3>
+              <div
+                id="general1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#generalAccordion"
+              >
+                <div class="accordion-body">
+                  <p>When you purchase our HOA template package, you receive:</p>
+                  <ul>
+                    <li>
+                      <strong>3 Complete Themes:</strong> Classic, Modern, and Premium designs
+                    </li>
+                    <li><strong>25+ HTML Pages:</strong> All essential pages for HOA websites</li>
+                    <li>
+                      <strong>Admin Dashboard:</strong> Complete backend interface with user management
+                    </li>
+                    <li>
+                      <strong>Source Files:</strong> HTML, CSS/SCSS, JavaScript, and all assets
+                    </li>
+                    <li>
+                      <strong>Documentation:</strong> Comprehensive setup and customization guide
+                    </li>
+                    <li><strong>Free Updates:</strong> Future improvements and new features</li>
+                    <li><strong>Support:</strong> 6 months of email support included</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div
+              class="accordion-item border rounded-3 mb-3"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="1400"
+            >
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#general2"
+                  aria-expanded="false"
+                  aria-controls="general2"
+                >
+                  Is this template suitable for my HOA size?
+                </button>
+              </h3>
+              <div
+                id="general2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#generalAccordion"
+              >
+                <div class="accordion-body">
+                  <p>Yes! Our template is designed to scale with communities of all sizes:</p>
+                  <ul>
+                    <li>
+                      <strong>Small Communities (10-50 homes):</strong> Perfect for basic communication
+                      and announcements
+                    </li>
+                    <li>
+                      <strong>Medium Communities (50-200 homes):</strong> Ideal for amenity management
+                      and resident portals
+                    </li>
+                    <li>
+                      <strong>Large Communities (200+ homes):</strong> Handles complex user management
+                      and extensive features
+                    </li>
+                  </ul>
+                  <p>
+                    The admin panel includes user management tools that can handle hundreds of
+                    residents, and the design scales beautifully regardless of your community size.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div
+              class="accordion-item border rounded-3 mb-3"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1400"
+            >
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#general3"
+                  aria-expanded="false"
+                  aria-controls="general3"
+                >
+                  Can I use this template for multiple HOA communities?
+                </button>
+              </h3>
+              <div
+                id="general3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#generalAccordion"
+              >
+                <div class="accordion-body">
+                  <p>Our licensing allows you to use the template for multiple projects:</p>
+                  <ul>
+                    <li><strong>Single License:</strong> Use for one HOA community website</li>
+                    <li>
+                      <strong>Extended License:</strong> Use for multiple communities or client projects
+                    </li>
+                    <li>
+                      <strong>Developer License:</strong> Unlimited usage for web development agencies
+                    </li>
+                  </ul>
+                  <p>
+                    Each license includes the same features and support - choose based on your usage
+                    needs. Contact us if you need a custom licensing arrangement.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
