@@ -142,6 +142,25 @@ const code_7 = `<section class="my-4 text-light position-relative" style="backgr
   </div>
 </section>
 `
+
+const code_8 = `<section class="bg-body pb-5 px-2 px-md-0">
+  <div
+    class="container bg-secondary-subtle text-center rounded-4 px-3 py-3 py-md-4"
+    data-aos="fade-up"
+    data-aos-duration="1400"
+  >
+    <i class="ri-home-3-fill text-primary fs-1"></i>
+    <h5 class="fs-1 mb-2">Ready to Get Involved?</h5>
+    <p class="lead">
+      Whether you want to join a committee, volunteer for an event, or attend the next board
+      meeting, we welcome your participation.
+    </p>
+    <button class="btn btn-lg btn-primary mb-2"
+      >Get Started<i class="ri-arrow-right-line ms-2"></i>
+    </button>
+  </div>
+</section>
+`
 ---
 
 <AdminLayout
@@ -234,6 +253,16 @@ const code_7 = `<section class="my-4 text-light position-relative" style="backgr
               height="550px"
               component={code_7}
               htmlCode={code_7}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-8">Example 8</h3>
+
+            <ComponentPreview
+              title="CTA Example 8"
+              height="550px"
+              component={code_8}
+              htmlCode={code_8}
             />
           </div>
         </div>
