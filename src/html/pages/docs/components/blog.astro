@@ -427,6 +427,128 @@ const code_4 = `<section class="my-4">
     </div>
 </section>
 `
+
+const code_5 = `<section class="bg-body py-5">
+  <div class="container">
+    <h1 class="fs-1 text-center mb-4" data-aos="fade-down" data-aos-duration="800">
+      Read our latest articles and tips
+    </h1>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="card border p-0 mb-4" data-aos="fade-in" data-aos-duration="800">
+          <img
+            src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+            class="card-img-top"
+            style="max-height: 300px; object-fit: cover;"
+            alt="blog image"
+          />
+          <div class="card-body p-3">
+            <div
+              class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between mb-2"
+            >
+              <span class="badge text-body bg-primary-subtle fs-6 mb-2 mb-sm-0">Landscaping</span>
+              <span class="d-flex gap-3 text-muted">
+                <a href="#" class="text-decoration-none text-muted">
+                  <i class="ri-user-line me-1"></i>James Mitchell
+                </a>
+                <span><i class="ri-calendar-line me-1"></i>12 Jan 2025</span>
+              </span>
+            </div>
+            <h5 class="card-title fs-4 mb-2">
+              <a href={getPathPrefix('/theme/2/post-1')} class="text-decoration-none text-body">
+                Spring Landscaping Tips for a Greener Neighborhood
+              </a>
+            </h5>
+            <p class="text-muted mb-2">
+              Easy ways to refresh your yard and boost curb appeal this spring.
+            </p>
+            <a href={getPathPrefix('/theme/2/post-1')} class="text-decoration-none text-body mb-0"
+              >Read more <i class="ri-arrow-right-line"></i></a
+            >
+          </div>
+        </div>
+        <div class="card border p-0 mb-4" data-aos="fade-in" data-aos-duration="800">
+          <img
+            src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+            class="card-img-top"
+            style="max-height: 300px; object-fit: cover;"
+            alt="blog image"
+          />
+          <div class="card-body p-3">
+            <div
+              class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between mb-2"
+            >
+              <span class="badge text-body bg-primary-subtle fs-6 mb-2 mb-sm-0">Amenities</span>
+              <span class="d-flex gap-3 text-muted">
+                <a href="#" class="text-decoration-none text-muted">
+                  <i class="ri-user-line me-1"></i>James Mitchell
+                </a>
+                <span><i class="ri-calendar-line me-1"></i>20 Feb 2025</span>
+              </span>
+            </div>
+            <h5 class="card-title fs-4 mb-2">
+              <a href="#" class="text-decoration-none text-body">
+                Pool Reopening Schedule and New Rules for Summer
+              </a>
+            </h5>
+            <p class="text-muted mb-2">
+              Everything you need to know about the pool's reopening and updated guidelines.
+            </p>
+            <a href="#" class="text-decoration-none text-body mb-0"
+              >Read more <i class="ri-arrow-right-line"></i></a
+            >
+          </div>
+        </div>
+        <div class="card border p-0" data-aos="fade-in" data-aos-duration="800">
+          <img
+            src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+            class="card-img-top"
+            style="max-height: 300px; object-fit: cover;"
+            alt="blog image"
+          />
+          <div class="card-body p-3">
+            <div
+              class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between mb-2"
+            >
+              <span class="badge text-body bg-primary-subtle fs-6 mb-2 mb-sm-0"
+                >Informational</span
+              >
+              <span class="d-flex gap-3 text-muted">
+                <a href="#" class="text-decoration-none text-muted">
+                  <i class="ri-user-line me-1"></i>James Mitchell
+                </a>
+                <span><i class="ri-calendar-line me-1"></i>6 Jan 2025</span>
+              </span>
+            </div>
+            <h5 class="card-title fs-4 mb-2">
+              <a href="#" class="text-decoration-none text-body">
+                How to Submit a Maintenance Request the Right Way
+              </a>
+            </h5>
+            <p class="text-muted mb-2">
+              A step-by-step guide to getting common area issues resolved quickly.
+            </p>
+            <a href="#" class="text-decoration-none text-body mb-0"
+              >Read more <i class="ri-arrow-right-line"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="mt-5 d-flex justify-content-center" aria-label="Pagination">
+          <ul class="pagination pagination-lg z-1">
+            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+`
 ---
 
 <AdminLayout
@@ -491,6 +613,16 @@ const code_4 = `<section class="my-4">
               height="550px"
               component={code_4}
               htmlCode={code_4}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-5">Example 5</h3>
+
+            <ComponentPreview
+              title="Blog Example 5"
+              height="550px"
+              component={code_5}
+              htmlCode={code_5}
             />
           </div>
         </div>
