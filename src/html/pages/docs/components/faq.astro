@@ -365,6 +365,1061 @@ const code_5 = `<section class="my-4">
     </div>
 </section>
 `
+
+const code_6 = `<section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-1 text-center mb-3" data-aos="fade-up" data-aos-duration="1400">
+        Frequently Asked Questions
+      </h2>
+      <p class="mb-4 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1400">
+        Find answers to the most common questions about our homeowners association and community. If
+        you have any additional questions, please don't hesitate to reach out to us.
+      </p>
+      <div class="row">
+        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+          <!-- Nav Tabs -->
+          <ul
+            class="nav nav-tabs justify-content-center flex-wrap gap-2 mb-3"
+            id="faqTabs"
+            role="tablist"
+            data-aos="fade-in"
+            data-aos-delay="100"
+            data-aos-duration="1400"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-body active"
+                id="general-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#general"
+                type="button"
+                role="tab"
+                aria-controls="general"
+                aria-selected="true"
+              >
+                General
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-body"
+                id="payments-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#payments"
+                type="button"
+                role="tab"
+                aria-controls="payments"
+                aria-selected="false"
+              >
+                Payments
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link text-body"
+                id="policies-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#policies"
+                type="button"
+                role="tab"
+                aria-controls="policies"
+                aria-selected="false"
+              >
+                Policies
+              </button>
+            </li>
+          </ul>
+
+          <!-- Tab Panes -->
+          <div
+            class="tab-content"
+            data-aos="fade-in"
+            data-aos-delay="200"
+            data-aos-duration="1400"
+            id="faqTabContent"
+          >
+            <!-- General Tab -->
+            <div
+              class="tab-pane fade show active"
+              id="general"
+              role="tabpanel"
+              aria-labelledby="general-tab"
+            >
+              <div
+                class="accordion accordion-flush"
+                id="accordionGeneral"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#general-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="general-collapseOne"
+                    >
+                      When are homeowners association meetings held?
+                    </button>
+                  </h2>
+                  <div
+                    id="general-collapseOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionGeneral"
+                  >
+                    <div class="accordion-body p-3 pt-0">
+                      HOA meetings are held quarterly at the clubhouse. Dates are posted on the
+                      community website and emailed to residents in advance.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#general-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="general-collapseTwo"
+                    >
+                      Who do I contact for maintenance issues in common areas?
+                    </button>
+                  </h2>
+                  <div
+                    id="general-collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionGeneral"
+                  >
+                    <div class="accordion-body p-3 pt-0">
+                      Please report any maintenance concerns through the HOA contact form or by
+                      calling the property management company directly.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#general-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="general-collapseThree"
+                    >
+                      Are there rules about parking or street parking?
+                    </button>
+                  </h2>
+                  <div
+                    id="general-collapseThree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionGeneral"
+                  >
+                    <div class="accordion-body p-3 pt-0">
+                      Yes. Overnight street parking is limited in certain areas. Residents are
+                      encouraged to use driveways and garages when possible.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Payments Tab -->
+            <div class="tab-pane fade" id="payments" role="tabpanel" aria-labelledby="payments-tab">
+              <div
+                class="accordion accordion-flush"
+                id="accordionPayments"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#payments-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="payments-collapseOne"
+                    >
+                      How can I pay my HOA dues?
+                    </button>
+                  </h2>
+                  <div
+                    id="payments-collapseOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionPayments"
+                  >
+                    <div class="accordion-body p-3 pt-0">
+                      You can pay your dues online through the resident portal, by mail, or in
+                      person at the HOA office.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#payments-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="payments-collapseTwo"
+                    >
+                      Are payment plans available?
+                    </button>
+                  </h2>
+                  <div
+                    id="payments-collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionPayments"
+                  >
+                    <div class="accordion-body p-3 pt-0">
+                      Yes, payment plans can be arranged by contacting the HOA office directly.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#payments-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="payments-collapseThree"
+                    >
+                      What happens if I miss a payment?
+                    </button>
+                  </h2>
+                  <div
+                    id="payments-collapseThree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionPayments"
+                  >
+                    <div class="accordion-body p-3 pt-0">
+                      Late payments may incur a fee. Please contact the HOA if you anticipate
+                      difficulty making a payment.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Policies Tab -->
+            <div class="tab-pane fade" id="policies" role="tabpanel" aria-labelledby="policies-tab">
+              <div
+                class="accordion accordion-flush"
+                id="accordionPolicies"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#policies-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="policies-collapseOne"
+                    >
+                      What are the community’s pet policies?
+                    </button>
+                  </h2>
+                  <div
+                    id="policies-collapseOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionPolicies"
+                  >
+                    <div class="accordion-body p-3 pt-0">
+                      Pets are welcome, but must be leashed in common areas. Please clean up after
+                      your pets.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#policies-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="policies-collapseTwo"
+                    >
+                      Are there restrictions on exterior home modifications?
+                    </button>
+                  </h2>
+                  <div
+                    id="policies-collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionPolicies"
+                  >
+                    <div class="accordion-body p-3 pt-0">
+                      Yes, all exterior modifications must be approved by the HOA Architectural
+                      Review Committee.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button bg-transparent collapsed rounded shadow-none p-3"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#policies-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="policies-collapseThree"
+                    >
+                      What is the noise policy in the community?
+                    </button>
+                  </h2>
+                  <div
+                    id="policies-collapseThree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionPolicies"
+                  >
+                    <div class="accordion-body p-3 pt-0">
+                      Quiet hours are from 10 PM to 7 AM. Please be considerate of your neighbors at
+                      all times.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End tab-content -->
+        </div>
+      </div>
+    </div>
+  </section>
+`
+
+const code_7 = `<section class="bg-body pb-5">
+  <div class="container">
+    <h2 class="fs-1 text-md-center mb-2" data-aos="fade-up" data-aos-duration="1400">
+      Frequently Asked Questions
+    </h2>
+    <p
+      class="lead text-md-center mb-4"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1400"
+    >
+      Find quick answers about community living, policies, and amenities.
+    </p>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <!-- Tabs Navigation -->
+        <ul
+          class="nav nav-pills nav-fill flex-wrap justify-content-center gap-3 mb-3"
+          id="faqTabs"
+          role="tablist"
+          data-aos="fade-up"
+          data-aos-duration="1400"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active border"
+              id="general-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#general"
+              type="button"
+              role="tab">General Info</button
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link border"
+              id="amenities-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#amenities"
+              type="button"
+              role="tab">Amenities</button
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link border"
+              id="policies-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#policies"
+              type="button"
+              role="tab">Rules & Policies</button
+            >
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div
+          class="tab-content"
+          id="faqTabContent"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1400"
+        >
+          <!-- General Info Tab -->
+          <div
+            class="tab-pane fade show active"
+            id="general"
+            role="tabpanel"
+            aria-labelledby="general-tab"
+          >
+            <div class="accordion" id="accordionGeneral">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="gen-q1">
+                  <button
+                    class="accordion-button shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#gen-a1"
+                    aria-expanded="true"
+                  >
+                    What is the HOA and what does it do?
+                  </button>
+                </h2>
+                <div
+                  id="gen-a1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionGeneral"
+                >
+                  <div class="accordion-body pt-0">
+                    The HOA manages community resources, enforces neighborhood rules, and ensures
+                    upkeep of common areas.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="gen-q2">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#gen-a2"
+                  >
+                    How do I contact the HOA Board?
+                  </button>
+                </h2>
+                <div
+                  id="gen-a2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionGeneral"
+                >
+                  <div class="accordion-body pt-0">
+                    Visit the Contact page or email us at hello@email.com. You can also attend
+                    monthly board meetings.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="gen-q3">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#gen-a3"
+                  >
+                    How are HOA fees used?
+                  </button>
+                </h2>
+                <div
+                  id="gen-a3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionGeneral"
+                >
+                  <div class="accordion-body pt-0">
+                    Fees go toward landscaping, pool maintenance, insurance, community events, and
+                    reserve funds.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="gen-q4">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#gen-a4"
+                  >
+                    When are board meetings held?
+                  </button>
+                </h2>
+                <div
+                  id="gen-a4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionGeneral"
+                >
+                  <div class="accordion-body pt-0">
+                    Meetings are typically held on the first Tuesday of each month in the
+                    Community Clubhouse.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Amenities Tab -->
+          <div
+            class="tab-pane fade"
+            id="amenities"
+            role="tabpanel"
+            aria-labelledby="amenities-tab"
+          >
+            <div class="accordion" id="accordionAmenities">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="amen-q1">
+                  <button
+                    class="accordion-button shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#amen-a1"
+                  >
+                    How do I reserve the clubhouse?
+                  </button>
+                </h2>
+                <div
+                  id="amen-a1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionAmenities"
+                >
+                  <div class="accordion-body pt-0">
+                    Reservations can be made through the HOA website or by contacting the
+                    management office.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="amen-q2">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#amen-a2"
+                  >
+                    Are pets allowed in community parks?
+                  </button>
+                </h2>
+                <div
+                  id="amen-a2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionAmenities"
+                >
+                  <div class="accordion-body pt-0">
+                    Yes, but pets must be leashed at all times and owners must clean up after
+                    them.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="amen-q3">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#amen-a3"
+                  >
+                    Is the pool open year-round?
+                  </button>
+                </h2>
+                <div
+                  id="amen-a3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionAmenities"
+                >
+                  <div class="accordion-body pt-0">
+                    The pool is open seasonally from May through September, weather permitting.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="amen-q4">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#amen-a4"
+                  >
+                    Can I host a private event at a community space?
+                  </button>
+                </h2>
+                <div
+                  id="amen-a4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionAmenities"
+                >
+                  <div class="accordion-body pt-0">
+                    Yes, with advance approval and signed agreement. Contact the HOA office for
+                    details.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rules & Policies Tab -->
+          <div class="tab-pane fade" id="policies" role="tabpanel" aria-labelledby="policies-tab">
+            <div class="accordion" id="accordionPolicies">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="pol-q1">
+                  <button
+                    class="accordion-button shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pol-a1"
+                  >
+                    What are the quiet hours in the neighborhood?
+                  </button>
+                </h2>
+                <div
+                  id="pol-a1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionPolicies"
+                >
+                  <div class="accordion-body pt-0">
+                    Quiet hours are from 10:00 PM to 7:00 AM daily. Please be respectful of
+                    neighbors.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="pol-q2">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pol-a2"
+                  >
+                    Are there restrictions on exterior home modifications?
+                  </button>
+                </h2>
+                <div
+                  id="pol-a2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionPolicies"
+                >
+                  <div class="accordion-body pt-0">
+                    Yes, all exterior changes must be approved by the Architectural Review
+                    Committee.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="pol-q3">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pol-a3"
+                  >
+                    Can I park my RV or trailer in the driveway?
+                  </button>
+                </h2>
+                <div
+                  id="pol-a3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionPolicies"
+                >
+                  <div class="accordion-body pt-0">
+                    RVs and trailers may not be parked in driveways for more than 48 hours without
+                    approval.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="pol-q4">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pol-a4"
+                  >
+                    What happens if I violate HOA rules?
+                  </button>
+                </h2>
+                <div
+                  id="pol-a4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionPolicies"
+                >
+                  <div class="accordion-body pt-0">
+                    Violations may result in warnings, fines, or legal action based on HOA
+                    covenants.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`
+
+const code_8 = `<section class="bg-body py-5">
+  <div class="container">
+    <h2 class="fs-1 text-md-center mb-4" data-aos="fade-up" data-aos-duration="1400">
+      Frequently Asked Questions
+    </h2>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <!-- Search Input -->
+        <input
+          type="search"
+          class="form-control form-control-lg mb-3"
+          placeholder="Search FAQs..."
+          aria-label="Search FAQs"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1400"
+        />
+        <!-- Tabs Navigation -->
+        <ul
+          class="nav nav-underline nav-fill flex-wrap justify-content-center gap-3 mb-3"
+          id="faqTabs"
+          role="tablist"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1400"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link nav-link-lg active"
+              id="general-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#general"
+              type="button"
+              role="tab">General Info</button
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link nav-link-lg"
+              id="amenities-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#amenities"
+              type="button"
+              role="tab">Amenities</button
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link nav-link-lg"
+              id="policies-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#policies"
+              type="button"
+              role="tab">Rules & Policies</button
+            >
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div
+          class="tab-content"
+          id="faqTabContent"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="1400"
+        >
+          <!-- General Info Tab -->
+          <div
+            class="tab-pane fade show active"
+            id="general"
+            role="tabpanel"
+            aria-labelledby="general-tab"
+          >
+            <div class="accordion" id="accordionGeneral">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="gen-q1">
+                  <button
+                    class="accordion-button shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#gen-a1"
+                    aria-expanded="true"
+                  >
+                    What is the HOA and what does it do?
+                  </button>
+                </h2>
+                <div
+                  id="gen-a1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionGeneral"
+                >
+                  <div class="accordion-body pt-0">
+                    The HOA manages community resources, enforces neighborhood rules, and ensures
+                    upkeep of common areas.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="gen-q2">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#gen-a2"
+                  >
+                    How do I contact the HOA Board?
+                  </button>
+                </h2>
+                <div
+                  id="gen-a2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionGeneral"
+                >
+                  <div class="accordion-body pt-0">
+                    Visit the Contact page or email us at hello@email.com. You can also attend
+                    monthly board meetings.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="gen-q3">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#gen-a3"
+                  >
+                    How are HOA fees used?
+                  </button>
+                </h2>
+                <div
+                  id="gen-a3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionGeneral"
+                >
+                  <div class="accordion-body pt-0">
+                    Fees go toward landscaping, pool maintenance, insurance, community events, and
+                    reserve funds.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="gen-q4">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#gen-a4"
+                  >
+                    When are board meetings held?
+                  </button>
+                </h2>
+                <div
+                  id="gen-a4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionGeneral"
+                >
+                  <div class="accordion-body pt-0">
+                    Meetings are typically held on the first Tuesday of each month in the
+                    Community Clubhouse.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Amenities Tab -->
+          <div
+            class="tab-pane fade"
+            id="amenities"
+            role="tabpanel"
+            aria-labelledby="amenities-tab"
+          >
+            <div class="accordion" id="accordionAmenities">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="amen-q1">
+                  <button
+                    class="accordion-button shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#amen-a1"
+                  >
+                    How do I reserve the clubhouse?
+                  </button>
+                </h2>
+                <div
+                  id="amen-a1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionAmenities"
+                >
+                  <div class="accordion-body pt-0">
+                    Reservations can be made through the HOA website or by contacting the
+                    management office.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="amen-q2">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#amen-a2"
+                  >
+                    Are pets allowed in community parks?
+                  </button>
+                </h2>
+                <div
+                  id="amen-a2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionAmenities"
+                >
+                  <div class="accordion-body pt-0">
+                    Yes, but pets must be leashed at all times and owners must clean up after
+                    them.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="amen-q3">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#amen-a3"
+                  >
+                    Is the pool open year-round?
+                  </button>
+                </h2>
+                <div
+                  id="amen-a3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionAmenities"
+                >
+                  <div class="accordion-body pt-0">
+                    The pool is open seasonally from May through September, weather permitting.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="amen-q4">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#amen-a4"
+                  >
+                    Can I host a private event at a community space?
+                  </button>
+                </h2>
+                <div
+                  id="amen-a4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionAmenities"
+                >
+                  <div class="accordion-body pt-0">
+                    Yes, with advance approval and signed agreement. Contact the HOA office for
+                    details.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rules & Policies Tab -->
+          <div class="tab-pane fade" id="policies" role="tabpanel" aria-labelledby="policies-tab">
+            <div class="accordion" id="accordionPolicies">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="pol-q1">
+                  <button
+                    class="accordion-button shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pol-a1"
+                  >
+                    What are the quiet hours in the neighborhood?
+                  </button>
+                </h2>
+                <div
+                  id="pol-a1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionPolicies"
+                >
+                  <div class="accordion-body pt-0">
+                    Quiet hours are from 10:00 PM to 7:00 AM daily. Please be respectful of
+                    neighbors.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="pol-q2">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pol-a2"
+                  >
+                    Are there restrictions on exterior home modifications?
+                  </button>
+                </h2>
+                <div
+                  id="pol-a2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionPolicies"
+                >
+                  <div class="accordion-body pt-0">
+                    Yes, all exterior changes must be approved by the Architectural Review
+                    Committee.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="pol-q3">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pol-a3"
+                  >
+                    Can I park my RV or trailer in the driveway?
+                  </button>
+                </h2>
+                <div
+                  id="pol-a3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionPolicies"
+                >
+                  <div class="accordion-body pt-0">
+                    RVs and trailers may not be parked in driveways for more than 48 hours without
+                    approval.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="pol-q4">
+                  <button
+                    class="accordion-button shadow-none collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pol-a4"
+                  >
+                    What happens if I violate HOA rules?
+                  </button>
+                </h2>
+                <div
+                  id="pol-a4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionPolicies"
+                >
+                  <div class="accordion-body pt-0">
+                    Violations may result in warnings, fines, or legal action based on HOA
+                    covenants.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`
 ---
 
 <AdminLayout
@@ -436,6 +1491,36 @@ const code_5 = `<section class="my-4">
               height="550px"
               component={code_5}
               htmlCode={code_5}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-6">Example 6</h3>
+
+            <ComponentPreview
+              title="FAQ Example 6"
+              height="550px"
+              component={code_6}
+              htmlCode={code_6}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-7">Example 7</h3>
+
+            <ComponentPreview
+              title="FAQ Example 7"
+              height="550px"
+              component={code_7}
+              htmlCode={code_7}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-8">Example 8</h3>
+
+            <ComponentPreview
+              title="FAQ Example 8"
+              height="550px"
+              component={code_8}
+              htmlCode={code_8}
             />
           </div>
         </div>
