@@ -430,6 +430,115 @@ const code_8 = `<section class="my-4">
     </div>
 </section>
 `
+
+const code_9 = `<section class="bg-body py-5">
+  <div class="container">
+    <h2 class="fs-1 text-md-center mb-3" data-aos="fade-up" data-aos-duration="1400">
+      Learn More About Us
+    </h2>
+    <p class="lead" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1400">
+      Longhorn Heights is a vibrant community nestled in the heart of Austin, Texas. Our mission
+      is to foster a sense of belonging and connection among residents through shared spaces,
+      events, and community spirit.
+    </p>
+    <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1400">
+      With tree-lined streets, well-maintained homes, and access to top-notch amenities like our
+      private pool, walking trails, and community clubhouse, Longhorn Heights offers the perfect
+      blend of comfort, convenience, and charm.
+    </p>
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1400">
+        <figure class="img-scale rounded-4">
+          <img
+            src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+            class="img-fluid"
+            alt="About Us Image"
+          />
+        </figure>
+      </div>
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1400">
+        <figure class="img-scale rounded-4">
+          <img
+            src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-540x540.png')}"
+            class="img-fluid"
+            alt="About Us Image"
+          />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+`
+
+const code_10 = `<section class="bg-body py-5">
+  <div class="container">
+    <h2 class="fs-1 text-md-center mb-2" data-aos="fade-up" data-aos-duration="1400">
+      Our Community
+    </h2>
+    <p
+      class="lead text-md-center mb-4"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1400"
+    >
+      Discover the history, spirit, and growth of Longhorn Heights.
+    </p>
+    <div class="row">
+      <div class="col-lg-6 pe-lg-5" data-aos="fade-right" data-aos-duration="1600">
+        <h3 class="mb-3">Our History</h3>
+        <p class="lead">
+          Longhorn Heights was established in the early 1980s with a vision to create a
+          close-knit, family-friendly neighborhood in the heart of Austin. What began as a modest
+          development soon grew into a thriving community grounded in shared values, safety, and
+          natural beauty.
+        </p>
+        <p class="lead mb-0">
+          Over the years, Longhorn Heights has become a beloved Austin neighborhood, cherished for
+          its friendly residents and beautiful homes.
+        </p>
+      </div>
+      <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-duration="1600">
+        <h3 class="mb-3">Stats</h3>
+        <div class="card text-center border p-4">
+          <div class="row row-cols-2 g-4">
+            <!-- Stat 1 -->
+            <div class="col" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
+              <div>
+                <h4 class="fs-2 text-primary mb-0">350+</h4>
+                <div>Living Families</div>
+              </div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="col" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+              <div>
+                <h4 class="fs-2 text-primary mb-0">45+</h4>
+                <div>Years Established</div>
+              </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="col" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+              <div>
+                <h4 class="fs-2 text-primary mb-0">10+</h4>
+                <div>Community Events</div>
+              </div>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="col" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1200">
+              <div>
+                <h4 class="fs-2 text-primary mb-0">5</h4>
+                <div>Neighborhood Parks</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`
 ---
 
 <AdminLayout
@@ -531,6 +640,26 @@ const code_8 = `<section class="my-4">
               height="550px"
               component={code_8}
               htmlCode={code_8}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-9">Example 9</h3>
+
+            <ComponentPreview
+              title="About Us Example 9"
+              height="550px"
+              component={code_9}
+              htmlCode={code_9}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-10">Example 10</h3>
+
+            <ComponentPreview
+              title="About Us Example 10"
+              height="550px"
+              component={code_10}
+              htmlCode={code_10}
             />
           </div>
         </div>
