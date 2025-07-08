@@ -131,6 +131,107 @@ const code_5 = `<section class="my-5">
   </div>
 </section>
 `
+
+const code_6 = `<section
+  class="position-relative text-light text-center text-lg-start"
+  style="background-image: url('${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-1200x440.png')}'); background-size: cover; background-position: center; height: 85vh"
+>
+  <!-- Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+  <!-- Content -->
+  <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+        <h1 class="display-2 fw-semibold lh-1 mb-2" data-aos="fade-up" data-aos-duration="1600">
+          Welcome to <br />Longhorn Heights
+        </h1>
+        <p class="fs-4 mb-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1600">
+          A thriving community in the heart of Austin
+        </p>
+        <button
+          class="btn btn-lg btn-outline-light rounded-pill px-4"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="1600">Explore<i class="ri-arrow-right-line ms-2"></i></button
+        >
+      </div>
+    </div>
+  </div>
+</section>
+`
+
+const code_7_Html = `<section
+  class="position-relative text-light text-start"
+  style="background-image: url('${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-1200x440.png')}'); background-size: cover; background-position: center; height: 85vh"
+>
+  <!-- Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+  <!-- Content -->
+  <div class="position-relative d-flex flex-column justify-content-center h-100 px-3">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+        <h1
+          class="typer display-5 fw-semibold mb-2"
+          data-aos="fade-up"
+          data-aos-duration="1600"
+          data-type-speed="50"
+          data-back-speed="50"
+          data-loop="true"
+          data-strings="friendship,community,belonging"
+        >
+          Life at Longhorn Heights means <span id="headingTyper" class="text-primary"></span>
+        </h1>
+        <p class="fs-4 mb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1600">
+          Bringing neighbors together through shared spaces, events, and community spirit.
+        </p>
+        <div
+          class="d-flex justify-content-start flex-wrap gap-2 mb-2"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="1600"
+        >
+          <button class="btn btn-lg btn-primary">
+            Amenities<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+          <button class="btn btn-lg btn-outline-light">
+            Meet the Board<i class="ri-arrow-right-line ms-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`
+
+const code_7_Js = `<!-- Typer Script -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" is:inline></script>
+<script is:inline>
+  // Wait for the DOM to be ready before running the script
+  document.addEventListener('DOMContentLoaded', function () {
+    // Select all elements with the class 'typer'
+    const typers = document.querySelectorAll('.typer')
+
+    typers.forEach(function (typer) {
+      // Get the configuration values from data attributes
+      const typeSpeed = typer.getAttribute('data-type-speed') || 50
+      const backSpeed = typer.getAttribute('data-back-speed') || 50
+      const strings = typer.getAttribute('data-strings')
+        ? typer.getAttribute('data-strings').split(',')
+        : []
+      const loop = typer.getAttribute('data-loop') === 'true'
+
+      // Initialize the Typed.js instance with the custom options
+      new Typed(typer.querySelector('.text-primary'), {
+        strings: strings,
+        typeSpeed: parseInt(typeSpeed, 10),
+        backSpeed: parseInt(backSpeed, 10),
+        loop: loop,
+        backDelay: 1000 // Add a slight delay before the text starts backspacing
+      })
+    })
+  })
+</script>
+`
 ---
 
 <AdminLayout
@@ -203,6 +304,27 @@ const code_5 = `<section class="my-5">
               height="550px"
               component={code_5}
               htmlCode={code_5}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-6">Example 6</h3>
+
+            <ComponentPreview
+              title="Hero Example 6"
+              height="550px"
+              component={code_6}
+              htmlCode={code_6}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-7">Example 7</h3>
+
+            <ComponentPreview
+              title="Hero Example 7"
+              height="550px"
+              component={code_7_Html}
+              htmlCode={code_7_Html}
+              jsCode={code_7_Js}
             />
           </div>
         </div>
