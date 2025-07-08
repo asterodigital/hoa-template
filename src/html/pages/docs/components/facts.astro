@@ -3,7 +3,7 @@ import AdminLayout from '../../../layouts/admin/admin-layout.astro'
 import ComponentPreview from '../../../components/component-preview/component-preview.astro'
 import Toc from '../../../components/toc/toc.astro'
 import PageHeader from '../../../components/common/page-header.astro'
-import { getPathPrefix } from '../../../../utils/path.js'
+import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
 
 // Page header configuration with navigation breadcrumbs
 const pageHeaderConfig = {
@@ -242,6 +242,54 @@ const code_6 = `<section class="my-4">
     </div>
 </section>
 `
+
+const code_7 = `<section
+  class="position-relative text-light text-center"
+  style="background-image: url('${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-1200x440.png')}'); background-size: cover; background-position: center;"
+>
+  <!-- Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-75"></div>
+  <!-- Content -->
+  <div class="container">
+    <div class="position-relative h-100">
+      <div class="row text-center py-5">
+        <div class="col-12 col-md-6 col-lg-3 py-3">
+          <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1200">
+            <h4 class="display-2 fw-semibold mb-0">
+              350<span class="text-warning">+</span>
+            </h4>
+            <div class="fs-5">Living Families</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-3">
+          <div data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1200">
+            <h4 class="display-2 fw-semibold mb-0">
+              120<span class="text-warning">+</span>
+            </h4>
+            <div class="fs-5">New Homes</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-3">
+          <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1200">
+            <h4 class="display-2 fw-semibold mb-0">
+              50<span class="text-warning">+</span>
+            </h4>
+            <div class="fs-5">Amenities</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 py-3">
+          <div data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1200">
+            <h4 class="display-2 fw-semibold mb-0">
+              10<span class="text-warning">+</span>
+            </h4>
+            <div class="fs-5">Years in Business</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`
 ---
 
 <AdminLayout
@@ -324,6 +372,16 @@ const code_6 = `<section class="my-4">
               height="450px"
               component={code_6}
               htmlCode={code_6}
+            />
+          </div>
+          <div class="my-3">
+            <h3 class="mb-2" id="example-7">Example 7</h3>
+
+            <ComponentPreview
+              title="Facts Example 7"
+              height="450px"
+              component={code_7}
+              htmlCode={code_7}
             />
           </div>
         </div>
