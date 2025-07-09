@@ -4,9 +4,19 @@ import { getPathPrefix } from '../../../../utils/path.js'
 
 <!-- Top Navigation -->
 <div class="topbar container">
-  <nav class="d-flex align-items-center justify-content-end py-2">
-    <a href={getPathPrefix('/#themes')} target="_blank" class="btn btn-lg btn-outline-primary"
-      >All Demos</a
-    >
+  <nav class="d-flex align-items-center justify-content-between py-2">
+    <!-- Left section -->
+    <div class="d-flex align-items-center gap-4">
+      <button class="btn sidebar-toggle d-block d-xl-none border-0 p-0" id="sidebar-toggle">
+        <i class="ri-menu-line fs-5"></i>
+      </button>
+    </div>
+
+    <!-- Right section -->
+    <div class="d-flex align-items-center">
+      <a href={getPathPrefix('/#themes')} target="_blank" class="btn btn-lg btn-outline-primary"
+        >All Demos</a
+      >
+    </div>
   </nav>
 </div>
