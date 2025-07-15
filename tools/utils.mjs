@@ -257,16 +257,22 @@ export async function showBanner(projectRoot) {
  * Creates a progress indicator for long-running operations
  * @param {string} message - Progress message
  * @param {number} [interval=500] - Update interval in ms
- * @returns {Function} Stop function
+ * @returns {function(): void} - Function to stop the indicator
  */
-export function createProgressIndicator(message, interval = 500) {
+export function createProgressIndicator(message) {
+  // Only show progress indicator in an interactive terminal
+  if (!process.stdout.isTTY) {
+    log(message, 'info')
+    return () => {} // Return a no-op function
+  }
+
   const frames = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
   let frameIndex = 0
 
   const timer = setInterval(() => {
     process.stdout.write(`\r${chalk.blue(frames[frameIndex])} ${message}`)
     frameIndex = (frameIndex + 1) % frames.length
-  }, interval)
+  }, 500) // Default interval is 500ms
 
   return () => {
     clearInterval(timer)
