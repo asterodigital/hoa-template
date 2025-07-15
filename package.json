@@ -8,15 +8,20 @@
   "scripts": {
     "dev": "node tools/dev.mjs",
     "build": "node tools/build.mjs",
+    "build:offline": "node tools/build-offline.mjs",
+    "build:all": "npm run build && npm run build:offline",
     "css": "node tools/css.mjs",
     "js": "node tools/js.mjs",
     "assets": "node tools/assets.mjs",
+    "assets:relative": "node config/assets.relative.config.mjs",
     "lint": "node tools/lint.mjs",
     "fixlint": "node tools/fixlint.mjs",
     "format:html": "node tools/format.mjs",
     "clean": "node tools/clean.mjs",
+    "clean:offline": "node -e \"import('fs-extra').then(fs => fs.removeSync('./dist/offline'))\"",
     "watch": "node tools/watch.mjs",
     "serve": "node tools/serve.mjs",
+    "serve:offline": "node tools/serve-offline.mjs",
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json"
   },
   "keywords": [
