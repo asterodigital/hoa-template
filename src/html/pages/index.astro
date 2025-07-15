@@ -188,7 +188,9 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
       <div class="row g-4">
         <!-- Theme 1 -->
         <div class="col-lg-4" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1400">
-          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden theme-card">
+          <div
+            class="card p-0 border-0 shadow-lg h-100 position-relative overflow-hidden theme-card"
+          >
             <div class="position-relative">
               <img
                 src={getAssetPrefix('/assets/img/thumbnails/theme-1.jpg')}
@@ -210,7 +212,13 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
               </div>
             </div>
             <div class="card-body p-4">
-              <h4 class="card-title fw-bold mb-3">Demo 1: Classic</h4>
+              <h4 class="card-title fw-bold mb-3">
+                <a
+                  href={getPathPrefix('/theme/1/home')}
+                  target="_blank"
+                  class="text-decoration-none text-primary theme-title-link">Demo 1: Classic</a
+                >
+              </h4>
               <p class="card-text text-muted mb-4">
                 Timeless, professional design with elegant typography and sophisticated color
                 scheme. Perfect for established communities seeking formal presentation.
@@ -234,7 +242,9 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
 
         <!-- Theme 2 -->
         <div class="col-lg-4" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1400">
-          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden theme-card">
+          <div
+            class="card p-0 border-0 shadow-lg h-100 position-relative overflow-hidden theme-card"
+          >
             <div class="position-relative">
               <img
                 src={getAssetPrefix('/assets/img/thumbnails/theme-2.jpg')}
@@ -256,7 +266,13 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
               </div>
             </div>
             <div class="card-body p-4">
-              <h4 class="card-title fw-bold mb-3">Demo 2: Modern</h4>
+              <h4 class="card-title fw-bold mb-3">
+                <a
+                  href={getPathPrefix('/theme/2/home')}
+                  target="_blank"
+                  class="text-decoration-none text-primary theme-title-link">Demo 2: Modern</a
+                >
+              </h4>
               <p class="card-text text-muted mb-4">
                 Contemporary design with video backgrounds and dynamic elements. Ideal for
                 progressive communities embracing modern digital experiences.
@@ -280,7 +296,9 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
 
         <!-- Theme 3 -->
         <div class="col-lg-4" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1400">
-          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden theme-card">
+          <div
+            class="card p-0 border-0 shadow-lg h-100 position-relative overflow-hidden theme-card"
+          >
             <div class="position-relative">
               <img
                 src={getAssetPrefix('/assets/img/thumbnails/theme-3.jpg')}
@@ -302,7 +320,13 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
               </div>
             </div>
             <div class="card-body p-4">
-              <h4 class="card-title fw-bold mb-3">Demo 3: Premium</h4>
+              <h4 class="card-title fw-bold mb-3">
+                <a
+                  href={getPathPrefix('/theme/3/home')}
+                  target="_blank"
+                  class="text-decoration-none text-primary theme-title-link">Demo 3: Premium</a
+                >
+              </h4>
               <p class="card-text text-muted mb-4">
                 Sophisticated design with bold visuals and streamlined navigation. Perfect for
                 luxury communities requiring premium aesthetics.
@@ -1291,6 +1315,14 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
 
   .bg-gradient-6 {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .theme-title-link {
+    transition: text-decoration 0.2s ease;
+  }
+
+  .theme-title-link:hover {
+    text-decoration: underline !important;
   }
 </style>
 
