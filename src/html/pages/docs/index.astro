@@ -25,13 +25,13 @@ const pageHeaderProps = {
       <!-- Hero Section -->
       <div class="mb-5">
         <div class="card border-0 bg-primary">
-          <div class="card-body p-4">
+          <div class="card-body p-1">
             <div class="row align-items-center">
-              <div class="col-md-8">
-                <h1 class="h2 mb-3 text-white">🏡 Welcome to HOA Template</h1>
+              <div class="col">
+                <h1 class="h2 mb-3 text-white">📚 HOA Template Documentation</h1>
                 <p class="lead mb-3 text-white opacity-90">
-                  Your complete solution for creating professional homeowner association websites.
-                  Get up and running in minutes with our comprehensive template package.
+                  Complete setup and customization guide for your HOA template. Everything you need
+                  to build and deploy your community website.
                 </p>
                 <div class="d-flex flex-wrap gap-2">
                   <span class="badge bg-white text-primary fs-6">3 Complete Themes</span>
@@ -40,9 +40,6 @@ const pageHeaderProps = {
                   <span class="badge bg-white text-primary fs-6">6 Months Support</span>
                 </div>
               </div>
-              <div class="col-md-4 text-center">
-                <i class="ri-home-heart-line text-white" style="font-size: 4rem; opacity: 0.3;"></i>
-              </div>
             </div>
           </div>
         </div>
@@ -50,7 +47,7 @@ const pageHeaderProps = {
 
       <!-- Quick Start Steps -->
       <div class="mb-5">
-        <h2 class="h3 mb-4">
+        <h2 class="h3 mb-4" id="quick-start">
           <i class="ri-rocket-line text-primary me-2"></i>
           Quick Start Guide
         </h2>
@@ -162,8 +159,8 @@ const pageHeaderProps = {
 
         <div class="row g-3">
           <div class="col-lg-4">
-            <div class="card">
-              <div class="card-header bg-light">
+            <div class="card h-100">
+              <div class="card-header">
                 <h6 class="mb-0">
                   <i class="ri-play-circle-line text-success me-2"></i>
                   Development
@@ -181,8 +178,8 @@ const pageHeaderProps = {
           </div>
 
           <div class="col-lg-4">
-            <div class="card">
-              <div class="card-header bg-light">
+            <div class="card h-100">
+              <div class="card-header">
                 <h6 class="mb-0">
                   <i class="ri-hammer-line text-warning me-2"></i>
                   Production Build
@@ -200,8 +197,8 @@ const pageHeaderProps = {
           </div>
 
           <div class="col-lg-4">
-            <div class="card">
-              <div class="card-header bg-light">
+            <div class="card h-100">
+              <div class="card-header">
                 <h6 class="mb-0">
                   <i class="ri-eye-line text-info me-2"></i>
                   Preview
@@ -221,8 +218,8 @@ const pageHeaderProps = {
       </div>
 
       <!-- Theme Showcase -->
-      <div class="mb-5" id="themes">
-        <h2 class="h3 mb-4">
+      <div class="mb-5">
+        <h2 class="h3 mb-4" id="themes">
           <i class="ri-palette-line text-primary me-2"></i>
           Theme Variations
         </h2>
@@ -238,7 +235,7 @@ const pageHeaderProps = {
                   class="bg-primary bg-opacity-15 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style="width: 70px; height: 70px;"
                 >
-                  <i class="ri-building-line text-primary fs-3"></i>
+                  <i class="ri-building-line text-light fs-3"></i>
                 </div>
                 <h5 class="card-title mb-3">Theme 1: Classic</h5>
                 <p class="card-text text-muted mb-4">
@@ -246,8 +243,8 @@ const pageHeaderProps = {
                   requirements.
                 </p>
                 <div class="d-flex justify-content-center gap-2 flex-wrap">
-                  <span class="badge bg-primary bg-opacity-15 text-primary">Professional</span>
-                  <span class="badge bg-primary bg-opacity-15 text-primary">Traditional</span>
+                  <span class="badge bg-primary bg-opacity-15 text-light">Professional</span>
+                  <span class="badge bg-primary bg-opacity-15 text-light">Traditional</span>
                 </div>
               </div>
             </div>
@@ -260,7 +257,7 @@ const pageHeaderProps = {
                   class="bg-success bg-opacity-15 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style="width: 70px; height: 70px;"
                 >
-                  <i class="ri-magic-line text-success fs-3"></i>
+                  <i class="ri-magic-line text-light fs-3"></i>
                 </div>
                 <h5 class="card-title mb-3">Theme 2: Modern</h5>
                 <p class="card-text text-muted mb-4">
@@ -268,8 +265,8 @@ const pageHeaderProps = {
                   progressive communities.
                 </p>
                 <div class="d-flex justify-content-center gap-2 flex-wrap">
-                  <span class="badge bg-success bg-opacity-15 text-success">Contemporary</span>
-                  <span class="badge bg-success bg-opacity-15 text-success">Vibrant</span>
+                  <span class="badge bg-success bg-opacity-15 text-light">Contemporary</span>
+                  <span class="badge bg-success bg-opacity-15 text-light">Vibrant</span>
                 </div>
               </div>
             </div>
@@ -282,7 +279,7 @@ const pageHeaderProps = {
                   class="bg-warning bg-opacity-15 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style="width: 70px; height: 70px;"
                 >
-                  <i class="ri-vip-crown-line text-warning fs-3"></i>
+                  <i class="ri-vip-crown-line text-light fs-3"></i>
                 </div>
                 <h5 class="card-title mb-3">Theme 3: Premium</h5>
                 <p class="card-text text-muted mb-4">
@@ -290,8 +287,8 @@ const pageHeaderProps = {
                   communities.
                 </p>
                 <div class="d-flex justify-content-center gap-2 flex-wrap">
-                  <span class="badge bg-warning bg-opacity-15 text-warning">Sophisticated</span>
-                  <span class="badge bg-warning bg-opacity-15 text-warning">Animated</span>
+                  <span class="badge bg-warning bg-opacity-15 text-light">Sophisticated</span>
+                  <span class="badge bg-warning bg-opacity-15 text-light">Animated</span>
                 </div>
               </div>
             </div>
@@ -306,8 +303,8 @@ const pageHeaderProps = {
       </div>
 
       <!-- Customization Guide -->
-      <div class="mb-5" id="customization">
-        <h2 class="h3 mb-4">
+      <div class="mb-5">
+        <h2 class="h3 mb-4" id="customization">
           <i class="ri-brush-line text-primary me-2"></i>
           Quick Customization
         </h2>
@@ -435,8 +432,8 @@ $info: #17a2b8;             // Info messages</code></pre>
       </div>
 
       <!-- Project Structure -->
-      <div class="mb-5" id="project-structure">
-        <h2 class="h3 mb-4">
+      <div class="mb-5">
+        <h2 class="h3 mb-4" id="project-structure">
           <i class="ri-folder-open-line text-primary me-2"></i>
           Understanding the Structure
         </h2>
@@ -475,8 +472,8 @@ $info: #17a2b8;             // Info messages</code></pre>
       </div>
 
       <!-- Deployment -->
-      <div class="mb-5" id="deployment">
-        <h2 class="h3 mb-4">
+      <div class="mb-5">
+        <h2 class="h3 mb-4" id="deployment">
           <i class="ri-cloud-line text-primary me-2"></i>
           Going Live
         </h2>
@@ -490,11 +487,11 @@ $info: #17a2b8;             // Info messages</code></pre>
                   class="bg-primary bg-opacity-15 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style="width: 60px; height: 60px;"
                 >
-                  <i class="ri-flashlight-line text-primary fs-4"></i>
+                  <i class="ri-flashlight-line text-light fs-4"></i>
                 </div>
                 <h6 class="mb-2">Static Hosting</h6>
                 <p class="small text-muted mb-3">Netlify, Vercel, GitHub Pages</p>
-                <span class="badge bg-primary bg-opacity-15 text-primary">Free Options</span>
+                <span class="badge bg-primary bg-opacity-15 text-light">Free Options</span>
               </div>
             </div>
           </div>
@@ -505,11 +502,11 @@ $info: #17a2b8;             // Info messages</code></pre>
                   class="bg-success bg-opacity-15 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style="width: 60px; height: 60px;"
                 >
-                  <i class="ri-server-line text-success fs-4"></i>
+                  <i class="ri-server-line text-light fs-4"></i>
                 </div>
                 <h6 class="mb-2">Traditional Hosting</h6>
                 <p class="small text-muted mb-3">cPanel, Shared hosting</p>
-                <span class="badge bg-success bg-opacity-15 text-success">Universal</span>
+                <span class="badge bg-success bg-opacity-15 text-light">Universal</span>
               </div>
             </div>
           </div>
@@ -520,11 +517,11 @@ $info: #17a2b8;             // Info messages</code></pre>
                   class="bg-info bg-opacity-15 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style="width: 60px; height: 60px;"
                 >
-                  <i class="ri-cloud-line text-info fs-4"></i>
+                  <i class="ri-cloud-line text-light fs-4"></i>
                 </div>
                 <h6 class="mb-2">CDN Hosting</h6>
                 <p class="small text-muted mb-3">AWS CloudFront, Cloudflare</p>
-                <span class="badge bg-info bg-opacity-15 text-info">Enterprise</span>
+                <span class="badge bg-info bg-opacity-15 text-light">Enterprise</span>
               </div>
             </div>
           </div>
@@ -538,8 +535,8 @@ $info: #17a2b8;             // Info messages</code></pre>
       </div>
 
       <!-- Support Section -->
-      <div class="mb-5" id="support">
-        <h2 class="h3 mb-4">
+      <div class="mb-5">
+        <h2 class="h3 mb-4" id="support">
           <i class="ri-customer-service-line text-primary me-2"></i>
           Need Help?
         </h2>
@@ -553,7 +550,7 @@ $info: #17a2b8;             // Info messages</code></pre>
                   class="bg-primary bg-opacity-15 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style="width: 70px; height: 70px;"
                 >
-                  <i class="ri-mail-line text-primary fs-3"></i>
+                  <i class="ri-mail-line text-light fs-3"></i>
                 </div>
                 <h5 class="card-title text-primary mb-3">Direct Email Support</h5>
                 <p class="card-text mb-4">
@@ -574,7 +571,7 @@ $info: #17a2b8;             // Info messages</code></pre>
                   class="bg-info bg-opacity-15 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                   style="width: 70px; height: 70px;"
                 >
-                  <i class="ri-question-answer-line text-info fs-3"></i>
+                  <i class="ri-question-answer-line fs-3"></i>
                 </div>
                 <h5 class="card-title text-info mb-3">FAQ & Documentation</h5>
                 <p class="card-text mb-4">

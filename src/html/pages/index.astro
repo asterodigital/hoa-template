@@ -215,11 +215,19 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
                 Timeless, professional design with elegant typography and sophisticated color
                 scheme. Perfect for established communities seeking formal presentation.
               </p>
-              <div class="d-flex gap-2 flex-wrap">
+              <div class="d-flex gap-2 flex-wrap mb-3">
                 <span class="badge bg-primary bg-opacity-25 text-primary">Professional</span>
                 <span class="badge bg-success bg-opacity-25 text-success">Elegant</span>
                 <span class="badge bg-info bg-opacity-25 text-info">Traditional</span>
               </div>
+              <!-- Mobile/Tablet Preview Button -->
+              <a
+                href={getPathPrefix('/theme/1/home')}
+                target="_blank"
+                class="btn btn-outline-primary btn rounded-pill px-4 w-100 d-lg-none"
+              >
+                <i class="ri-external-link-line me-2"></i>Live Preview
+              </a>
             </div>
           </div>
         </div>
@@ -253,11 +261,19 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
                 Contemporary design with video backgrounds and dynamic elements. Ideal for
                 progressive communities embracing modern digital experiences.
               </p>
-              <div class="d-flex gap-2 flex-wrap">
+              <div class="d-flex gap-2 flex-wrap mb-3">
                 <span class="badge bg-primary bg-opacity-25 text-primary">Contemporary</span>
                 <span class="badge bg-success bg-opacity-25 text-success">Dynamic</span>
                 <span class="badge bg-info bg-opacity-25 text-info">Interactive</span>
               </div>
+              <!-- Mobile/Tablet Preview Button -->
+              <a
+                href={getPathPrefix('/theme/2/home')}
+                target="_blank"
+                class="btn btn-outline-success btn rounded-pill px-4 w-100 d-lg-none"
+              >
+                <i class="ri-external-link-line me-2"></i>Live Preview
+              </a>
             </div>
           </div>
         </div>
@@ -291,11 +307,19 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
                 Sophisticated design with bold visuals and streamlined navigation. Perfect for
                 luxury communities requiring premium aesthetics.
               </p>
-              <div class="d-flex gap-2 flex-wrap">
+              <div class="d-flex gap-2 flex-wrap mb-3">
                 <span class="badge bg-primary bg-opacity-25 text-primary">Luxury</span>
                 <span class="badge bg-success bg-opacity-25 text-success">Sophisticated</span>
                 <span class="badge bg-info bg-opacity-25 text-info">Premium</span>
               </div>
+              <!-- Mobile/Tablet Preview Button -->
+              <a
+                href={getPathPrefix('/theme/3/home')}
+                target="_blank"
+                class="btn btn-outline-warning btn rounded-pill px-4 w-100 d-lg-none"
+              >
+                <i class="ri-external-link-line me-2"></i>Live Preview
+              </a>
             </div>
           </div>
         </div>
@@ -726,7 +750,7 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
           <div class="row g-3 mb-4">
             <div class="col-sm-6">
               <div class="d-flex align-items-center gap-3">
-                <div class="bg-white bg-opacity-25 rounded-circle p-2">
+                <div class="btn btn-icon bg-white bg-opacity-25 p-2">
                   <i class="ri-check-line text-warning fs-5"></i>
                 </div>
                 <span class="fw-medium">HOA Communities</span>
@@ -734,7 +758,7 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
             </div>
             <div class="col-sm-6">
               <div class="d-flex align-items-center gap-3">
-                <div class="bg-white bg-opacity-25 rounded-circle p-2">
+                <div class="btn btn-icon bg-white bg-opacity-25 p-2">
                   <i class="ri-check-line text-warning fs-5"></i>
                 </div>
                 <span class="fw-medium">Property Managers</span>
@@ -742,7 +766,7 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
             </div>
             <div class="col-sm-6">
               <div class="d-flex align-items-center gap-3">
-                <div class="bg-white bg-opacity-25 rounded-circle p-2">
+                <div class="btn btn-icon bg-white bg-opacity-25 p-2">
                   <i class="ri-check-line text-warning fs-5"></i>
                 </div>
                 <span class="fw-medium">Web Developers</span>
@@ -750,7 +774,7 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
             </div>
             <div class="col-sm-6">
               <div class="d-flex align-items-center gap-3">
-                <div class="bg-white bg-opacity-25 rounded-circle p-2">
+                <div class="btn btn-icon bg-white bg-opacity-25 p-2">
                   <i class="ri-check-line text-warning fs-5"></i>
                 </div>
                 <span class="fw-medium">Design Agencies</span>
@@ -1227,19 +1251,22 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
       opacity 0.3s ease;
   }
 
-  .theme-card:hover .theme-overlay-primary {
-    background-color: rgba(102, 126, 234, 0.5) !important;
-    opacity: 1 !important;
-  }
+  /* Only apply hover effects on devices that support hover (desktop) */
+  @media (hover: hover) and (pointer: fine) {
+    .theme-card:hover .theme-overlay-primary {
+      background-color: rgba(102, 126, 234, 0.5) !important;
+      opacity: 1 !important;
+    }
 
-  .theme-card:hover .theme-overlay-success {
-    background-color: rgba(25, 135, 84, 0.5) !important;
-    opacity: 1 !important;
-  }
+    .theme-card:hover .theme-overlay-success {
+      background-color: rgba(25, 135, 84, 0.5) !important;
+      opacity: 1 !important;
+    }
 
-  .theme-card:hover .theme-overlay-warning {
-    background-color: rgba(255, 193, 7, 0.5) !important;
-    opacity: 1 !important;
+    .theme-card:hover .theme-overlay-warning {
+      background-color: rgba(255, 193, 7, 0.5) !important;
+      opacity: 1 !important;
+    }
   }
 
   .bg-gradient-1 {
