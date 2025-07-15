@@ -62,8 +62,10 @@ async function verifyDirectories(options = {}) {
   // Ensure options object is properly initialized with defaults
   const opts = {
     verbose: false,
+    silent: false,
     ...options
   }
+  const log = (...args) => !opts.silent && log(...args)
 
   let allExist = true
 
@@ -92,8 +94,10 @@ async function touchReloadFile(options = {}) {
   // Ensure options object is properly initialized with defaults
   const opts = {
     verbose: false,
+    silent: false,
     ...options
   }
+  const log = (...args) => !opts.silent && log(...args)
 
   const reloadFilePath = path.join(projectRoot, 'dist', '.reload-trigger')
   try {
@@ -122,8 +126,10 @@ export async function watchAll(options = {}) {
   // Ensure options object is properly initialized with defaults
   const opts = {
     verbose: false,
+    silent: false,
     ...options
   }
+  const log = (...args) => !opts.silent && log(...args)
 
   const watchers = []
 

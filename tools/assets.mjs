@@ -21,8 +21,10 @@ async function touchReloadFile(options = {}) {
   // Ensure options object is properly initialized with defaults
   const opts = {
     verbose: false,
+    silent: false,
     ...options
   }
+  const log = (...args) => !opts.silent && log(...args)
 
   try {
     // Create multiple reload triggers to ensure detection
@@ -99,8 +101,10 @@ export async function copyAssets(options = {}) {
   const opts = {
     verbose: false,
     triggerReload: true,
+    silent: false,
     ...options
   }
+  const log = (...args) => !opts.silent && log(...args)
 
   try {
     log('Copying assets...', 'info', 'ASSETS')
@@ -131,10 +135,12 @@ export async function copyAssets(options = {}) {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const verbose = process.argv.includes('--verbose')
   const noReload = process.argv.includes('--no-reload')
+  const silent = process.argv.includes('--silent')
 
   copyAssets({
     verbose,
-    triggerReload: !noReload
+    triggerReload: !noReload,
+    silent
   }).catch((error) => {
     log(`Fatal asset copy error: ${error.message}`, 'error', 'ASSETS')
     process.exit(1)

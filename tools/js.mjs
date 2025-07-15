@@ -4,7 +4,7 @@
  */
 
 import { fileURLToPath } from 'url'
-import { runCommand, runCommandQuiet, log } from './utils.mjs'
+import { runCommandQuiet, log } from './utils.mjs'
 import fs from 'fs/promises'
 import path from 'path'
 
@@ -26,8 +26,11 @@ export async function buildJs(options = {}) {
     isDev: false,
     skipMinification: false,
     verbose: false,
+    silent: false,
     ...options
   }
+
+  const log = (...args) => !opts.silent && log(...args)
 
   try {
     log('JS build process started...', 'info', 'JS')

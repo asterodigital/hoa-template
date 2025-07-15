@@ -12,6 +12,7 @@ import { glob } from 'glob'
 import * as sass from 'sass-embedded'
 import { URL } from 'url'
 import { readFileSync } from 'fs'
+import { Listr } from 'listr2'
 
 // Get the absolute path to the project root
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -35,12 +36,11 @@ const banner = `/*!
  * @throws {Error} If compilation fails
  */
 async function compileSass(options = {}) {
-  // Ensure options object is properly initialized with defaults
   const opts = {
-    verbose: false,
-    entryFile: 'src/scss/style.scss',
+    ...{ verbose: false, silent: false, entryFile: 'src/scss/style.scss' },
     ...options
   }
+  const log = (...args) => !opts.silent && log(...args)
 
   log('Compiling SASS...', 'info', 'CSS')
 
@@ -117,7 +117,10 @@ async function compileSass(options = {}) {
  * @throws {Error} If minification fails
  */
 async function minifyCSS(inputPath, options) {
+  const opts = { ...{ verbose: false, silent: false }, ...options }
+  const log = (...args) => !opts.silent && log(...args)
   const fileName = path.basename(inputPath)
+
   log(`Minifying ${fileName}...`, 'info', 'CSS')
 
   try {
@@ -144,7 +147,7 @@ async function minifyCSS(inputPath, options) {
     const outputPath = inputPath.replace('.css', '.min.css')
     await fs.writeFile(outputPath, banner + '\n' + minified)
 
-    if (options && options.verbose) {
+    if (opts.verbose) {
       const originalSize = code.length
       const minifiedSize = minified.length
       const savings = (((originalSize - minifiedSize) / originalSize) * 100).toFixed(2)
@@ -169,6 +172,8 @@ async function minifyCSS(inputPath, options) {
  * @returns {Promise<void>}
  */
 async function minifyAllCSS(options = { verbose: false }) {
+  const opts = { ...{ verbose: false, silent: false }, ...options }
+  const log = (...args) => !opts.silent && log(...args)
   log('Starting CSS minification...', 'info', 'CSS')
 
   try {
@@ -189,13 +194,14 @@ async function minifyAllCSS(options = { verbose: false }) {
       } catch (error) {
         // Log error but continue with other files
         log(`Error minifying ${file}: ${error.message}`, 'error', 'CSS')
+        throw error // Re-throw the error to fail the task
       }
     }
 
     log('CSS minification completed', 'success', 'CSS')
   } catch (error) {
     log(`CSS minification error: ${error.message}`, 'error', 'CSS')
-    // Don't throw as we want to continue with other steps
+    throw error // Re-throw the error
   }
 }
 
@@ -207,6 +213,8 @@ async function minifyAllCSS(options = { verbose: false }) {
  * @returns {Promise<void>}
  */
 async function processWithPostcss(files, options = { verbose: false }) {
+  const opts = { ...{ verbose: false, silent: false }, ...options }
+  const log = (...args) => !opts.silent && log(...args)
   log('Adding vendor prefixes...', 'info', 'CSS')
 
   try {
@@ -250,7 +258,7 @@ async function processWithPostcss(files, options = { verbose: false }) {
     }
 
     for (const file of files) {
-      if (options.verbose) {
+      if (opts.verbose) {
         log(`Adding vendor prefixes to ${path.basename(file)}...`, 'info', 'CSS')
       }
       try {
@@ -277,7 +285,10 @@ async function processWithPostcss(files, options = { verbose: false }) {
  * @returns {Promise<void>}
  */
 async function generateRtlCss(inputPath, options) {
+  const opts = { ...{ verbose: false, silent: false }, ...options }
+  const log = (...args) => !opts.silent && log(...args)
   const fileName = path.basename(inputPath)
+
   log(`Converting ${fileName} to RTL...`, 'info', 'CSS')
 
   try {
@@ -299,7 +310,7 @@ async function generateRtlCss(inputPath, options) {
     const outputPath = inputPath.replace('.css', '.rtl.css')
     await fs.writeFile(outputPath, banner + '\n' + rtlCss)
 
-    if (options && options.verbose) {
+    if (opts.verbose) {
       log(`Generated RTL CSS: ${path.basename(outputPath)}`, 'info', 'CSS')
     }
 
@@ -317,6 +328,8 @@ async function generateRtlCss(inputPath, options) {
  * @returns {Promise<void>}
  */
 async function generateAllRtlCSS(options = { verbose: false }) {
+  const opts = { ...{ verbose: false, silent: false }, ...options }
+  const log = (...args) => !opts.silent && log(...args)
   log('Generating RTL CSS...', 'info', 'CSS')
 
   try {
@@ -337,13 +350,14 @@ async function generateAllRtlCSS(options = { verbose: false }) {
         await generateRtlCss(file, options)
       } catch (error) {
         log(`Error generating RTL for ${file}: ${error.message}`, 'error', 'CSS')
+        throw error // Re-throw the error to fail the task
       }
     }
 
     log('RTL CSS generation completed', 'success', 'CSS')
   } catch (error) {
     log(`RTL CSS generation error: ${error.message}`, 'error', 'CSS')
-    // Don't throw as we want to continue with other steps
+    throw error // Re-throw the error
   }
 }
 
@@ -355,6 +369,8 @@ async function generateAllRtlCSS(options = { verbose: false }) {
  * @returns {Promise<void>}
  */
 async function optimizeCSS(files, options = { verbose: false }) {
+  const opts = { ...{ verbose: false, silent: false }, ...options }
+  const log = (...args) => !opts.silent && log(...args)
   log('Optimizing CSS...', 'info', 'CSS')
 
   try {
@@ -364,7 +380,7 @@ async function optimizeCSS(files, options = { verbose: false }) {
     }
 
     for (const file of files) {
-      if (options.verbose) {
+      if (opts.verbose) {
         log(`Optimizing ${path.basename(file)}...`, 'info', 'CSS')
       }
       try {
@@ -396,6 +412,7 @@ async function optimizeCSS(files, options = { verbose: false }) {
         }
       } catch (error) {
         log(`Error optimizing ${file}: ${error.message}`, 'error', 'CSS')
+        throw error // Re-throw the error to fail the task
       }
     }
 
@@ -414,52 +431,71 @@ async function optimizeCSS(files, options = { verbose: false }) {
  * @param {boolean} [options.verbose=false] - Whether to log verbose output
  * @returns {Promise<void>}
  */
-export async function buildCss(options = {}) {
+export function buildCss(options = {}) {
   // Validate and normalize options
   const opts = validateOptions(
     options,
     {
       isDev: false,
       skipRtl: false,
-      verbose: false
+      verbose: false,
+      silent: false // Keep for standalone runs
     },
     []
   )
 
-  log('Starting CSS production build...', 'info', 'CSS')
-
-  try {
-    // Compile SASS to CSS
-    await compileSass({ verbose: opts.verbose })
-
-    // Find all generated CSS files
-    const cssFiles = (await glob('dist/css/*.css')).filter(
-      (file) => !file.includes('.rtl.') && !file.includes('.min.')
-    )
-
-    // Generate RTL CSS if not skipped
-    if (!opts.skipRtl) {
-      await generateAllRtlCSS({ verbose: opts.verbose })
+  // This function now returns a Listr instance to be used as a sub-task
+  return new Listr(
+    [
+      {
+        title: 'Compiling SASS to CSS',
+        task: () => compileSass({ verbose: opts.verbose, silent: true })
+      },
+      {
+        title: 'Generating RTL CSS',
+        task: async () => {
+          const cssFiles = (await glob('dist/css/*.css')).filter(
+            (file) => !file.includes('.rtl.') && !file.includes('.min.')
+          )
+          if (cssFiles.length > 0) {
+            await generateAllRtlCSS({ verbose: opts.verbose, silent: true })
+          }
+        },
+        enabled: () => !opts.skipRtl
+      },
+      {
+        title: 'Adding Vendor Prefixes',
+        task: async () => {
+          const allCssFiles = (await glob('dist/css/*.css')).filter(
+            (file) => !file.includes('.min.')
+          )
+          if (allCssFiles.length > 0) {
+            await processWithPostcss(allCssFiles, { verbose: opts.verbose, silent: true })
+          }
+        }
+      },
+      {
+        title: 'Optimizing CSS',
+        task: async () => {
+          const allCssFiles = (await glob('dist/css/*.css')).filter(
+            (file) => !file.includes('.min.')
+          )
+          if (allCssFiles.length > 0) {
+            await optimizeCSS(allCssFiles, { verbose: opts.verbose, silent: true })
+          }
+        }
+      },
+      {
+        title: 'Minifying CSS',
+        task: () => minifyAllCSS({ verbose: opts.verbose, silent: true }),
+        enabled: () => !opts.isDev
+      }
+    ],
+    {
+      // The parent Listr will control rendering and error handling
+      exitOnError: true
     }
-
-    // Add vendor prefixes with PostCSS
-    const allCssFiles = (await glob('dist/css/*.css')).filter((file) => !file.includes('.min.'))
-    await processWithPostcss(allCssFiles, { verbose: opts.verbose })
-
-    // Optimize all CSS files before minification
-    await optimizeCSS(allCssFiles, { verbose: opts.verbose })
-
-    // Minify all CSS files in production builds
-    if (!opts.isDev) {
-      await minifyAllCSS({ verbose: opts.verbose })
-    }
-
-    log('CSS build completed', 'success', 'CSS')
-  } catch (error) {
-    log(`CSS build failed: ${error.message}`, 'error', 'CSS')
-    // Propagate the error to the caller
-    throw error
-  }
+  )
 }
 
 // Execute if run directly
@@ -471,15 +507,16 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const skipOptimization = process.argv.includes('--skip-optimization')
   const verbose = process.argv.includes('--verbose')
 
-  buildCss({
+  const tasks = buildCss({
     isDev,
     skipMinification,
     skipPrefixing,
     skipRtl,
     skipOptimization,
     verbose
-  }).catch((error) => {
-    log(`Fatal CSS build error: ${error.message}`, 'error', 'CSS')
+  })
+
+  tasks.run().catch(() => {
     process.exit(1)
   })
 }

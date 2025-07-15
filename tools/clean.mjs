@@ -16,6 +16,7 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
  * @param {Object} [options] - Cleaning options
  * @param {boolean} [options.verbose=false] - Whether to log verbose output
  * @param {boolean} [options.cleanCache=false] - Whether to clean cache directory
+ * @param {boolean} [options.silent=false] - Whether to suppress all output
  * @returns {Promise<void>}
  * @throws {Error} If cleanup fails
  */
@@ -24,8 +25,10 @@ export async function clean(options = {}) {
   const opts = {
     verbose: false,
     cleanCache: false,
+    silent: false,
     ...options
   }
+  const log = (...args) => !opts.silent && log(...args)
 
   const distPath = path.join(projectRoot, 'dist')
   const cachePath = path.join(projectRoot, '.cache')
@@ -66,8 +69,9 @@ export async function clean(options = {}) {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const cleanCache = process.argv.includes('--clean-cache')
   const verbose = process.argv.includes('--verbose')
+  const silent = process.argv.includes('--silent')
 
-  clean({ cleanCache, verbose }).catch((error) => {
+  clean({ cleanCache, verbose, silent }).catch((error) => {
     log(`Fatal cleanup error: ${error.message}`, 'error')
     process.exit(1)
   })

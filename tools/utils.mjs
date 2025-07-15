@@ -5,6 +5,7 @@
 
 import spawn from 'cross-spawn'
 import chalk from 'chalk'
+import ora from 'ora'
 
 /**
  * Log types configuration with icons and colors
@@ -260,21 +261,17 @@ export async function showBanner(projectRoot) {
  * @returns {Function} Stop function
  */
 export function createProgressIndicator(message, interval = 500) {
-  const frames = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
-  let frameIndex = 0
+  const spinner = ora({
+    text: message,
+    spinner: 'dots',
+    color: 'blue'
+  }).start()
 
-  const timer = setInterval(() => {
-    process.stdout.write(`\r${chalk.blue(frames[frameIndex])} ${message}`)
-    frameIndex = (frameIndex + 1) % frames.length
-  }, interval)
-
-  return () => {
-    clearInterval(timer)
-    // More aggressive clearing - clear entire line and move cursor
-    process.stdout.write('\r') // Move to start of line
-    process.stdout.write(' '.repeat(80)) // Clear with more spaces
-    process.stdout.write('\r') // Move back to start
-    process.stdout.clearLine(0) // Clear the entire line
-    process.stdout.cursorTo(0) // Move cursor to column 0
+  return (success = true, newMessage = '') => {
+    if (success) {
+      spinner.succeed(newMessage || message)
+    } else {
+      spinner.fail(newMessage || message)
+    }
   }
 }

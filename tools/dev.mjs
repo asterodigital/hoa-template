@@ -3,389 +3,114 @@
  * @module dev
  */
 
-import { fileURLToPath } from 'url'
-import { log, validateOptions, createProgressIndicator, showBanner } from './utils.mjs'
-import { watchAll } from './watch.mjs'
+import { showBanner, showServerUrls } from './utils.mjs'
+import { cleanDist } from './clean.mjs'
+import { buildAssets } from './assets.mjs'
 import { buildCss } from './css.mjs'
-import { buildJs } from './js.mjs'
-import { copyAssets } from './assets.mjs'
-import { clean } from './clean.mjs'
-import path from 'path'
-import open from 'open'
-import { spawn } from 'child_process'
-import fs from 'fs/promises'
-import chalk from 'chalk'
+import { watchFiles } from './watch.mjs'
+import { Listr } from 'listr2'
+import { execa } from 'execa'
 
-// Get the absolute path to the project root
-const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+async function main() {
+  showBanner()
 
-// Default configuration
-const DEFAULT_CONFIG = {
-  port: 4321, // this port is important for the component preview
-  host: 'localhost', // listen on localhost only
-  openBrowser: true,
-  startPath: '/',
-  cleanBeforeBuild: true
-}
-
-/**
- * Runs initial build of all assets
- * @param {Object} [options] - Build options
- * @param {boolean} [options.verbose=false] - Whether to log verbose output
- * @param {boolean} [options.cleanBeforeBuild=true] - Whether to clean before build
- * @returns {Promise<void>}
- * @throws {Error} If initial build fails
- */
-async function initialBuild(options = {}) {
-  // Validate and normalize options
-  const opts = validateOptions(options, {
-    verbose: false,
-    cleanBeforeBuild: true
-  })
-
-  log('Running initial build of all assets...', 'info')
-  const progress = createProgressIndicator('Building development assets...')
-
-  try {
-    // Clean dist directory if needed
-    if (opts.cleanBeforeBuild !== false) {
-      await clean({ verbose: opts.verbose })
-      log('Cleaned dist directory', 'success', 'BUILD')
-    }
-
-    // Run all build tasks in parallel for better performance
-    const results = await Promise.allSettled([
-      buildCss({
-        isDev: true,
-        skipRtl: false,
-        verbose: opts.verbose
-      }).then(() => log('Initial CSS build completed', 'success', 'CSS')),
-
-      buildJs({
-        isDev: true,
-        verbose: opts.verbose
-      }).then(() => log('Initial JS build completed', 'success', 'JS')),
-
-      copyAssets({
-        verbose: opts.verbose
-      }).then(() => log('Initial assets copy completed', 'success', 'ASSETS'))
-    ])
-
-    progress() // Stop progress indicator
-
-    const failures = results.filter((result) => result.status === 'rejected')
-    if (failures.length > 0) {
-      const errorMessages = failures.map((failure) => failure.reason.message).join('; ')
-      throw new Error(`Initial build failed: ${errorMessages}`)
-    }
-
-    log('Initial build completed successfully', 'success', 'BUILD')
-  } catch (error) {
-    log(`Initial build failed: ${error.message}`, 'error', 'BUILD')
-    if (error.stack && opts.verbose) {
-      log(`Stack trace: ${error.stack}`, 'error', 'BUILD')
-    }
-    throw error
-  }
-}
-
-/**
- * Starts the Astro development server
- * @param {Object} [options] - Server options
- * @param {number} [options.port=4321] - Port to run the server on
- * @param {string} [options.host="0.0.0.0"] - Host to run the server on
- * @param {boolean} [options.openBrowser=true] - Whether to open the browser
- * @param {string} [options.startPath='/dashboard'] - Path to open in the browser
- * @param {boolean} [options.verbose=false] - Whether to log verbose output
- * @returns {Promise<Object>} Server process and cleanup function
- * @throws {Error} If server fails to start
- */
-async function startAstroServer(options = {}) {
-  const port = options.port || DEFAULT_CONFIG.port
-  const host = options.host || DEFAULT_CONFIG.host
-  const openBrowser = options.openBrowser !== false
-  const startPath = options.startPath || DEFAULT_CONFIG.startPath
-
-  log('Starting Astro development server...', 'info', 'ASTRO')
-
-  // Ensure config file exists
-  const configPath = path.join(projectRoot, 'config/astro.config.mjs')
-  try {
-    await fs.access(configPath)
-  } catch {
-    throw new Error(`Astro config file not found: ${configPath}`)
-  }
-
-  return new Promise((resolve, reject) => {
-    const child = spawn(
-      'npx',
-      [
-        'astro',
-        'dev',
-        '--config',
-        'config/astro.config.mjs',
-        '--root',
-        '.',
-        '--port',
-        port.toString(),
-        '--host',
-        host
-      ],
+  const tasks = new Listr(
+    [
       {
-        shell: true,
-        stdio: 'inherit',
-        cwd: projectRoot,
-        env: {
-          ...process.env,
-          ASTRO_TELEMETRY_DISABLED: '1', // Disable telemetry for cleaner logs
-          NODE_ENV: 'development' // Set development environment
+        title: 'Initial Build',
+        task: (ctx, task) =>
+          task.newListr(
+            [
+              {
+                title: 'Clean Dist Directory',
+                task: async () => await cleanDist({ silent: true })
+              },
+              {
+                title: 'Build Assets',
+                task: async () => await buildAssets({ silent: true })
+              },
+              {
+                title: 'Build CSS',
+                task: async () => await buildCss({ isDev: true, silent: true })
+              }
+            ],
+            { concurrent: true }
+          )
+      },
+      {
+        title: 'Starting Astro Dev Server',
+        task: async (ctx, task) => {
+          task.output = 'Launching Astro...'
+          const astroBin = './node_modules/.bin/astro'
+          const astroProcess = execa(astroBin, ['dev', '--host', 'localhost'])
+
+          let serverLogs = ''
+          let resolved = false
+
+          const serverReadyPromise = new Promise((resolve, reject) => {
+            const handleData = (data) => {
+              const line = data.toString()
+              serverLogs += line
+              if (!resolved && line.includes('http://')) {
+                ctx.serverLogs = serverLogs
+                ctx.astroProcess = astroProcess
+                resolved = true
+                resolve()
+              }
+            }
+
+            astroProcess.stdout.on('data', handleData)
+            astroProcess.stderr.on('data', handleData)
+
+            astroProcess.on('exit', (code) => {
+              if (code !== 0 && !resolved) {
+                reject(new Error(`Astro server failed to start.\n\n${serverLogs}`))
+              }
+            })
+
+            astroProcess.on('error', (err) => {
+              if (!resolved) reject(err)
+            })
+          })
+
+          return serverReadyPromise
         }
       }
-    )
-
-    let serverStarted = false
-
-    // Set a timeout to detect if server fails to start
-    const startTimeout = setTimeout(() => {
-      if (!serverStarted) {
-        child.removeAllListeners()
-        child.kill('SIGTERM')
-        reject(new Error('Astro server failed to start within the timeout period'))
+    ],
+    {
+      exitOnError: true,
+      concurrent: false,
+      rendererOptions: {
+        clearOutput: true
       }
-    }, 30000) // 30 second timeout
-
-    child.on('error', (error) => {
-      clearTimeout(startTimeout)
-      child.removeAllListeners()
-      reject(new Error(`Failed to start Astro server: ${error.message}`))
-    })
-
-    // Wait a bit for the server to start, then open the URL
-    setTimeout(async () => {
-      try {
-        serverStarted = true
-        clearTimeout(startTimeout)
-
-        const url = `http://localhost:${port}${startPath}`
-        const urlText = `Astro server ready at ${url}`
-        const separator = '='.repeat(urlText.length + 4)
-
-        console.log()
-        // Using magenta for Astro, consistent with context colors
-        console.log(chalk.magenta(separator))
-        console.log(chalk.magenta.bold(`  ${urlText}  `))
-        console.log(chalk.magenta(separator))
-        console.log()
-
-        if (openBrowser) {
-          await open(url)
-          log(`Browser opened at ${url}`, 'success', 'ASTRO')
-        }
-
-        resolve({
-          process: child,
-          cleanup: () => {
-            return new Promise((resolve) => {
-              child.on('close', () => resolve())
-              child.kill('SIGTERM')
-            })
-          }
-        })
-      } catch (error) {
-        log(`Failed to open browser: ${error.message}`, 'error')
-        // Still resolve as the server is running
-        resolve({
-          process: child,
-          cleanup: () => {
-            return new Promise((resolve) => {
-              child.on('close', () => resolve())
-              child.kill('SIGTERM')
-            })
-          }
-        })
-      }
-    }, 3000) // Wait 3 seconds for server to be ready
-  })
-}
-
-/**
- * Starts the development server and file watchers
- * @param {Object} [options] - Development options
- * @param {number} [options.port=4321] - Port to run the server on
- * @param {string} [options.host="0.0.0.0"] - Host to run the server on
- * @param {boolean} [options.openBrowser=true] - Whether to open the browser
- * @param {string} [options.startPath='/dashboard'] - Path to open in the browser
- * @param {boolean} [options.cleanBeforeBuild=true] - Whether to clean before initial build
- * @param {boolean} [options.verbose=false] - Whether to log verbose output
- * @returns {Promise<Function>} Cleanup function
- * @throws {Error} If development server fails to start
- */
-export async function startDevServer(options = {}) {
-  // Ensure options object is properly initialized with defaults
-  const config = {
-    ...DEFAULT_CONFIG,
-    ...options
-  }
-
-  let watchCleanup = null
-  let serverCleanup = null
+    }
+  )
 
   try {
-    // Show banner
-    await showBanner(projectRoot)
+    const context = await tasks.run()
 
-    log('Starting development environment...', 'info', 'BUILD')
+    showServerUrls(context.serverLogs)
 
-    // Run initial build before starting watchers
-    await initialBuild({
-      verbose: config.verbose,
-      cleanBeforeBuild: config.cleanBeforeBuild
-    })
+    // Now that the task list is cleared, pipe the ongoing server output
+    context.astroProcess.stdout.pipe(process.stdout)
+    context.astroProcess.stderr.pipe(process.stderr)
 
-    // Start file watchers
-    log('Setting up file watchers...', 'info', 'BUILD')
-    watchCleanup = await watchAll({ verbose: config.verbose })
-    log('File watchers initialized successfully', 'success', 'BUILD')
+    // Start watching files for changes
+    watchFiles({ silent: true })
 
-    // Start Astro dev server
-    const server = await startAstroServer({
-      port: config.port,
-      host: config.host,
-      openBrowser: config.openBrowser,
-      startPath: config.startPath,
-      verbose: config.verbose
-    })
-
-    serverCleanup = server.cleanup
-
-    // Handle server process events
-    server.process.on('close', async (code) => {
-      if (code !== 0) {
-        log(`Development server exited with code ${code}`, 'error', 'ASTRO')
-      } else {
-        log('Development server closed', 'info', 'ASTRO')
-      }
-
-      // Clean up watchers when Astro server closes
-      if (watchCleanup) {
-        log('Cleaning up file watchers...', 'info', 'BUILD')
-        try {
-          await watchCleanup()
-          log('File watchers cleaned up', 'success', 'BUILD')
-        } catch (error) {
-          log(`Error cleaning up file watchers: ${error.message}`, 'error', 'BUILD')
-        }
-      }
-    })
-
-    // Return a cleanup function
-    return async () => {
-      log('Shutting down development environment...', 'info', 'BUILD')
-
-      if (serverCleanup) {
-        try {
-          await serverCleanup()
-          log('Development server shut down', 'success', 'ASTRO')
-        } catch (error) {
-          log(`Error shutting down server: ${error.message}`, 'error', 'ASTRO')
-        }
-      }
-
-      if (watchCleanup) {
-        try {
-          await watchCleanup()
-          log('File watchers cleaned up', 'success', 'BUILD')
-        } catch (error) {
-          log(`Error cleaning up file watchers: ${error.message}`, 'error', 'BUILD')
-        }
-      }
-
-      log('Development environment shut down', 'success', 'BUILD')
-    }
-  } catch (error) {
-    log(`Development server error: ${error.message}`, 'error', 'BUILD')
-
-    // Clean up resources on error
-    if (serverCleanup) {
-      try {
-        await serverCleanup()
-      } catch (cleanupError) {
-        log(`Error shutting down server: ${cleanupError.message}`, 'error', 'ASTRO')
-      }
+    // Handle graceful shutdown
+    const cleanup = async () => {
+      console.log('\nShutting down development server...')
+      await context.astroProcess.kill('SIGTERM', { forceKillAfterTimeout: 2000 })
+      process.exit(0)
     }
 
-    if (watchCleanup) {
-      try {
-        await watchCleanup()
-      } catch (cleanupError) {
-        log(`Error cleaning up file watchers: ${cleanupError.message}`, 'error', 'BUILD')
-      }
-    }
-
-    throw error
-  }
-}
-
-// Handle graceful shutdown
-process.on('SIGINT', async () => {
-  log('Shutting down development server...', 'info', 'BUILD')
-  process.exit(0)
-})
-
-process.on('SIGTERM', async () => {
-  log('Shutting down development server...', 'info', 'BUILD')
-  process.exit(0)
-})
-
-// Execute if run directly
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const port = parseInt(
-    process.argv.find((arg) => arg.startsWith('--port='))?.split('=')[1] || DEFAULT_CONFIG.port
-  )
-  const host =
-    process.argv.find((arg) => arg.startsWith('--host='))?.split('=')[1] || DEFAULT_CONFIG.host
-  const noOpen = process.argv.includes('--no-open')
-  const verbose = process.argv.includes('--verbose')
-  const noClean = process.argv.includes('--no-clean')
-  const startPath =
-    process.argv.find((arg) => arg.startsWith('--path='))?.split('=')[1] || DEFAULT_CONFIG.startPath
-
-  const cleanup = startDevServer({
-    port,
-    host,
-    openBrowser: !noOpen,
-    startPath,
-    cleanBeforeBuild: !noClean,
-    verbose
-  }).catch((error) => {
-    log(`Fatal error: ${error.message}`, 'error', 'BUILD')
+    process.on('SIGINT', cleanup)
+    process.on('SIGTERM', cleanup)
+  } catch (e) {
+    // Listr will print the error message.
     process.exit(1)
-  })
-
-  // Handle cleanup on exit - use synchronous approach since 'exit' event cannot handle async
-  let cleanupFunction = null
-
-  const handleExit = () => {
-    if (cleanupFunction && typeof cleanupFunction === 'function') {
-      // Force synchronous cleanup - this is a limitation of the 'exit' event
-      try {
-        cleanupFunction()
-      } catch (error) {
-        console.error('Error during cleanup:', error.message)
-      }
-    }
   }
-
-  process.on('exit', handleExit)
-  process.on('SIGINT', handleExit)
-  process.on('SIGTERM', handleExit)
-
-  // Store the cleanup function when it's available
-  cleanup
-    .then((fn) => {
-      cleanupFunction = fn
-    })
-    .catch(() => {
-      // Ignore cleanup setup errors
-    })
 }
+
+main()
