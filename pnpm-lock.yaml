@@ -36,6 +36,9 @@ importers:
       '@rollup/plugin-terser':
         specifier: ^0.4.4
         version: 0.4.4(rollup@4.44.0)
+      '@types/rtlcss':
+        specifier: ^3.5.4
+        version: 3.5.4
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.35.0
         version: 8.35.0(@typescript-eslint/parser@8.35.0(eslint@9.29.0)(typescript@5.8.3))(eslint@9.29.0)(typescript@5.8.3)
@@ -985,6 +988,9 @@ packages:
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+
+  '@types/rtlcss@3.5.4':
+    resolution: {integrity: sha512-MgGlOoTwu0SjpqBqVr9vwwezysD+ZoM0q6eS3ULAYuoKDYBlJMVz73Du/paSER9AOxv/UepGfcAzeO5otP72aQ==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -5361,6 +5367,10 @@ snapshots:
   '@types/normalize-package-data@2.4.4': {}
 
   '@types/resolve@1.20.2': {}
+
+  '@types/rtlcss@3.5.4':
+    dependencies:
+      postcss: 8.5.6
 
   '@types/unist@3.0.3': {}
 
