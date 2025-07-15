@@ -26,13 +26,13 @@ const pageSeo = {
 <html lang="en" dir={isRtl ? 'rtl' : 'ltr'} data-bs-theme="light">
   <head>
     <Head {...pageSeo} {pageCss} isRtl={isRtl} />
-    <style>
+    <style is:inline>
       body {
         font-family: 'Lexend', sans-serif;
         font-optical-sizing: auto;
       }
     </style>
-    <style>
+    <style is:inline>
       :root,
       [data-bs-theme='light'] {
         --bs-primary: #4764e7;
