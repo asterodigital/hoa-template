@@ -9,13 +9,7 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
 <nav class="navbar navbar-expand-lg navbar-light bg-body shadow-sm sticky-top z-4">
   <div class="container">
     <!-- Brand Logo -->
-    <a
-      class="navbar-brand d-flex align-items-center"
-      href={getPathPrefix('/theme/3/home')}
-      data-aos="fade-right"
-      data-aos-delay="200"
-      data-aos-duration="800"
-    >
+    <a class="navbar-brand d-flex align-items-center" href={getPathPrefix('/theme/3/home')}>
       <Logo />
     </a>
 
@@ -27,9 +21,6 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
       data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar"
       aria-label="Toggle navigation"
-      data-aos="fade-left"
-      data-aos-delay="300"
-      data-aos-duration="800"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -46,12 +37,7 @@ const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
       <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
         <div class="d-flex w-100 align-items-center">
           <!-- Desktop Nav Links -->
-          <ul
-            class="navbar-nav navbar-highlight d-none d-lg-flex ms-auto"
-            data-aos="fade-down"
-            data-aos-delay="400"
-            data-aos-duration="800"
-          >
+          <ul class="navbar-nav navbar-highlight d-none d-lg-flex ms-auto">
             <li class="nav-item">
               <a
                 class={`nav-link${currentPath === '/theme/3/home' ? ' active' : ''}`}
