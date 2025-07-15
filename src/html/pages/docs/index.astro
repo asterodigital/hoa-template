@@ -67,6 +67,41 @@ const pageHeaderProps = {
       </div> -->
 
       <div class="mb-5">
+        <h2 class="h4" id="commands">🛠️ Development & Build Commands</h2>
+        <p>Before running any commands, make sure you have installed dependencies:</p>
+        <pre class="bg-body p-3 rounded"><code>npm install</code></pre>
+        <p>Here are the main commands to use this project:</p>
+        <ul>
+          <li>
+            <strong>Start Development Server (with live reload):</strong>
+            <pre class="bg-body p-3 rounded mb-2"><code>npm run dev</code></pre>
+            <div class="small text-muted ms-2">
+              Runs a local development server with hot reloading.<br />
+              <strong>Default URL:</strong>
+              <code>http://localhost:4321/</code> (opens automatically in your browser)
+            </div>
+          </li>
+          <li class="mt-3">
+            <strong>Build for Production:</strong>
+            <pre class="bg-body p-3 rounded mb-2"><code>npm run build</code></pre>
+            <div class="small text-muted ms-2">
+              Compiles and optimizes your site for production.<br />
+              Output is placed in the <code>dist/</code> folder.
+            </div>
+          </li>
+          <li class="mt-3">
+            <strong>Preview Production Build:</strong>
+            <pre class="bg-body p-3 rounded mb-2"><code>npm run serve</code></pre>
+            <div class="small text-muted ms-2">
+              Serves the built site locally for testing.<br />
+              <strong>Default URL:</strong>
+              <code>http://localhost:3000/</code> (opens <code>/pages/dashboard</code> by default)
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-5">
         <h2 class="h4" id="installation">🚀 Quick Start Installation</h2>
         <p>Follow these steps to get your HOA website up and running:</p>
 
