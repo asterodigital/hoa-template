@@ -4,7 +4,7 @@
  */
 
 import { fileURLToPath } from 'url'
-import { log } from './utils.mjs'
+import { log, validateOptions } from './utils.mjs'
 import { transform } from 'lightningcss'
 import fs from 'fs/promises'
 import path from 'path'
@@ -505,16 +505,15 @@ async function optimizeCSS(files, options = { verbose: false }) {
  * @throws {Error} If build fails
  */
 export async function buildCss(options = {}) {
-  // Ensure options object is properly initialized with defaults
-  const opts = {
+  // Validate and normalize options
+  const opts = validateOptions(options, {
     isDev: false,
     skipMinification: false,
     skipPrefixing: false,
     skipRtl: false,
     skipOptimization: false,
-    verbose: false,
-    ...options
-  }
+    verbose: false
+  })
 
   try {
     log(`Starting CSS ${opts.isDev ? 'development' : 'production'} build...`, 'info', 'CSS')

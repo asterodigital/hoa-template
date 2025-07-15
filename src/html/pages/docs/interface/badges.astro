@@ -330,8 +330,8 @@ function toggleUserRole() {
   };
 
   const config = roleConfig[role];
-  badge.className = \`badge \${config.class}\`;
-  badge.innerHTML = \`<i class="\${config.icon} me-1"></i>\${role}\`;
+  badge.className = 'badge ' + config.class;
+  badge.innerHTML = '<i class="' + config.icon + ' me-1"></i>' + role;
 }
 
 function dismissBadge(badgeId) {

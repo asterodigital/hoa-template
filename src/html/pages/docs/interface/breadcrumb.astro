@@ -332,7 +332,7 @@ function addBreadcrumbLevel() {
   const newItem = document.createElement('li');
   newItem.className = 'breadcrumb-item active';
   newItem.setAttribute('aria-current', 'page');
-  newItem.textContent = \`Dynamic Level \${breadcrumbLevels}\`;
+  newItem.textContent = 'Dynamic Level ' + breadcrumbLevels;
 
   breadcrumb.appendChild(newItem);
 

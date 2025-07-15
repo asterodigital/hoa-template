@@ -72,3 +72,47 @@ export function log(message, type = 'info', context = null) {
 
   console.log(`${timestampStr} ${logType.color(logType.icon)} ${contextStr}${message}`)
 }
+
+/**
+ * Validates and normalizes options object with defaults
+ * @param {Object} options - Input options
+ * @param {Object} defaults - Default values
+ * @param {string[]} [requiredKeys] - Required option keys
+ * @returns {Object} Normalized options
+ * @throws {Error} If required keys are missing
+ */
+export function validateOptions(options = {}, defaults = {}, requiredKeys = []) {
+  // Check for required keys
+  for (const key of requiredKeys) {
+    if (!(key in options) && !(key in defaults)) {
+      throw new Error(`Required option '${key}' is missing`)
+    }
+  }
+
+  // Merge with defaults
+  return {
+    ...defaults,
+    ...options
+  }
+}
+
+/**
+ * Creates a progress indicator for long-running operations
+ * @param {string} message - Progress message
+ * @param {number} [interval=500] - Update interval in ms
+ * @returns {Function} Stop function
+ */
+export function createProgressIndicator(message, interval = 500) {
+  const frames = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
+  let frameIndex = 0
+
+  const timer = setInterval(() => {
+    process.stdout.write(`\r${chalk.blue(frames[frameIndex])} ${message}`)
+    frameIndex = (frameIndex + 1) % frames.length
+  }, interval)
+
+  return () => {
+    clearInterval(timer)
+    process.stdout.write('\r')
+  }
+}

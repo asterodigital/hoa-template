@@ -4,7 +4,7 @@
  */
 
 import { fileURLToPath } from 'url'
-import { log } from './utils.mjs'
+import { log, validateOptions, createProgressIndicator } from './utils.mjs'
 import { clean } from './clean.mjs'
 import { lint } from './lint.mjs'
 import { formatCode } from './prettier.mjs'
@@ -28,15 +28,14 @@ import { buildJs } from './js.mjs'
  * @throws {Error} If build fails
  */
 export async function build(options = {}) {
-  // Ensure options object is properly initialized with defaults
-  const opts = {
+  // Validate and normalize options
+  const opts = validateOptions(options, {
     skipLint: false,
     skipClean: false,
     skipFormat: false,
     verbose: false,
-    production: true,
-    ...options
-  }
+    production: true
+  })
 
   try {
     const buildStartTime = performance.now()
@@ -68,6 +67,7 @@ export async function build(options = {}) {
 
     // Run remaining build steps in parallel for better performance
     log('Running parallel build steps...', 'info')
+    const progress = createProgressIndicator('Building assets...')
 
     const buildTasks = [
       buildCss({
@@ -90,9 +90,15 @@ export async function build(options = {}) {
       }).then(() => log('Assets copied', 'success'))
     ]
 
-    await Promise.all(buildTasks).catch((error) => {
-      throw new Error(`Build process failed during parallel execution: ${error.message}`)
-    })
+    const results = await Promise.allSettled(buildTasks)
+    progress() // Stop progress indicator
+
+    const failures = results.filter((result) => result.status === 'rejected')
+
+    if (failures.length > 0) {
+      const errorMessages = failures.map((failure) => failure.reason.message).join('; ')
+      throw new Error(`Build process failed during parallel execution: ${errorMessages}`)
+    }
 
     const buildEndTime = performance.now()
     const totalTime = ((buildEndTime - buildStartTime) / 1000).toFixed(2)

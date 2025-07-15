@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const span = document.createElement('span');
       span.className = 'char';
       span.textContent = char === ' ' ? '\u00A0' : char; // Use non-breaking space
-      span.style.animationDelay = \`\${index * 0.05}s\`;
+      span.style.animationDelay = (index * 0.05) + 's';
       charRevealElement.appendChild(span);
     });
   }

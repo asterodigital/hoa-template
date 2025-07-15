@@ -863,7 +863,7 @@ function toggleAdvancedMode() {
 
 function syncSelection(button, value) {
   const syncGroup = button.closest('[data-sync-group]').dataset.syncGroup;
-  const allGroups = document.querySelectorAll(\`[data-sync-group="\${syncGroup}"]\`);
+  const allGroups = document.querySelectorAll('[data-sync-group="' + syncGroup + '"]');
 
   allGroups.forEach(group => {
     const buttons = group.querySelectorAll('button');

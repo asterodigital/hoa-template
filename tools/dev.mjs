@@ -4,7 +4,7 @@
  */
 
 import { fileURLToPath } from 'url'
-import { log } from './utils.mjs'
+import { log, validateOptions, createProgressIndicator } from './utils.mjs'
 import { watchAll } from './watch.mjs'
 import { buildCss } from './css.mjs'
 import { buildJs } from './js.mjs'
@@ -36,14 +36,14 @@ const DEFAULT_CONFIG = {
  * @throws {Error} If initial build fails
  */
 async function initialBuild(options = {}) {
-  // Ensure options object is properly initialized with defaults
-  const opts = {
+  // Validate and normalize options
+  const opts = validateOptions(options, {
     verbose: false,
-    cleanBeforeBuild: true,
-    ...options
-  }
+    cleanBeforeBuild: true
+  })
 
   log('Running initial build of all assets...', 'info')
+  const progress = createProgressIndicator('Building development assets...')
 
   try {
     // Clean dist directory if needed
@@ -53,7 +53,7 @@ async function initialBuild(options = {}) {
     }
 
     // Run all build tasks in parallel for better performance
-    await Promise.all([
+    const results = await Promise.allSettled([
       buildCss({
         isDev: true,
         skipRtl: false,
@@ -69,6 +69,14 @@ async function initialBuild(options = {}) {
         verbose: opts.verbose
       }).then(() => log('Initial assets copy completed', 'success'))
     ])
+
+    progress() // Stop progress indicator
+
+    const failures = results.filter((result) => result.status === 'rejected')
+    if (failures.length > 0) {
+      const errorMessages = failures.map((failure) => failure.reason.message).join('; ')
+      throw new Error(`Initial build failed: ${errorMessages}`)
+    }
 
     log('Initial build completed successfully', 'success')
   } catch (error) {
@@ -139,12 +147,15 @@ async function startAstroServer(options = {}) {
     // Set a timeout to detect if server fails to start
     const startTimeout = setTimeout(() => {
       if (!serverStarted) {
+        child.removeAllListeners()
+        child.kill('SIGTERM')
         reject(new Error('Astro server failed to start within the timeout period'))
       }
     }, 30000) // 30 second timeout
 
     child.on('error', (error) => {
       clearTimeout(startTimeout)
+      child.removeAllListeners()
       reject(new Error(`Failed to start Astro server: ${error.message}`))
     })
 

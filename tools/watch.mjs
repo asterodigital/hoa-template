@@ -181,10 +181,12 @@ export async function watchAll(options = {}) {
         // Clear any existing debounce timer
         if (debounceTimer) {
           clearTimeout(debounceTimer)
+          debounceTimer = null
         }
 
         // Set a new debounce timer
         debounceTimer = setTimeout(async () => {
+          debounceTimer = null
           lastFilePath = filePath
 
           if (isProcessing) {
