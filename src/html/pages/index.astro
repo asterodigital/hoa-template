@@ -6,43 +6,91 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
 <FrontLayout
   currentPath="home"
   title="HOA Website Templates"
-  description="Professional, responsive HOA website templates for homeowner associations. 3 unique designs with admin panels, amenities management, and resident portals."
+  description="Professional, responsive HOA website templates for homeowner associations. 3 unique designs with 25+ HTML pages, modern features, and clean code."
 >
   <!-- Hero Section -->
   <section
     class="position-relative text-center py-5"
-    style={`background-image: url('${getAssetPrefix('/assets/img/theme-images/hero-2.jpg')}'); background-size: cover; background-position: center; height: 70vh; display: flex; align-items: center;`}
+    style={`background-image: url('${getAssetPrefix('/assets/img/theme-images/hero-2.jpg')}'); background-size: cover; background-position: center; min-height: 80vh; display: flex; align-items: center;`}
   >
     <!-- Overlay -->
     <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
 
-    <div class="container">
+    <div class="container position-relative">
       <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h1 class="display-4 fw-bold text-white mb-3" data-aos="fade-up" data-aos-duration="1600">
-            Premium HOA Website Templates
-          </h1>
-          <p
-            class="lead mb-4"
-            style="color: rgba(255, 255, 255, 0.9);"
+        <div class="col-lg-10">
+          <div class="mb-4" data-aos="fade-up" data-aos-duration="1000">
+            <span class="badge bg-light text-dark px-3 py-2 rounded-pill fs-6 mb-3">
+              <i class="ri-star-line me-2"></i>Premium HOA Templates
+            </span>
+          </div>
+          <h1
+            class="display-3 fw-bold text-white mb-4"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="1600"
           >
-            Professional, responsive templates designed specifically for Homeowner Associations. Get
-            your community online with beautiful designs and powerful features.
-          </p>
-          <div
-            class="d-flex justify-content-center gap-3 flex-wrap"
+            Professional HOA Website Templates
+          </h1>
+          <p
+            class="lead mb-5 fs-4"
+            style="color: rgba(255, 255, 255, 0.9);"
             data-aos="fade-up"
             data-aos-delay="400"
             data-aos-duration="1600"
           >
-            <a href="#" class="btn btn-light btn-lg rounded-pill px-4">
+            Beautiful, responsive templates designed specifically for homeowner associations. Get 3
+            unique demo themes with modern designs and clean, customizable code.
+          </p>
+
+          <!-- Feature badges -->
+          <div
+            class="row g-3 mb-5 justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-duration="1600"
+          >
+            <div class="col-6 col-md-3">
+              <div class="bg-white bg-opacity-15 rounded-3 p-3">
+                <i class="ri-layout-3-line fs-2 mb-2 text-warning"></i>
+                <div class="fw-bold">3 Themes</div>
+                <small class="opacity-75">Unique Designs</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="bg-white bg-opacity-15 rounded-3 p-3">
+                <i class="ri-pages-line fs-2 mb-2 text-warning"></i>
+                <div class="fw-bold">25+ Pages</div>
+                <small class="opacity-75">Complete Package</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="bg-white bg-opacity-15 rounded-3 p-3">
+                <i class="ri-code-line fs-2 mb-2 text-warning"></i>
+                <div class="fw-bold">Clean Code</div>
+                <small class="opacity-75">Well Organized</small>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="bg-white bg-opacity-15 rounded-3 p-3">
+                <i class="ri-customer-service-line fs-2 mb-2 text-warning"></i>
+                <div class="fw-bold">6 Months</div>
+                <small class="opacity-75">Premium Support</small>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="d-flex justify-content-center gap-3 flex-wrap"
+            data-aos="fade-up"
+            data-aos-delay="800"
+            data-aos-duration="1600"
+          >
+            <a href="#" class="btn btn-warning btn-lg rounded-pill px-5 py-3 fw-bold">
               <i class="ri-download-line me-2"></i>Purchase Now - $49
             </a>
-            <a href="#themes" class="btn btn-outline-light btn-lg rounded-pill px-4">
-              <i class="ri-eye-line me-2"></i>View Demos
+            <a href="#themes" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3">
+              <i class="ri-eye-line me-2"></i>View Live Demos
             </a>
           </div>
         </div>
@@ -51,35 +99,55 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
   </section>
 
   <!-- Quick Stats -->
-  <section class="py-4 bg-light">
+  <section class="py-5 bg-light border-bottom">
     <div class="container">
       <div class="row text-center g-4">
         <div class="col-6 col-md-3">
           <div class="d-flex flex-column align-items-center">
-            <i class="ri-layout-3-line text-primary fs-1 mb-2"></i>
-            <h5 class="fw-bold mb-1">3</h5>
-            <small class="text-muted">Unique Themes</small>
+            <div
+              class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3"
+              style="width: 70px; height: 70px;"
+            >
+              <i class="ri-layout-3-line text-primary fs-1"></i>
+            </div>
+            <h4 class="fw-bold mb-1 text-primary">3</h4>
+            <p class="text-muted mb-0">Unique Themes</p>
           </div>
         </div>
         <div class="col-6 col-md-3">
           <div class="d-flex flex-column align-items-center">
-            <i class="ri-pages-line text-primary fs-1 mb-2"></i>
-            <h5 class="fw-bold mb-1">25+</h5>
-            <small class="text-muted">HTML Pages</small>
+            <div
+              class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3"
+              style="width: 70px; height: 70px;"
+            >
+              <i class="ri-pages-line text-success fs-1"></i>
+            </div>
+            <h4 class="fw-bold mb-1 text-success">25+</h4>
+            <p class="text-muted mb-0">HTML Pages</p>
           </div>
         </div>
         <div class="col-6 col-md-3">
           <div class="d-flex flex-column align-items-center">
-            <i class="ri-smartphone-line text-primary fs-1 mb-2"></i>
-            <h5 class="fw-bold mb-1">100%</h5>
-            <small class="text-muted">Responsive</small>
+            <div
+              class="bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3"
+              style="width: 70px; height: 70px;"
+            >
+              <i class="ri-smartphone-line text-info fs-1"></i>
+            </div>
+            <h4 class="fw-bold mb-1 text-info">100%</h4>
+            <p class="text-muted mb-0">Responsive</p>
           </div>
         </div>
         <div class="col-6 col-md-3">
           <div class="d-flex flex-column align-items-center">
-            <i class="ri-bootstrap-line text-primary fs-1 mb-2"></i>
-            <h5 class="fw-bold mb-1">Bootstrap 5</h5>
-            <small class="text-muted">Framework</small>
+            <div
+              class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mb-3"
+              style="width: 70px; height: 70px;"
+            >
+              <i class="ri-bootstrap-line text-warning fs-1"></i>
+            </div>
+            <h4 class="fw-bold mb-1 text-warning">Bootstrap 5</h4>
+            <p class="text-muted mb-0">Framework</p>
           </div>
         </div>
       </div>
@@ -91,130 +159,142 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center mb-5">
-          <h2 class="display-5 fw-bold mb-3" data-aos="fade-up" data-aos-duration="1400">
-            Demos for All HOA Communities
-          </h2>
-          <p
-            class="lead text-muted"
+          <span
+            class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 rounded-pill mb-3"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <i class="ri-palette-line me-2"></i>Theme Collection
+          </span>
+          <h2
+            class="display-4 fw-bold mb-4"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="1400"
           >
-            Each theme comes with unique styling and layouts while maintaining the same powerful
-            features and functionality.
+            Three Stunning Designs
+          </h2>
+          <p
+            class="lead text-muted"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1400"
+          >
+            Each theme provides the same comprehensive page structure with unique visual styling,
+            giving you the perfect foundation for any HOA community website.
           </p>
         </div>
       </div>
       <div class="row g-4">
         <!-- Theme 1 -->
-        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1400">
-          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden p-0">
+        <div class="col-lg-4" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1400">
+          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden theme-card">
             <div class="position-relative">
               <img
                 src={getAssetPrefix('/assets/img/thumbnails/theme-1.jpg')}
                 class="card-img-top"
                 alt="Theme 1 Preview"
-                style="height: 240px; object-fit: cover;"
+                style="height: 280px; object-fit: cover;"
               />
               <div
-                class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex align-items-center justify-content-center opacity-0 transition-opacity"
-                style="transition: opacity 0.3s ease;"
+                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center theme-overlay theme-overlay-primary"
+                style="background-color: rgba(102, 126, 234, 0); opacity: 0;"
               >
                 <a
                   href={getPathPrefix('/theme/1/home')}
                   target="_blank"
-                  class="btn btn-light btn-lg rounded-pill"
+                  class="btn btn-dark btn-lg rounded-pill px-4"
                 >
                   <i class="ri-external-link-line me-2"></i>Live Preview
                 </a>
               </div>
             </div>
-            <div class="card-body border-top p-4">
-              <h4 class="card-title fw-bold">Demo 1 - Classic</h4>
-              <p class="card-text text-muted">
-                Clean, timeless design with elegant typography and sophisticated color scheme.
-                Perfect for established communities.
+            <div class="card-body p-4">
+              <h4 class="card-title fw-bold mb-3">Demo 1: Classic</h4>
+              <p class="card-text text-muted mb-4">
+                Timeless, professional design with elegant typography and sophisticated color
+                scheme. Perfect for established communities seeking formal presentation.
               </p>
               <div class="d-flex gap-2 flex-wrap">
-                <span class="badge bg-primary-subtle text-primary">Hero Banner</span>
-                <span class="badge bg-success-subtle text-success">Animations</span>
-                <span class="badge bg-info-subtle text-info">Typography</span>
+                <span class="badge bg-primary bg-opacity-25 text-primary">Professional</span>
+                <span class="badge bg-success bg-opacity-25 text-success">Elegant</span>
+                <span class="badge bg-info bg-opacity-25 text-info">Traditional</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Theme 2 -->
-        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1400">
-          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden p-0">
+        <div class="col-lg-4" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1400">
+          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden theme-card">
             <div class="position-relative">
               <img
                 src={getAssetPrefix('/assets/img/thumbnails/theme-2.jpg')}
                 class="card-img-top"
                 alt="Theme 2 Preview"
-                style="height: 240px; object-fit: cover;"
+                style="height: 280px; object-fit: cover;"
               />
               <div
-                class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex align-items-center justify-content-center opacity-0"
-                style="transition: opacity 0.3s ease;"
+                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center theme-overlay theme-overlay-success"
+                style="background-color: rgba(25, 135, 84, 0); opacity: 0;"
               >
                 <a
                   href={getPathPrefix('/theme/2/home')}
                   target="_blank"
-                  class="btn btn-light btn-lg rounded-pill"
+                  class="btn btn-dark btn-lg rounded-pill px-4"
                 >
                   <i class="ri-external-link-line me-2"></i>Live Preview
                 </a>
               </div>
             </div>
-            <div class="card-body border-top p-4">
-              <h4 class="card-title fw-bold">Demo 2 - Modern</h4>
-              <p class="card-text text-muted">
-                Contemporary design with video backgrounds and dynamic elements. Great for
-                progressive communities.
+            <div class="card-body p-4">
+              <h4 class="card-title fw-bold mb-3">Demo 2: Modern</h4>
+              <p class="card-text text-muted mb-4">
+                Contemporary design with video backgrounds and dynamic elements. Ideal for
+                progressive communities embracing modern digital experiences.
               </p>
               <div class="d-flex gap-2 flex-wrap">
-                <span class="badge bg-primary-subtle text-primary">Video Hero</span>
-                <span class="badge bg-success-subtle text-success">Modern UI</span>
-                <span class="badge bg-info-subtle text-info">Minimal</span>
+                <span class="badge bg-primary bg-opacity-25 text-primary">Contemporary</span>
+                <span class="badge bg-success bg-opacity-25 text-success">Dynamic</span>
+                <span class="badge bg-info bg-opacity-25 text-info">Interactive</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Theme 3 -->
-        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1400">
-          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden p-0">
+        <div class="col-lg-4" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="1400">
+          <div class="card border-0 shadow-lg h-100 position-relative overflow-hidden theme-card">
             <div class="position-relative">
               <img
                 src={getAssetPrefix('/assets/img/thumbnails/theme-3.jpg')}
                 class="card-img-top"
                 alt="Theme 3 Preview"
-                style="height: 240px; object-fit: cover;"
+                style="height: 280px; object-fit: cover;"
               />
               <div
-                class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex align-items-center justify-content-center opacity-0 transition-opacity"
-                style="transition: opacity 0.3s ease;"
+                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center theme-overlay theme-overlay-warning"
+                style="background-color: rgba(255, 193, 7, 0); opacity: 0;"
               >
                 <a
                   href={getPathPrefix('/theme/3/home')}
                   target="_blank"
-                  class="btn btn-light btn-lg rounded-pill"
+                  class="btn btn-dark btn-lg rounded-pill px-4"
                 >
                   <i class="ri-external-link-line me-2"></i>Live Preview
                 </a>
               </div>
             </div>
-            <div class="card-body border-top p-4">
-              <h4 class="card-title fw-bold">Demo 3 - Premium</h4>
-              <p class="card-text text-muted">
-                Sleek design with bold visuals and streamlined navigation. Perfect for luxury
-                communities.
+            <div class="card-body p-4">
+              <h4 class="card-title fw-bold mb-3">Demo 3: Premium</h4>
+              <p class="card-text text-muted mb-4">
+                Sophisticated design with bold visuals and streamlined navigation. Perfect for
+                luxury communities requiring premium aesthetics.
               </p>
               <div class="d-flex gap-2 flex-wrap">
-                <span class="badge bg-primary-subtle text-primary">Premium UI</span>
-                <span class="badge bg-success-subtle text-success">Gallery</span>
-                <span class="badge bg-info-subtle text-info">Luxury</span>
+                <span class="badge bg-primary bg-opacity-25 text-primary">Luxury</span>
+                <span class="badge bg-success bg-opacity-25 text-success">Sophisticated</span>
+                <span class="badge bg-info bg-opacity-25 text-info">Premium</span>
               </div>
             </div>
           </div>
@@ -228,83 +308,51 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center mb-5">
-          <h2 class="display-5 fw-bold mb-3" data-aos="fade-up" data-aos-duration="1400">
-            Powerful Features
-          </h2>
-          <p
-            class="lead text-muted"
+          <span
+            class="badge bg-success bg-opacity-25 text-success px-3 py-2 rounded-pill mb-3"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <i class="ri-star-line me-2"></i>Template Features
+          </span>
+          <h2
+            class="display-4 fw-bold mb-4"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="1400"
           >
-            Everything your HOA needs to create a professional online presence and manage community
-            operations effectively.
+            Everything You Need
+          </h2>
+          <p
+            class="lead text-muted"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1400"
+          >
+            Built with modern web technologies and best practices to create professional HOA
+            websites that look great and perform perfectly.
           </p>
         </div>
       </div>
       <div class="row g-4">
-        <!-- Color Styling -->
-        <div
-          class="col-md-6 col-lg-4"
-          data-aos="flip-up"
-          data-aos-delay="100"
-          data-aos-duration="1200"
-        >
-          <div class="text-center">
-            <div
-              class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-              style="width: 80px; height: 80px;"
-            >
-              <i class="ri-palette-line text-white fs-1"></i>
-            </div>
-            <h4 class="fw-bold">Color Styling</h4>
-            <p class="text-muted">
-              Easily update your theme's color scheme from a single location. Changes reflect
-              instantly.
-            </p>
-          </div>
-        </div>
-
-        <!-- User-Friendly -->
-        <div
-          class="col-md-6 col-lg-4"
-          data-aos="flip-up"
-          data-aos-delay="200"
-          data-aos-duration="1200"
-        >
-          <div class="text-center">
-            <div
-              class="bg-info rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-              style="width: 80px; height: 80px;"
-            >
-              <i class="ri-user-line text-white fs-1"></i>
-            </div>
-            <h4 class="fw-bold">User-Friendly</h4>
-            <p class="text-muted">
-              Built for simplicity and ease of use. The templates are designed to be intuitive to
-              work with.
-            </p>
-          </div>
-        </div>
-
         <!-- Responsive Design -->
         <div
           class="col-md-6 col-lg-4"
-          data-aos="flip-up"
-          data-aos-delay="300"
+          data-aos="fade-up"
+          data-aos-delay="100"
           data-aos-duration="1200"
         >
-          <div class="text-center">
+          <div class="card border-0 shadow-sm h-100 text-center p-4">
             <div
-              class="bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              class="bg-gradient-1 rounded-circle d-inline-flex align-items-center justify-content-center mb-4 mx-auto"
               style="width: 80px; height: 80px;"
             >
-              <i class="ri-smartphone-line text-white fs-1"></i>
+              <i class="ri-devices-line text-white fs-1"></i>
             </div>
-            <h4 class="fw-bold">Fully Responsive</h4>
-            <p class="text-muted">
-              Perfect display on all devices - desktop, tablet, and mobile with Bootstrap 5
-              framework.
+            <h4 class="fw-bold mb-3">Fully Responsive</h4>
+            <p class="text-muted mb-0">
+              Perfect display on all devices - desktop, tablet, and mobile. Built with Bootstrap 5
+              for guaranteed compatibility.
             </p>
           </div>
         </div>
@@ -312,20 +360,21 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
         <!-- Clean Code -->
         <div
           class="col-md-6 col-lg-4"
-          data-aos="flip-up"
-          data-aos-delay="400"
+          data-aos="fade-up"
+          data-aos-delay="200"
           data-aos-duration="1200"
         >
-          <div class="text-center">
+          <div class="card border-0 shadow-sm h-100 text-center p-4">
             <div
-              class="bg-secondary rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              class="bg-gradient-2 rounded-circle d-inline-flex align-items-center justify-content-center mb-4 mx-auto"
               style="width: 80px; height: 80px;"
             >
               <i class="ri-code-s-slash-line text-white fs-1"></i>
             </div>
-            <h4 class="fw-bold">Clean Code</h4>
-            <p class="text-muted">
-              Clean, organized, and well-structured code. Easy to navigate, extend, and maintain.
+            <h4 class="fw-bold mb-3">Clean, Organized Code</h4>
+            <p class="text-muted mb-0">
+              Well-structured, commented code that's easy to navigate, extend, and maintain. Perfect
+              for developers of all skill levels.
             </p>
           </div>
         </div>
@@ -333,20 +382,21 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
         <!-- Easy Customization -->
         <div
           class="col-md-6 col-lg-4"
-          data-aos="flip-up"
-          data-aos-delay="500"
+          data-aos="fade-up"
+          data-aos-delay="300"
           data-aos-duration="1200"
         >
-          <div class="text-center">
+          <div class="card border-0 shadow-sm h-100 text-center p-4">
             <div
-              class="bg-warning rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              class="bg-gradient-3 rounded-circle d-inline-flex align-items-center justify-content-center mb-4 mx-auto"
               style="width: 80px; height: 80px;"
             >
-              <i class="ri-hammer-line text-white fs-1"></i>
+              <i class="ri-palette-line text-white fs-1"></i>
             </div>
-            <h4 class="fw-bold">Easy Customization</h4>
-            <p class="text-muted">
-              SCSS variables, utility classes, and modular components for easy theme customization.
+            <h4 class="fw-bold mb-3">Easy Customization</h4>
+            <p class="text-muted mb-0">
+              SCSS variables, utility classes, and modular components make theme customization
+              straightforward and efficient.
             </p>
           </div>
         </div>
@@ -354,21 +404,65 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
         <!-- Modern UI Components -->
         <div
           class="col-md-6 col-lg-4"
-          data-aos="flip-up"
-          data-aos-delay="600"
+          data-aos="fade-up"
+          data-aos-delay="400"
           data-aos-duration="1200"
         >
-          <div class="text-center">
+          <div class="card border-0 shadow-sm h-100 text-center p-4">
             <div
-              class="bg-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              class="bg-gradient-4 rounded-circle d-inline-flex align-items-center justify-content-center mb-4 mx-auto"
               style="width: 80px; height: 80px;"
             >
               <i class="ri-stack-line text-white fs-1"></i>
             </div>
-            <h4 class="fw-bold">UI Components</h4>
-            <p class="text-muted">
-              Rich collection of pre-built components including cards, modals, forms, and data
-              tables.
+            <h4 class="fw-bold mb-3">Rich UI Components</h4>
+            <p class="text-muted mb-0">
+              Extensive collection of pre-built components including navigation, forms, cards, and
+              interactive elements.
+            </p>
+          </div>
+        </div>
+
+        <!-- SEO Optimized -->
+        <div
+          class="col-md-6 col-lg-4"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-duration="1200"
+        >
+          <div class="card border-0 shadow-sm h-100 text-center p-4">
+            <div
+              class="bg-gradient-5 rounded-circle d-inline-flex align-items-center justify-content-center mb-4 mx-auto"
+              style="width: 80px; height: 80px;"
+            >
+              <i class="ri-search-line text-white fs-1"></i>
+            </div>
+            <h4 class="fw-bold mb-3">SEO Optimized</h4>
+            <p class="text-muted mb-0">
+              Built with SEO best practices including semantic HTML, meta tags, and structured data
+              for better search rankings.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cross Browser Compatible -->
+        <div
+          class="col-md-6 col-lg-4"
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="1200"
+        >
+          <div class="card border-0 shadow-sm h-100 text-center p-4">
+            <div
+              class="bg-gradient-6 rounded-circle d-inline-flex align-items-center justify-content-center mb-4 mx-auto"
+              style="width: 80px; height: 80px;"
+            >
+              <i class="ri-window-line text-white fs-1"></i>
+            </div>
+            <h4 class="fw-bold mb-3">Cross Browser Compatible</h4>
+            <p class="text-muted mb-0">
+              Tested and optimized for all modern browsers including Chrome, Firefox, Safari, and
+              Edge.
             </p>
           </div>
         </div>
@@ -376,21 +470,33 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
     </div>
   </section>
 
-  <!-- Theme Features Section -->
-  <section class="py-5 bg-light">
+  <!-- What's Included Section -->
+  <section class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center mb-5">
-          <h2 class="display-5 fw-bold mb-3" data-aos="fade-up" data-aos-duration="1400">
-            Theme Features
-          </h2>
-          <p
-            class="lead text-muted"
+          <span
+            class="badge bg-info bg-opacity-25 text-info px-3 py-2 rounded-pill mb-3"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <i class="ri-gift-line me-2"></i>Package Contents
+          </span>
+          <h2
+            class="display-4 fw-bold mb-4"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="1400"
           >
-            Comprehensive backend functionality for managing your HOA community effectively.
+            What's Included
+          </h2>
+          <p
+            class="lead text-muted"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1400"
+          >
+            Complete package with everything you need to build a professional HOA website.
           </p>
         </div>
       </div>
@@ -401,15 +507,18 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
           data-aos-delay="100"
           data-aos-duration="1600"
         >
-          <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body p-4">
-              <i class="ri-user-settings-line text-primary fs-1 mb-3"></i>
-              <h5 class="fw-bold">Resident Management</h5>
-              <p class="text-muted mb-0">
-                Add, edit, and manage resident profiles with contact information and property
-                details.
-              </p>
+          <div class="card border-0 shadow-sm text-center h-100 p-4">
+            <div
+              class="bg-primary bg-opacity-10 rounded-3 d-inline-flex align-items-center justify-content-center mb-4 mx-auto"
+              style="width: 80px; height: 80px;"
+            >
+              <i class="ri-layout-3-line text-primary fs-1"></i>
             </div>
+            <h5 class="fw-bold mb-3">3 Complete Themes</h5>
+            <p class="text-muted mb-0">
+              Classic, Modern, and Premium designs with unique visual styling and complete page
+              sets.
+            </p>
           </div>
         </div>
         <div
@@ -418,15 +527,18 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
           data-aos-delay="200"
           data-aos-duration="1600"
         >
-          <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body p-4">
-              <i class="ri-calendar-check-line text-primary fs-1 mb-3"></i>
-              <h5 class="fw-bold">Amenity Booking</h5>
-              <p class="text-muted mb-0">
-                Complete reservation system for pools, courts, clubhouse, and other community
-                amenities.
-              </p>
+          <div class="card border-0 shadow-sm text-center h-100 p-4">
+            <div
+              class="bg-success bg-opacity-10 rounded-3 d-inline-flex align-items-center justify-content-center mb-4 mx-auto"
+              style="width: 80px; height: 80px;"
+            >
+              <i class="ri-pages-line text-success fs-1"></i>
             </div>
+            <h5 class="fw-bold mb-3">25+ HTML Pages</h5>
+            <p class="text-muted mb-0">
+              Complete set of pages including home, about, services, contact, blog, and more for
+              each theme.
+            </p>
           </div>
         </div>
         <div
@@ -435,15 +547,18 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
           data-aos-delay="300"
           data-aos-duration="1600"
         >
-          <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body p-4">
-              <i class="ri-megaphone-line text-primary fs-1 mb-3"></i>
-              <h5 class="fw-bold">Announcements</h5>
-              <p class="text-muted mb-0">
-                Create and manage community announcements with priority levels and scheduling
-                options.
-              </p>
+          <div class="card border-0 shadow-sm text-center h-100 p-4">
+            <div
+              class="bg-info bg-opacity-10 rounded-3 d-inline-flex align-items-center justify-content-center mb-4 mx-auto"
+              style="width: 80px; height: 80px;"
+            >
+              <i class="ri-file-code-line text-info fs-1"></i>
             </div>
+            <h5 class="fw-bold mb-3">Source Files</h5>
+            <p class="text-muted mb-0">
+              HTML, CSS/SCSS, JavaScript files, and all assets including images, fonts, and
+              documentation.
+            </p>
           </div>
         </div>
         <div
@@ -452,80 +567,18 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
           data-aos-delay="400"
           data-aos-duration="1600"
         >
-          <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body p-4">
-              <i class="ri-file-chart-line text-primary fs-1 mb-3"></i>
-              <h5 class="fw-bold">Financial Reports</h5>
-              <p class="text-muted mb-0">
-                Track HOA dues, expenses, and generate financial reports for board meetings.
-              </p>
+          <div class="card border-0 shadow-sm text-center h-100 p-4">
+            <div
+              class="bg-warning bg-opacity-10 rounded-3 d-inline-flex align-items-center justify-content-center mb-4 mx-auto"
+              style="width: 80px; height: 80px;"
+            >
+              <i class="ri-customer-service-line text-warning fs-1"></i>
             </div>
-          </div>
-        </div>
-        <div
-          class="col-md-6 col-lg-3"
-          data-aos="fade-up"
-          data-aos-delay="500"
-          data-aos-duration="1600"
-        >
-          <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body p-4">
-              <i class="ri-shield-user-line text-primary fs-1 mb-3"></i>
-              <h5 class="fw-bold">Role Permissions</h5>
-              <p class="text-muted mb-0">
-                Granular permission system to control what different user types can access and
-                modify.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-md-6 col-lg-3"
-          data-aos="fade-up"
-          data-aos-delay="600"
-          data-aos-duration="1600"
-        >
-          <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body p-4">
-              <i class="ri-table-line text-primary fs-1 mb-3"></i>
-              <h5 class="fw-bold">Data Tables</h5>
-              <p class="text-muted mb-0">
-                Advanced data tables with sorting, filtering, and pagination for managing large
-                datasets.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-md-6 col-lg-3"
-          data-aos="fade-up"
-          data-aos-delay="700"
-          data-aos-duration="1600"
-        >
-          <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body p-4">
-              <i class="ri-mail-send-line text-primary fs-1 mb-3"></i>
-              <h5 class="fw-bold">Email System</h5>
-              <p class="text-muted mb-0">
-                Built-in email templates and notification system for community communications.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-md-6 col-lg-3"
-          data-aos="fade-up"
-          data-aos-delay="800"
-          data-aos-duration="1600"
-        >
-          <div class="card border-0 shadow-sm text-center h-100">
-            <div class="card-body p-4">
-              <i class="ri-settings-3-line text-primary fs-1 mb-3"></i>
-              <h5 class="fw-bold">System Settings</h5>
-              <p class="text-muted mb-0">
-                Configure site settings, themes, and customize the platform to match your community.
-              </p>
-            </div>
+            <h5 class="fw-bold mb-3">6 Months Support</h5>
+            <p class="text-muted mb-0">
+              Premium email support for setup, customization, and technical questions with quick
+              response times.
+            </p>
           </div>
         </div>
       </div>
@@ -533,97 +586,120 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
   </section>
 
   <!-- Technical Specifications -->
-  <section class="py-5">
+  <section class="py-5 bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center mb-5">
-          <h2 class="display-5 fw-bold mb-3" data-aos="fade-up" data-aos-duration="1400">
-            Technical Specifications
-          </h2>
-          <p
-            class="lead text-muted"
+          <span
+            class="badge bg-warning bg-opacity-25 text-warning px-3 py-2 rounded-pill mb-3"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <i class="ri-code-line me-2"></i>Technical Excellence
+          </span>
+          <h2
+            class="display-4 fw-bold mb-4"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="1400"
           >
-            Built with modern web technologies and following industry best practices.
+            Built with Modern Technologies
+          </h2>
+          <p
+            class="lead text-muted"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1400"
+          >
+            Leveraging the latest web technologies and following industry best practices for
+            performance, security, and maintainability.
           </p>
         </div>
       </div>
-      <div class="row g-4">
+      <div class="row g-4 align-items-center">
         <div class="col-md-6" data-aos="fade-right" data-aos-duration="1600">
-          <div class="d-flex gap-3 mb-4">
-            <div class="flex-shrink-0">
-              <i class="ri-bootstrap-line text-primary fs-2"></i>
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="d-flex gap-4 align-items-center p-4 bg-white rounded-3 shadow-sm">
+                <div class="bg-primary bg-opacity-10 rounded-2 p-3">
+                  <i class="ri-bootstrap-line text-primary fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">Bootstrap 5</h5>
+                  <p class="text-muted mb-0">
+                    Latest version with modern components and responsive grid system
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h5 class="fw-bold">Bootstrap 5</h5>
-              <p class="text-muted mb-0">
-                Latest version of Bootstrap framework ensuring modern, responsive layouts and
-                extensive component library.
-              </p>
+            <div class="col-12">
+              <div class="d-flex gap-4 align-items-center p-4 bg-white rounded-3 shadow-sm">
+                <div class="bg-success bg-opacity-10 rounded-2 p-3">
+                  <i class="ri-html5-line text-success fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">HTML5 & CSS3</h5>
+                  <p class="text-muted mb-0">
+                    Semantic markup and modern CSS features for clean, accessible code
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="d-flex gap-3 mb-4">
-            <div class="flex-shrink-0">
-              <i class="ri-html5-line text-primary fs-2"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold">HTML5 & CSS3</h5>
-              <p class="text-muted mb-0">
-                Semantic HTML5 markup and modern CSS3 features for clean, accessible, and
-                maintainable code.
-              </p>
-            </div>
-          </div>
-          <div class="d-flex gap-3 mb-4">
-            <div class="flex-shrink-0">
-              <i class="ri-javascript-line text-primary fs-2"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold">Modern JavaScript</h5>
-              <p class="text-muted mb-0">
-                ES6+ JavaScript with modular components and interactive functionality throughout the
-                platform.
-              </p>
+            <div class="col-12">
+              <div class="d-flex gap-4 align-items-center p-4 bg-white rounded-3 shadow-sm">
+                <div class="bg-warning bg-opacity-10 rounded-2 p-3">
+                  <i class="ri-javascript-line text-warning fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">Modern JavaScript</h5>
+                  <p class="text-muted mb-0">
+                    ES6+ features with modular components and interactive functionality
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-md-6" data-aos="fade-left" data-aos-duration="1600">
-          <div class="d-flex gap-3 mb-4">
-            <div class="flex-shrink-0">
-              <i class="ri-css3-line text-primary fs-2"></i>
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="d-flex gap-4 align-items-center p-4 bg-white rounded-3 shadow-sm">
+                <div class="bg-info bg-opacity-10 rounded-2 p-3">
+                  <i class="ri-css3-line text-info fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">SCSS/Sass</h5>
+                  <p class="text-muted mb-0">
+                    Organized architecture with variables and mixins for easy customization
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h5 class="fw-bold">SCSS/Sass</h5>
-              <p class="text-muted mb-0">
-                Organized Sass architecture with variables, mixins, and partials for easy
-                customization and maintenance.
-              </p>
+            <div class="col-12">
+              <div class="d-flex gap-4 align-items-center p-4 bg-white rounded-3 shadow-sm">
+                <div class="bg-danger bg-opacity-10 rounded-2 p-3">
+                  <i class="ri-remixicon-line text-danger fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">Remix Icons</h5>
+                  <p class="text-muted mb-0">
+                    Complete icon set with 2000+ icons for all website needs
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="d-flex gap-3 mb-4">
-            <div class="flex-shrink-0">
-              <i class="ri-remixicon-line text-primary fs-2"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold">Remix Icons</h5>
-              <p class="text-muted mb-0">
-                Complete icon set with over 2000+ icons covering all common use cases for HOA
-                websites.
-              </p>
-            </div>
-          </div>
-          <div class="d-flex gap-3 mb-4">
-            <div class="flex-shrink-0">
-              <i class="ri-tools-line text-primary fs-2"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold">Build Tools</h5>
-              <p class="text-muted mb-0">
-                Modern build system with Astro, PostCSS, and automated optimization for production
-                deployment.
-              </p>
+            <div class="col-12">
+              <div class="d-flex gap-4 align-items-center p-4 bg-white rounded-3 shadow-sm">
+                <div class="bg-warning bg-opacity-10 rounded-2 p-3">
+                  <i class="ri-tools-line text-warning fs-2"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">Build Tools</h5>
+                  <p class="text-muted mb-0">
+                    Modern build system with Astro and automated optimization
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -631,55 +707,72 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
     </div>
   </section>
 
-  <!-- Admin Panel Features -->
+  <!-- Perfect For Section -->
   <section
-    class="py-5 text-white"
+    class="py-5 text-white position-relative"
     style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
   >
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1600">
-          <h2 class="display-5 fw-bold mb-4">Perfect for All Types of HOA Users</h2>
-          <p class="lead mb-4">
-            From board members to property managers, our templates make launching a beautiful,
-            functional HOA website effortless.
+          <span class="badge bg-white bg-opacity-25 text-white px-3 py-2 rounded-pill mb-3">
+            <i class="ri-community-line me-2"></i>Perfect For
+          </span>
+          <h2 class="display-4 fw-bold mb-4">Ideal for Every Project</h2>
+          <p class="lead mb-4 opacity-90">
+            Whether you're building for HOAs, community organizations, or residential complexes,
+            these templates provide the perfect foundation for your project.
           </p>
-          <div class="row g-3">
+          <div class="row g-3 mb-4">
             <div class="col-sm-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="ri-check-line text-warning fs-4"></i>
-                <span>Board Members</span>
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-white bg-opacity-25 rounded-circle p-2">
+                  <i class="ri-check-line text-warning fs-5"></i>
+                </div>
+                <span class="fw-medium">HOA Communities</span>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="ri-check-line text-warning fs-4"></i>
-                <span>Property Managers</span>
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-white bg-opacity-25 rounded-circle p-2">
+                  <i class="ri-check-line text-warning fs-5"></i>
+                </div>
+                <span class="fw-medium">Property Managers</span>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="ri-check-line text-warning fs-4"></i>
-                <span>Self-Managed Communities</span>
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-white bg-opacity-25 rounded-circle p-2">
+                  <i class="ri-check-line text-warning fs-5"></i>
+                </div>
+                <span class="fw-medium">Web Developers</span>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-center gap-2">
-                <i class="ri-check-line text-warning fs-4"></i>
-                <span>HOA Software Resellers</span>
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-white bg-opacity-25 rounded-circle p-2">
+                  <i class="ri-check-line text-warning fs-5"></i>
+                </div>
+                <span class="fw-medium">Design Agencies</span>
               </div>
             </div>
           </div>
-          <a href="#" class="btn btn-light btn-lg mt-4 rounded-pill px-4">
-            <i class="ri-download-line me-2"></i>Purchase Now - $49
+          <a href="#" class="btn btn-warning btn-lg rounded-pill px-5 py-3 fw-bold">
+            <i class="ri-download-line me-2"></i>Get Started Today - $49
           </a>
         </div>
         <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-duration="1600">
-          <img
-            src={getAssetPrefix('/assets/img/theme-images/hero-3.jpg')}
-            alt="Admin Panel Preview"
-            class="img-fluid rounded-4"
-          />
+          <div class="position-relative">
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/hero-3.jpg')}
+              alt="HOA Community"
+              class="img-fluid rounded-4 shadow-lg"
+            />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 bg-white bg-opacity-10 rounded-4"
+            >
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -688,35 +781,54 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
   <!-- FAQs -->
   <section id="faq" class="py-5">
     <div class="container">
-      <!-- General Questions -->
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2
-            class="display-5 fw-bold mb-4 text-center"
-            data-aos="fade-up"
-            data-aos-duration="1400"
-          >
-            General Questions
-          </h2>
+          <div class="text-center mb-5">
+            <span
+              class="badge bg-warning bg-opacity-25 text-warning px-3 py-2 rounded-pill mb-3"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <i class="ri-question-line me-2"></i>Questions & Answers
+            </span>
+            <h2
+              class="display-4 fw-bold mb-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="1400"
+            >
+              Frequently Asked Questions
+            </h2>
+            <p
+              class="lead text-muted"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="1400"
+            >
+              Got questions? We've got answers. Here are the most common questions about our
+              templates.
+            </p>
+          </div>
 
           <div class="accordion accordion-flush" id="generalAccordion">
             <!-- FAQ 1 -->
             <div
-              class="accordion-item border rounded-3 mb-3"
+              class="accordion-item border mb-3"
               data-aos="fade-up"
               data-aos-delay="100"
               data-aos-duration="1400"
             >
               <h3 class="accordion-header">
                 <button
-                  class="accordion-button collapsed fw-semibold"
+                  class="accordion-button collapsed fw-semibold py-4"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#general1"
                   aria-expanded="false"
                   aria-controls="general1"
                 >
-                  What exactly do I get when I purchase this HOA template?
+                  <i class="ri-gift-line text-primary me-3"></i>
+                  What exactly do I get when I purchase this template package?
                 </button>
               </h3>
               <div
@@ -724,46 +836,80 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
                 class="accordion-collapse collapse"
                 data-bs-parent="#generalAccordion"
               >
-                <div class="accordion-body">
-                  <p>When you purchase our HOA template package, you receive:</p>
-                  <ul>
-                    <li>
-                      <strong>3 Complete Themes:</strong> Classic, Modern, and Premium designs
-                    </li>
-                    <li><strong>25+ HTML Pages:</strong> All essential pages for HOA websites</li>
-                    <li>
-                      <strong>Admin Dashboard:</strong> Complete backend interface with user management
-                    </li>
-                    <li>
-                      <strong>Source Files:</strong> HTML, CSS/SCSS, JavaScript, and all assets
-                    </li>
-                    <li>
-                      <strong>Documentation:</strong> Comprehensive setup and customization guide
-                    </li>
-                    <li><strong>Free Updates:</strong> Future improvements and new features</li>
-                    <li><strong>Support:</strong> 6 months of email support included</li>
-                  </ul>
+                <div class="accordion-body py-4">
+                  <p class="mb-3">When you purchase our template package, you receive:</p>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <ul class="list-unstyled">
+                        <li class="mb-2">
+                          <i class="ri-check-circle-line text-success me-2"></i><strong
+                            >3 Complete Themes:</strong
+                          > Classic, Modern, and Premium designs
+                        </li>
+                        <li class="mb-2">
+                          <i class="ri-check-circle-line text-success me-2"></i><strong
+                            >25+ HTML Pages:</strong
+                          > All essential pages for each theme
+                        </li>
+                        <li class="mb-2">
+                          <i class="ri-check-circle-line text-success me-2"></i><strong
+                            >Source Files:</strong
+                          > HTML, CSS/SCSS, JavaScript, and assets
+                        </li>
+                        <li class="mb-2">
+                          <i class="ri-check-circle-line text-success me-2"></i><strong
+                            >Documentation:</strong
+                          > Comprehensive setup guide
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="list-unstyled">
+                        <li class="mb-2">
+                          <i class="ri-check-circle-line text-success me-2"></i><strong
+                            >SCSS Files:</strong
+                          > Easy customization with variables
+                        </li>
+                        <li class="mb-2">
+                          <i class="ri-check-circle-line text-success me-2"></i><strong
+                            >Free Updates:</strong
+                          > Future improvements and features
+                        </li>
+                        <li class="mb-2">
+                          <i class="ri-check-circle-line text-success me-2"></i><strong
+                            >Premium Support:</strong
+                          > 6 months of email support
+                        </li>
+                        <li class="mb-2">
+                          <i class="ri-check-circle-line text-success me-2"></i><strong
+                            >Build Tools:</strong
+                          > Modern development workflow
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- FAQ 2 -->
             <div
-              class="accordion-item border rounded-3 mb-3"
+              class="accordion-item border mb-3"
               data-aos="fade-up"
               data-aos-delay="200"
               data-aos-duration="1400"
             >
               <h3 class="accordion-header">
                 <button
-                  class="accordion-button collapsed fw-semibold"
+                  class="accordion-button collapsed fw-semibold py-4"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#general2"
                   aria-expanded="false"
                   aria-controls="general2"
                 >
-                  Is this template suitable for my HOA size?
+                  <i class="ri-code-line text-primary me-3"></i>
+                  Do I need coding knowledge to use these templates?
                 </button>
               </h3>
               <div
@@ -771,25 +917,39 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
                 class="accordion-collapse collapse"
                 data-bs-parent="#generalAccordion"
               >
-                <div class="accordion-body">
-                  <p>Yes! Our template is designed to scale with communities of all sizes:</p>
-                  <ul>
-                    <li>
-                      <strong>Small Communities (10-50 homes):</strong> Perfect for basic communication
-                      and announcements
-                    </li>
-                    <li>
-                      <strong>Medium Communities (50-200 homes):</strong> Ideal for amenity management
-                      and resident portals
-                    </li>
-                    <li>
-                      <strong>Large Communities (200+ homes):</strong> Handles complex user management
-                      and extensive features
-                    </li>
-                  </ul>
-                  <p>
-                    The admin panel includes user management tools that can handle hundreds of
-                    residents, and the design scales beautifully regardless of your community size.
+                <div class="accordion-body py-4">
+                  <p class="mb-3">
+                    Our templates are designed to be accessible for different skill levels:
+                  </p>
+                  <div class="row g-3">
+                    <div class="col-md-4">
+                      <div class="card border-0 bg-light p-3">
+                        <h6 class="fw-bold text-primary">Beginners</h6>
+                        <p class="small mb-0">
+                          Basic HTML/CSS knowledge helpful for content changes and customization
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card border-0 bg-light p-3">
+                        <h6 class="fw-bold text-success">Intermediate</h6>
+                        <p class="small mb-0">
+                          Can easily modify styles, add pages, and customize the design
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card border-0 bg-light p-3">
+                        <h6 class="fw-bold text-info">Advanced</h6>
+                        <p class="small mb-0">
+                          Full access to SCSS, build tools, and complete customization
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0">
+                    The templates come with comprehensive documentation and our support team is
+                    available to help with setup and customization questions.
                   </p>
                 </div>
               </div>
@@ -797,21 +957,22 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
 
             <!-- FAQ 3 -->
             <div
-              class="accordion-item border rounded-3 mb-3"
+              class="accordion-item border mb-3"
               data-aos="fade-up"
               data-aos-delay="300"
               data-aos-duration="1400"
             >
               <h3 class="accordion-header">
                 <button
-                  class="accordion-button collapsed fw-semibold"
+                  class="accordion-button collapsed fw-semibold py-4"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#general3"
                   aria-expanded="false"
                   aria-controls="general3"
                 >
-                  Can I use this template for multiple HOA communities?
+                  <i class="ri-file-copy-line text-primary me-3"></i>
+                  Can I use this template for multiple projects?
                 </button>
               </h3>
               <div
@@ -819,18 +980,34 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
                 class="accordion-collapse collapse"
                 data-bs-parent="#generalAccordion"
               >
-                <div class="accordion-body">
-                  <p>Our licensing allows you to use the template for multiple projects:</p>
-                  <ul>
-                    <li><strong>Single License:</strong> Use for one HOA community website</li>
-                    <li>
-                      <strong>Extended License:</strong> Use for multiple communities or client projects
-                    </li>
-                    <li>
-                      <strong>Developer License:</strong> Unlimited usage for web development agencies
-                    </li>
-                  </ul>
-                  <p>
+                <div class="accordion-body py-4">
+                  <p class="mb-3">
+                    Our flexible licensing allows you to use the template based on your needs:
+                  </p>
+                  <div class="row g-3">
+                    <div class="col-md-4">
+                      <div class="card border border-primary p-3">
+                        <h6 class="fw-bold text-primary">Single License</h6>
+                        <p class="small mb-2">Perfect for one website project</p>
+                        <span class="badge bg-primary bg-opacity-25 text-primary">$49</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card border border-success p-3">
+                        <h6 class="fw-bold text-success">Extended License</h6>
+                        <p class="small mb-2">Use for multiple projects or client work</p>
+                        <span class="badge bg-success bg-opacity-25 text-success">Contact Us</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card border border-info p-3">
+                        <h6 class="fw-bold text-info">Developer License</h6>
+                        <p class="small mb-2">Unlimited usage for agencies</p>
+                        <span class="badge bg-info bg-opacity-25 text-info">Contact Us</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0">
                     Each license includes the same features and support - choose based on your usage
                     needs. Contact us if you need a custom licensing arrangement.
                   </p>
@@ -844,110 +1021,125 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
   </section>
 
   <!-- Testimonials Section -->
-  <section class="py-5">
+  <section class="py-5 bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center mb-5">
-          <h2 class="display-5 fw-bold mb-3" data-aos="fade-up" data-aos-duration="800">
-            What Customers Say
-          </h2>
-          <p
-            class="lead text-muted"
+          <span
+            class="badge bg-success bg-opacity-25 text-success px-3 py-2 rounded-pill mb-3"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            <i class="ri-heart-line me-2"></i>Customer Love
+          </span>
+          <h2
+            class="display-4 fw-bold mb-4"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="800"
           >
-            Join hundreds of satisfied HOAs using our templates.
+            What Our Customers Say
+          </h2>
+          <p
+            class="lead text-muted"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="800"
+          >
+            Join hundreds of satisfied customers who have created beautiful websites with our
+            templates.
           </p>
         </div>
       </div>
       <div class="row g-4">
-        <div class="col-md-4" data-aos="flip-up" data-aos-delay="100" data-aos-duration="1400">
-          <div class="card card-lift border h-100">
-            <div class="card-body">
-              <div class="d-flex gap-1 text-warning mb-3">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-              </div>
-              <p class="card-text">
-                "Excellent template with everything we needed for our HOA website. The admin panel
-                makes managing our community so much easier!"
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1400">
+          <div class="card border-0 shadow-sm h-100 p-4">
+            <div class="d-flex gap-1 text-warning mb-4">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <blockquote class="blockquote mb-4">
+              <p class="mb-0">
+                "Excellent templates with beautiful designs and clean code. The documentation is
+                comprehensive and the three theme options gave us exactly what we needed for our
+                community website."
               </p>
-              <div class="d-flex align-items-center gap-3">
-                <img
-                  src={getAssetPrefix('/assets/img/avatars/avatar1.jpg')}
-                  alt="User"
-                  class="rounded-circle"
-                  width="50"
-                  height="50"
-                />
-                <div>
-                  <h6 class="mb-0">Sarah Johnson</h6>
-                  <small class="text-muted">Board President</small>
-                </div>
+            </blockquote>
+            <div class="d-flex align-items-center gap-3 mt-auto">
+              <img
+                src={getAssetPrefix('/assets/img/avatars/avatar1.jpg')}
+                alt="Sarah Johnson"
+                class="rounded-circle"
+                width="60"
+                height="60"
+              />
+              <div>
+                <h6 class="mb-1 fw-bold">Sarah Johnson</h6>
+                <small class="text-muted">HOA Board President</small>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="flip-up" data-aos-delay="200" data-aos-duration="1400">
-          <div class="card card-lift border h-100">
-            <div class="card-body">
-              <div class="d-flex gap-1 text-warning mb-3">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-              </div>
-              <p class="card-text">
-                "Beautiful designs and very easy to customize. The documentation is clear and the
-                code is well-organized. Highly recommended!"
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1400">
+          <div class="card border-0 shadow-sm h-100 p-4">
+            <div class="d-flex gap-1 text-warning mb-4">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <blockquote class="blockquote mb-4">
+              <p class="mb-0">
+                "Professional templates that are easy to customize. The responsive design works
+                perfectly across all devices and the code quality is outstanding. Highly
+                recommended!"
               </p>
-              <div class="d-flex align-items-center gap-3">
-                <img
-                  src={getAssetPrefix('/assets/img/avatars/avatar2.jpg')}
-                  alt="User"
-                  class="rounded-circle"
-                  width="50"
-                  height="50"
-                />
-                <div>
-                  <h6 class="mb-0">Michael Chen</h6>
-                  <small class="text-muted">Web Developer</small>
-                </div>
+            </blockquote>
+            <div class="d-flex align-items-center gap-3 mt-auto">
+              <img
+                src={getAssetPrefix('/assets/img/avatars/avatar2.jpg')}
+                alt="Michael Chen"
+                class="rounded-circle"
+                width="60"
+                height="60"
+              />
+              <div>
+                <h6 class="mb-1 fw-bold">Michael Chen</h6>
+                <small class="text-muted">Web Developer</small>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="flip-up" data-aos-delay="300" data-aos-duration="1400">
-          <div class="card card-lift border h-100">
-            <div class="card-body">
-              <div class="d-flex gap-1 text-warning mb-3">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-              </div>
-              <p class="card-text">
-                "Great value for money. Three different themes gave us options to choose from. The
-                admin panel is intuitive and feature-rich."
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1400">
+          <div class="card border-0 shadow-sm h-100 p-4">
+            <div class="d-flex gap-1 text-warning mb-4">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <blockquote class="blockquote mb-4">
+              <p class="mb-0">
+                "Great value for money with three distinct designs to choose from. The support team
+                is responsive and helpful. Perfect solution for our property management company."
               </p>
-              <div class="d-flex align-items-center gap-3">
-                <img
-                  src={getAssetPrefix('/assets/img/avatars/avatar3.jpg')}
-                  alt="User"
-                  class="rounded-circle"
-                  width="50"
-                  height="50"
-                />
-                <div>
-                  <h6 class="mb-0">Emily Rodriguez</h6>
-                  <small class="text-muted">Community Manager</small>
-                </div>
+            </blockquote>
+            <div class="d-flex align-items-center gap-3 mt-auto">
+              <img
+                src={getAssetPrefix('/assets/img/avatars/avatar3.jpg')}
+                alt="Emily Rodriguez"
+                class="rounded-circle"
+                width="60"
+                height="60"
+              />
+              <div>
+                <h6 class="mb-1 fw-bold">Emily Rodriguez</h6>
+                <small class="text-muted">Property Manager</small>
               </div>
             </div>
           </div>
@@ -958,43 +1150,69 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
 
   <!-- CTA Section -->
   <section
-    class="py-5 text-center"
+    class="py-5 text-center position-relative"
     style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"
   >
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <h2 class="display-5 fw-bold text-white mb-3" data-aos="fade-up" data-aos-duration="800">
-            Ready to Get Started?
-          </h2>
-          <p
-            class="lead mb-4"
-            style="color: rgba(255, 255, 255, 0.9);"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="800"
-          >
-            Download now and launch your professional HOA website today. Complete with all themes,
-            admin panel, and comprehensive documentation.
-          </p>
-          <div
-            class="d-flex justify-content-center gap-3 flex-wrap"
-            data-aos="fade-up"
-            data-aos-delay="400"
-            data-aos-duration="800"
-          >
-            <a href="#" class="btn btn-light btn-lg rounded-pill px-4">
-              <i class="ri-download-line me-2"></i>Purchase Now - $49
-            </a>
-            <a href={getPathPrefix('/docs')} class="btn btn-outline-light btn-lg rounded-pill px-4">
-              <i class="ri-book-open-line me-2"></i>View Documentation
-            </a>
-          </div>
-          <div class="mt-4">
-            <small class="text-light fw-light">
-              <i class="ri-shield-check-line me-1"></i>
-              30-day money-back guarantee • Free updates • Premium support
-            </small>
+          <div class="text-white">
+            <span
+              class="badge bg-white bg-opacity-25 text-white px-3 py-2 rounded-pill mb-3"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <i class="ri-rocket-line me-2"></i>Get Started Today
+            </span>
+            <h2
+              class="display-3 fw-bold mb-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
+              Ready to Build Your Website?
+            </h2>
+            <p
+              class="lead mb-5 fs-4 opacity-90"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="800"
+            >
+              Download now and get 3 professional templates with 25+ pages, clean code,
+              comprehensive documentation, and premium support.
+            </p>
+            <div
+              class="d-flex justify-content-center gap-3 flex-wrap mb-4"
+              data-aos="fade-up"
+              data-aos-delay="600"
+              data-aos-duration="800"
+            >
+              <a href="#" class="btn btn-warning btn-lg rounded-pill px-5 py-3 fw-bold">
+                <i class="ri-download-line me-2"></i>Purchase Now - Only $49
+              </a>
+              <a
+                href={getPathPrefix('/docs')}
+                class="btn btn-outline-light btn-lg rounded-pill px-5 py-3"
+              >
+                <i class="ri-book-open-line me-2"></i>View Documentation
+              </a>
+            </div>
+            <div class="mt-4" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
+              <div class="d-flex justify-content-center gap-4 flex-wrap">
+                <small class="text-light d-flex align-items-center">
+                  <i class="ri-shield-check-line me-2"></i>
+                  30-day money-back guarantee
+                </small>
+                <small class="text-light d-flex align-items-center">
+                  <i class="ri-refresh-line me-2"></i>
+                  Free lifetime updates
+                </small>
+                <small class="text-light d-flex align-items-center">
+                  <i class="ri-customer-service-line me-2"></i>
+                  6 months premium support
+                </small>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1003,8 +1221,49 @@ import { getAssetPrefix, getPathPrefix } from '../../utils/path.js'
 </FrontLayout>
 
 <style is:inline>
-  .card:hover .opacity-0 {
+  .theme-overlay {
+    transition:
+      background-color 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .theme-card:hover .theme-overlay-primary {
+    background-color: rgba(102, 126, 234, 0.5) !important;
     opacity: 1 !important;
+  }
+
+  .theme-card:hover .theme-overlay-success {
+    background-color: rgba(25, 135, 84, 0.5) !important;
+    opacity: 1 !important;
+  }
+
+  .theme-card:hover .theme-overlay-warning {
+    background-color: rgba(255, 193, 7, 0.5) !important;
+    opacity: 1 !important;
+  }
+
+  .bg-gradient-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .bg-gradient-2 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .bg-gradient-3 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .bg-gradient-4 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .bg-gradient-5 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .bg-gradient-6 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
 </style>
 
