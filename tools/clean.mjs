@@ -38,9 +38,9 @@ export async function clean(options = {}) {
       .catch(() => false)
     if (distExists) {
       await fs.rm(distPath, { recursive: true, force: true })
-      log('Cleaned dist directory', 'success')
+      log('Cleaned dist directory', 'success', 'BUILD')
     } else if (opts.verbose) {
-      log('Dist directory does not exist, skipping', 'info')
+      log('Dist directory does not exist, skipping', 'info', 'CLEAN')
     }
 
     // Optionally clean cache directory
@@ -51,13 +51,13 @@ export async function clean(options = {}) {
         .catch(() => false)
       if (cacheExists) {
         await fs.rm(cachePath, { recursive: true, force: true })
-        log('Cleaned cache directory', 'success')
+        log('Cleaned cache directory', 'success', 'CLEAN')
       } else if (opts.verbose) {
-        log('Cache directory does not exist, skipping', 'info')
+        log('Cache directory does not exist, skipping', 'info', 'CLEAN')
       }
     }
   } catch (error) {
-    log(`Cleanup error: ${error.message}`, 'error')
+    log(`Cleanup error: ${error.message}`, 'error', 'CLEAN')
     throw error
   }
 }

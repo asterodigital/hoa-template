@@ -4,7 +4,7 @@
  */
 
 import { fileURLToPath } from 'url'
-import { runCommand, log } from './utils.mjs'
+import { runCommand, runCommandQuiet, log } from './utils.mjs'
 import prettier from 'prettier'
 import fs from 'fs/promises'
 import path from 'path'
@@ -109,13 +109,22 @@ export async function buildPages(options = {}) {
 
     // Build documentation pages
     log('Building Astro documentation pages...', 'info', 'ASTRO')
-    await runCommand('astro', ['--config', 'config/astro.config.mjs', 'build'])
+    await runCommandQuiet('astro', ['--config', 'config/astro.config.mjs', 'build'])
     log('Astro documentation built successfully', 'success', 'ASTRO')
 
     // Format generated HTML if not skipped
     if (!opts.skipFormatting) {
       log('Formatting generated HTML...', 'info', 'ASTRO')
+
+      // Use the exact same pattern as lint progress indicators
+      const { createProgressIndicator } = await import('./utils.mjs')
+      const progress = createProgressIndicator('Formatting HTML files...')
+
+      // Run the formatting
       await formatHtmlFiles(opts)
+
+      // Stop progress indicator immediately (same as lint)
+      progress()
     }
   } catch (error) {
     // Log detailed error information for better debugging

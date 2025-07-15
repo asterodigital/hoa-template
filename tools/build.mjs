@@ -4,10 +4,10 @@
  */
 
 import { fileURLToPath } from 'url'
-import { log, validateOptions, createProgressIndicator } from './utils.mjs'
+import { log, validateOptions, createProgressIndicator, showBanner } from './utils.mjs'
 import { clean } from './clean.mjs'
 import { lint } from './lint.mjs'
-import { formatCode } from './prettier.mjs'
+
 import { buildPages } from './astro.mjs'
 import { copyAssets } from './assets.mjs'
 import { buildCss } from './css.mjs'
@@ -39,59 +39,77 @@ export async function build(options = {}) {
 
   try {
     const buildStartTime = performance.now()
-    log('Build process started', 'info')
+
+    // Show professional banner with project info
+    const path = await import('path')
+    const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+    await showBanner(projectRoot)
+
+    log('Build process started', 'info', 'BUILD')
 
     // Clean output directory first if not skipped
     if (!opts.skipClean) {
       await clean({ verbose: opts.verbose })
-      log('Clean completed', 'success')
+      log('Clean completed', 'success', 'PRECHECK')
     } else {
-      log('Skipping clean step', 'info')
-    }
-
-    // Format code with Prettier if not skipped
-    if (!opts.skipFormat) {
-      await formatCode(null)
-      log('Code formatting completed', 'success')
-    } else {
-      log('Skipping code formatting step', 'info')
+      log('Skipping clean step', 'info', 'PRECHECK')
     }
 
     // Run linting if not skipped
     if (!opts.skipLint) {
       await lint(null, { verbose: opts.verbose })
-      log('Lint completed', 'success')
+      log('Lint completed', 'success', 'PRECHECK')
     } else {
-      log('Skipping lint step', 'info')
+      log('Skipping lint step', 'info', 'PRECHECK')
     }
 
     // Run remaining build steps in parallel for better performance
-    log('Running parallel build steps...', 'info')
+    log('Running parallel build steps...', 'info', 'BUILD')
     const progress = createProgressIndicator('Building assets...')
+
+    let progressStopped = false
+    const stopProgress = () => {
+      if (!progressStopped) {
+        progress()
+        progressStopped = true
+      }
+    }
 
     const buildTasks = [
       buildCss({
         isDev: !opts.production,
         verbose: opts.verbose
-      }).then(() => log('CSS built', 'success')),
+      }).then(() => {
+        stopProgress()
+        log('CSS build completed', 'success', 'CSS')
+      }),
 
       buildJs({
         isDev: !opts.production,
         verbose: opts.verbose
-      }).then(() => log('JavaScript built', 'success')),
+      }).then(() => {
+        stopProgress()
+        log('JavaScript build completed', 'success', 'JS')
+      }),
 
       buildPages({
-        skipTypeCheck: opts.skipLint, // Skip type check if linting is skipped
+        skipTypeCheck: !opts.skipLint, // Skip type check since we already did it in lint phase
         verbose: opts.verbose
-      }).then(() => log('Docs built', 'success')),
+      }).then(() => {
+        stopProgress()
+        log('Astro build completed', 'success', 'ASTRO')
+      }),
 
       copyAssets({
         verbose: opts.verbose
-      }).then(() => log('Assets copied', 'success'))
+      }).then(() => {
+        stopProgress()
+        log('Assets copied', 'success', 'ASSETS')
+      })
     ]
 
     const results = await Promise.allSettled(buildTasks)
-    progress() // Stop progress indicator
+    stopProgress() // Ensure progress is stopped even if all tasks fail
 
     const failures = results.filter((result) => result.status === 'rejected')
 

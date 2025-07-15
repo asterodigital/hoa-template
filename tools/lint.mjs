@@ -4,7 +4,7 @@
  */
 
 import { fileURLToPath } from 'url'
-import { runCommand, log } from './utils.mjs'
+import { runCommandQuiet, log } from './utils.mjs'
 import path from 'path'
 import fs from 'fs/promises'
 
@@ -99,7 +99,7 @@ async function verifyConfig(taskType) {
  * @returns {Promise<void>}
  * @throws {Error} If linting fails
  */
-export async function lint(taskType, options = {}) {
+export async function lint(taskType) {
   try {
     // Validate task type if provided
     if (taskType && !tasks[taskType]) {
@@ -119,22 +119,47 @@ export async function lint(taskType, options = {}) {
 
     // Run each task
     for (const [name, task] of Object.entries(tasksToRun)) {
-      log(`Running ${task.name} lint check...`, 'info')
+      log(`Running ${task.name} lint check...`, 'info', 'PRECHECK')
 
       // Verify config files exist
       await verifyConfig(name)
 
-      // Run the linting command
-      await runCommand(task.cmd, task.args)
+      // Show progress indicator for all tasks for consistency
+      const { createProgressIndicator } = await import('./utils.mjs')
+      let progressMessage = ''
 
-      if (options.verbose) {
-        log(`${task.name} lint check completed with detailed output`, 'info')
+      switch (name) {
+        case 'lockfile':
+          progressMessage = 'Validating package lockfile...'
+          break
+        case 'js':
+          progressMessage = 'Checking JavaScript code quality...'
+          break
+        case 'css':
+          progressMessage = 'Checking CSS/SCSS code quality...'
+          break
+        case 'astro':
+          progressMessage = 'Checking Astro syntax and types...'
+          break
+        default:
+          progressMessage = `Running ${task.name} checks...`
       }
 
-      log(`✓ ${task.name} passed`, 'success')
-    }
+      const progress = createProgressIndicator(progressMessage)
 
-    log('All lint checks passed successfully', 'success')
+      // Run the linting command quietly (only show output on error)
+      await runCommandQuiet(task.cmd, task.args)
+
+      // Stop progress indicator
+      progress()
+
+      // Clean up task completion messages
+      if (name === 'astro') {
+        log('Astro passed', 'success', 'PRECHECK')
+      } else {
+        log(`${task.name} passed`, 'success', 'PRECHECK')
+      }
+    }
   } catch (error) {
     log(`Lint error: ${error.message}`, 'error')
     throw error

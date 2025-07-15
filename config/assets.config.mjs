@@ -40,21 +40,21 @@ function syncAssets() {
         const srcPath = path.join(faviconSrcDir, file)
         const destPath = path.join(distRootDir, file)
         fs.copySync(srcPath, destPath)
-        log(`Copied favicon file: ${file} to dist root`)
       })
+      log(`Copied ${faviconFiles.length} favicon files to dist root`, 'info', 'ASSETS')
     } else {
-      log('Favicon directory not found', 'warning')
+      log('Favicon directory not found', 'warning', 'ASSETS')
     }
 
     // Copy index.html to dist directory. Used for redirecting to dashboard
     if (fs.existsSync('./index.html')) {
       fs.copySync('./index.html', './dist/index.html')
-      log('index.html copied to dist directory')
+      log('index.html copied to dist directory', 'info', 'ASSETS')
     } else {
-      log('index.html not found in root directory', 'warning')
+      log('index.html not found in root directory', 'warning', 'ASSETS')
     }
 
-    log('Assets synchronized successfully!')
+    log('Assets synchronized successfully!', 'success', 'ASSETS')
   } catch (error) {
     log(`Asset sync error: ${error}`, 'error')
     throw error

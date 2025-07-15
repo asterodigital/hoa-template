@@ -4,7 +4,7 @@
  */
 
 import { fileURLToPath } from 'url'
-import { runCommand, log } from './utils.mjs'
+import { runCommand, runCommandQuiet, log } from './utils.mjs'
 import fs from 'fs/promises'
 import path from 'path'
 
@@ -49,7 +49,7 @@ export async function buildJs(options = {}) {
 
     // In development, only build non-minified version
     if (opts.isDev || opts.skipMinification) {
-      await runCommand('rollup', [
+      await runCommandQuiet('rollup', [
         '--config',
         configPath,
         '--sourcemap',
@@ -65,7 +65,7 @@ export async function buildJs(options = {}) {
       }
     } else {
       // In production, build both versions
-      await runCommand('rollup', [
+      await runCommandQuiet('rollup', [
         '--config',
         configPath,
         '--sourcemap',
