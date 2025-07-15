@@ -32,11 +32,19 @@ export function runCommand(command, args = [], options = {}) {
       ...options
     })
 
+    // Handle user interruption - use once to prevent memory leaks
+    const handleInterrupt = () => {
+      child.kill('SIGINT')
+      reject(new Error('Command interrupted by user'))
+    }
+
     child.on('error', (error) => {
+      process.removeListener('SIGINT', handleInterrupt)
       reject(new Error(`Failed to start command: ${error.message}`))
     })
 
     child.on('close', (code) => {
+      process.removeListener('SIGINT', handleInterrupt)
       if (code === 0) {
         resolve()
       } else {
@@ -44,11 +52,7 @@ export function runCommand(command, args = [], options = {}) {
       }
     })
 
-    // Handle user interruption
-    process.on('SIGINT', () => {
-      child.kill('SIGINT')
-      reject(new Error('Command interrupted by user'))
-    })
+    process.once('SIGINT', handleInterrupt)
   })
 }
 

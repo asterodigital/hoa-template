@@ -52,7 +52,7 @@ export async function build(options = {}) {
 
     // Format code with Prettier if not skipped
     if (!opts.skipFormat) {
-      await formatCode(null, { verbose: opts.verbose })
+      await formatCode(null)
       log('Code formatting completed', 'success')
     } else {
       log('Skipping code formatting step', 'info')

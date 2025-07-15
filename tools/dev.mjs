@@ -343,10 +343,30 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     process.exit(1)
   })
 
-  // Handle cleanup on exit
-  process.on('exit', async () => {
-    if (cleanup && typeof cleanup === 'function') {
-      await cleanup().catch(() => {})
+  // Handle cleanup on exit - use synchronous approach since 'exit' event cannot handle async
+  let cleanupFunction = null
+
+  const handleExit = () => {
+    if (cleanupFunction && typeof cleanupFunction === 'function') {
+      // Force synchronous cleanup - this is a limitation of the 'exit' event
+      try {
+        cleanupFunction()
+      } catch (error) {
+        console.error('Error during cleanup:', error.message)
+      }
     }
-  })
+  }
+
+  process.on('exit', handleExit)
+  process.on('SIGINT', handleExit)
+  process.on('SIGTERM', handleExit)
+
+  // Store the cleanup function when it's available
+  cleanup
+    .then((fn) => {
+      cleanupFunction = fn
+    })
+    .catch(() => {
+      // Ignore cleanup setup errors
+    })
 }
