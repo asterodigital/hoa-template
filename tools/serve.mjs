@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 app.use(express.static(DIST_DIR))
 
 // Handle all routes by serving index.html for non-existent paths
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(join(DIST_DIR, 'index.html'))
 })
 
