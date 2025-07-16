@@ -21,12 +21,13 @@ function findHtmlFiles(dir, fileList = []) {
 }
 
 /**
- * Fixes relative paths in the HTML files after Astro build
- * This corrects navigation links based on the actual file depth
+ * Fixes offline paths in the HTML files after Astro build
+ * This is necessary because Astro doesn't always generate perfect file:// compatible paths
+ * @returns {Promise<void>}
  */
 export async function fixOfflinePaths() {
   try {
-    log('Fixing relative paths in HTML files...', 'info', 'FIX-PATHS')
+    log('Fixing offline paths in HTML files...', 'info', 'FIX-PATHS')
 
     const distDir = './dist/offline'
     const htmlFiles = findHtmlFiles(distDir)
@@ -38,10 +39,10 @@ export async function fixOfflinePaths() {
       // Calculate the depth of the current file
       const depth = (htmlFile.match(/\//g) || []).length
 
-      // Fix href attributes for proper relative paths
+      // Fix href attributes for proper offline paths
       let fixedContent = content
 
-      // Calculate correct relative path prefix based on depth
+      // Calculate correct offline path prefix based on depth
       const upLevels = depth > 0 ? '../'.repeat(depth) : './'
 
       if (depth === 0) {
@@ -77,9 +78,9 @@ export async function fixOfflinePaths() {
       }
     }
 
-    log('Relative path fixing completed', 'success', 'FIX-PATHS')
+    log('Offline path fixing completed', 'success', 'FIX-PATHS')
   } catch (error) {
-    log(`Error fixing relative paths: ${error.message}`, 'error', 'FIX-PATHS')
+    log(`Error fixing offline paths: ${error.message}`, 'error', 'FIX-PATHS')
     throw error
   }
 }

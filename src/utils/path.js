@@ -6,14 +6,14 @@
 function getAssetPrefix(path) {
   const env = import.meta.env || {}
   const isDev = env.DEV || false
-  const isRelativeBuild = env.PUBLIC_RELATIVE_PATHS === 'true'
+  const isOfflineBuild = env.PUBLIC_OFFLINE_PATHS === 'true'
 
   if (isDev) {
     return `/dist${path}`
   }
 
-  if (isRelativeBuild) {
-    // For relative builds, use relative paths
+  if (isOfflineBuild) {
+    // For offline builds, use offline paths
     return `.${path}`
   }
 
@@ -29,14 +29,14 @@ function getAssetPrefix(path) {
 function getPathPrefix(path) {
   const env = import.meta.env || {}
   const isDev = env.DEV || false
-  const isRelativeBuild = env.PUBLIC_RELATIVE_PATHS === 'true'
+  const isOfflineBuild = env.PUBLIC_OFFLINE_PATHS === 'true'
 
   if (isDev) {
     return `${path}`
   }
 
-  if (isRelativeBuild) {
-    // For relative builds, we'll use a simplified approach
+  if (isOfflineBuild) {
+    // For offline builds, we'll use a simplified approach
     // Since Astro builds each page individually, we'll determine depth
     // based on the import.meta.url of the calling file
 
@@ -45,8 +45,8 @@ function getPathPrefix(path) {
       return './index.html'
     }
 
-    // For relative builds, we need to determine the depth dynamically
-    // This is a simplified approach - we'll use a base relative path
+    // For offline builds, we need to determine the depth dynamically
+    // This is a simplified approach - we'll use a base offline path
     // and let the post-build process fix the paths
     const cleanPath = path.startsWith('/') ? path.substring(1) : path
     return `./${cleanPath}.html`

@@ -162,7 +162,7 @@ cd dist/offline
 The system uses environment variables to determine path generation:
 
 - `import.meta.env.DEV`: Development mode detection
-- `import.meta.env.PUBLIC_RELATIVE_PATHS`: Offline build mode
+- `import.meta.env.PUBLIC_OFFLINE_PATHS`: Offline build mode
 
 ### Configuration Files
 
@@ -181,9 +181,9 @@ The system uses environment variables to determine path generation:
 
 The offline build includes these steps:
 
-1. **Astro Build**: Generates static HTML files with relative paths
+1. **Astro Build**: Generates static HTML files with offline paths
 2. **Asset Copying**: Copies CSS, JS, images, and favicon files
-3. **Path Fixing**: Corrects relative paths based on file depth
+3. **Path Fixing**: Corrects offline paths based on file depth
 4. **Prettier Formatting**: Formats all HTML files for better readability
 5. **Verification**: Checks that all required files are present
 
@@ -193,7 +193,7 @@ The offline build includes these steps:
 
 1. **CSS/JS not found**: Run `npm run css && npm run js` before `npm run build:offline`
 2. **Assets missing**: Check that `src/assets/` directory exists
-3. **Paths still absolute**: Verify `PUBLIC_RELATIVE_PATHS=true` environment variable
+3. **Paths still absolute**: Verify `PUBLIC_OFFLINE_PATHS=true` environment variable
 4. **CORS errors**: Use `npm run serve:offline` instead of opening files directly
 
 ### Common CORS Issues
@@ -229,6 +229,6 @@ themeforest-submission.zip
 
 - **File:// Compatibility**: Works when customers open files directly
 - **No Server Required**: Customers can preview without setting up a web server
-- **Relative Paths**: All links and assets work regardless of folder location
+- **Offline Paths**: All links and assets work regardless of folder location
 - **Formatted Code**: Clean, readable HTML for customer review
 - **Offline Ready**: Perfect for marketplace requirements
