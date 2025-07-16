@@ -1,0 +1,128 @@
+---
+import Layout from './layout.astro'
+---
+
+<Layout
+  title="Franchise"
+  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora repudiandae harum nostrum sed natus."
+>
+  <!-- Heading -->
+  <!-- <section class="bg-black py-5">
+    <div class="container text-center">
+      <h1 class="display-5 text-primary fw-semibold mb-4">JazzUp Salon Franchise</h1>
+    </div>
+  </section> -->
+
+  <!-- Heading -->
+  <section
+    class="py-5 d-flex align-items-center position-relative"
+    style="
+      background-image: url('https://jazzupsalon.in/storage/local/aajv/cms/page/82/82857887_4367-(1).jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 280px;
+    "
+  >
+    <!-- Overlay -->
+    <div style="position: absolute; inset: 0; background: rgba(50, 50, 50, 0.5); z-index: 1;"></div>
+
+    <div class="row position-relative" style="z-index: 2; width: 100%;">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="container text-center">
+          <h1 class="display-5 text-light fw-semibold">JazzUp Salon Franchise</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <p class="text-light mb-4">
+        <span class="text-primary">JazzUp Salon</span> is a rapidly growing brand in the beauty and wellness
+        industry, known for delivering top-quality hair, beauty, and skincare services. Since its inception,
+        JazzUp has become a trusted name in Pune, offering personalized services in a clean, welcoming
+        environment. With a commitment to excellence, cutting-edge treatments, and exceptional customer
+        service, JazzUp Salon is the perfect opportunity for aspiring entrepreneurs looking to invest
+        in the beauty sector. Join the JazzUp Salon franchise network and be part of a thriving industry
+        with a brand that prioritizes innovation, hygiene, and client satisfaction.
+      </p>
+      <p class="text-light mb-0">
+        If you're interested in becoming a part of the JazzUp Salon family and starting your own
+        franchise, we’d love to hear from you! Simply fill out the form below, and our team will get
+        in touch with you to discuss the exciting opportunities that await with JazzUp Salon.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section
+    class="position-relative d-flex align-items-center"
+    style="
+      background-image: url('https://jazzupsalon.in/storage/local/aajv/cms/page/76/jazzup-salon-baner-baner_1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    "
+  >
+    <div class="container py-5 px-2">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="card p-lg-5" style="background: rgba(255, 255, 255, 0.85);">
+            <h2 class="fs-1 text-center mb-3 text-dark">Contact Us</h2>
+            <div class="fs-5 text-center mb-5 text-muted" style="text-align: justify;">
+              Fill up this form if you want Franchise.
+            </div>
+            <!-- Form -->
+            <form>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label"
+                    >Name <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label"
+                    >Email <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label"
+                  >Message <span class="text-danger">*</span></label
+                >
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Enter your message"
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn btn-lg btn-primary rounded-pill px-4"
+                >Send message</button
+              >
+              <p class="mt-3">
+                <span class="text-danger">*</span> These fields are required.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

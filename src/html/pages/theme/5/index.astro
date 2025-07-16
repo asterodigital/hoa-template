@@ -1,0 +1,62 @@
+---
+import { getPathPrefix } from '../../../../utils/path.js'
+
+// Determine the target redirect URL with environment-specific path prefix
+const redirectTargetPath = getPathPrefix('/theme/5/home')
+
+// Configuration for meta refresh (in seconds)
+const REDIRECT_DELAY = 0
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content={`${REDIRECT_DELAY};url=${redirectTargetPath}`} />
+    <title>Jazzup Salon</title>
+    <style>
+      /* Base styles for the redirect page */
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: var(--bs-gray-100, #f8f9fa);
+      }
+
+      /* Loading animation styles */
+      .loading-spinner {
+        border: 0.25rem solid var(--bs-gray-200, #f3f3f3);
+        border-top: 0.25rem solid var(--bs-primary, #ffc734);
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        animation: spinAnimation 1s linear infinite;
+      }
+
+      /* Spinner rotation animation */
+      @keyframes spinAnimation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading-spinner" role="status"></div>
+
+    <script is:inline define:vars={{ redirectTargetPath }}>
+      // Fallback JavaScript redirection if meta refresh fails
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          window.location.href = redirectTargetPath
+        }, 100) // Small delay to ensure smooth transition
+      })
+    </script>
+  </body>
+</html>

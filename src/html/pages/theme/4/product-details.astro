@@ -1,0 +1,287 @@
+---
+import Layout from './layout.astro'
+import { getAssetPrefix } from '../../../../utils/path.js'
+---
+
+<Layout
+  title="Product Details"
+  description="A clean, responsive theme designed to help homeowners associations build a strong online presence."
+>
+  <!-- Product Details -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <!-- Product Info Row -->
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Image Column -->
+        <!-- <div class="col">
+          <img
+            src={getAssetPrefix('/assets/img/theme-images/product-2.jpg')}
+            class="img-fluid rounded-4 w-100 mb-3"
+            data-aos="fade-in"
+            data-aos-duration="1200"
+            alt="Product Image"
+          />
+          <div class="d-flex gap-3">
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/product-1.jpg')}
+              class="img-fluid rounded-4"
+              style="height: 96px; width: 96px; object-fit: cover"
+              data-aos="fade-in"
+              data-aos-delay="100"
+              data-aos-duration="1200"
+              alt="Product Image"
+            />
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/product-2.jpg')}
+              class="img-fluid rounded-4"
+              style="height: 96px; width: 96px; object-fit: cover"
+              data-aos="fade-in"
+              data-aos-delay="200"
+              data-aos-duration="1200"
+              alt="Product Image"
+            />
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/product-1.jpg')}
+              class="img-fluid rounded-4"
+              style="height: 96px; width: 96px; object-fit: cover"
+              data-aos="fade-in"
+              data-aos-delay="300"
+              data-aos-duration="1200"
+              alt="Product Image"
+            />
+          </div>
+        </div> -->
+
+        <!-- Image Column -->
+        <div class="col">
+          <!-- Main Product Image -->
+          <img
+            id="main-product-img"
+            src={getAssetPrefix('/assets/img/theme-images/product-2.jpg')}
+            class="img-fluid rounded-4 w-100 mb-3"
+            data-aos="fade-in"
+            data-aos-duration="1200"
+            alt="Product Image"
+          />
+
+          <!-- Thumbnails -->
+          <div class="d-flex gap-3">
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/product-1.jpg')}
+              class="img-fluid rounded-4 thumbnail-img"
+              style="height: 96px; width: 96px; object-fit: cover"
+              data-aos="fade-in"
+              data-aos-delay="100"
+              data-aos-duration="1200"
+              alt="Product Image"
+            />
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/product-2.jpg')}
+              class="img-fluid rounded-4 thumbnail-img"
+              style="height: 96px; width: 96px; object-fit: cover"
+              data-aos="fade-in"
+              data-aos-delay="200"
+              data-aos-duration="1200"
+              alt="Product Image"
+            />
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/product-1.jpg')}
+              class="img-fluid rounded-4 thumbnail-img"
+              style="height: 96px; width: 96px; object-fit: cover"
+              data-aos="fade-in"
+              data-aos-delay="300"
+              data-aos-duration="1200"
+              alt="Product Image"
+            />
+          </div>
+        </div>
+
+        <!-- Details Column -->
+        <div class="col" data-aos="fade-up" data-aos-duration="1200">
+          <!-- <span class="badge text-primary border fs-6">Beds</span> -->
+          <h1 class="display-5 fw-semibold mt-1 mb-2">Wooden Table</h1>
+          <h2 class="text-primary text-uppercase fs-6 fw-semibold mb-3">Oak Wood</h2>
+          <!-- Description -->
+          <p class="mb-3">
+            Bring timeless charm and unmatched durability to your bedroom with our Oak Elegance
+            Wooden Table. Crafted from 100% premium-grade oak, this bed offers a sturdy frame,
+            smooth finish, and natural wood grain that adds warmth and sophistication to any space.
+          </p>
+          <!-- Price -->
+          <!-- <div class="mb-3">
+            <h6 class="fs-3 mb-0">₹40,000</h6>
+          </div> -->
+          <!-- Price -->
+          <div class="mb-3 d-flex align-items-center gap-2">
+            <h6 class="fs-3 mb-0">₹40,000</h6>
+            <span class="text-muted text-decoration-line-through">₹53,333</span>
+            <span class="badge bg-blue">25% OFF</span>
+          </div>
+
+          <!-- Quantity -->
+          <!-- <div class="mb-3">
+            <label class="form-label fw-semibold">Quantity:</label>
+            <input
+              type="number"
+              class="form-control w-auto d-inline-block ms-2"
+              value="1"
+              min="1"
+            />
+          </div> -->
+
+          <!-- Color -->
+          <!-- <div class="mb-4">
+            <label class="form-label fw-semibold">Color:</label>
+            <div class="d-flex gap-2 mt-1">
+              <button
+                class="rounded bg-primary border border-2 border-primary"
+                style="width: 32px; height: 32px"
+                title="Brown"></button>
+              <button
+                class="rounded bg-orange border"
+                style="width: 32px; height: 32px"
+                title="Orange"></button>
+              <button class="rounded bg-gray border" style="width: 32px; height: 32px" title="Gray"
+              ></button>
+            </div>
+          </div> -->
+
+          <!-- Button -->
+          <a href="#" class="btn btn-lg btn-primary">
+            <i class="ri-whatsapp-line fs-3 me-2"></i>Message Us
+          </a>
+          <!-- <div class="d-flex gap-2 mb-4">
+            <a href="#" class="btn btn-lg btn-primary">
+              <i class="ri-shopping-cart-2-line me-1"></i>Add to Cart
+            </a>
+            <a href="#" class="btn btn-lg btn-outline-primary"> <i class="ri-heart-line"></i> </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Similar Products Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h3 class="mb-4" data-aos="fade-left" data-aos-duration="1200">Similar Products</h3>
+      <div class="row g-4">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card p-0 position-relative">
+            <!-- Discount Badge -->
+            <small class="badge bg-blue position-absolute top-0 end-0 m-2">25% OFF</small>
+
+            <!-- Product Image -->
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/product-2.jpg')}
+              class="card-img-top rounded-4"
+              alt="Product Image"
+            />
+
+            <!-- Card Body -->
+            <div class="card-body p-3">
+              <h5 class="mb-2">
+                <a href="#" class="text-decoration-none text-dark">Wooden Table</a>
+              </h5>
+              <div class="d-flex align-items-center gap-2">
+                <h6 class="fs-6 mb-0">₹40,000</h6>
+                <small class="text-muted text-decoration-line-through">₹53,333</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card p-0 position-relative">
+            <!-- Discount Badge -->
+            <small class="badge bg-blue position-absolute top-0 end-0 m-2">25% OFF</small>
+
+            <!-- Product Image -->
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/product-2.jpg')}
+              class="card-img-top rounded-4"
+              alt="Product Image"
+            />
+
+            <!-- Card Body -->
+            <div class="card-body p-3">
+              <h5 class="mb-2">
+                <a href="#" class="text-decoration-none text-dark">Wooden Table</a>
+              </h5>
+              <div class="d-flex align-items-center gap-2">
+                <h6 class="fs-6 mb-0">₹40,000</h6>
+                <small class="text-muted text-decoration-line-through">₹53,333</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card p-0 position-relative">
+            <!-- Discount Badge -->
+            <small class="badge bg-blue position-absolute top-0 end-0 m-2">25% OFF</small>
+
+            <!-- Product Image -->
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/product-2.jpg')}
+              class="card-img-top rounded-4"
+              alt="Product Image"
+            />
+
+            <!-- Card Body -->
+            <div class="card-body p-3">
+              <h5 class="mb-2">
+                <a href="#" class="text-decoration-none text-dark">Wooden Table</a>
+              </h5>
+              <div class="d-flex align-items-center gap-2">
+                <h6 class="fs-6 mb-0">₹40,000</h6>
+                <small class="text-muted text-decoration-line-through">₹53,333</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card p-0 position-relative">
+            <!-- Discount Badge -->
+            <small class="badge bg-blue position-absolute top-0 end-0 m-2">25% OFF</small>
+
+            <!-- Product Image -->
+            <img
+              src={getAssetPrefix('/assets/img/theme-images/product-2.jpg')}
+              class="card-img-top rounded-4"
+              alt="Product Image"
+            />
+
+            <!-- Card Body -->
+            <div class="card-body p-3">
+              <h5 class="mb-2">
+                <a href="#" class="text-decoration-none text-dark">Wooden Table</a>
+              </h5>
+              <div class="d-flex align-items-center gap-2">
+                <h6 class="fs-6 mb-0">₹40,000</h6>
+                <small class="text-muted text-decoration-line-through">₹53,333</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Button -->
+  <a
+    href="#"
+    class="btn btn-lg btn-secondary rounded-pill ps-3 pe-4 position-fixed"
+    style="bottom: 24px; right: 24px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); z-index: 1050;"
+  >
+    <i class="ri-phone-fill me-2"></i>Quick Call
+  </a>
+</Layout>
+
+<script is:inline>
+  // Add event listener to all thumbnail images
+  document.querySelectorAll('.thumbnail-img').forEach((thumbnail) => {
+    thumbnail.addEventListener('click', function () {
+      const mainImg = document.getElementById('main-product-img')
+      mainImg.src = this.src
+    })
+  })
+</script>

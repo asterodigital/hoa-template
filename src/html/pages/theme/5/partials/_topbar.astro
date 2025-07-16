@@ -1,0 +1,240 @@
+---
+import Logo from './_topbar/_logo.astro'
+import { getPathPrefix } from '../../../../../utils/path'
+const rawPath = Astro.url.pathname
+const currentPath = rawPath.replace(/\.html$/, '') // remove .html if present
+---
+
+<!-- Navbar -->
+<div class="sticky-top z-4">
+  <!-- Topbar -->
+  <div class="bg-primary text-light py-3">
+    <div class="container">
+      <div class="row align-items-center gx-3 gy-2">
+        <!-- Right: Hours & Location -->
+        <div
+          class="col-12 col-lg-auto d-flex justify-content-start justify-content-lg-end flex-wrap gap-3 ms-lg-auto"
+        >
+          <div class="fw-semibold">
+            <i class="ri-phone-line me-1"></i>
+            <a href="tel:7887800355" class="link-light text-decoration-none">Baner - 7887800355</a>
+          </div>
+          <div class="fw-semibold">
+            <i class="ri-phone-line me-1"></i>
+            <a href="tel:7887826565" class="link-light text-decoration-none">Wakad - 7887826565</a>
+          </div>
+          <div class="fw-semibold">
+            <i class="ri-send-plane-2-line me-1"></i>
+            <a href="mailto:ops.jazzup@gmail.com" class="link-light text-decoration-none"
+              >ops.jazzup@gmail.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-lg-0">
+    <div class="container">
+      <!-- Brand Logo or Text -->
+      <a
+        class="navbar-brand d-flex align-items-center py-lg-0"
+        href={getPathPrefix('/theme/5/home')}
+      >
+        <Logo />
+      </a>
+
+      <!-- Offcanvas Toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Offcanvas Menu -->
+      <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <a class="navbar-brand d-flex align-items-center" href={getPathPrefix('/theme/5/home')}>
+            <Logo />
+          </a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+          <!-- For lg+ screens -->
+          <ul class="navbar-nav flex-grow-1 pe-3 justify-content-end d-none d-lg-flex">
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/about' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/about')}
+              >
+                <span>About</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/blog' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/blog')}
+              >
+                <span>Blog</span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="branchDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span>Branch</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="branchDropdown">
+                <li>
+                  <a
+                    class={`dropdown-item${currentPath === '/theme/5/baner' ? ' active' : ''}`}
+                    href={getPathPrefix('/theme/5/baner')}>Baner</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class={`dropdown-item${currentPath === '/theme/5/wakad' ? ' active' : ''}`}
+                    href={getPathPrefix('/theme/5/wakad')}>Wakad</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/menu' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/menu')}
+              >
+                <span>Menu</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/franchise' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/franchise')}
+              >
+                <span>Franchise</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/contact-us' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/contact-us')}
+              >
+                <span>Contact Us</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- For smaller screens -->
+          <ul class="navbar-nav flex-grow-1 justify-content-start d-flex d-lg-none">
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/home' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/home')}>Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/about' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/about')}>About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/blog' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/blog')}>Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/baner' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/baner')}>Branch - Baner</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/wakad' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/wakad')}>Branch - Wakad</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/menu' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/menu')}>Menu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/franchise' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/franchise')}>Franchise</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class={`nav-link${currentPath === '/theme/5/contact-us' ? ' active' : ''}`}
+                href={getPathPrefix('/theme/5/contact-us')}>Contact Us</a
+              >
+            </li>
+          </ul>
+
+          <!-- Contact Details (Bottom) -->
+          <div class="d-block d-lg-none mt-2">
+            <div class="mb-2">
+              <i class="ri-mail-fill text-white me-1"></i>
+              <a href="mailto:ops.jazzup@gmail.com" class="text-light text-decoration-none"
+                >ops.jazzup@gmail.com</a
+              >
+            </div>
+            <div class="mb-4">
+              <i class="ri-phone-fill text-white me-1"></i>
+              <a href="tel:7887826565" class="text-light text-decoration-none">7887826565</a>
+            </div>
+            <nav class="d-flex fs-5 gap-2">
+              <a
+                href="https://www.facebook.com/JazzUpSalonwkd/"
+                class="text-decoration-none text-white"
+                target="_blank"
+                title="Facebook"><i class="ri-facebook-circle-fill"></i></a
+              >
+              <a
+                href="https://www.instagram.com/jazzup_salons/"
+                class="text-decoration-none text-white"
+                target="_blank"
+                title="Instagram"><i class="ri-instagram-line"></i></a
+              >
+              <a
+                href="https://wa.me/7887826565"
+                class="text-decoration-none text-white"
+                target="_blank"
+                title="WhatsApp"><i class="ri-whatsapp-line"></i></a
+              >
+              <a
+                href="https://www.linkedin.com/in/jazzup-salon-4034231a9"
+                class="text-decoration-none text-white"
+                target="_blank"
+                title="Linkedin"><i class="ri-linkedin-box-fill"></i></a
+              >
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,997 @@
+---
+import Layout from './layout.astro'
+// import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout
+  title="Home"
+  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora repudiandae harum nostrum sed natus."
+>
+  <style>
+    :root {
+      --swiper-pagination-color: var(--bs-primary);
+      --swiper-pagination-bullet-inactive-color: #ffffff;
+      --swiper-pagination-bullet-inactive-opacity: 0.2;
+      --swiper-pagination-bullet-opacity: 1;
+    }
+
+    .carousel-hero {
+      height: 60vh;
+    }
+
+    @media (min-width: 992px) {
+      .carousel-hero {
+        height: 80vh;
+      }
+    }
+  </style>
+
+  <!-- Hero Section -->
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item carousel-hero active position-relative">
+        <img
+          src="https://jazzupsalon.in/storage/local/aajv/cms/page/29/J_slid_1.png"
+          class="d-block w-100"
+          style="object-fit: cover; height: 100%; width: 100%;"
+          alt="Expert Hair Styling"
+        />
+        <!-- Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+        <!-- Content -->
+        <div class="position-absolute top-50 start-0 translate-middle-y text-light ps-4">
+          <div class="row">
+            <div class="col-lg-7 offset-lg-2">
+              <h2
+                class="text-uppercase fw-semibold text-primary fs-6 mb-3"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                The Place To Try Something New
+              </h2>
+              <h3
+                class="display-5 fw-semibold mb-4"
+                data-aos="fade-down"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
+                Elevate Your Style at jazzup salon's
+              </h3>
+              <p
+                class="lead lh-sm"
+                data-aos="fade-right"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+              >
+                Expert Cuts, Vibrant Color, and Luxurious Care for Every Strand
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item carousel-hero position-relative">
+        <img
+          src="https://jazzupsalon.in/storage/local/aajv/cms/page/16/J_s_2_N.png"
+          class="d-block w-100"
+          style="object-fit: cover; height: 100%; width: 100%;"
+          alt="Personalized Beauty"
+        />
+        <!-- Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+        <!-- Content -->
+        <div class="position-absolute top-50 start-0 translate-middle-y text-light ps-4">
+          <div class="row">
+            <div class="col-lg-7 offset-lg-2">
+              <h2
+                class="text-uppercase fw-semibold text-primary fs-6 mb-3"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+              >
+                Transform Your Beauty with jazzup salon's
+              </h2>
+              <h3
+                class="display-5 fw-semibold mb-4"
+                data-aos="fade-down"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
+                Unveil Your Best Look
+              </h3>
+              <p
+                class="lead lh-sm"
+                data-aos="fade-right"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+              >
+                Flawless Makeup, Personalized Beauty, and Artistry for Every Occasion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Clients Section -->
+  <!-- <section class="bg-black py-3">
+    <div class="container-fluid">
+      <div class="row align-items-center g-4">
+        <div class="col-4 col-sm-2">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/51/loreal.png"
+            class="img-fluid"
+            alt="Loreal"
+          />
+        </div>
+        <div class="col-4 col-sm-2">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/47/o3logo.png"
+            class="img-fluid"
+            alt="O3"
+          />
+        </div>
+        <div class="col-4 col-sm-2">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/48/raaga-images.png"
+            class="img-fluid"
+            alt="Raaga"
+          />
+        </div>
+        <div class="col-4 col-sm-2">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/49/434042065_752699733637421_8574337038940628039_n.jpg"
+            class="img-fluid"
+            alt="Hijinny"
+          />
+        </div>
+        <div class="col-4 col-sm-2">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/50/images-logo.png"
+            class="img-fluid"
+            alt="Schwarzkopf"
+          />
+        </div>
+        <div class="col-4 col-sm-2">
+          <img
+            src=" https://jazzupsalon.in/storage/local/aajv/cms/page/99/godrej.jpeg.png"
+            class="img-fluid"
+            alt="Godrej"
+          />
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Clients Section -->
+  <section class="bg-black py-3">
+    <div class="container-fluid">
+      <div class="row align-items-center g-4">
+        <div class="col-4 col-sm-2">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/51/loreal.png"
+            class="img-fluid"
+            alt="Loreal"
+          />
+        </div>
+        <div class="col-4 col-sm-2">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/47/o3logo.png"
+            class="img-fluid"
+            alt="O3"
+          />
+        </div>
+        <div class="col-4 col-sm-2">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/48/raaga-images.png"
+            class="img-fluid"
+            alt="Raaga"
+          />
+        </div>
+        <div class="col-4 col-sm-2">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/49/434042065_752699733637421_8574337038940628039_n.jpg"
+            class="img-fluid"
+            alt="Hijinny"
+          />
+        </div>
+        <div class="col-4 col-sm-2">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/50/images-logo.png"
+            class="img-fluid"
+            alt="Schwarzkopf"
+          />
+        </div>
+        <div class="col-4 col-sm-2">
+          <img
+            src=" https://jazzupsalon.in/storage/local/aajv/cms/page/99/godrej.jpeg.png"
+            class="img-fluid"
+            alt="Godrej"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="text-center">
+        <p class="text-primary text-uppercase fw-semibold fs-6 mb-2">
+          Transform Your Beauty with Jazzup Salon
+        </p>
+        <h1 class="text-light display-6 fw-semibold mb-5">Elevate Your Style at JazzUp Salon</h1>
+      </div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-xl-3">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <img
+                src="https://jazzupsalon.in/storage/local/aajv/cms/page/18/face.png"
+                class="img-fluid"
+                style="height: 48px;"
+                alt="Beauty"
+              />
+              <h4 class="my-2">Beauty</h4>
+              <p class="text-muted mb-2">
+                Revitalize your glow with our luxurious beauty treatments, tailored for head-to-toe
+                perfection.
+              </p>
+              <a href="#" class="link-yellow fw-semibold text-decoration-none">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <img
+                src="https://jazzupsalon.in/storage/local/aajv/cms/page/19/scissors.png"
+                class="img-fluid"
+                style="height: 48px;"
+                alt="Hair"
+              />
+              <h4 class="my-2">Hair</h4>
+              <p class="text-muted mb-2">
+                Transform your hair with our rejuvenating treatments, designed for shine, strength,
+                and lasting beauty.
+              </p>
+              <a href="#" class="link-red fw-semibold text-decoration-none">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <img
+                src="https://jazzupsalon.in/storage/local/aajv/cms/page/20/makeup-(1).png"
+                class="img-fluid"
+                style="height: 48px;"
+                alt="Makeup"
+              />
+              <h4 class="my-2">Makeup</h4>
+              <p class="text-muted mb-2">
+                Enhance your natural beauty with our expert makeup artist, creating flawless looks
+                for every occasion.
+              </p>
+              <a href="#" class="link-green fw-semibold text-decoration-none">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <div class="card text-center h-100">
+            <div class="card-body">
+              <img
+                src="https://jazzupsalon.in/storage/local/aajv/cms/page/21/manicure.png"
+                class="img-fluid"
+                style="height: 48px;"
+                alt="Nail"
+              />
+              <h4 class="my-2">Nail</h4>
+              <p class="text-muted mb-2">
+                Express your style with our creative nail art treatments, where every design is a
+                work of art.
+              </p>
+              <a href="#" class="link-blue fw-semibold text-decoration-none">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformation Section -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="text-primary text-uppercase fw-semibold fs-6 mb-2">See the Transformation</h2>
+        <h3 class="text-light display-6 fw-semibold mb-5">
+          Expert Transformations for Stunning Results
+        </h3>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper mb-5">
+          <div class="swiper-slide" style="height: auto;">
+            <img
+              src="https://jazzupsalon.in/storage/local/aajv/cms/page/37/image2.jpg"
+              class="img-fluid rounded-4"
+              alt="Hair Transformation"
+            />
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <img
+              src="https://jazzupsalon.in/storage/local/aajv/cms/page/38/image4.jpg"
+              class="img-fluid rounded-4"
+              alt="Hair Transformation"
+            />
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <img
+              src="https://jazzupsalon.in/storage/local/aajv/cms/page/39/image3.jpg"
+              class="img-fluid rounded-4"
+              alt="Hair Transformation"
+            />
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <img
+              src="https://jazzupsalon.in/storage/local/aajv/cms/page/36/image1.jpg"
+              class="img-fluid rounded-4"
+              alt="Hair Transformation"
+            />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/media/30/img.jpg"
+            class="img-fluid rounded-4"
+            alt="Jazzup Salon"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h2 class="text-primary text-uppercase fw-semibold fs-6 mb-2">Jazzup Salons</h2>
+          <h3 class="text-light display-6 fw-semibold mb-3">Why Choose Us?</h3>
+          <p class="text-light mb-4">
+            Unparalleled Expertise, Personalized Care, and a Commitment to Your Beauty and Wellness.
+          </p>
+          <div class="row g-5">
+            <div class="col-12 col-md-6">
+              <div class="d-flex flex-row gap-3">
+                <div>
+                  <img
+                    src="https://jazzupsalon.in/storage/local/aajv/cms/media/32/skin-care.png"
+                    class="img-fluid me-4"
+                    style="width: 40px;"
+                    alt="Personalized Consultations"
+                  />
+                </div>
+                <div>
+                  <h4 class="text-light fs-5 mb-1">Personalized Consultations</h4>
+                  <p class="text-light mb-0">
+                    Tailored beauty and hair solutions to match your individual style and needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="d-flex flex-row gap-3">
+                <div>
+                  <img
+                    src="https://jazzupsalon.in/storage/local/aajv/cms/media/33/beauty-blogger.png"
+                    class="img-fluid me-4"
+                    style="width: 40px;"
+                    alt="Experienced Professionals"
+                  />
+                </div>
+                <div>
+                  <h4 class="text-light fs-5 mb-1">Experienced Professionals</h4>
+                  <p class="text-light mb-0">
+                    Skilled stylists and beauty experts delivering top-notch services with attention
+                    to detail.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="d-flex flex-row gap-3">
+                <div>
+                  <img
+                    src="https://jazzupsalon.in/storage/local/aajv/cms/media/34/premium-service.png"
+                    class="img-fluid me-4"
+                    style="width: 40px;"
+                    alt="High-Quality Products"
+                  />
+                </div>
+                <div>
+                  <h4 class="text-light fs-5 mb-1">High-Quality Products</h4>
+                  <p class="text-light mb-0">
+                    Premium hair and beauty products ensuring lasting results and healthy care.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="d-flex flex-row gap-3">
+                <div>
+                  <img
+                    src="https://jazzupsalon.in/storage/local/aajv/cms/media/35/mirror.png"
+                    class="img-fluid me-4"
+                    style="width: 40px;"
+                    alt="Relaxing Environment"
+                  />
+                </div>
+                <div>
+                  <h4 class="text-light fs-5 mb-1">Relaxing Environment</h4>
+                  <p class="text-light mb-0">
+                    A serene and welcoming atmosphere designed for ultimate relaxation and
+                    rejuvenation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="text-center">
+        <h3 class="text-primary display-6 fw-semibold mb-2">Happy Customers</h3>
+        <p class="lead text-light mb-5">
+          Customer satisfaction is our major goal. See what our customers are saying about us.
+        </p>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper mb-5">
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="lead text-muted">
+                  “Laxmi- Excellent service provided by her . She was very friendly and was taking
+                  care of me .She was very much polite and happy to provide service in a very nice
+                  manner.Thanks Laxmi”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://jazzupsalon.in/storage/local/aajv/cms/page/52/unnamed.png"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Pallavi Prabhupatkar</p>
+                    <p class="fs-5 text-muted mb-0">Hair care</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="lead text-muted">
+                  “I really like the service and the staff was amazing. Rohan was very professional
+                  polite, he did beautiful haircut. All over the experience was too good.”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://jazzupsalon.in/storage/local/aajv/cms/page/53/unnamed-(1).png"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Vrushali Goyal</p>
+                    <p class="fs-5 text-muted mb-0">Hair cut</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="lead text-muted">
+                  “Very professional service. Great haircut by Amit. Mr. Amit was very professional
+                  and explained everything about my hair and the problems and solutions for it.
+                  Highly recommended. Not too expensive as well”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://jazzupsalon.in/storage/local/aajv/cms/page/54/unnamed-(2).png"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Hrithik Jain</p>
+                    <p class="fs-5 text-muted mb-0">Hair cut</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="lead text-muted">
+                  “Great service. Hygenic, Attention to detail. Aromatic cozy ambiance. Good
+                  masseuse-Lakshmi and Martha. Also got a green tea after my massage”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://cdn.asterobuilder.com/aabg/cms/design_block/23/u4.jpg"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Kamya Joshi</p>
+                    <p class="fs-5 text-muted mb-0">Massage</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="lead text-muted">
+                  “Wonder full service. Very good experience for jazz up saloon. Sania khan is a
+                  great beautician I have wonderful experience for jazzup salon.”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://jazzupsalon.in/storage/local/aajv/cms/page/55/unnamed-(3).png"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Pooja Lande</p>
+                    <p class="fs-5 text-muted mb-0">Skin Care</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1 text-center">
+          <h2 class="text-primary text-uppercase fw-semibold fs-6 mb-2">Our team</h2>
+          <h3 class="text-light display-6 fw-semibold mb-5">
+            Meet Our Expert Team, Ready to Bring Your Vision to Life
+          </h3>
+
+          <!-- Team Cards -->
+          <div class="row g-4">
+            <div class="col-sm-6 col-md-4">
+              <div class="card text-start h-100 p-0">
+                <img
+                  src="https://jazzupsalon.in/storage/local/aajv/cms/page/40/team1.jpeg"
+                  class="card-img-top"
+                  style="height: 320px; object-fit: cover;"
+                  alt="Marketing Head"
+                />
+                <div class="card-body p-4">
+                  <h4>Ashish Garg</h4>
+                  <p class="text-muted mb-0">Marketing Head</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="card text-start h-100 p-0">
+                <img
+                  src="https://jazzupsalon.in/storage/local/aajv/cms/page/56/Sambhaji-Thorat-Operational-Head.jpeg"
+                  class="card-img-top"
+                  style="height: 320px; object-fit: cover;"
+                  alt="Operational Head"
+                />
+                <div class="card-body p-4">
+                  <h4>Sambhaji Thorat</h4>
+                  <p class="text-muted mb-0">Operational Head</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="card text-start h-100 p-0">
+                <img
+                  src="https://jazzupsalon.in/storage/local/aajv/cms/page/41/team2.jpeg"
+                  class="card-img-top"
+                  style="height: 320px; object-fit: cover;"
+                  alt="Senior Hair Artist"
+                />
+                <div class="card-body p-4">
+                  <h4>Mahesh Kashid</h4>
+                  <p class="text-muted mb-0">Senior Hair Artist</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 offset-md-2">
+              <div class="card text-start h-100 p-0">
+                <img
+                  src="https://jazzupsalon.in/storage/local/aajv/cms/page/42/team-3.jpg"
+                  class="card-img-top"
+                  style="height: 320px; object-fit: cover;"
+                  alt="Manager"
+                />
+                <div class="card-body p-4">
+                  <h4>Wilson Sable</h4>
+                  <p class="text-muted mb-0">Manager</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="card text-start h-100 p-0">
+                <img
+                  src="https://jazzupsalon.in/storage/local/aajv/cms/page/43/team-4.jpeg"
+                  class="card-img-top"
+                  style="height: 320px; object-fit: cover;"
+                  alt="Front Desk Manager & Skin Expert"
+                />
+                <div class="card-body p-4">
+                  <h4>Shweta</h4>
+                  <p class="text-muted mb-0">Front Desk Manager & Skin Expert</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="text-primary fw-semibold mb-2">Pricing FAQ</h2>
+        <p class="lead text-light mb-5">
+          If you don't see an answer to your question, you can send us an email from our contact
+          form.
+        </p>
+      </div>
+
+      <!-- Accordion -->
+      <div class="row gx-4 gy-0">
+        <div class="col-md-6">
+          <div
+            class="accordion accordion-flush"
+            id="accordionFlushLeft"
+            role="tablist"
+            aria-multiselectable="true"
+          >
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  What hygiene measures does JazzUp Salon follow?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  We sterilize All Accessories Before any Service start. We Sanitize All Rooms,
+                  surfaces, before Service start. Our staff sanitize there Hand's Before All
+                  services.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  What hair treatments do you offer?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  We offer haircuts, coloring, keratin treatments, deep conditioning, and more.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  What makeup services do you provide?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  We offer bridal makeup, event makeup, and everyday looks.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  Do you offer consultations?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  Yes, complimentary consultations are available for all services.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="accordion accordion-flush"
+            id="accordionFlushRight"
+            role="tablist"
+            aria-multiselectable="true"
+          >
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFive"
+                >
+                  Do I need to book an appointment?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFive"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushRight"
+              >
+                <div class="accordion-body">
+                  Booking in advance is recommended, but walk-ins are welcome.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSix"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSix"
+                >
+                  Are your beauty products safe for sensitive skin?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSix"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushRight"
+              >
+                <div class="accordion-body">
+                  Yes, we use dermatologist-tested products suitable for all skin types.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSeven"
+                >
+                  Do you have packages or memberships?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSeven"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushRight"
+              >
+                <div class="accordion-body">
+                  Yes, we offer packages and membership plans with discounts.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseEight"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseEight"
+                >
+                  What if I’m not satisfied with my service?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseEight"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushRight"
+              >
+                <div class="accordion-body">
+                  Please inform us immediately; we’ll work to resolve any issues.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Section -->
+  <section class="marquee-wrapper bg-black border-top border-bottom py-5">
+    <div class="container-fluid overflow-hidden">
+      <div class="marquee fs-3 d-flex">
+        <!-- Original + Duplicate content inside -->
+        <div class="marquee-track d-flex align-items-center">
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Luxury
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Hygenic
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Best Service
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Experienced Staff
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Premium
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Happy Customers
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <!-- Duplicate content for seamless loop -->
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Luxury
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Hygenic
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Best Service
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Experienced Staff
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Premium
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+          <h2 class="marquee-content display-2 fw-semibold text-uppercase text-light me-3">
+            Happy Customers
+          </h2>
+          <div class="marquee-content text-primary me-3">
+            <i class="ri-shining-2-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

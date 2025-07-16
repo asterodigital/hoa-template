@@ -1,0 +1,104 @@
+---
+interface Props {
+  pageScript?: string
+}
+
+const { pageScript } = Astro.props
+
+function getJS(filename: string) {
+  const isDev = import.meta.env.DEV
+  return isDev ? `/dist/js/${filename}.js` : `/js/${filename}.min.js`
+}
+---
+
+<!-- Main JS -->
+<script src={getJS('main')} type="module" is:inline></script>
+
+<!-- Page Script -->{pageScript && <Fragment set:html={pageScript} />}
+
+<!-- Animate on Scroll (AOS) Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
+<script is:inline>
+  AOS.init({
+    once: true
+  })
+</script>
+
+<!-- Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" is:inline></script>
+
+<!-- Script for Swiper -->
+<script is:inline>
+  var swiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      }
+    }
+  })
+
+  var swiper2 = new Swiper('.mySwiper2', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    breakpoints: {
+      556: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      }
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+    }
+  })
+</script>
+
+<!-- Typer Script -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" is:inline></script>
+<script is:inline>
+  // Wait for the DOM to be ready before running the script
+  document.addEventListener('DOMContentLoaded', function () {
+    // Select all elements with the class 'typer'
+    const typers = document.querySelectorAll('.typer')
+
+    typers.forEach(function (typer) {
+      // Get the configuration values from data attributes
+      const typeSpeed = typer.getAttribute('data-type-speed') || 50
+      const backSpeed = typer.getAttribute('data-back-speed') || 50
+      const strings = typer.getAttribute('data-strings')
+        ? typer.getAttribute('data-strings').split(',')
+        : []
+      const loop = typer.getAttribute('data-loop') === 'true'
+
+      // Initialize the Typed.js instance with the custom options
+      new Typed(typer.querySelector('.text-primary'), {
+        strings: strings,
+        typeSpeed: parseInt(typeSpeed, 10),
+        backSpeed: parseInt(backSpeed, 10),
+        loop: loop,
+        backDelay: 1000 // Add a slight delay before the text starts backspacing
+      })
+    })
+  })
+</script>

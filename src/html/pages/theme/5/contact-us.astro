@@ -1,0 +1,150 @@
+---
+import Layout from './layout.astro'
+---
+
+<Layout
+  title="Contact"
+  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora repudiandae harum nostrum sed natus."
+>
+  <!-- Heading -->
+  <!-- <section class="bg-black py-5">
+    <div class="container text-center">
+      <h1 class="display-5 text-primary fw-semibold mb-4">Contact Us</h1>
+    </div>
+  </section> -->
+
+  <!-- Heading -->
+  <section
+    class="py-5 d-flex align-items-center position-relative"
+    style="
+      background-image: url('https://jazzupsalon.in/storage/local/aajv/cms/page/28/J_s_N_1.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 280px;
+    "
+  >
+    <!-- Overlay -->
+    <div style="position: absolute; inset: 0; background: rgba(50, 50, 50, 0.5); z-index: 1;"></div>
+
+    <div class="row position-relative" style="z-index: 2; width: 100%;">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="container text-center">
+          <h1 class="display-5 text-light fw-semibold">Contact Us</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-md-6">
+          <h1 class="text-light mb-2">Contact Us</h1>
+          <p class="text-light mb-4">Please use below form to contact us.</p>
+          <form class="row g-3">
+            <div class="col-12">
+              <label for="name" class="form-label text-light mb-1"
+                >Name <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                id="name"
+                placeholder="Enter Your Name"
+                required
+              />
+            </div>
+            <div class="col-12">
+              <label for="phone" class="form-label text-light mb-1"
+                >Phone Number <span class="text-danger">*</span></label
+              >
+              <input
+                type="tel"
+                class="form-control form-control-lg"
+                id="phone"
+                placeholder="Enter Phone Number"
+                required
+              />
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label text-light mb-1"
+                >Message <span class="text-danger">*</span></label
+              >
+              <textarea
+                class="form-control form-control-lg"
+                id="message"
+                rows="4"
+                placeholder="Message"
+                required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4"
+                >Send Message</button
+              >
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-5">
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="ri-map-pin-line text-primary fs-3 flex-shrink-0"></i>
+              <div>
+                <h5 class="fw-semibold text-light mb-1">Address</h5>
+                <p class="text-light mb-0">
+                  1st Floor, Shree Ganesh Imperia Square Opp Omega Paradise. Lane Front of Coasta
+                  Rica Society New Hinjawadi Link Road, Wakad, Pimpri-Chinchwad, Maharashtra 411057
+                </p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="ri-phone-line text-primary fs-3 flex-shrink-0"></i>
+              <div>
+                <h5 class="fw-semibold text-light mb-1">Phone</h5>
+                <div class="text-light">7887826565</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3 mb-4">
+              <i class="ri-mail-line text-primary fs-3 flex-shrink-0"></i>
+              <div>
+                <h5 class="fw-semibold text-light mb-1">E-mail</h5>
+                <a href="mailto:ops.jazzup@gmail.com" class="text-primary text-decoration-none"
+                  >ops.jazzup@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mb-5">
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="ri-map-pin-line text-primary fs-3 flex-shrink-0"></i>
+              <div>
+                <h5 class="fw-semibold text-light mb-1">Address</h5>
+                <p class="text-light mb-0">
+                  S.NO 163/3B/1, 2nd Floor, Opp. Aker Solutions, near joshi vadewale, Balewadi
+                  Phata, Baner, Pune, Maharashtra 411045
+                </p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="ri-phone-line text-primary fs-3 flex-shrink-0"></i>
+              <div>
+                <h5 class="fw-semibold text-light mb-1">Phone</h5>
+                <div class="text-light">7887800355</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3">
+              <i class="ri-mail-line text-primary fs-3 flex-shrink-0"></i>
+              <div>
+                <h5 class="fw-semibold text-light mb-1">E-mail</h5>
+                <a href="mailto:ops.jazzup@gmail.com" class="text-primary text-decoration-none"
+                  >ops.jazzup@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

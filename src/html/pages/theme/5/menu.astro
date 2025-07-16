@@ -1,0 +1,96 @@
+---
+import Layout from './layout.astro'
+---
+
+<Layout
+  title="Menu"
+  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora repudiandae harum nostrum sed natus."
+>
+  <!-- Heading -->
+  <!-- <section class="bg-black py-5">
+    <div class="container text-center">
+      <h1 class="display-5 text-primary fw-semibold mb-4">Menu</h1>
+    </div>
+  </section> -->
+
+  <!-- Heading -->
+  <section
+    class="py-5 d-flex align-items-center position-relative"
+    style="
+      background-image: url('https://jazzupsalon.in/storage/local/aajv/cms/page/79/8861.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 280px;
+    "
+  >
+    <!-- Overlay -->
+    <div style="position: absolute; inset: 0; background: rgba(50, 50, 50, 0.5); z-index: 1;"></div>
+
+    <div class="row position-relative" style="z-index: 2; width: 100%;">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="container text-center">
+          <h1 class="display-5 text-light fw-semibold">Menu</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <h1 class="text-light mb-2">Menu Form</h1>
+      <p class="text-light mb-4">Please fill the form below to see our menu.</p>
+      <form class="row g-3">
+        <div class="col-12">
+          <label for="name" class="form-label text-light mb-1"
+            >Name <span class="text-danger">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="name"
+            placeholder="Enter Your Name"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="phone" class="form-label text-light mb-1"
+            >Phone Number <span class="text-danger">*</span></label
+          >
+          <input
+            type="tel"
+            class="form-control form-control-lg"
+            id="phone"
+            placeholder="Enter Phone Number"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="branch" class="form-label text-light mb-1">Select Branch</label>
+          <select class="form-select form-select-lg" id="branch">
+            <option value="" disabled selected>Select Branch</option>
+            <option value="baner">Baner</option>
+            <option value="wakad">Wakad</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label for="message" class="form-label text-light mb-1"
+            >Message <span class="text-danger">*</span></label
+          >
+          <textarea
+            class="form-control form-control-lg"
+            id="message"
+            rows="4"
+            placeholder="Message"
+            required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4"
+            >Send Message</button
+          >
+        </div>
+      </form>
+    </div>
+  </section>
+</Layout>

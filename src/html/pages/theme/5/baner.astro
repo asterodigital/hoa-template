@@ -1,0 +1,715 @@
+---
+import Layout from './layout.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout
+  title="Baner"
+  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempora repudiandae harum nostrum sed natus."
+>
+  <style>
+    :root {
+      --swiper-pagination-color: var(--bs-primary);
+      --swiper-pagination-bullet-inactive-color: #ffffff;
+      --swiper-pagination-bullet-inactive-opacity: 0.2;
+      --swiper-pagination-bullet-opacity: 1;
+    }
+  </style>
+
+  <!-- Heading -->
+  <section
+    class="py-5 d-flex align-items-center position-relative"
+    style="
+      background-image: url('https://jazzupsalon.in/storage/local/aajv/cms/page/76/jazzup-salon-baner-baner_1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 280px;
+    "
+  >
+    <!-- Overlay -->
+    <div style="position: absolute; inset: 0; background: rgba(50, 50, 50, 0.5); z-index: 1;"></div>
+
+    <div class="row position-relative" style="z-index: 2; width: 100%;">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="container text-center">
+          <h1 class="display-5 text-light fw-semibold">
+            JazzUp Salon Baner - The Best Unisex Salon in Baner
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/76/jazzup-salon-baner-baner_1.jpg"
+            class="img-fluid rounded-4"
+            alt="Jazzup Salon"
+          />
+        </div>
+        <div class="col-lg-6 text-light">
+          <h2 class="display-6 fw-semibold mb-3">
+            Experience Top-Quality Hair and Beauty Services at JazzUp Salon in Baner
+          </h2>
+          <div class="mb-4">
+            Located in the heart of Baner, JazzUp Salon is your go-to destination for exceptional
+            hair and beauty services. As a top unisex salon, we cater to both men and women,
+            offering a wide range of treatments, from precision haircuts and vibrant coloring to
+            flawless makeup and rejuvenating skin care. Our experienced team uses the latest
+            techniques and high-quality products to ensure you leave feeling refreshed and looking
+            your best. Whether you're prepping for a special occasion or simply want to pamper
+            yourself, JazzUp Salon in Baner is the perfect choice.
+          </div>
+          <a href={getPathPrefix('/theme/5/contact-us')} class="btn btn-lg btn-primary"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="text-center">
+        <h3 class="fs-1 mb-5 text-primary">Why Choose JazzUp Salon, Baner?</h3>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="ri-trophy-line text-primary display-4"></i>
+              <span class="d-block mt-1 mb-2"><strong>Top-Tier Expertise</strong></span>
+              <p class="mb-0">
+                Our experienced stylists in Baner are trained in the latest trends, delivering
+                hairstyles, beauty makeovers, and grooming services that suit your unique
+                personality.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="ri-hand-heart-line text-primary display-4"></i>
+              <span class="d-block mt-1 mb-2"
+                ><strong>Exclusive Hair & Skin Treatments</strong></span
+              >
+              <p class="mb-0">
+                Enjoy a wide range of treatments, from advanced hair spas to skin rejuvenation
+                therapies, designed to make you feel your best.
+              </p>
+            </div>
+          </div>
+        </div><div class="col-md-6 col-xl-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="ri-map-pin-line text-primary display-4"></i>
+              <span class="d-block mt-1 mb-2"><strong>Central Location</strong></span>
+              <p class="mb-0">
+                Located conveniently at Balewadi Phata, Baner, we are easily accessible and offer
+                ample parking for a hassle-free experience.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="ri-heart-line text-primary display-4"></i>
+              <span class="d-block mt-1 mb-2"><strong>Personalized Care</strong></span>
+              <p class="mb-0">
+                At our Baner branch, every client receives personalized attention, ensuring services
+                are tailored to meet your individual needs and preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="text-center">
+        <img
+          src="https://jazzupsalon.in/storage/local/aajv/cms/page/75/picture.png"
+          class="img-fluid mb-2"
+          style="max-height: 48px;"
+          alt="Gallery Icon"
+        />
+        <h2 class="fs-1 text-light mb-3">Explore Our Baner Gallery</h2>
+        <div class="text-light mb-5">
+          A Showcase of Stunning Transformations and Artistic Beauty Creations.
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-md-3">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/61/jazzup-salon-wakad_2.jpg"
+            class="img-fluid rounded-4"
+            style="height: 100%; object-fit: cover;"
+            alt="Gallery Image"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/62/image_2.jpg"
+            class="img-fluid rounded-4"
+            style="height: 100%; object-fit: cover;"
+            alt="Gallery Image"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/63/image_12.jpg"
+            class="img-fluid rounded-4"
+            style="height: 100%; object-fit: cover;"
+            alt="Gallery Image"
+          />
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/64/image_3.jpg"
+            class="img-fluid rounded-4"
+            style="height: 100%; object-fit: cover;"
+            alt="Gallery Image"
+          />
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/68/image4.jpg"
+            class="img-fluid rounded-4"
+            style="height: 100%; object-fit: cover;"
+            alt="Gallery Image"
+          />
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/66/jazz4-15-8881.jpeg"
+            class="img-fluid rounded-4"
+            style="height: 100%; object-fit: cover;"
+            alt="Gallery Image"
+          />
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <img
+            src="https://jazzupsalon.in/storage/local/aajv/cms/page/67/jazzup-salon-wakad1.jpg"
+            class="img-fluid rounded-4"
+            style="height: 100%; object-fit: cover;"
+            alt="Gallery Image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="text-center">
+        <h3 class="text-primary display-6 fw-semibold mb-2">Happy Customers</h3>
+        <p class="lead text-light mb-5">
+          Hear from Our Clients: Real Stories of Beauty, Confidence, and Exceptional Service.
+        </p>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper mb-5">
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="text-muted">
+                  “I recently visited Jaazup Salon for highlights and a keratin treatment, and I was
+                  blown away by the exceptional service and results! Madhav was the stylist who took
+                  care of my hair, and he did a phenomenal job. Not only were the highlights
+                  perfectly matched to my expectations, but the keratin treatment left my hair silky
+                  smooth and vibrant.The atmosphere at Jaazup Salon is welcoming and professional.
+                  I'll definitely be returning for future hair treatments!”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://jazzupsalon.in/storage/local/aajv/cms/page/69/images.png"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Bhagyashri Jalgaonkar</p>
+                    <p class="text-muted mb-0">Hair Treatments</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="text-muted">
+                  “I have been coming to Jazz Up for all salon and spa services since 5 years now.
+                  It's a clean, hygienic, and feel good place with the friendliest staff. I
+                  especially want to mention Madhav the hair stylist who styles my younger
+                  daughter's hair and makes her super happy with the perfect cuts. Happy to
+                  recommend him! Thank you!”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://jazzupsalon.in/storage/local/aajv/cms/page/70/unnamed.png"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Divya Upadhyay</p>
+                    <p class="text-muted mb-0">Hair Cut</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="text-muted">
+                  “Throughout my visit, I was impressed by the professionalism and politeness of the
+                  staff. They were attentive and made sure I was comfortable at every stage of the
+                  process. What really stood out to me was the attention to detail and personalized
+                  care. Each service felt tailored to my needs, and the quality was top-notch. I
+                  highly recommend Jazz Up Salon to anyone looking for a relaxing and high-quality
+                  salon experience. The staff is excellent, the services are thorough, and the
+                  atmosphere is incredibly calming. It was an absolute delight, and I’ll definitely
+                  be returning for more!”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://jazzupsalon.in/storage/local/aajv/cms/page/71/yash_b.png"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Yash Bajaj</p>
+                    <p class="text-muted mb-0">Haircut, Manicure, Facials</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="text-muted">
+                  “Best for Aqua Gold hair treatment- Madhav and Siddhi helped me to get it done.
+                  Experienced and professional staff. Very good satisfying service. Thumbs up for
+                  Aqua hair treatment.”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://jazzupsalon.in/storage/local/aajv/cms/page/72/unnamed-(1).png"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Anuja Jadhav</p>
+                    <p class="text-muted mb-0">Aqua Gold Hair Treatment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="text-muted">
+                  “I got kera smoothening treatment done for my hair by Raj singh. I am very happy
+                  with the results !! The staff is extremely helpful and patient and Raj is very
+                  knowledgeable and extremely patient, he did not rush anytime during the treatment
+                  although it was a long process. If you are getting kera smoothening treatment I
+                  highly recommend getting it done by Raj singh for better results.”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://jazzupsalon.in/storage/local/aajv/cms/page/73/unnamed-(2).png"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Shruti Warkar</p>
+                    <p class="text-muted mb-0">Shampoo & conditioning, Haircut, Hairstyling</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div class="card border h-100 p-0">
+              <div class="card-body d-flex flex-column p-3">
+                <p class="text-muted">
+                  “I recently had my hair cut by Raj Singh, and I couldn't be happier with the
+                  results! Raj's attention to detail and expertise really shone through during my
+                  appointment. Not only did he listen carefully to what I wanted, but he also
+                  offered valuable suggestions to enhance the final look. The haircut itself was
+                  executed with precision, and I left the salon feeling confident and refreshed. I
+                  highly recommend Raj Singh to anyone looking for a skilled and personable
+                  hairstylist. I'll definitely be returning for my future hair care needs!”
+                </p>
+                <div class="d-flex align-items-center mt-auto">
+                  <span class="avatar avatar-md mb-0 me-3">
+                    <img
+                      src="https://jazzupsalon.in/storage/local/aajv/cms/page/74/unnamed-(3).png"
+                      alt="Customer"
+                      class="img-fluid rounded-circle"
+                    />
+                  </span>
+                  <div>
+                    <p class="fw-semibold fs-5 mb-1">Celestee Pradite</p>
+                    <p class="text-muted mb-0">Haircut</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="bg-black py-5">
+    <div class="container">
+      <div class="text-center">
+        <h3 class="text-primary fw-semibold mb-2">Pricing FAQ</h3>
+        <p class="lead text-light mb-5">
+          If you don't see an answer to your question, you can send us an email from our contact
+          form.
+        </p>
+      </div>
+
+      <!-- Accordion -->
+      <div class="row gx-4 gy-0">
+        <div class="col-md-6">
+          <div
+            class="accordion accordion-flush"
+            id="accordionFlushLeft"
+            role="tablist"
+            aria-multiselectable="true"
+          >
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  What are your operating hours?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">We are open every day from 10:00 AM to 9:00 PM.</div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  How can I book an appointment?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  You can call us at +91-7887800355, book online through our Baner page, or use the
+                  form below to schedule your appointment.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Do you accept walk-ins?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  Yes, but it’s best to schedule an appointment to avoid waiting times.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  What offers do you have right now?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  We frequently have seasonal promotions. Contact us or visit the website for the
+                  latest deals.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="accordion accordion-flush"
+            id="accordionFlushRight"
+            role="tablist"
+            aria-multiselectable="true"
+          >
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFive"
+                >
+                  Where is JazzUp Salon in Baner located?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFive"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushRight"
+              >
+                <div class="accordion-body">
+                  We are located at S.NO 163/3B/1, 2nd Floor, Opp. Aker Solutions, near Joshi
+                  Vadewale, Balewadi Phata, Baner, Pune, Maharashtra 411045.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSix"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSix"
+                >
+                  What services do you offer?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSix"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushRight"
+              >
+                <div class="accordion-body">
+                  We provide a full range of beauty and grooming services, including haircuts,
+                  skincare, bridal makeup, manicures, and more. You can view our complete service
+                  menu here.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSeven"
+                >
+                  Is parking available?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSeven"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushRight"
+              >
+                <div class="accordion-body">
+                  Yes, we have ample parking space available near the salon.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Appointment Form -->
+  <section class="bg-black pb-5">
+    <div class="container">
+      <h6 class="text-light fs-2 mb-4">Book Appointment Form</h6>
+      <form class="row g-4">
+        <div class="col-12">
+          <label for="fullName" class="form-label text-light mb-1"
+            >Full Name <span class="text-danger">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control form-control-lg rounded-3"
+            id="fullName"
+            placeholder="Enter Full Name"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="mobile" class="form-label text-light mb-1"
+            >Mobile No. <span class="text-danger">*</span></label
+          >
+          <input
+            type="tel"
+            class="form-control form-control-lg rounded-3"
+            id="mobile"
+            placeholder="Enter Mobile No."
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="services" class="form-label text-light mb-1"
+            >Services <span class="text-danger">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control form-control-lg rounded-3"
+            id="services"
+            placeholder="Enter Services"
+            required
+          />
+          <div
+            class="form-text text-light bg-danger bg-opacity-10 rounded-2 px-2 mt-1"
+            style="display: inline-block;"
+          >
+            For example : Skin, Hair, Makeup, Nail, etc.
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="datetime" class="form-label text-light mb-1"
+            >Date & Time <span class="text-danger">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control form-control-lg rounded-3"
+            id="datetime"
+            placeholder="Enter Date & Time"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4 mt-2">
+            Book Appointment Now
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Card -->
+  <section class="bg-black pb-5">
+    <div class="container">
+      <div class="card rounded-4 overflow-hidden p-0">
+        <div class="card-body p-0">
+          <div class="row">
+            <div class="col-md-6 p-0">
+              <div class="h-100 w-100" style="min-height: 400px;">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15129.06069620136!2d73.784863!3d18.56208!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bed1fe128cc3%3A0x1ba9099516ba9ed0!2sJazzUP%20SALON!5e0!3m2!1sen!2sin!4v1752127022276!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style="border: 0; min-height: 400px;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="JazzUp Salon Baner Location"></iframe>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+              <div class="p-4 w-100">
+                <div class="mb-4 d-flex align-items-start gap-3">
+                  <i class="ri-map-pin-line text-primary fs-3 flex-shrink-0"></i>
+                  <div>
+                    <div class="fw-semibold text-secondary mb-1">Address</div>
+                    <div class="text-secondary">
+                      S.NO 163/3B/1, 2nd Floor, <br />
+                      Opp. Aker Solutions, near joshi vadewale,<br />
+                      Balewadi Phata, Baner, Pune,<br />
+                      Maharashtra 411045
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-4 d-flex align-items-start gap-3">
+                  <i class="ri-phone-line text-primary fs-3 flex-shrink-0"></i>
+                  <div>
+                    <div class="fw-semibold text-secondary mb-1">Phone</div>
+                    <div class="text-secondary">7887800355</div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-3">
+                  <i class="ri-mail-line text-primary fs-3 flex-shrink-0"></i>
+                  <div>
+                    <div class="fw-semibold text-secondary mb-1">E-mail</div>
+                    <a href="mailto:ops.jazzup@gmail.com" class="text-primary text-decoration-none"
+                      >ops.jazzup@gmail.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
