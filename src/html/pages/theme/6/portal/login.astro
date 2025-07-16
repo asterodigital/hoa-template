@@ -1,0 +1,78 @@
+---
+import Layout from '../layout.astro'
+// import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout title="Sign In" description="An easy website builder for pet breeders.">
+  <!-- Heading -->
+  <section
+    class="py-5 d-flex align-items-center position-relative"
+    style="
+      background-image: url('https://cdn.breederspot.com/bspot/cms/page/157/rsz_15634900_5660676.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 280px;
+    "
+  >
+    <!-- Overlay -->
+    <div style="position: absolute; inset: 0; background: rgba(50, 50, 50, 0.5); z-index: 1;"></div>
+
+    <div class="row position-relative" style="z-index: 2; width: 100%;">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="container text-center">
+          <h1 class="display-5 text-light fw-bold">Sign In</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="card border p-4">
+            <div class="card-body">
+              <p class="fs-5 text-muted text-center mb-4">
+                Fill your email and password to sign in.
+              </p>
+              <form>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control form-control-lg"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <div class="mb-4 form-check">
+                  <input type="checkbox" class="form-check-input" id="rememberMe" />
+                  <label class="form-check-label" for="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary rounded-pill w-100 px-4 mb-3"
+                  >Sign in</button
+                >
+                <div class="text-center mb-2">
+                  <a href="#" class="text-decoration-none text-primary">Forgot Password?</a>
+                </div>
+                <div class="text-center">
+                  <span class="text-muted">Don't have an account? </span>
+                  <a href="#" class="text-decoration-none text-primary">Sign up</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

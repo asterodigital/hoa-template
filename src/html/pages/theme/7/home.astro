@@ -1,0 +1,1158 @@
+---
+import Layout from './layout.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout title="Home" description="ROI-driven Digital Marketing Company.">
+  <style>
+    .card-img-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: var(--bs-card-img-overlay-padding);
+    }
+
+    .full-cover {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (min-width: 992px) {
+      .border-lg-end {
+        border-inline-end: 1px solid var(--bs-border-color);
+      }
+    }
+
+    @media (max-width: 991px) {
+      .h-25-custom {
+        height: 20rem !important;
+      }
+    }
+  </style>
+
+  <!-- Hero Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row align-items-center justify-content-center g-5">
+        <div class="col-lg-6" data-aos="zoom-out" data-aos-duration="1000">
+          <div class="d-flex flex-row gap-2 align-items-center mb-2">
+            <i class="ri-rocket-2-line text-primary fs-5"></i>
+            <h1 class="fs-6 mb-0">ROI-driven Digital Marketing Company</h1>
+          </div>
+          <h2 class="fs-1 mb-3">Where Digital Excellence Meets Business Success</h2>
+          <p class="text-muted fs-5 mb-3">
+            Partner with <span class="text-primary">Astero Digital</span> for expert digital services
+            that bring you paying customers.
+          </p>
+          <ul class="list-unstyled text-muted mb-4">
+            <li>
+              <span><i class="ri-checkbox-circle-line text-primary me-2"></i></span><span
+                >SEO that actually works</span
+              >
+            </li>
+            <li class="mt-1">
+              <span><i class="ri-checkbox-circle-line text-primary me-2"></i></span><span
+                >Ads that make money</span
+              >
+            </li>
+            <li class="mt-1">
+              <span><i class="ri-checkbox-circle-line text-primary me-2"></i></span><span
+                >Websites that sell</span
+              >
+            </li>
+          </ul>
+          <a href={getPathPrefix('/theme/7/contact-us')} class="btn btn-lg btn-yellow"
+            >Book Your Free Strategy Call</a
+          >
+        </div>
+        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+          <div class="position-relative">
+            <img
+              src="https://asterodigital.com/storage/local/aalp/cms/media/61/team.jpg"
+              alt="Team"
+              class="w-100 rounded-4"
+              width="480"
+            />
+            <div
+              class="position-absolute text-center bottom-0 start-0 d-none d-md-block"
+              style="margin-left: -20px;"
+            >
+              <div
+                class="bg-white rounded-4 p-3"
+                style="width: 160px; box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15)"
+              >
+                <i class="ri-line-chart-line text-success fs-1"></i>
+                <div class="fs-5 text-success fw-bold">+280%</div>
+                <div class="fs-6 text-muted">Average return on investment</div>
+              </div>
+            </div>
+            <div
+              class="position-absolute text-center top-0 end-0 d-none d-md-block"
+              style="margin-right: -20px;"
+            >
+              <div
+                class="bg-white rounded-4 p-3"
+                style="width: 160px; box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15)"
+              >
+                <i class="ri-bar-chart-box-line text-sky fs-1"></i>
+                <div class="fs-5 text-sky fw-bold">56.8K</div>
+                <div class="fs-6 text-muted">Organic traffic per month</div>
+              </div>
+            </div>
+            <div class="row g-4 mt-2 d-flex d-md-none">
+              <div class="col-6">
+                <div
+                  class="bg-white border rounded-4 p-3"
+                  style="height: 100%; box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15)"
+                >
+                  <i class="ri-line-chart-line text-success fs-1"></i>
+                  <div class="fs-5 text-success fw-bold">+280%</div>
+                  <div class="fs-6 text-muted">Average return on investment</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div
+                  class="bg-white border rounded-4 p-3"
+                  style="height: 100%; box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15)"
+                >
+                  <i class="ri-bar-chart-box-line text-sky fs-1"></i>
+                  <div class="fs-5 text-sky fw-bold">56.8K</div>
+                  <div class="fs-6 text-muted">Organic traffic per month</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section class="bg-body py-3 py-lg-5">
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-lg-4 col-xl-2 offset-xl-3 border-lg-end border-bottom"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+        >
+          <figure class="text-center p-4 mb-0">
+            <img
+              src="https://asterodigital.co.uk/storage/local/aalp/cms/media/6/award-logo-1.svg"
+              class="img-fluid"
+              alt="Award"
+            />
+          </figure>
+        </div>
+        <div
+          class="col-lg-4 col-xl-2 border-lg-end border-bottom"
+          data-aos="fade-in"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
+          <figure class="text-center p-4 mb-0">
+            <img
+              src="https://asterodigital.com/storage/local/aalp/cms/media/46/award-logo-2.svg"
+              class="img-fluid"
+              alt="Award"
+            />
+          </figure>
+        </div>
+        <div
+          class="col-lg-4 col-xl-2 border-bottom"
+          data-aos="fade-in"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
+          <figure class="text-center p-4 mb-0">
+            <img
+              src="https://asterodigital.com/storage/local/aalp/cms/media/7/award-logo-3.svg"
+              class="img-fluid"
+              alt="Award"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row mb-4 justify-content-center">
+        <div class="col-lg-6 mb-2" data-aos="zoom-in" data-aos-duration="1000">
+          <div>
+            <h2 class="mb-0">We Drive Results. You Drive Growth.</h2>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+          <div>
+            <p class="text-muted mb-0">
+              At <span class="text-dark fw-bold">Astero Digital</span>, We're Your Digital Growth
+              Partner Take a Look at What We Can Do for You
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="card h-100 h-25-custom p-0">
+            <img
+              src="https://asterodigital.co.uk/storage/local/aalp/cms/media/63/download-(1).png"
+              alt="Digital Marketing"
+              class="rounded-4 img-fluid full-cover w-100"
+            />
+            <div class="card-img-overlay" style="background-color: rgb(30, 41, 59, 0.75)">
+              <div class="position-absolute bottom-0 start-0 end-0 p-4">
+                <h3 class="text-white">Digital Marketing</h3>
+                <p class="text-white">
+                  Supercharge Your Online Presence Craft winning digital strategies that attract,
+                  engage, and convert your ideal customers.
+                </p>
+                <a href={getPathPrefix('/theme/7/services')} class="btn btn-lg btn-primary"
+                  >All services</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="card card-lift h-100 border p-0"
+                data-aos="fade-in"
+                data-aos-duration="1000"
+              >
+                <div class="card-body p-4">
+                  <div class="mb-2">
+                    <i class="ri-map-pin-line text-primary fs-1"></i>
+                  </div>
+                  <h3 class="fs-5">Local Business Optimization</h3>
+                  <p class="text-muted mb-0">
+                    Dominate your local market with optimized Google Business Profile and local SEO
+                    strategies.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="card card-lift h-100 border p-0"
+                data-aos="fade-in"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
+                <div class="card-body p-4">
+                  <div class="mb-2">
+                    <i class="ri-money-dollar-circle-line text-primary fs-1"></i>
+                  </div>
+                  <h3 class="fs-5">Paid Search Marketing (PPC)</h3>
+                  <p class="text-muted mb-0">
+                    Maximize your ROI with targeted PPC campaigns that bring qualified traffic to
+                    your business.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="card card-lift h-100 border p-0"
+                data-aos="fade-in"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+              >
+                <div class="card-body p-4">
+                  <div class="mb-2">
+                    <i class="ri-group-line text-primary fs-1"></i>
+                  </div>
+                  <h3 class="fs-5">Social Media Advertising</h3>
+                  <p class="text-muted mb-0">
+                    Connect with your audience through powerful social campaigns that drive
+                    engagement and conversions.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="card card-lift h-100 border p-0"
+                data-aos="fade-in"
+                data-aos-delay="150"
+                data-aos-duration="1000"
+              >
+                <div class="card-body p-4">
+                  <div class="mb-2">
+                    <i class="ri-seo-line text-primary fs-1"></i>
+                  </div>
+                  <h3 class="fs-5">SEO</h3>
+                  <p class="text-muted mb-0">
+                    Boost your website rankings and drive targeted traffic with proven strategies
+                    that outrank your competitors.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="card card-lift h-100 border p-0"
+                data-aos="fade-in"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
+                <div class="card-body p-4">
+                  <div class="mb-2">
+                    <i class="ri-lightbulb-line text-primary fs-1"></i>
+                  </div>
+                  <h3 class="fs-5">Lead Generation</h3>
+                  <p class="text-muted mb-0">
+                    Fill your sales pipeline with quality leads using our multi-channel lead
+                    generation tactics.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="card card-lift h-100 border p-0"
+                data-aos="fade-in"
+                data-aos-delay="250"
+                data-aos-duration="1000"
+              >
+                <div class="card-body p-4">
+                  <div class="mb-2">
+                    <i class="ri-window-2-line text-primary fs-1"></i>
+                  </div>
+                  <h3 class="fs-5">Web Design &amp; Development</h3>
+                  <p class="text-muted mb-0">
+                    Transform your ideas into stunning, user-friendly websites that convert visitors
+                    into loyal customers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facts Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row align-items-center justify-content-center gy-4">
+        <div class="col-lg-6">
+          <div class="mb-4" data-aos="fade-right" data-aos-duration="1000">
+            <h2 class="mb-0">
+              See Why Smart Business Owners Pick
+              <span class="text-primary">Astero Digital</span>
+            </h2>
+          </div>
+          <div
+            class="row mb-4 gy-4"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <div class="col-md-6">
+              <h3 class="fs-5">Expertise</h3>
+              <p class="text-muted mb-0">
+                Our team of SEO specialists has years of experience and a deep understanding of
+                search engine algorithms and trends.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h3 class="fs-5">Proven Results</h3>
+              <p class="text-muted mb-0">
+                Our data-driven approach ensures measurable results and continuous improvement.
+              </p>
+            </div>
+          </div>
+          <div class="row" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+            <div class="col-4 border-end">
+              <div>
+                <h3 class="fs-6">Digital Experts</h3>
+                <span class="fs-2 fw-semibold text-primary">20+</span>
+              </div>
+            </div>
+            <div class="col-4 border-end">
+              <div>
+                <h3 class="fs-6">Reviews</h3>
+                <span class="fs-2 fw-semibold text-primary">100+</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div>
+                <h3 class="fs-6">Track Record</h3>
+                <span class="fs-2 fw-semibold text-primary">15-year</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-5 offset-lg-1"
+          data-aos="fade-left"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
+          <div>
+            <img
+              src="https://asterodigital.co.uk/storage/local/aalp/cms/page/64/team-roi.png"
+              class="img-fluid rounded-4"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row mb-4" data-aos="fade-in" data-aos-duration="1000">
+        <div class="col-lg-6 pe-lg-5 mb-3">
+          <div>
+            <h2 class="mb-0">Meet Our Industry Partners</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div>
+            <p class="text-muted mb-0">
+              We're certified experts with the tools you need to succeed. Each badge means better
+              service for you - from Google's search secrets to Meta's ad tools.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 gx-lg-4 gy-4 justify-content-center">
+        <div class="col">
+          <div
+            class="card border h-100 align-items-center"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+          >
+            <div class="card-body align-items-center d-flex">
+              <figure class="mb-0">
+                <img
+                  src="https://asterodigital.com/storage/local/aalp/cms/media/59/semrush-partner.png"
+                  class="img-fluid"
+                  alt="Semrush Certified Agency Partner"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card border h-100 align-items-center"
+            data-aos="fade-in"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
+            <div class="card-body align-items-center d-flex">
+              <figure class="mb-0">
+                <img
+                  src="https://asterodigital.com/storage/local/aalp/cms/media/58/google-partner.webp"
+                  class="img-fluid"
+                  alt="Google Partner"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card border h-100 align-items-center"
+            data-aos="fade-in"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <div class="card-body align-items-center d-flex">
+              <figure class="mb-0">
+                <img
+                  src="https://asterodigital.co.uk/storage/local/aalp/cms/media/57/meta-partner.webp"
+                  class="img-fluid"
+                  alt="Meta Business Partner"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card border h-100 align-items-center"
+            data-aos="fade-in"
+            data-aos-delay="150"
+            data-aos-duration="1000"
+          >
+            <div class="card-body align-items-center d-flex">
+              <figure class="mb-0">
+                <img
+                  src="https://asterodigital.co.uk/storage/local/aalp/cms/media/13/clutch-logo.png"
+                  class="img-fluid"
+                  alt="Top SEO Companies - Clutch 2022"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div
+            class="card border h-100 align-items-center"
+            data-aos="fade-in"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <div class="card-body align-items-center d-flex">
+              <figure class="mb-0">
+                <img
+                  src="https://asterodigital.co.uk/storage/local/aalp/cms/media/60/Microsoft-for-Startups.jpg"
+                  class="img-fluid"
+                  alt="Microsoft for Startups"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-body px-2 py-5">
+    <div class="container">
+      <div
+        class="row p-4 p-lg-5 align-items-center bg-primary rounded-4"
+        data-aos="fade-in"
+        data-aos-duration="1000"
+      >
+        <div class="col-lg-6 mb-3 mb-lg-0">
+          <h2 class="text-white fs-3 mb-0">Let's Talk About Your Growth Goals</h2>
+        </div>
+        <div class="offset-lg-2 col-lg-4">
+          <div class="text-start text-lg-center">
+            <a href={getPathPrefix('/theme/7/contact-us')} class="btn btn-lg btn-yellow"
+              >Book my free consultation</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row mb-4" data-aos="fade-in" data-aos-duration="1000">
+        <div class="col-lg-6 pe-lg-5 mb-3">
+          <div>
+            <h2 class="mb-0">Dominating the SEO key sectors</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div>
+            <p class="text-muted mb-0">
+              We make businesses more money online. No fluff, no jargon - just marketing that brings
+              real customers through your door.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card bg-blue-soft border card-lift h-100 p-4"
+            data-aos="fade-in"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <div>
+              <i class="ri-store-2-line text-blue fs-1"></i>
+            </div>
+            <div>
+              <h3>Local Business</h3>
+              <p class="text-muted mb-0">
+                Transform your local presence with targeted digital marketing. Get found easily,
+                attract more customers, and outshine your competition.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card bg-green-soft border card-lift h-100 p-4"
+            data-aos="fade-in"
+            data-aos-delay="150"
+            data-aos-duration="1000"
+          >
+            <div>
+              <i class="ri-shopping-cart-2-line text-green fs-1"></i>
+            </div>
+            <div>
+              <h3>E-Commerce</h3>
+              <p class="text-muted mb-0">
+                Turn your online store into a sales machine. Drive quality traffic, boost
+                conversions, and scale your e-commerce business effectively.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card bg-orange-soft border card-lift h-100 p-4"
+            data-aos="fade-in"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <div>
+              <i class="ri-computer-line text-orange fs-1"></i>
+            </div>
+            <div>
+              <h3>SaaS</h3>
+              <p class="text-muted mb-0">
+                Accelerate your software company's growth with strategic digital marketing that
+                drives qualified leads and reduces acquisition costs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card bg-red-soft border card-lift h-100 p-4"
+            data-aos="fade-in"
+            data-aos-delay="250"
+            data-aos-duration="1000"
+          >
+            <div>
+              <i class="ri-flight-takeoff-line text-red fs-1"></i>
+            </div>
+            <div>
+              <h3>Hospitality</h3>
+              <p class="text-muted mb-0">
+                Stand out in the hospitality sector with marketing that fills your booking calendar
+                and keeps guests coming back for more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="text-center">
+            <span
+              class="fw-medium text-success"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="1000">99% Result Driven Feedback</span
+            >
+            <h2 class="mb-0" data-aos="fade-up" data-aos-duration="1000">
+              There’s a reason why our clients work with us
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-xl-10 offset-xl-1">
+          <!-- Swiper -->
+          <div
+            class="swiper mySwiper"
+            data-aos="fade-in"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <div class="swiper-wrapper mb-5">
+              <div class="swiper-slide" style="height: auto;">
+                <!-- ITEM START -->
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <div>
+                      <img
+                        src="https://asterodigital.com/storage/local/aalp/cms/media/66/jazzup-salon-wakad_2.jpg"
+                        class="img-fluid rounded-4 w-100"
+                        alt="Client Image"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-7">
+                    <div class="card border p-0">
+                      <div class="card-body d-flex flex-column gap-4 p-3 p-md-4 p-lg-5">
+                        <div class="d-flex flex-column gap-md-3">
+                          <div class="text-center">
+                            <img
+                              src="https://asterodigital.com/storage/local/aalp/cms/media/65/logo-jazzup.png"
+                              class="img-fluid"
+                              style="max-width: 84px;"
+                              alt="Company Logo"
+                            />
+                          </div>
+                          <div class="text-start">
+                            <h3 class="mb-3">
+                              SEO Case Study: Transforming Online Visibility for JazzUp
+                            </h3>
+                            <div
+                              class="d-flex flex-column flex-md-row justify-content-between w-100 gap-3"
+                            >
+                              <div>
+                                <span class="text-primary">32,000+ Visitor</span>
+                                <p class="text-muted fs-6 mb-0">Organic Traffic Increase</p>
+                              </div>
+                              <div>
+                                <span class="text-primary">25%</span>
+                                <p class="text-muted fs-6 mb-0">Conversion Rate</p>
+                              </div>
+                              <div>
+                                <span class="text-primary">70%</span>
+                                <p class="text-muted fs-6 mb-0">Return on Investment</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mt-auto text-start">
+                            <a
+                              href="#"
+                              class="text-decoration-none d-inline-flex align-items-center gap-2 mt-3"
+                            >
+                              See JazzUp case study
+                              <i class="ri-arrow-right-line"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM END -->
+              </div>
+              <div class="swiper-slide" style="height: auto;">
+                <!-- ITEM START -->
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <div>
+                      <img
+                        src="https://asterodigital.co.uk/storage/local/aalp/cms/media/50/case-study-img-2.jpg"
+                        class="img-fluid rounded-4 w-100"
+                        alt="Client Image"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-7">
+                    <div class="card border p-0">
+                      <div class="card-body d-flex flex-column gap-4 p-3 p-md-4 p-lg-5">
+                        <div class="d-flex flex-column gap-md-3">
+                          <div class="text-center">
+                            <img
+                              src="https://asterodigital.co.uk/storage/local/aalp/cms/media/21/casestudy-logo-5.svg"
+                              class="img-fluid"
+                              style="max-height: 60px;"
+                              alt="Company Logo"
+                            />
+                          </div>
+                          <div class="text-start">
+                            <h3 class="mb-3">Top 3 rankings for key local search terms</h3>
+                            <div
+                              class="d-flex flex-column flex-md-row justify-content-between w-100 gap-3"
+                            >
+                              <div>
+                                <span class="text-primary">1,40,000+ Visitors</span>
+                                <p class="text-muted fs-6 mb-0">Organic Traffic Increase</p>
+                              </div>
+                              <div>
+                                <span class="text-primary">55%</span>
+                                <p class="text-muted fs-6 mb-0">Conversion Rate</p>
+                              </div>
+                              <div>
+                                <span class="text-primary">90%</span>
+                                <p class="text-muted fs-6 mb-0">Return on Investment</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mt-auto text-start">
+                            <a
+                              href="#"
+                              class="text-decoration-none d-inline-flex align-items-center gap-2 mt-3"
+                            >
+                              See Amazon case study
+                              <i class="ri-arrow-right-line"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM END -->
+              </div>
+              <div class="swiper-slide" style="height: auto;">
+                <!-- ITEM START -->
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-5">
+                    <div>
+                      <img
+                        src="https://asterodigital.co.uk/storage/local/aalp/cms/media/22/case-study-img-3.jpg"
+                        class="img-fluid rounded-4 w-100"
+                        alt="Client Image"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-7">
+                    <div class="card border p-0">
+                      <div class="card-body d-flex flex-column gap-4 p-3 p-md-4 p-lg-5">
+                        <div class="d-flex flex-column gap-md-3">
+                          <div class="text-center">
+                            <img
+                              src="https://asterodigital.co.uk/storage/local/aalp/cms/media/20/casestudy-logo-4.svg"
+                              class="img-fluid"
+                              style="max-height: 60px;"
+                              alt="Company Logo"
+                            />
+                          </div>
+                          <div class="text-start">
+                            <h3 class="mb-3">150% increase in organic traffic in 6 months</h3>
+                            <div
+                              class="d-flex flex-column flex-md-row justify-content-between w-100 gap-3"
+                            >
+                              <div>
+                                <span class="text-primary">12,000+ Visitor</span>
+                                <p class="text-muted fs-6 mb-0">Organic Traffic Increase</p>
+                              </div>
+                              <div>
+                                <span class="text-primary">20%</span>
+                                <p class="text-muted fs-6 mb-0">Conversion Rate</p>
+                              </div>
+                              <div>
+                                <span class="text-primary">200%</span>
+                                <p class="text-muted fs-6 mb-0">Return on Investment</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mt-auto text-start">
+                            <a
+                              href="#"
+                              class="text-decoration-none d-inline-flex align-items-center gap-2 mt-3"
+                            >
+                              See LinkedIn case study
+                              <i class="ri-arrow-right-line"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ITEM END -->
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-6 offset-xl-3">
+          <div class="text-center">
+            <h2 data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
+              Take a look at how we’re different
+            </h2>
+            <p class="text-muted mb-4" data-aos="fade-down" data-aos-duration="1000">
+              Below is a table that highlights the key points that set
+              <span class="text-primary">Astero Digital</span>
+              apart from other SEO agencies:
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1">
+          <div class="table-responsive-xl">
+            <table class="table" data-aos="fade-in" data-aos-duration="1000">
+              <thead>
+                <tr>
+                  <th style="min-width: 300px"></th>
+                  <th class="bg-blue-soft rounded-top-4 py-4" style="min-width: 300px">
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                      <img
+                        src="https://asterodigital.com/storage/local/aalp/app/theme/56/astero-digital-logo-copy.svg"
+                        alt="AsteroDigital Logo"
+                        width="100px"
+                        class="d-block"
+                      />
+                      <p class="text-dark mb-1">Agency</p>
+                    </div>
+                  </th>
+                  <th class="text-center py-4" style="min-width: 300px">Other Agencies</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-dark fw-bold py-4" style="min-width: 300px"
+                    >Customized Strategies</td
+                  >
+                  <td class="bg-blue-soft py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-check-line text-green"></i>
+                      <span class="ms-1 text-dark">Tailored SEO plans for each client</span>
+                    </div>
+                  </td>
+                  <td class="py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-close-line text-red"></i>
+                      <span class="ms-1 text-dark">Often use one-size-fits-all approaches</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-dark fw-bold py-4" style="min-width: 300px"
+                    >Data-Driven Approach</td
+                  >
+                  <td class="bg-blue-soft py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-check-line text-green"></i>
+                      <span class="ms-1 text-dark"
+                        >Decisions based on real insights and analytics</span
+                      >
+                    </div>
+                  </td>
+                  <td class="py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-close-line text-red"></i>
+                      <span class="ms-1 text-dark">Limited use of data and analytics</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-dark fw-bold py-4" style="min-width: 300px"
+                    >Transparent Reporting</td
+                  >
+                  <td class="bg-blue-soft py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-check-line text-green"></i>
+                      <span class="ms-1 text-dark">Detailed, easy-to-understand reports</span>
+                    </div>
+                  </td>
+                  <td class="py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-close-line text-red"></i>
+                      <span class="ms-1 text-dark">Often provide vague or complex reports</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-dark fw-bold py-4" style="min-width: 300px">Industry Expertise</td
+                  >
+                  <td class="bg-blue-soft py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-check-line text-green"></i>
+                      <span class="ms-1 text-dark"
+                        >Team with extensive experience in various industries</span
+                      >
+                    </div>
+                  </td>
+                  <td class="py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-close-line text-red"></i>
+                      <span class="ms-1 text-dark"
+                        >Generalized knowledge without specific expertise</span
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-dark fw-bold py-4" style="min-width: 300px"
+                    >Cutting-Edge Techniques</td
+                  >
+                  <td class="bg-blue-soft py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-check-line text-green"></i>
+                      <span class="ms-1 text-dark"
+                        >Continuously updated with the latest SEO practices</span
+                      >
+                    </div>
+                  </td>
+                  <td class="py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-close-line text-red"></i>
+                      <span class="ms-1 text-dark">Use outdated methods and strategies</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-dark fw-bold py-4" style="min-width: 300px"
+                    >Holistic SEO Services</td
+                  >
+                  <td class="bg-blue-soft py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-check-line text-green"></i>
+                      <span class="ms-1 text-dark"
+                        >Comprehensive range including technical audits, content creation, and link
+                        building</span
+                      >
+                    </div>
+                  </td>
+                  <td class="py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-close-line text-red"></i>
+                      <span class="ms-1 text-dark">Creative and forward-thinking strategies</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-dark fw-bold py-4" style="min-width: 300px"
+                    >Innovative Solutions</td
+                  >
+                  <td class="bg-blue-soft py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-check-line text-green"></i>
+                      <span class="ms-1 text-dark">Creative and forward-thinking strategies</span>
+                    </div>
+                  </td>
+                  <td class="py-4 px-md-5" style="min-width: 300px">
+                    <div class="d-flex gap-2">
+                      <i class="ri-close-line text-red"></i>
+                      <span class="ms-1 text-dark">Stuck in traditional methods</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-4 border-bottom-0" style="min-width: 300px"></td>
+                  <td
+                    class="py-4 border-bottom-0 bg-blue-soft rounded-bottom-4 text-center"
+                    style="min-width: 300px"
+                  >
+                    <a href={getPathPrefix('/theme/7/contact-us')} class="btn btn-lg btn-yellow"
+                      >Book a consultation</a
+                    >
+                  </td>
+                  <td class="py-4 border-bottom-0" style="min-width: 300px"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blogs Section -->
+  <section class="bg-blue-soft py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="mb-0" data-aos="fade-in" data-aos-duration="1000">Read our blogs</h2>
+      </div>
+      <div class="row gy-3">
+        <div class="col-lg-4" data-aos="fade-in" data-aos-duration="1000">
+          <div class="card card-lift border-0 h-100 p-4">
+            <div class="card-body d-flex flex-column gap-2">
+              <div>
+                <h3>
+                  <a
+                    class="text-decoration-none text-body fs-5"
+                    href="https://asterodigital.com/guide/bootstrap-cheatsheet/"
+                    >The Ultimate Bootstrap 5 Cheatsheet: Developer's Quick Reference Guide</a
+                  >
+                </h3>
+                <p class="text-muted mb-0">
+                  Bootstrap 5 Components Cheatsheet A comprehensive guide to Bootstrap's most useful
+                  components Table of Contents Layout Components Content Components Form Components
+                  Navigation Components Feedback Components Layout Components Grid System
+                  Bootstrap's...
+                </p>
+              </div>
+              <div class="mt-auto">
+                <a
+                  href="https://asterodigital.com/guide/bootstrap-cheatsheet/"
+                  class="d-flex flex-row align-items-center text-decoration-none gap-2"
+                >
+                  <span
+                    class="btn btn-sm btn-primary d-flex align-items-center justify-content-center px-2"
+                  >
+                    <i class="ri-arrow-right-s-line text-white"></i>
+                  </span>
+                  <span>Read more</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">
+          <div class="card card-lift border-0 h-100 p-4">
+            <div class="card-body d-flex flex-column gap-2">
+              <div>
+                <h3>
+                  <a
+                    class="text-decoration-none text-body fs-5"
+                    href="https://asterodigital.com/coding/bootstrap-language-selector/"
+                    ><span class="s1">Bootstrap Language Selector: Implementation Guide</span></a
+                  >
+                </h3>
+                <p class="text-muted mb-0">
+                  When launching a global product or website, providing language options is crucial
+                  for user accessibility. A well-designed language selector enhances user experience
+                  and demonstrates your commitment to international users. In this guide, we'll...
+                </p>
+              </div>
+              <div class="mt-auto">
+                <a
+                  href="https://asterodigital.com/coding/bootstrap-language-selector/"
+                  class="d-flex flex-row align-items-center text-decoration-none gap-2"
+                >
+                  <span
+                    class="btn btn-sm btn-primary d-flex align-items-center justify-content-center px-2"
+                  >
+                    <i class="ri-arrow-right-s-line text-white"></i>
+                  </span>
+                  <span>Read more</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-in" data-aos-delay="200" data-aos-duration="1000">
+          <div class="card card-lift border-0 h-100 p-4">
+            <div class="card-body d-flex flex-column gap-2">
+              <div>
+                <h3>
+                  <a
+                    class="text-decoration-none text-body fs-5"
+                    href="https://asterodigital.com/seo/sites-like-etsy-to-sell-digital-products/"
+                    >Top 5 sites like etsy to sell digital products</a
+                  >
+                </h3>
+                <p class="text-muted mb-0">
+                  Selling digital products requires a platform that aligns with your business goals,
+                  provides adequate control, and offers favorable commission structures. While Etsy
+                  has been a popular choice, many creators are exploring alternatives that better...
+                </p>
+              </div>
+              <div class="mt-auto">
+                <a
+                  href="https://asterodigital.com/seo/sites-like-etsy-to-sell-digital-products/"
+                  class="d-flex flex-row align-items-center text-decoration-none gap-2"
+                >
+                  <span
+                    class="btn btn-sm btn-primary d-flex align-items-center justify-content-center px-2"
+                  >
+                    <i class="ri-arrow-right-s-line text-white"></i>
+                  </span>
+                  <span>Read more</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

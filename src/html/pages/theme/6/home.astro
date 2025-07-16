@@ -1,0 +1,902 @@
+---
+import Layout from './layout.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout title="Home" description="An easy website builder for pet breeders.">
+  <!-- Hero Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6 order-md-2">
+          <div>
+            <div style="position: relative; display: inline-block; width: 100%;">
+              <!-- <span
+                style="position: absolute; top: 12px; right: 12px; z-index: 2; background: #6c3794; color: #ffffff; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"
+                >NO CODE</span
+              > -->
+              <span
+                class="badge bg-fuchsia text-light fs-6 p-3 rounded-pill"
+                style="position: absolute; top: 12px; right: 12px; z-index: 2;"
+                data-aos="flip-up"
+                data-aos-delay="300"
+                data-aos-duration="1000">NO CODE</span
+              >
+              <img
+                src="https://cdn.breederspot.com/bspot/app/media/158/laptop-showcase-homepage.png"
+                class="img-fluid"
+                data-aos="fade-in"
+                data-aos-delay="150"
+                data-aos-duration="1000"
+                alt="Website Built Using BreederSpot"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h1
+            class="typer display-5 fw-bold mb-3"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-type-speed="50"
+            data-back-speed="50"
+            data-loop="true"
+            data-strings="Dog Breeder.,Cat Breeder.,Horse Breeder., All Pet Breeders."
+          >
+            Easy Website Builder For <span id="headingTyper" class="text-primary"></span>
+          </h1>
+          <p
+            class="fs-5 text-muted mb-4"
+            data-aos="fade-down"
+            data-aos-delay="150"
+            data-aos-duration="1000"
+          >
+            Start your free website trial today. No credit card required.
+          </p>
+          <a
+            href="https://breederspot.com/portal/register/"
+            class="btn btn-lg btn-primary rounded-pill px-4"
+            data-aos="fade-down"
+            data-aos-delay="300"
+            data-aos-duration="1000">Start Free Trial</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2
+        class="fs-6 fw-semibold text-muted text-md-center text-uppercase mb-3"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        id="features"
+      >
+        Website Features
+      </h2>
+      <h3
+        class="fs-2 fw-bold text-md-center mb-5"
+        data-aos="fade-up"
+        data-aos-delay="150"
+        data-aos-duration="1000"
+      >
+        Your Website's Success Starts with <span class="mark warning">BreederSpot</span>
+      </h3>
+      <div class="row g-4">
+        <div class="col-sm-6 col-md-4">
+          <div class="d-flex flex-row gap-3" data-aos="fade-in" data-aos-duration="1000">
+            <div>
+              <i class="ri-seo-line text-yellow fs-1"></i>
+            </div>
+            <div>
+              <h4 class="mb-1 fs-5">SEO-Friendly Website Builder</h4>
+              <p class="mb-0">
+                Create a website that's search engine friendly and drives organic traffic
+                effortlessly.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div
+            class="d-flex flex-row gap-3"
+            data-aos="fade-in"
+            data-aos-delay="150"
+            data-aos-duration="1000"
+          >
+            <div>
+              <i class="ri-smartphone-line text-orange fs-1"></i>
+            </div>
+            <div>
+              <h4 class="mb-1 fs-5">Mobile-Friendly Designs</h4>
+              <p class="mb-0">
+                Explore our collection of responsive website templates, ensuring a seamless
+                experience across all devices.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div
+            class="d-flex flex-row gap-3"
+            data-aos="fade-in"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <div>
+              <i class="ri-time-line text-red fs-1"></i>
+            </div>
+            <div>
+              <h4 class="mb-1 fs-5">Easy To Use (Save Time)</h4>
+              <p class="mb-0">
+                Our builder lets you create a website in minutes, saving you time for what matters
+                most.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div
+            class="d-flex flex-row gap-3"
+            data-aos="fade-in"
+            data-aos-delay="450"
+            data-aos-duration="1000"
+          >
+            <div>
+              <i class="ri-lightbulb-flash-line text-green fs-1"></i>
+            </div>
+            <div>
+              <h4 class="mb-1 fs-5">Fast and Secure Hosting</h4>
+              <p class="mb-0">
+                Enjoy lightning-fast TTFB (Time To First Byte) in under 100ms, with free and secure
+                SSL for your peace of mind.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div
+            class="d-flex flex-row gap-3"
+            data-aos="fade-in"
+            data-aos-delay="600"
+            data-aos-duration="1000"
+          >
+            <div>
+              <i class="ri-flashlight-line text-blue fs-1"></i>
+            </div>
+            <div>
+              <h4 class="mb-1 fs-5">Speedy Website</h4>
+              <p class="mb-0">
+                Experience faster image loading with our reliable CDN and expert optimization
+                techniques to enhance user experience on your website.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div
+            class="d-flex flex-row gap-3"
+            data-aos="fade-in"
+            data-aos-delay="750"
+            data-aos-duration="1000"
+          >
+            <div>
+              <i class="ri-upload-cloud-2-line text-primary fs-1"></i>
+            </div>
+            <div>
+              <h4 class="mb-1 fs-5">30 Days Backups</h4>
+              <p class="mb-0">
+                Daily backup with 30 days backup history. Backup included all files and your website
+                database as well.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-2 fw-bold mb-3" id="features" data-aos="fade-down" data-aos-duration="1000">
+        Build Your Website In <span class="underline">4 Easy Steps</span>
+      </h2>
+      <p
+        class="fs-5 text-muted mb-4"
+        data-aos="fade-down"
+        data-aos-delay="150"
+        data-aos-duration="1000"
+      >
+        We make your website starting and management stress-free for you.
+      </p>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-in" data-aos-duration="1000">
+          <div
+            class="text-primary bg-primary-subtle fs-3 fw-semibold border rounded-circle mb-3"
+            style="width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;"
+          >
+            01
+          </div>
+          <h4 class="fw-bold fs-5 mb-3">Choose Domain Name</h4>
+          <p class="text-muted mb-0">
+            Choose a new domain, or<br />transfer you existing domain.
+          </p>
+        </div>
+        <div
+          class="col-sm-6 col-lg-3"
+          data-aos="fade-in"
+          data-aos-delay="150"
+          data-aos-duration="1000"
+        >
+          <div
+            class="text-primary bg-primary-subtle fs-3 fw-semibold border rounded-circle mb-3"
+            style="width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;"
+          >
+            02
+          </div>
+          <h4 class="fw-bold fs-5 mb-3">Enter Business Info</h4>
+          <p class="text-muted mb-0">Upload your content. Images, videos and everything else.</p>
+        </div>
+        <div
+          class="col-sm-6 col-lg-3"
+          data-aos="fade-in"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
+          <div
+            class="text-primary bg-primary-subtle fs-3 fw-semibold border rounded-circle mb-3"
+            style="width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;"
+          >
+            03
+          </div>
+          <h4 class="fw-bold fs-5 mb-3">Select Theme</h4>
+          <p class="text-muted mb-0">Choose from beautiful ready-made templates.</p>
+        </div>
+        <div
+          class="col-sm-6 col-lg-3"
+          data-aos="fade-in"
+          data-aos-delay="450"
+          data-aos-duration="1000"
+        >
+          <div
+            class="text-primary bg-primary-subtle fs-3 fw-semibold border rounded-circle mb-3"
+            style="width: 64px; height: 64px; display: flex; align-items: center; justify-content: center;"
+          >
+            04
+          </div>
+          <h4 class="fw-bold fs-5 mb-3">Go Live</h4>
+          <p class="text-muted mb-0">You are now ready to go live.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <h2
+            class="text-primary text-uppercase fw-semibold fs-6 mb-3"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            Our Pricing
+          </h2>
+          <h3
+            class="fs-2 fw-bold mb-3"
+            data-aos="fade-down"
+            data-aos-delay="150"
+            data-aos-duration="1000"
+          >
+            Affordable Prices For All Breeders.
+          </h3>
+          <p
+            class="text-muted mb-4"
+            data-aos="fade-down"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            Enjoy a free 14-day trial and experience our full service — no credit card required!
+          </p>
+          <a
+            href={getPathPrefix('/theme/6/portal/pricing')}
+            class="btn btn-lg btn-primary"
+            data-aos="fade-down"
+            data-aos-delay="450"
+            data-aos-duration="1000">See All Prices</a
+          >
+        </div>
+        <!-- <div class="col-lg-7">
+          <div class="d-flex flex-column flex-md-row gap-4">
+            <div class="card border flex-fill p-3">
+              <div class="card-body">
+                <div class="mb-2">
+                  <span class="fs-6 text-muted">$</span>
+                  <span class="fs-1 fw-semibold">9.95</span>
+                  <h4 class="d-inline fs-6 text-muted">/mo</h4>
+                </div>
+                <h4 class="fw-semibold mb-4">Website Plan</h4>
+                <ul class="list-unstyled mb-4">
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i>Free Sub-Domain
+                  </li>
+                  <li class="mb-2"><i class="ri-check-line text-primary me-2"></i>Free SSL</li>
+                  <li class="mb-2"><i class="ri-check-line text-primary me-2"></i>1GB Storage</li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                      >Unlimited</span
+                    > Bandwidth
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i>Professional Website
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i><span class="fw-bold">Free</span>
+                    Image CDN
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i>Advance <span class="fw-bold"
+                      >SEO</span
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i>Advanced Design Blocks
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i>Drag & drop page builder
+                  </li>
+                </ul>
+                <a
+                  href="https://breederspot.com/portal/register/"
+                  class="btn btn-lg btn-primary w-100">Start Free Trial</a
+                >
+              </div>
+            </div>
+            <div class="card border flex-fill p-3">
+              <div class="card-body">
+                <div class="mb-2">
+                  <span class="fs-6 text-muted">$</span>
+                  <span class="fs-1 fw-semibold">29.95</span>
+                  <h4 class="d-inline fs-6 text-muted">/mo</h4>
+                </div>
+                <h4 class="fw-semibold mb-4">Business Plan</h4>
+                <ul class="list-unstyled mb-4">
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i>Everything From Website Plan
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i><span class="fw-bold">Free</span>
+                    .Com Domain Name
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                      >Pet Breeding</span
+                    > Management
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                      >Medical Records</span
+                    > Management
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                      >Financial</span
+                    > Management
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i>Inventory Management
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i>Contracts Management
+                  </li>
+                  <li class="mb-2">
+                    <i class="ri-check-line text-primary me-2"></i>Email <span class="fw-bold"
+                      >Marketing</span
+                    >
+                  </li>
+                </ul>
+                <a class="btn btn-lg btn-outline-primary w-100">Coming Soon</a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-lg-7">
+          <!-- Switcher -->
+          <div
+            class="d-flex align-items-center justify-content-center justify-content-lg-end mb-4"
+            id="billing-toggle"
+          >
+            <span id="monthly-label" class="me-2 fw-semibold" style="cursor: pointer;">Monthly</span
+            >
+            <div
+              class="form-check form-switch mx-2"
+              style="display: inline-block; vertical-align: middle;"
+            >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="billingSwitch"
+                style="width: 2.5em; height: 1.5em; cursor: pointer; background-color: #eee; border-color: #eee;"
+              />
+            </div>
+            <span id="yearly-label" class="ms-2 fw-semibold" style="cursor: pointer;">
+              Yearly <span class="text-danger" style="font-size: 0.95em;">(Save 16%)</span>
+            </span>
+          </div>
+          <!-- <script>
+            const billingSwitch = document.getElementById('billingSwitch')
+            const monthlyLabel = document.getElementById('monthly-label')
+            const yearlyLabel = document.getElementById('yearly-label')
+            function setBillingLabels() {
+              if (billingSwitch.checked) {
+                monthlyLabel.classList.remove('text-primary')
+                yearlyLabel.classList.add('text-primary')
+              } else {
+                monthlyLabel.classList.add('text-primary')
+                yearlyLabel.classList.remove('text-primary')
+              }
+            }
+            billingSwitch.addEventListener('change', setBillingLabels)
+            monthlyLabel.addEventListener('click', () => {
+              billingSwitch.checked = false
+              setBillingLabels()
+            })
+            yearlyLabel.addEventListener('click', () => {
+              billingSwitch.checked = true
+              setBillingLabels()
+            })
+            setBillingLabels()
+          </script> -->
+          <div class="row g-4">
+            <div class="col-md-6">
+              <!-- <div
+                class="card h-100 p-3"
+                style="border-top: 8px solid #6c3794; box-shadow: 0 2px 16px rgba(0, 0, 0, 0.075);"
+              > -->
+              <div class="card border h-100 p-3" data-aos="flip-right" data-aos-duration="1000">
+                <div class="card-body d-flex flex-column">
+                  <div class="mb-2">
+                    <span class="fs-6 text-muted">$</span>
+                    <span class="fs-1 fw-semibold">9.95</span>
+                    <h4 class="d-inline fs-6 text-muted">/mo</h4>
+                  </div>
+                  <h4 class="fw-semibold mb-4">Website Plan</h4>
+                  <ul class="list-unstyled mb-4">
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Free Sub-Domain
+                    </li>
+                    <li class="mb-2"><i class="ri-check-line text-primary me-2"></i>Free SSL</li>
+                    <li class="mb-2"><i class="ri-check-line text-primary me-2"></i>1GB Storage</li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Unlimited</span
+                      > Bandwidth
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Professional Website
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Free</span
+                      >
+                      Image CDN
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Advance <span class="fw-bold"
+                        >SEO</span
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Advanced Design Blocks
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Drag & drop page builder
+                    </li>
+                  </ul>
+                  <div class="mt-auto">
+                    <a
+                      href="https://breederspot.com/portal/register/"
+                      class="btn btn-lg btn-primary w-100">Start Free Trial</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <!-- <div
+                class="card h-100 p-3"
+                style="border-top: 8px solid #6c3794; box-shadow: 0 2px 16px rgba(0, 0, 0, 0.075);"
+              > -->
+              <div
+                class="card border h-100 p-3"
+                data-aos="flip-left"
+                data-aos-delay="150"
+                data-aos-duration="1000"
+              >
+                <div class="card-body d-flex flex-column">
+                  <div class="mb-2">
+                    <span class="fs-6 text-muted">$</span>
+                    <span class="fs-1 fw-semibold">29.95</span>
+                    <h4 class="d-inline fs-6 text-muted">/mo</h4>
+                  </div>
+                  <h4 class="fw-semibold mb-4">Business Plan</h4>
+                  <ul class="list-unstyled mb-4">
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Everything From Website Plan
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Free</span
+                      >
+                      .Com Domain Name
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Pet Breeding</span
+                      > Management
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Medical Records</span
+                      > Management
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Financial</span
+                      > Management
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Inventory Management
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Contracts Management
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Email <span class="fw-bold"
+                        >Marketing</span
+                      >
+                    </li>
+                  </ul>
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-lg btn-outline-primary w-100">Coming Soon</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BreederSpot Joins Microsoft Section -->
+  <section class="bg-body py-5">
+    <div class="container p-2 p-md-0">
+      <div class="bg-gradient-5 text-center rounded-3 py-5 px-3">
+        <h2
+          class="text-light fs-6 fw-semibold text-uppercase mb-3"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+        >
+          Trusted by Tech Giants
+        </h2>
+        <h3
+          class="text-light fw-bold fs-1 mb-4"
+          data-aos="fade-in"
+          data-aos-delay="150"
+          data-aos-duration="1000"
+        >
+          BreederSpot <span class="underline warning">Joins</span> Microsoft for Startups.
+        </h3>
+        <a
+          href="https://breederspot.com/news/breederspot-proudly-accepted-microsoft-startups/"
+          class="btn btn-lg btn-light"
+          data-aos="fade-in"
+          data-aos-delay="300"
+          data-aos-duration="1000">Learn More</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Blogs Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-1 fw-bold text-center mb-3" data-aos="fade-down" data-aos-duration="1000">
+        Latest Blogs
+      </h2>
+      <p
+        class="text-muted fs-5 text-center mb-5"
+        data-aos="fade-down"
+        data-aos-delay="150"
+        data-aos-duration="1000"
+      >
+        Latest Blog Posts.
+      </p>
+
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper mb-5">
+          <div class="swiper-slide" style="height: auto;">
+            <div
+              class="card border h-100 p-0"
+              data-aos="flip-up"
+              data-aos-delay="150"
+              data-aos-duration="1000"
+            >
+              <img
+                src="https://cdn.breederspot.com/bspot/cms/post/139/Untitled-design-(2).jpg?height=300&aspect_ratio=16:9"
+                class="card-img-top"
+                alt="Blog Image"
+              />
+              <div class="card-body p-3">
+                <a
+                  href="https://breederspot.com/author/azad-shaikh/"
+                  class="text-primary text-uppercase fw-semibold text-decoration-none"
+                  >Azad Shaikh</a
+                >
+                <h2 class="fs-4 mt-1 mb-2 overflow-hidden text-ellipsis">
+                  <a
+                    class="link-dark text-decoration-none"
+                    href="https://breederspot.com/reviews/best-dog-knee-brace-torn-acl/"
+                    >Best Dog Knee Brace for Torn ACL – Protect Your Canine</a
+                  >
+                </h2>
+                <p class="text-muted mb-0">
+                  As pet owners, we understand how distressing it can be when our furry friends
+                  suffer from injuries.
+                </p>
+              </div>
+              <div
+                class="card-footer border-top d-flex align-items-center justify-content-between p-3"
+              >
+                <div class="d-flex align-items-center text-muted gap-2">
+                  <i class="ri-calendar-line me-1"></i>
+                  <span>10 Jul 2025</span>
+                </div>
+                <div class="d-flex align-items-center text-muted gap-2">
+                  <a
+                    href="https://breederspot.com/reviews/best-dog-knee-brace-torn-acl/"
+                    class="text-decoration-none text-muted"
+                  >
+                    <i class="ri-chat-2-line me-1"></i>
+                    <span>0</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div
+              class="card border h-100 p-0"
+              data-aos="flip-up"
+              data-aos-delay="150"
+              data-aos-duration="1000"
+            >
+              <img
+                src="https://cdn.breederspot.com/bspot/cms/post/139/Untitled-design-(2).jpg?height=300&aspect_ratio=16:9"
+                class="card-img-top"
+                alt="Blog Image"
+              />
+              <div class="card-body p-3">
+                <a
+                  href="https://breederspot.com/author/azad-shaikh/"
+                  class="text-primary text-uppercase fw-semibold text-decoration-none"
+                  >Azad Shaikh</a
+                >
+                <h2 class="fs-4 mt-1 mb-2 overflow-hidden text-ellipsis">
+                  <a
+                    class="link-dark text-decoration-none"
+                    href="https://breederspot.com/reviews/best-dog-knee-brace-torn-acl/"
+                    >Best Dog Knee Brace for Torn ACL – Protect Your Canine</a
+                  >
+                </h2>
+                <p class="text-muted mb-0">
+                  As pet owners, we understand how distressing it can be when our furry friends
+                  suffer from injuries.
+                </p>
+              </div>
+              <div
+                class="card-footer border-top d-flex align-items-center justify-content-between p-3"
+              >
+                <div class="d-flex align-items-center text-muted gap-2">
+                  <i class="ri-calendar-line me-1"></i>
+                  <span>10 Jul 2025</span>
+                </div>
+                <div class="d-flex align-items-center text-muted gap-2">
+                  <a
+                    href="https://breederspot.com/reviews/best-dog-knee-brace-torn-acl/"
+                    class="text-decoration-none text-muted"
+                  >
+                    <i class="ri-chat-2-line me-1"></i>
+                    <span>0</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div
+              class="card border h-100 p-0"
+              data-aos="flip-up"
+              data-aos-delay="150"
+              data-aos-duration="1000"
+            >
+              <img
+                src="https://cdn.breederspot.com/bspot/cms/post/139/Untitled-design-(2).jpg?height=300&aspect_ratio=16:9"
+                class="card-img-top"
+                alt="Blog Image"
+              />
+              <div class="card-body p-3">
+                <a
+                  href="https://breederspot.com/author/azad-shaikh/"
+                  class="text-primary text-uppercase fw-semibold text-decoration-none"
+                  >Azad Shaikh</a
+                >
+                <h2 class="fs-4 mt-1 mb-2 overflow-hidden text-ellipsis">
+                  <a
+                    class="link-dark text-decoration-none"
+                    href="https://breederspot.com/reviews/best-dog-knee-brace-torn-acl/"
+                    >Best Dog Knee Brace for Torn ACL – Protect Your Canine</a
+                  >
+                </h2>
+                <p class="text-muted mb-0">
+                  As pet owners, we understand how distressing it can be when our furry friends
+                  suffer from injuries.
+                </p>
+              </div>
+              <div
+                class="card-footer border-top d-flex align-items-center justify-content-between p-3"
+              >
+                <div class="d-flex align-items-center text-muted gap-2">
+                  <i class="ri-calendar-line me-1"></i>
+                  <span>10 Jul 2025</span>
+                </div>
+                <div class="d-flex align-items-center text-muted gap-2">
+                  <a
+                    href="https://breederspot.com/reviews/best-dog-knee-brace-torn-acl/"
+                    class="text-decoration-none text-muted"
+                  >
+                    <i class="ri-chat-2-line me-1"></i>
+                    <span>0</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div
+              class="card border h-100 p-0"
+              data-aos="flip-up"
+              data-aos-delay="150"
+              data-aos-duration="1000"
+            >
+              <img
+                src="https://cdn.breederspot.com/bspot/cms/post/139/Untitled-design-(2).jpg?height=300&aspect_ratio=16:9"
+                class="card-img-top"
+                alt="Blog Image"
+              />
+              <div class="card-body p-3">
+                <a
+                  href="https://breederspot.com/author/azad-shaikh/"
+                  class="text-primary text-uppercase fw-semibold text-decoration-none"
+                  >Azad Shaikh</a
+                >
+                <h2 class="fs-4 mt-1 mb-2 overflow-hidden text-ellipsis">
+                  <a
+                    class="link-dark text-decoration-none"
+                    href="https://breederspot.com/reviews/best-dog-knee-brace-torn-acl/"
+                    >Best Dog Knee Brace for Torn ACL – Protect Your Canine</a
+                  >
+                </h2>
+                <p class="text-muted mb-0">
+                  As pet owners, we understand how distressing it can be when our furry friends
+                  suffer from injuries.
+                </p>
+              </div>
+              <div
+                class="card-footer border-top d-flex align-items-center justify-content-between p-3"
+              >
+                <div class="d-flex align-items-center text-muted gap-2">
+                  <i class="ri-calendar-line me-1"></i>
+                  <span>10 Jul 2025</span>
+                </div>
+                <div class="d-flex align-items-center text-muted gap-2">
+                  <a
+                    href="https://breederspot.com/reviews/best-dog-knee-brace-torn-acl/"
+                    class="text-decoration-none text-muted"
+                  >
+                    <i class="ri-chat-2-line me-1"></i>
+                    <span>0</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height: auto;">
+            <div
+              class="card border h-100 p-0"
+              data-aos="flip-up"
+              data-aos-delay="150"
+              data-aos-duration="1000"
+            >
+              <img
+                src="https://cdn.breederspot.com/bspot/cms/post/139/Untitled-design-(2).jpg?height=300&aspect_ratio=16:9"
+                class="card-img-top"
+                alt="Blog Image"
+              />
+              <div class="card-body p-3">
+                <a
+                  href="https://breederspot.com/author/azad-shaikh/"
+                  class="text-primary text-uppercase fw-semibold text-decoration-none"
+                  >Azad Shaikh</a
+                >
+                <h2 class="fs-4 mt-1 mb-2 overflow-hidden text-ellipsis">
+                  <a
+                    class="link-dark text-decoration-none"
+                    href="https://breederspot.com/reviews/best-dog-knee-brace-torn-acl/"
+                    >Best Dog Knee Brace for Torn ACL – Protect Your Canine</a
+                  >
+                </h2>
+                <p class="text-muted mb-0">
+                  As pet owners, we understand how distressing it can be when our furry friends
+                  suffer from injuries.
+                </p>
+              </div>
+              <div
+                class="card-footer border-top d-flex align-items-center justify-content-between p-3"
+              >
+                <div class="d-flex align-items-center text-muted gap-2">
+                  <i class="ri-calendar-line me-1"></i>
+                  <span>10 Jul 2025</span>
+                </div>
+                <div class="d-flex align-items-center text-muted gap-2">
+                  <a
+                    href="https://breederspot.com/reviews/best-dog-knee-brace-torn-acl/"
+                    class="text-decoration-none text-muted"
+                  >
+                    <i class="ri-chat-2-line me-1"></i>
+                    <span>0</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-gradient-8 py-5 mt-5">
+    <div class="container text-center">
+      <h2
+        class="text-light fs-6 fw-semibold text-uppercase mb-3"
+        data-aos="fade-in"
+        data-aos-duration="1000"
+      >
+        Join Our Community
+      </h2>
+      <h3
+        class="text-light fw-bold fs-1 mb-4"
+        data-aos="fade-in"
+        data-aos-delay="150"
+        data-aos-duration="1000"
+      >
+        We Are <span class="underline warning">Trusted</span> by All Pet Breeders.
+      </h3>
+      <a
+        href="https://breederspot.com/portal/register/"
+        class="btn btn-lg btn-outline-light"
+        data-aos="fade-in"
+        data-aos-delay="300"
+        data-aos-duration="1000">Learn More</a
+      >
+    </div>
+  </section>
+</Layout>

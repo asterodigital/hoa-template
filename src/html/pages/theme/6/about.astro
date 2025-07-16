@@ -1,0 +1,101 @@
+---
+import Layout from './layout.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout title="About" description="An easy website builder for pet breeders.">
+  <!-- Heading -->
+  <section
+    class="py-5 d-flex align-items-center position-relative"
+    style="
+      background-image: url('https://cdn.breederspot.com/bspot/cms/page/157/rsz_15634900_5660676.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 280px;
+    "
+  >
+    <!-- Overlay -->
+    <div style="position: absolute; inset: 0; background: rgba(50, 50, 50, 0.5); z-index: 1;"></div>
+
+    <div class="row position-relative" style="z-index: 2; width: 100%;">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="container text-center">
+          <h1 class="display-5 text-light fw-bold">About</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <img
+            src="https://cdn.asterobuilder.com/aabg/cms/design_block/197/g3.jpg"
+            class="img-fluid rounded-3 w-100"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            alt="About Us"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h2
+            class="text-primary text-uppercase fw-semibold fs-6 mb-2"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            About Us
+          </h2>
+          <h2
+            class="display-5 fw-bold mb-3"
+            data-aos="fade-down"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            Who Are We?
+          </h2>
+          <p class="mb-4" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
+            Build, update, and promote your own website with ease. BreederSpot makes it simple to
+            create, update, and market your site—no web design skills required. Get a professional
+            website up and running in just minutes.
+          </p>
+          <a
+            href={getPathPrefix('/theme/6/portal/register')}
+            class="btn btn-lg btn-outline-primary"
+            data-aos="fade-down"
+            data-aos-delay="300"
+            data-aos-duration="1000">Start Free Trial</a
+          >
+        </div>
+      </div>
+
+      <div class="mt-4" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
+        <p>
+          BreederSpot is a leading platform dedicated to empowering pet breeders worldwide. We
+          provide innovative one-stop solutions tailored to meet the unique needs of breeders,
+          making their journey smooth and successful.
+        </p>
+        <p>
+          Our user-friendly platform offers a simple yet powerful website builder, enabling breeders
+          to showcase their expertise and connect with potential clients. With a range of design
+          blocks, breeders can create custom websites that reflect their individual style.
+        </p>
+        <p>
+          We take pride in offering essential tools such as pedigree management, medical record
+          tracking, and adoption page creation. As an LLC-registered company, we are committed to
+          maintaining the highest standards of quality and security for our users.
+        </p>
+        <p class="mb-0">
+          Our mission is to build one-stop solutions for pet breeders, while our vision is to
+          redefine the pet breeding industry through innovative solutions. We are driven by values
+          such as honesty, integrity, trust, excellence, accountability, collaboration, service,
+          innovation, and gratitude. Our commitment to these principles fuels our passion to create
+          a platform that empowers breeders worldwide, offering user-friendly tools and services
+          that simplify their journey and elevate their success.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

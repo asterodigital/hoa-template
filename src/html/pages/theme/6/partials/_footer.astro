@@ -1,0 +1,111 @@
+---
+import { getPathPrefix } from '../../../../../utils/path.js'
+import Logo from './_topbar/_logo.astro'
+---
+
+<!-- Footer -->
+<footer class="bg-dark py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <a href={getPathPrefix('/theme/6/')} class="text-decoration-none" aria-label="BreederSpot">
+          <img
+            src="https://cdn.breederspot.com/bspot/app/theme/29/breederspot-logo-light.svg"
+            class="img-fluid mb-3"
+            style="width: 80%;"
+            alt="BreederSpot"
+          />
+        </a>
+        <p class="text-light fs-5 mb-0">
+          BreederSpot LLC is Easy Website Builder for Pet Breeders.
+        </p>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <!-- <i class="ri-phone-fill text-primary fs-4 mb-2"></i>
+        <h6 class="mb-2">Phone</h6>
+        <p class="mb-0 text-muted">
+          <a href="tel:+12345678901" class="text-muted text-decoration-none">+1 (234) 567-8901</a>
+        </p> -->
+        <p class="text-light fw-bold fs-4 mb-3">Learn More</p>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2">
+            <a
+              class="fw-normal text-light text-decoration-none"
+              href={getPathPrefix('/theme/6/about')}>About</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="fw-normal text-light text-decoration-none"
+              href={getPathPrefix('/theme/6/pricing')}>Pricing</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="fw-normal text-light text-decoration-none"
+              href={getPathPrefix('/theme/6/blog')}>Blog</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="fw-normal text-light text-decoration-none"
+              href={getPathPrefix('/theme/6/features')}>Features</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="fw-normal text-light text-decoration-none"
+              href={getPathPrefix('/theme/6/dog-breeder-website-builder')}>Dog breeder</a
+            >
+          </li>
+          <li>
+            <a
+              class="fw-normal text-light text-decoration-none"
+              href={getPathPrefix('/theme/6/portal/login')}>Sign In</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <p class="text-light fw-bold fs-4 mb-3">Quick Links</p>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2">
+            <a
+              class="fw-normal text-light text-decoration-none"
+              href="https://help.breederspot.com/">Help</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="fw-normal text-light text-decoration-none"
+              href={getPathPrefix('/theme/6/contact-us')}>Contact</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="fw-normal text-light text-decoration-none"
+              href={getPathPrefix('/theme/6/privacy-policy')}>Privacy Policy</a
+            >
+          </li>
+          <li>
+            <a
+              class="fw-normal text-light text-decoration-none"
+              href={getPathPrefix('/theme/6/terms-and-conditions')}>Terms & Conditions</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-top pt-5 mt-5 opacity-25"></div>
+
+    <div class="text-center">
+      <p class="text-light mb-0">
+        © 2025 : BreederSpot LLC. All rights reserved. Powered By BreederSpot
+      </p>
+    </div>
+  </div>
+</footer>

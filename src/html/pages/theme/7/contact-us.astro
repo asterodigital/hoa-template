@@ -1,0 +1,228 @@
+---
+import Layout from './layout.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout title="Contact Us" description="ROI-driven Digital Marketing Company.">
+  <!-- Header Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-10 offset-lg-1">
+          <h1 class="fs-1 mb-2" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000">
+            Contact us
+          </h1>
+          <p
+            class="fs-5 text-muted mb-3"
+            data-aos="fade-down"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            Please reach out to us if you have questions about our enterprise offerings, or anything
+            else.
+          </p>
+          <a href="#" class="btn btn-lg btn-primary" data-aos="fade-down" data-aos-duration="1000"
+            >Get in Touch</a
+          >
+          <a
+            href={getPathPrefix('/theme/7/about')}
+            class="btn btn-lg btn-outline-primary"
+            data-aos="fade-down"
+            data-aos-duration="1000">Learn More</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="bg-body pt-3 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 mx-auto">
+          <div class="row g-5">
+            <!-- Form Column -->
+            <div class="col-lg-8" data-aos="fade-in" data-aos-duration="1000">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label"
+                    >Name <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    id="name"
+                    placeholder="Enter Name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label"
+                    >Email <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    id="email"
+                    placeholder="Enter Email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label"
+                    >Message <span class="text-danger">*</span></label
+                  >
+                  <textarea
+                    class="form-control form-control-lg"
+                    id="message"
+                    rows="3"
+                    placeholder="Message"
+                    required></textarea>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary rounded-pill px-4"
+                  >Send Message</button
+                >
+              </form>
+            </div>
+
+            <!-- Contact Details Column -->
+            <div class="col-lg-4">
+              <div
+                class="d-flex flex-row"
+                data-aos="fade-left"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+              >
+                <div>
+                  <div class="text-primary fs-3 me-3">
+                    <i class="ri-map-pin-line"></i>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <h5 class="mb-1">Address</h5>
+                  <address class="text-muted mb-0">
+                    71-75 Shelton Street, Covent Garden, London, WC2H 9JQ
+                  </address>
+                </div>
+              </div>
+              <div
+                class="d-flex flex-row"
+                data-aos="fade-left"
+                data-aos-delay="150"
+                data-aos-duration="1000"
+              >
+                <div>
+                  <div class="text-primary fs-3 me-3">
+                    <i class="ri-phone-line"></i>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <h5 class="mb-1">Phone</h5>
+                  <div class="text-muted">+44 7728022218</div>
+                </div>
+              </div>
+              <div
+                class="d-flex flex-row"
+                data-aos="fade-left"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
+                <div>
+                  <div class="text-primary fs-3 me-3">
+                    <i class="ri-mail-line"></i>
+                  </div>
+                </div>
+                <div>
+                  <h5 class="mb-1">E-mail</h5>
+                  <p class="mb-0">
+                    <a
+                      href="mailto:contact@asterodigital.co.uk"
+                      class="text-decoration-none text-muted">contact@asterodigital.co.uk</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Links Section -->
+  <section class="bg-primary-soft py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 offset-xl-1">
+          <div class="row g-5">
+            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="d-flex mb-3">
+                <div
+                  class="bg-primary rounded-4 d-flex justify-content-center align-items-center py-2 px-3"
+                >
+                  <i class="ri-customer-service-line text-light fs-4"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="mb-2">Technical Support</h4>
+                <p class="text-muted mb-2">
+                  Found a persistent bug, or need help setting a new team member up? Can’t crack a
+                  feature?
+                </p>
+                <a href="#" class="link-primary text-decoration-none">Let us know!</a>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+              <div class="d-flex mb-3">
+                <div
+                  class="bg-primary rounded-4 d-flex justify-content-center align-items-center py-2 px-3"
+                >
+                  <i class="ri-message-2-line text-light fs-4"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="mb-2">General chat</h4>
+                <p class="text-muted mb-2">
+                  Billing issues, customizations, plan changes - anything that doesn’t fit in the
+                  other brackets.
+                </p>
+                <a href="#" class="link-primary text-decoration-none">Start Chat</a>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+              <div class="d-flex mb-3">
+                <div
+                  class="bg-primary rounded-4 d-flex justify-content-center align-items-center py-2 px-3"
+                >
+                  <i class="ri-settings-3-line text-light fs-4"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="mb-2">Help Center</h4>
+                <p class="text-muted mb-2">
+                  Do you want to share feedback on an existing feature or suggest a new one? Talk to
+                  us!
+                </p>
+                <a href="#" class="link-primary text-decoration-none">Let us know!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="bg-body">
+    <div class="container-fluid px-0" data-aos="fade-in" data-aos-duration="1000">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2482.910334266132!2d-0.12358999999999999!3d51.514861!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ccab2f937d%3A0x2ceb81189244ae4c!2s71%20%E2%80%93%2075%20Shelton%20St%2C%20London%20WC2H%209JQ%2C%20UK!5e0!3m2!1sen!2sin!4v1752582157046!5m2!1sen!2sin"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+</Layout>

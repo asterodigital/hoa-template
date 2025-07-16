@@ -1,0 +1,118 @@
+---
+import Layout from './layout.astro'
+// import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout title="Contact Us" description="An easy website builder for pet breeders.">
+  <!-- Heading -->
+  <section
+    class="py-5 d-flex align-items-center position-relative"
+    style="
+      background-image: url('https://cdn.breederspot.com/bspot/cms/page/156/breederspot-contact-map.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 280px;
+    "
+  >
+    <!-- Overlay -->
+    <div style="position: absolute; inset: 0; background: rgba(50, 50, 50, 0.5); z-index: 1;"></div>
+
+    <div class="row position-relative" style="z-index: 2; width: 100%;">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="container text-center">
+          <h1 class="display-5 text-light fw-bold">Contact Us</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-8">
+          <h2 class="fs-2 fw-bold text-center mb-3" data-aos="fade-down" data-aos-duration="1000">
+            Start a conversation with us.
+          </h2>
+          <p
+            class="fs-5 mb-4"
+            style="text-align: justify;"
+            data-aos="fade-down"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            We’d love to hear from you! Whether you have a question about features, pricing, need a
+            demo, or anything else, our team is ready to answer all your questions.
+          </p>
+          <form data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Name *"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control form-control-lg"
+                placeholder="Email *"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control form-control-lg"
+                rows="6"
+                placeholder="Message *"
+                required></textarea>
+            </div>
+            <div class="mb-2">
+              <button type="submit" class="btn btn-lg btn-primary rounded-pill px-4"
+                >Send message</button
+              >
+            </div>
+            <div class="form-text text-muted">* These fields are required.</div>
+          </form>
+        </div>
+        <div class="col-md-4">
+          <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="ri-map-pin-line fs-2 text-primary"></i>
+              <div>
+                <h6 class="mb-1">Address</h6>
+                <p class="mb-0 text-muted">8 The Geen, Suite R, Dover, Delaware. 19901</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="ri-phone-line fs-2 text-primary"></i>
+              <div>
+                <h6 class="mb-1">Phone</h6>
+                <p class="mb-0 text-muted">
+                  <a href="tel:+17867861279" class="text-muted text-decoration-none"
+                    >+1 (786)-786-1279</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <i class="ri-mail-line fs-2 text-primary"></i>
+              <div>
+                <h6 class="mb-1">Email</h6>
+                <p class="mb-0 text-muted">
+                  <a href="mailto:contact@breederspot.com" class="text-muted text-decoration-none"
+                    >contact@breederspot.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

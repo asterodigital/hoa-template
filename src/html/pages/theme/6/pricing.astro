@@ -1,0 +1,476 @@
+---
+import Layout from './layout.astro'
+// import { getAssetPrefix, getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout title="Pricing" description="An easy website builder for pet breeders.">
+  <!-- Pricing Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 text-center">
+          <h1 class="fs-1 fw-bold mb-3" data-aos="fade-down" data-aos-duration="1000">
+            Our Pricing
+          </h1>
+          <p
+            class="fs-5 text-muted mb-5"
+            data-aos="fade-down"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            Affordable prices for all Breeders. Enjoy a free 14-day trial and experience our full
+            service — no credit card required!
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <!-- Switcher -->
+          <div
+            class="d-flex align-items-center justify-content-center mb-4"
+            id="billing-toggle"
+            data-aos="fade-in"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <span id="monthly-label" class="me-2 fw-semibold" style="cursor: pointer;">Monthly</span
+            >
+            <div
+              class="form-check form-switch mx-2"
+              style="display: inline-block; vertical-align: middle;"
+            >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="billingSwitch"
+                style="width: 2.5em; height: 1.5em; cursor: pointer; background-color: #eee; border-color: #eee;"
+              />
+            </div>
+            <span id="yearly-label" class="ms-2 fw-semibold" style="cursor: pointer;">
+              Yearly <span class="text-danger" style="font-size: 0.95em;">(Save 16%)</span>
+            </span>
+          </div>
+
+          <!-- Pricing Cards -->
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card border h-100 p-4" data-aos="flip-right" data-aos-duration="1000">
+                <div class="card-body d-flex flex-column">
+                  <div class="text-center">
+                    <div class="mb-2">
+                      <span class="fs-6 text-muted">$</span>
+                      <!-- <span class="fs-1 fw-semibold">9.95</span> -->
+                      <span id="website-plan" class="fs-1 fw-semibold">9.95</span>
+                      <h4 class="d-inline fs-6 text-muted">/mo</h4>
+                    </div>
+                    <h4 class="fw-semibold mb-4">Website Plan</h4>
+                  </div>
+                  <ul class="list-unstyled mb-3">
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Free Sub-Domain (or use your
+                      own domain name)
+                    </li>
+                    <li class="mb-2"><i class="ri-check-line text-primary me-2"></i>Free SSL</li>
+                    <li class="mb-2"><i class="ri-check-line text-primary me-2"></i>1GB Storage</li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Unlimited</span
+                      > Bandwidth
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Professional Website
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Free</span
+                      >
+                      Image CDN
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Advance <span class="fw-bold"
+                        >SEO</span
+                      >
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Advanced Design Blocks
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Drag & drop page builder
+                    </li>
+                  </ul>
+                  <div class="mt-auto mx-auto">
+                    <a
+                      href="https://breederspot.com/portal/register/"
+                      class="btn btn-lg btn-primary rounded-pill px-4">Start Free Trial</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div
+                class="card border h-100 p-4"
+                data-aos="flip-left"
+                data-aos-delay="150"
+                data-aos-duration="1000"
+              >
+                <div class="card-body d-flex flex-column">
+                  <div class="text-center">
+                    <div class="mb-2">
+                      <span class="fs-6 text-muted">$</span>
+                      <!-- <span class="fs-1 fw-semibold">29.95</span> -->
+                      <span id="business-plan" class="fs-1 fw-semibold">29.95</span>
+                      <h4 class="d-inline fs-6 text-muted">/mo</h4>
+                    </div>
+                    <h4 class="fw-semibold mb-4">Business Plan</h4>
+                  </div>
+                  <ul class="list-unstyled mb-3">
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Everything From Website Plan
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Free</span
+                      >
+                      .Com Domain Name
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Unlimited</span
+                      >
+                      Storage
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Unlimited</span
+                      >
+                      Bandwidth
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Pet Breeding</span
+                      > Management
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Medical Records</span
+                      > Management
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Financial</span
+                      > Management
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Inventory</span
+                      > Management
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i><span class="fw-bold"
+                        >Contracts</span
+                      > Management
+                    </li>
+                    <li class="mb-2">
+                      <i class="ri-check-line text-primary me-2"></i>Email <span class="fw-bold"
+                        >Marketing</span
+                      >
+                    </li>
+                  </ul>
+                  <div class="mt-auto mx-auto">
+                    <a href="#" class="btn btn-lg btn-primary rounded-pill px-4">Coming Soon</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <h2 class="fs-2 fw-bold text-center mb-3" data-aos="fade-down" data-aos-duration="1000">
+        Pricing FAQ
+      </h2>
+      <p
+        class="fs-5 text-muted text-center mb-5"
+        data-aos="fade-down"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+      >
+        If you don't see an answer to your question, you can send us an email from our contact form.
+      </p>
+
+      <!-- Accordion -->
+      <div class="row gx-4 gy-0" data-aos="fade-in" data-aos-delay="200" data-aos-duration="1000">
+        <div class="col-md-6">
+          <div
+            class="accordion accordion-flush"
+            id="accordionFlushLeft"
+            role="tablist"
+            aria-multiselectable="true"
+          >
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Do you offer free trial?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  Yes, we offer a 14-day free trial period for all our premium plans. During this
+                  period, you can explore all the features and decide if the plan suits your needs.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Do I have to enter my credit card to sign up?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  No. You can open a trial account at any time with no credit card required.
+                  Entering a credit card is required only if you choose to go premium after your
+                  trial period is over.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Can I switch my subscription plan?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  You are free to switch between plans. You will get more features in the premium
+                  plans; however, if you wish to degrade your plan, the existing features will get
+                  blocked or limited.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  Do you offer discounts for annual subscriptions?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushLeft"
+              >
+                <div class="accordion-body">
+                  Yes, we provide attractive discounts for annual subscriptions. When you opt for an
+                  annual plan, you can save significantly compared to the monthly pricing.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="accordion accordion-flush"
+            id="accordionFlushRight"
+            role="tablist"
+            aria-multiselectable="true"
+          >
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFive"
+                >
+                  What types of payment methods do you accept?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFive"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushRight"
+              >
+                <div class="accordion-body">
+                  We use Stripe for secure and reliable payments, accepting credit and debit cards.
+                  Stripe is renowned worldwide for its top-notch security and credibility in
+                  handling transactions.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSix"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSix"
+                >
+                  Is a domain name included in the premium plan?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSix"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushRight"
+              >
+                <div class="accordion-body">
+                  Yes, all premium plans come with a free custom domain name for the first year. You
+                  can choose a domain name that represents your business and brand.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border rounded mb-3">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold rounded shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSeven"
+                >
+                  Can I cancel my subscription at any time?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSeven"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushRight"
+              >
+                <div class="accordion-body">
+                  Yes, you have the freedom to cancel your subscription at any time. There are no
+                  long-term commitments, and you can easily cancel your plan through your account
+                  settings.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-gradient-8 py-5 mt-3">
+    <div class="container text-center">
+      <h2
+        class="text-light fs-6 fw-semibold text-uppercase mb-3"
+        data-aos="fade-in"
+        data-aos-duration="1000"
+      >
+        Join Our Community
+      </h2>
+      <h3
+        class="text-light fw-bold fs-1 mb-4"
+        data-aos="fade-in"
+        data-aos-delay="150"
+        data-aos-duration="1000"
+      >
+        We Are <span class="underline warning">Trusted</span> by All Pet Breeders.
+      </h3>
+      <a
+        href="https://breederspot.com/portal/register/"
+        class="btn btn-lg btn-outline-light"
+        data-aos="fade-in"
+        data-aos-delay="300"
+        data-aos-duration="1000">Start Free Trial</a
+      >
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  // Price configuration
+  const prices = {
+    monthly: {
+      website: 9.95,
+      business: 29.95
+    },
+    yearly: {
+      website: 99.5,
+      business: 299.5
+    }
+  }
+
+  // Get DOM elements
+  const switchInput = document.getElementById('billingSwitch')
+  const websitePlanEl = document.getElementById('website-plan')
+  const businessPlanEl = document.getElementById('business-plan')
+  const monthlyLabel = document.getElementById('monthly-label')
+  const yearlyLabel = document.getElementById('yearly-label')
+
+  // Update prices based on switch state
+  function updatePrices() {
+    const billingType = switchInput.checked ? 'yearly' : 'monthly'
+    websitePlanEl.textContent = prices[billingType].website.toFixed(2)
+    businessPlanEl.textContent = prices[billingType].business.toFixed(2)
+  }
+
+  // Event listener for switch
+  switchInput.addEventListener('change', updatePrices)
+
+  // Optional: click on labels toggles switch
+  monthlyLabel.addEventListener('click', () => {
+    switchInput.checked = false
+    updatePrices()
+  })
+
+  yearlyLabel.addEventListener('click', () => {
+    switchInput.checked = true
+    updatePrices()
+  })
+
+  // Initialize on load
+  updatePrices()
+</script>
