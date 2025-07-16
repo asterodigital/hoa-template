@@ -13,7 +13,7 @@
     "css": "node tools/css.mjs",
     "js": "node tools/js.mjs",
     "assets": "node tools/assets.mjs",
-    "assets:relative": "node config/assets.relative.config.mjs",
+    "assets:offline": "node config/assets.offline.config.mjs",
     "lint": "node tools/lint.mjs",
     "fixlint": "node tools/fixlint.mjs",
     "format:html": "node tools/format.mjs",

@@ -1,9 +1,8 @@
-/*
-Astro config for relative path builds - used for ThemeForest submission
-This config generates HTML with relative paths for file:// compatibility
-*/
+// Astro config for offline path builds - used for ThemeForest submission
+// This config generates HTML with offline paths for file:// compatibility
 
 import { defineConfig } from 'astro/config'
+import fs from 'fs-extra'
 import path from 'path'
 
 // Custom Vite plugin to watch for asset changes and trigger HMR
@@ -51,14 +50,24 @@ export default defineConfig({
   outDir: './dist/offline',
   trailingSlash: 'never',
 
-  // Set base to './' for relative paths
+  // Set base to './' for offline paths
   base: './',
 
-  // Configure build to use relative paths
+  // Configure build to use offline paths
   output: 'static',
 
   vite: {
     plugins: [assetHmrPlugin()],
+    build: {
+      rollupOptions: {
+        output: {
+          // Use offline asset references
+          assetFileNames: 'assets/[name].[ext]',
+          chunkFileNames: 'assets/[name].[ext]',
+          entryFileNames: 'assets/[name].js'
+        }
+      }
+    },
     css: {
       preprocessorOptions: {
         scss: {
@@ -66,9 +75,20 @@ export default defineConfig({
         }
       }
     },
-    // Define the environment variable for relative builds
+    // Set base to './' for offline paths
+    base: './',
+    // Configure build to use offline paths
     define: {
-      'import.meta.env.PUBLIC_RELATIVE_PATHS': '"true"'
+      // Configure build to use offline paths
+      'import.meta.env.MODE': '"production"',
+      'import.meta.env.PROD': 'true',
+      'import.meta.env.DEV': 'false',
+      'import.meta.env.SSR': 'false',
+      'import.meta.env.SITE': 'undefined',
+      'import.meta.env.ASSETS_PREFIX': 'undefined',
+
+      // Define the environment variable for offline builds
+      'import.meta.env.PUBLIC_OFFLINE_PATHS': '"true"'
     },
     server: {
       watch: {
