@@ -31,8 +31,8 @@ const pageHeaderProps = {
             <table class="table mb-0" style="table-layout: fixed;">
               <thead>
                 <tr>
-                  <th scope="col" class="pt-0">Plugin Name</th>
-                  <th scope="col" class="pt-0">Description</th>
+                  <th scope="col" class="fs-5 fw-semibold pt-0">Plugin Name</th>
+                  <th scope="col" class="fs-5 fw-semibold pt-0">Description</th>
                 </tr>
               </thead>
               <tbody>
@@ -116,8 +116,8 @@ const pageHeaderProps = {
             <table class="table mb-0" style="table-layout: fixed;">
               <thead>
                 <tr>
-                  <th scope="col" class="pt-0">Font Name</th>
-                  <th scope="col" class="pt-0">Description</th>
+                  <th scope="col" class="fs-5 fw-semibold pt-0">Font Name</th>
+                  <th scope="col" class="fs-5 fw-semibold pt-0">Description</th>
                 </tr>
               </thead>
               <tbody>
@@ -173,8 +173,8 @@ const pageHeaderProps = {
             <table class="table mb-0" style="table-layout: fixed;">
               <thead>
                 <tr>
-                  <th scope="col" class="pt-0">Source Name</th>
-                  <th scope="col" class="pt-0">Description</th>
+                  <th scope="col" class="fs-5 fw-semibold pt-0">Source Name</th>
+                  <th scope="col" class="fs-5 fw-semibold pt-0">Description</th>
                 </tr>
               </thead>
               <tbody>
@@ -202,31 +202,11 @@ const pageHeaderProps = {
         <h3 class="mb-2" id="images">Images</h3>
         <div class="card border p-4 mb-4">
           <div class="card-body">
-            <!-- <table class="table mb-0" style="table-layout: fixed;">
-              <thead>
-                <tr>
-                  <th scope="col" class="pt-0">Source</th>
-                  <th scope="col" class="pt-0">Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>AI Generated</td>
-                  <td>Most images used in this project were generated using AI tools.</td>
-                </tr>
-                <tr>
-                  <td>Stock/Other</td>
-                  <td
-                    >Some images may be sourced from free stock image platforms or open license
-                    resources where noted.</td
-                  >
-                </tr>
-              </tbody>
-            </table> -->
+            <p class="fs-5 fw-semibold mb-2">AI Generated</p>
             <p class="mb-4">Most images used in this project were generated using AI tools.</p>
-            <div class="row g-4">
-              <div class="col-4">
-                <figure class="img-scale rounded-4 mb-0">
+            <div class="row g-2 g-md-4 mb-4">
+              <div class="col-6 col-sm-4">
+                <figure class="img-scale rounded-4 h-100 mb-0">
                   <img
                     src={getAssetPrefix('/assets/img/theme-images/img-1.jpg')}
                     class="img-fluid"
@@ -234,8 +214,8 @@ const pageHeaderProps = {
                   />
                 </figure>
               </div>
-              <div class="col-4">
-                <figure class="img-scale rounded-4 mb-0">
+              <div class="col-6 col-sm-4">
+                <figure class="img-scale rounded-4 h-100 mb-0">
                   <img
                     src={getAssetPrefix('/assets/img/theme-images/img-3.jpg')}
                     class="img-fluid"
@@ -243,11 +223,70 @@ const pageHeaderProps = {
                   />
                 </figure>
               </div>
-              <div class="col-4">
-                <figure class="img-scale rounded-4 mb-0">
+              <div class="col-6 col-sm-4">
+                <figure class="img-scale rounded-4 h-100 mb-0">
                   <img
                     src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
                     class="img-fluid"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <p class="fs-5 fw-semibold border-top pt-4 mb-2">Unsplash</p>
+            <p class="mb-4">The following images used in this project are from Unsplash.</p>
+            <div class="row g-2 g-md-4">
+              <div class="col-6 col-sm-4">
+                <figure class="img-scale rounded-4 h-100 mb-0">
+                  <img
+                    src={getAssetPrefix('/assets/img/products/product-1.jpg')}
+                    class="img-fluid object-fit-cover"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+              <div class="col-6 col-sm-4">
+                <figure class="img-scale rounded-4 h-100 mb-0">
+                  <img
+                    src={getAssetPrefix('/assets/img/products/product-2.jpg')}
+                    class="img-fluid object-fit-cover"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+              <div class="col-6 col-sm-4">
+                <figure class="img-scale rounded-4 h-100 mb-0">
+                  <img
+                    src={getAssetPrefix('/assets/img/products/product-3.jpg')}
+                    class="img-fluid object-fit-cover"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+              <div class="col-6 col-sm-4">
+                <figure class="img-scale rounded-4 h-100 mb-0">
+                  <img
+                    src={getAssetPrefix('/assets/img/products/product-4.jpg')}
+                    class="img-fluid object-fit-cover"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+              <div class="col-6 col-sm-4">
+                <figure class="img-scale rounded-4 h-100 mb-0">
+                  <img
+                    src={getAssetPrefix('/assets/img/products/product-5.jpg')}
+                    class="img-fluid object-fit-cover"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+              <div class="col-6 col-sm-4">
+                <figure class="img-scale rounded-4 h-100 mb-0">
+                  <img
+                    src={getAssetPrefix('/assets/img/products/product-6.jpg')}
+                    class="img-fluid object-fit-cover"
                     alt="Image"
                   />
                 </figure>
