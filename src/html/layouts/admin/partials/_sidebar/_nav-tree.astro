@@ -39,6 +39,13 @@ const isActiveParent = (path: string) => currentPath.startsWith(path)
         <span>Changelog</span>
       </a>
     </li>
+    <!-- Credits -->
+    <li class={`nav-item ${isActive('docs/credits') ? 'active' : ''}`}>
+      <a class="nav-link" href={getPathPrefix('/docs/credits')}>
+        <i class="ri-award-line"></i>
+        <span>Credits</span>
+      </a>
+    </li>
 
     <!-- Main Section -->
     <li class="nav-section">

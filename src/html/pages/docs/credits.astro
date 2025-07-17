@@ -1,0 +1,140 @@
+---
+import AdminLayout from '../../layouts/admin/admin-layout.astro'
+import PageHeader from '../../components/common/page-header.astro'
+import Toc from '../../components/toc/toc.astro'
+import { getPathPrefix } from '../../../utils/path.js'
+
+const pageHeaderProps = {
+  title: 'Credits',
+  breadcrumbs: [
+    { label: 'Docs', href: getPathPrefix('/docs') },
+    { label: 'Credits', class: 'active' }
+  ]
+}
+---
+
+<AdminLayout
+  currentPath="docs/credits"
+  title="Credits"
+  description="Credits for the tools and resources used in building this project."
+>
+  <PageHeader {...pageHeaderProps} />
+  <div class="row">
+    <div class="col-lg-9 col-xl-9 order-1 order-lg-0">
+      <p class="my-0">Credits for the tools and resources used in building this project.</p>
+
+      <!-- JS -->
+      <div class="my-3">
+        <h3 class="mb-2" id="javascript">JavaScript</h3>
+        <div class="card border p-4 mb-4">
+          <div class="card-body">
+            <table class="table mb-0">
+              <thead>
+                <tr>
+                  <th scope="col" class="pt-0">Plugin Name</th>
+                  <th scope="col" class="pt-0">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fonts -->
+      <div class="my-3">
+        <h3 class="mb-2" id="fonts">Fonts</h3>
+        <div class="card border p-4 mb-4">
+          <div class="card-body">
+            <table class="table mb-0">
+              <thead>
+                <tr>
+                  <th scope="col" class="pt-0">Font Name</th>
+                  <th scope="col" class="pt-0">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    ><a
+                      href="https://fonts.google.com/specimen/Source+Sans+3"
+                      class="text-decoration-none link-primary"
+                      target="_blank">Source Sans 3<i class="ri-external-link-line ms-1"></i></a
+                    ></td
+                  >
+                  <td
+                    >An updated, versatile sans serif optimized for clarity across print and screen.</td
+                  >
+                </tr>
+                <tr>
+                  <td
+                    ><a
+                      href="https://fonts.google.com/specimen/DM+Sans"
+                      class="text-decoration-none link-primary"
+                      target="_blank">DM Sans<i class="ri-external-link-line ms-1"></i></a
+                    ></td
+                  >
+                  <td
+                    >A modern, low-contrast sans serif designed for readability and digital
+                    interfaces.</td
+                  >
+                </tr>
+                <tr>
+                  <td
+                    ><a
+                      href="https://fonts.google.com/specimen/Lexend"
+                      class="text-decoration-none link-primary"
+                      target="_blank">Lexend<i class="ri-external-link-line ms-1"></i></a
+                    ></td
+                  >
+                  <td
+                    >Lexend is a readability-focused font family designed to reduce visual stress
+                    and improve reading speed.</td
+                  >
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Icons -->
+      <div class="my-3">
+        <h3 class="mb-2" id="icons">Icons</h3>
+        <div class="card border p-4 mb-4">
+          <div class="card-body">
+            <table class="table mb-0">
+              <thead>
+                <tr>
+                  <th scope="col" class="pt-0">Source Name</th>
+                  <th scope="col" class="pt-0">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    ><a
+                      href="https://remixicon.com/"
+                      class="text-decoration-none link-primary"
+                      target="_blank">Remix Icon<i class="ri-external-link-line ms-1"></i></a
+                    ></td
+                  >
+                  <td
+                    >Remix Icon is a set of high-quality system icons designed for modern web and
+                    app interfaces.</td
+                  >
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Toc />
+  </div>
+</AdminLayout>
