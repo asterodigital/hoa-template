@@ -2,7 +2,7 @@
 import AdminLayout from '../../layouts/admin/admin-layout.astro'
 import PageHeader from '../../components/common/page-header.astro'
 import Toc from '../../components/toc/toc.astro'
-import { getPathPrefix } from '../../../utils/path.js'
+import { getAssetPrefix, getPathPrefix } from '../../../utils/path.js'
 
 const pageHeaderProps = {
   title: 'Credits',
@@ -193,6 +193,66 @@ const pageHeaderProps = {
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images -->
+      <div class="my-3">
+        <h3 class="mb-2" id="images">Images</h3>
+        <div class="card border p-4 mb-4">
+          <div class="card-body">
+            <!-- <table class="table mb-0" style="table-layout: fixed;">
+              <thead>
+                <tr>
+                  <th scope="col" class="pt-0">Source</th>
+                  <th scope="col" class="pt-0">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AI Generated</td>
+                  <td>Most images used in this project were generated using AI tools.</td>
+                </tr>
+                <tr>
+                  <td>Stock/Other</td>
+                  <td
+                    >Some images may be sourced from free stock image platforms or open license
+                    resources where noted.</td
+                  >
+                </tr>
+              </tbody>
+            </table> -->
+            <p class="mb-4">Most images used in this project were generated using AI tools.</p>
+            <div class="row g-4">
+              <div class="col-4">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src={getAssetPrefix('/assets/img/theme-images/img-1.jpg')}
+                    class="img-fluid"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+              <div class="col-4">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src={getAssetPrefix('/assets/img/theme-images/img-3.jpg')}
+                    class="img-fluid"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+              <div class="col-4">
+                <figure class="img-scale rounded-4 mb-0">
+                  <img
+                    src={getAssetPrefix('/assets/img/theme-images/img-4.jpg')}
+                    class="img-fluid"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
       </div>
