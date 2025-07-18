@@ -16,137 +16,53 @@ const pageHeaderConfig = {
 }
 
 // Animation examples
-const fadeInHtml = `<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="fade-in" alt="fade-in example" />
+const fadeInHtml = `<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-aos="fade-in" data-aos-duration="1000" alt="fade-in example" />
 `
 
-const fadeInJs = `<script>
-// JavaScript to handle different animations for images with data-cue attribute
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll('img[data-cue]');
-
-  // Set initial delay to 0
-  let delay = 0;
-
-  // Set up an IntersectionObserver to detect when the image is in view
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      // If the image is in view
-      if (entry.isIntersecting) {
-        const image = entry.target;
-
-        // Get the animation type from the data-cue attribute (fadeIn, zoomIn, etc.)
-        const animationType = image.getAttribute('data-cue');
-
-        // Add the corresponding class based on the animation type
-        setTimeout(() => {
-          image.classList.add(animationType);
-        }, delay);
-
-        // Increment the delay for the next image (so they fade in one by one)
-        delay += 200; // Adjust the delay between images (in milliseconds)
-
-        // Unobserve the image once it has been handled
-        observer.unobserve(image);
-      }
-    });
-  }, {
-    threshold: 0.5 // Trigger when 50% of the image is in view
-  });
-
-  // Observe all images with the data-cue attribute
-  images.forEach(image => observer.observe(image));
-});
+const fadeInJs = `<!-- Animate on Scroll (AOS) Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
+<script is:inline>
+  AOS.init({
+    once: true
+  })
 </script>
 `
-
-const zoomHtml = `<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="zoom-in" alt="zoom-in example" />
-<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="zoom-out" alt="zoom-out example" />
+const fadeInCss = `<!-- Animate on Scroll (AOS) Styles -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 `
 
-const zoomJs = `<script>
-// JavaScript to handle different animations for images with data-cue attribute
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll('img[data-cue]');
+const zoomHtml = `<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-aos="zoom-in"  data-aos-duration="1000" alt="zoom-in example" />
+<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="1000" alt="zoom-out example" />
+`
 
-  // Set initial delay to 0
-  let delay = 0;
-
-  // Set up an IntersectionObserver to detect when the image is in view
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      // If the image is in view
-      if (entry.isIntersecting) {
-        const image = entry.target;
-
-        // Get the animation type from the data-cue attribute (fadeIn, zoomIn, etc.)
-        const animationType = image.getAttribute('data-cue');
-
-        // Add the corresponding class based on the animation type
-        setTimeout(() => {
-          image.classList.add(animationType);
-        }, delay);
-
-        // Increment the delay for the next image (so they fade in one by one)
-        delay += 200; // Adjust the delay between images (in milliseconds)
-
-        // Unobserve the image once it has been handled
-        observer.unobserve(image);
-      }
-    });
-  }, {
-    threshold: 0.5 // Trigger when 50% of the image is in view
-  });
-
-  // Observe all images with the data-cue attribute
-  images.forEach(image => observer.observe(image));
-});
+const zoomJs = `<!-- Animate on Scroll (AOS) Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
+<script is:inline>
+  AOS.init({
+    once: true
+  })
 </script>
 `
-
-const slideHtml = `<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="slide-in-up" alt="slide-in-up example" />
-<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="slide-in-down" alt="slide-in-down example" />
-<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="slide-in-left" alt="slide-in-left example" />
-<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-cue="slide-in-right" alt="slide-in-right example" />
+const zoomCss = `<!-- Animate on Scroll (AOS) Styles -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 `
 
-const slideJs = `<script>
-// JavaScript to handle different animations for images with data-cue attribute
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll('img[data-cue]');
+const fadeHtml = `<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-aos="fade-left" data-aos-duration="1000" alt="fade-left example" />
+<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" alt="fade-right example" />
+<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" alt="fade-up example" />
+<img src="${getAssetPrefix('/assets/img/placeholder-images/placeholder-image-220x220.png')}" class="m-1 rounded-3" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000" alt="fade-down example" />
+`
 
-  // Set initial delay to 0
-  let delay = 0;
-
-  // Set up an IntersectionObserver to detect when the image is in view
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      // If the image is in view
-      if (entry.isIntersecting) {
-        const image = entry.target;
-
-        // Get the animation type from the data-cue attribute (fadeIn, zoomIn, etc.)
-        const animationType = image.getAttribute('data-cue');
-
-        // Add the corresponding class based on the animation type
-        setTimeout(() => {
-          image.classList.add(animationType);
-        }, delay);
-
-        // Increment the delay for the next image (so they fade in one by one)
-        delay += 200; // Adjust the delay between images (in milliseconds)
-
-        // Unobserve the image once it has been handled
-        observer.unobserve(image);
-      }
-    });
-  }, {
-    threshold: 0.5 // Trigger when 50% of the image is in view
-  });
-
-  // Observe all images with the data-cue attribute
-  images.forEach(image => observer.observe(image));
-});
+const fadeJs = `<!-- Animate on Scroll (AOS) Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
+<script is:inline>
+  AOS.init({
+    once: true
+  })
 </script>
+`
+const fadeCss = `<!-- Animate on Scroll (AOS) Styles -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 `
 ---
 
@@ -182,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
               height="300px"
               component={fadeInHtml}
               htmlCode={fadeInHtml}
+              cssCode={fadeInCss}
               jsCode={fadeInJs}
             />
           </div>
@@ -198,23 +115,26 @@ document.addEventListener("DOMContentLoaded", function () {
               height="500px"
               component={zoomHtml}
               htmlCode={zoomHtml}
+              cssCode={zoomCss}
               jsCode={zoomJs}
             />
           </div>
           <div class="my-3">
-            <h3 class="mb-0" id="slide">Slide animations</h3>
+            <h3 class="mb-0" id="fade">Directional fade animations</h3>
             <p class="py-2">
-              The slide animation moves an element from one position to another (e.g., from the
-              left, right, top, or bottom), creating a smooth transition that mimics sliding in or
-              out of the view, often used to add dynamic movement to elements.
+              Directional fade animations gradually change an element's opacity while moving it in a
+              specific direction (left, right, up, or down), creating a subtle yet smooth transition
+              effect. These animations are commonly used to bring elements into view in a more
+              elegant and less abrupt way.
             </p>
 
             <ComponentPreview
-              title="Slide-In-Up, Down, Left and Right"
+              title="Fade-Left, Right, Up and Down"
               height="550px"
-              component={slideHtml}
-              htmlCode={slideHtml}
-              jsCode={slideJs}
+              component={fadeHtml}
+              htmlCode={fadeHtml}
+              cssCode={fadeCss}
+              jsCode={fadeJs}
             />
           </div>
         </div>
