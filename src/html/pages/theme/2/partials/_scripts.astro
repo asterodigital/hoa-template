@@ -16,9 +16,21 @@ function getJS(filename: string) {
 
 <!-- Page Script -->{pageScript && <Fragment set:html={pageScript} />}
 
+<!-- Animate on Scroll (AOS) Script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" is:inline></script>
 <script is:inline>
   AOS.init({
     once: true
+  })
+</script>
+
+<!-- GLightbox -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" is:inline></script>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    })
   })
 </script>
