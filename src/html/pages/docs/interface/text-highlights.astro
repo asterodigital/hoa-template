@@ -26,19 +26,17 @@ const code_3 = `<h2>This type of <span class="underline-3 warning">underline</sp
 `
 const code_4 = `<span>You can also add a <span class="mark warning">mark</span> under text to make it stand out better.</span>
 `
-const code_5_html = `<h1><span id="h1">rough-notation</span></h1>
-<p>this is a test for <span id="span-1">underline notation.</span></p>
-<p>this is a test for <span id="span-2">box notation.</span></p>
-<p>this is a test for <span id="span-3">circle notation.</span></p>
-<p>this is a test for <span id="span-4">highlight notation.</span></p>
-<p>this is a test for <span id="span-5">strike-through notation.</span></p>
-<p>this is a test for <span id="span-6">crossed-off notation.</span></p>
-<p>this is a test for <span id="span-7">bracket notation.</span></p>
+const code_5_html = `<p class="mb-3">Create a sketchy <span id="span-1">underline</span> effect.</p>
+<p class="mb-3">Create a <span id="span-2">box</span> around the element.</p>
+<p class="mb-3">Create a <span id="span-3">circle</span> around the element.</p>
+<p class="mb-3">Create a <span id="span-4">highlight effect</span>.</p>
+<p class="mb-3">Draw a line for a <span id="span-5">strike-through</span> effect.</p>
+<p class="mb-3">Create a <span id="span-6">crossed-off</span> effect on an element.</p>
+<p>Draw a <span id="span-7">bracket</span> around an element.</p>
 `
 const code_5_js = `<script type="module">
   import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
 
-  const h1 = document.querySelector('#h1');
   const span_1 = document.querySelector('#span-1');
   const span_2 = document.querySelector('#span-2');
   const span_3 = document.querySelector('#span-3');
@@ -47,7 +45,6 @@ const code_5_js = `<script type="module">
   const span_6 = document.querySelector('#span-6');
   const span_7 = document.querySelector('#span-7');
 
-  const a = annotate(h1, { type: 'highlight', color: '#fab758' });
   const a1 = annotate(span_1, { type: 'underline', color: '#fab758' });
   const a2 = annotate(span_2, { type: 'box', color: '#fab758' });
   const a3 = annotate(span_3, { type: 'circle', color: '#fab758', padding: [2, 12] });
@@ -56,7 +53,7 @@ const code_5_js = `<script type="module">
   const a6 = annotate(span_6, { type: 'crossed-off', color: '#fab758' });
   const a7 = annotate(span_7, { type: 'bracket', color: '#fab758', brackets: ['left', 'right'], strokeWidth: 2 });
 
-  const ag = annotationGroup([a, a1, a2, a3, a4, a5, a6, a7]);
+  const ag = annotationGroup([a1, a2, a3, a4, a5, a6, a7]);
   ag.show();
 </script>
 `
@@ -148,7 +145,10 @@ const previewConfig = {
           </div>
           <div class="my-3">
             <h3 class="mb-0" id="rough-notation">Rough Notation</h3>
-            <p class="py-2">Lorem</p>
+            <p class="py-2">
+              You can also use Rough Notation — a JavaScript library that creates hand-drawn,
+              animated annotations on web elements to highlight or emphasize content.
+            </p>
 
             <ComponentPreview
               title="Rough Notation"
