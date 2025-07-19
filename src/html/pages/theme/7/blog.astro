@@ -1,0 +1,342 @@
+---
+import Layout from './layout.astro'
+import { getPathPrefix } from '../../../../utils/path.js'
+---
+
+<Layout title="Blog" description="ROI-driven Digital Marketing Company.">
+  <!-- Blog Section -->
+  <section class="bg-body py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 text-center">
+          <h1 class="mb-3" data-aos="fade-down" data-aos-duration="1000">Blogs</h1>
+          <p
+            class="fs-5 text-muted mb-5"
+            data-aos="fade-down"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            Explore our latest articles, insights, and expert opinions on industry trends, tips, and
+            much more.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-6 col-xl-8">
+          <!-- Blogs -->
+          <div
+            class="card border p-0 mb-4"
+            data-aos="fade-in"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <img
+              src="https://asterodigital.com/storage/local/aamf/cms/media/125/cheatsheet.png"
+              class="card-img-top"
+              alt="Blog Image"
+            />
+            <div class="card-body p-3 p-md-4">
+              <a
+                href="https://asterodigital.com/guide/"
+                class="text-decoration-none text-uppercase fs-6 fw-semibold">Guide</a
+              >
+              <h2 class="my-2">
+                <a
+                  href="https://asterodigital.com/guide/bootstrap-cheatsheet/"
+                  class="text-decoration-none text-body fs-3"
+                  >The Ultimate Bootstrap 5 Cheatsheet: Developer's Quick Reference Guide</a
+                >
+              </h2>
+              <p class="text-muted mb-0">
+                Bootstrap 5 Components Cheatsheet A comprehensive guide to Bootstrap's most useful
+                components Table of Contents Layout Components Content Components Form Components
+                Navigation Components Feedback Components Layout Components...
+              </p>
+            </div>
+            <div
+              class="card-footer border-top d-flex align-items-center justify-content-between p-3"
+            >
+              <div class="d-flex align-items-center text-muted gap-2">
+                <i class="ri-calendar-line me-1"></i>
+                <span>18 Mar 2025</span>
+              </div>
+              <div class="d-flex align-items-center text-muted gap-2">
+                <a href="#" class="text-decoration-none text-muted">
+                  <i class="ri-user-line me-1"></i>
+                  <span>By Azad Shaikh</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card border p-0 mb-4"
+            data-aos="fade-in"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <img
+              src="https://asterodigital.com/storage/local/aamf/cms/post/121/bootstrap-language.png"
+              class="card-img-top"
+              alt="Blog Image"
+            />
+            <div class="card-body p-3 p-md-4">
+              <a
+                href="https://asterodigital.com/coding/"
+                class="text-decoration-none text-uppercase fs-6 fw-semibold">Coding</a
+              >
+              <h2 class="my-2">
+                <a
+                  href="https://asterodigital.com/coding/bootstrap-language-selector/"
+                  class="text-decoration-none text-body fs-3"
+                  >Bootstrap Language Selector: Implementation Guide</a
+                >
+              </h2>
+              <p class="text-muted mb-0">
+                When launching a global product or website, providing language options is crucial
+                for user accessibility. A well-designed language selector enhances user experience
+                and demonstrates your commitment to international users....
+              </p>
+            </div>
+            <div
+              class="card-footer border-top d-flex align-items-center justify-content-between p-3"
+            >
+              <div class="d-flex align-items-center text-muted gap-2">
+                <i class="ri-calendar-line me-1"></i>
+                <span>15 Mar 2025</span>
+              </div>
+              <div class="d-flex align-items-center text-muted gap-2">
+                <a href="#" class="text-decoration-none text-muted">
+                  <i class="ri-user-line me-1"></i>
+                  <span>By Azad Shaikh</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card border p-0 mb-4"
+            data-aos="fade-in"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <img
+              src="https://asterodigital.com/storage/local/aalp/cms/post/94/sites-like-etsy.png"
+              class="card-img-top"
+              alt="Blog Image"
+            />
+            <div class="card-body p-3 p-md-4">
+              <a
+                href="https://asterodigital.com/seo/"
+                class="text-decoration-none text-uppercase fs-6 fw-semibold">SEO</a
+              >
+              <h2 class="my-2">
+                <a
+                  href="https://asterodigital.com/seo/sites-like-etsy-to-sell-digital-products/"
+                  class="text-decoration-none text-body fs-3"
+                  >Top 5 sites like etsy to sell digital products</a
+                >
+              </h2>
+              <p class="text-muted mb-0">
+                Selling digital products requires a platform that aligns with your business goals,
+                provides adequate control, and offers favorable commission structures. While Etsy
+                has been a popular choice, many creators are exploring alternatives...
+              </p>
+            </div>
+            <div
+              class="card-footer border-top d-flex align-items-center justify-content-between p-3"
+            >
+              <div class="d-flex align-items-center text-muted gap-2">
+                <i class="ri-calendar-line me-1"></i>
+                <span>24 Feb 2025</span>
+              </div>
+              <div class="d-flex align-items-center text-muted gap-2">
+                <a href="#" class="text-decoration-none text-muted">
+                  <i class="ri-user-line me-1"></i>
+                  <span>By Azad Shaikh</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xl-4">
+          <!-- Search -->
+          <div class="input-group mb-4" data-aos="fade-left" data-aos-duration="1000">
+            <input
+              type="text"
+              class="form-control form-control-lg rounded me-2"
+              placeholder="Search..."
+            />
+            <button class="btn btn-lg btn-outline-primary rounded" type="button">
+              <i class="ri-search-line"></i>
+            </button>
+          </div>
+
+          <!-- About Us Section -->
+          <div data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+            <h4 class="mb-2">About Us</h4>
+            <div class="text-muted mb-4">
+              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum.
+              Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget
+              metus.
+            </div>
+          </div>
+
+          <!-- Latest Blogs -->
+          <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+            <h4 class="mb-3">Latest Blogs</h4>
+            <ul class="list-unstyled">
+              <li class="mb-4 mb-md-3">
+                <div class="card p-0">
+                  <div class="row g-2 g-md-3">
+                    <div class="col-md-4">
+                      <img
+                        src="https://asterodigital.com/storage/local/aamf/cms/media/125/cheatsheet.png"
+                        class="img-fluid rounded-4"
+                        style="height: 100px; object-fit: cover;"
+                        alt="Blog Image"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h2 class="my-0" style="line-height: 0.6;">
+                          <a
+                            href="https://asterodigital.com/guide/bootstrap-cheatsheet/"
+                            class="text-decoration-none text-body fs-6"
+                            >The Ultimate Bootstrap 5 Cheatsheet: Developer's Quick Reference Guide</a
+                          >
+                        </h2>
+                      </div>
+                      <div class="card-footer d-flex align-items-center gap-2 pt-2 pt-md-3">
+                        <div class="text-muted gap-1">
+                          <i class="ri-calendar-line"></i>
+                          <span style="font-size: 0.9rem;">18 Mar 2025</span>
+                        </div>
+                        <div class="text-muted gap-1">
+                          <a href="#" class="text-decoration-none text-muted">
+                            <i class="ri-user-line"></i>
+                            <span style="font-size: 0.9rem;">By Azad Shaikh</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="mb-4 mb-md-3">
+                <div class="card p-0">
+                  <div class="row g-2 g-md-3">
+                    <div class="col-md-4">
+                      <img
+                        src="https://asterodigital.com/storage/local/aamf/cms/post/121/bootstrap-language.png"
+                        class="img-fluid rounded-4"
+                        style="height: 100px; object-fit: cover;"
+                        alt="Blog Image"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h2 class="my-0" style="line-height: 0.6;">
+                          <a
+                            href="https://asterodigital.com/coding/bootstrap-language-selector/"
+                            class="text-decoration-none text-body fs-6"
+                            >Bootstrap Language Selector: Implementation Guide</a
+                          >
+                        </h2>
+                      </div>
+                      <div class="card-footer d-flex align-items-center gap-2 pt-2 pt-md-3">
+                        <div class="text-muted gap-1">
+                          <i class="ri-calendar-line"></i>
+                          <span style="font-size: 0.9rem;">15 Mar 2025</span>
+                        </div>
+                        <div class="text-muted gap-1">
+                          <a href="#" class="text-decoration-none text-muted">
+                            <i class="ri-user-line"></i>
+                            <span style="font-size: 0.9rem;">By Azad Shaikh</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="mb-4 mb-md-3">
+                <div class="card p-0">
+                  <div class="row g-2 g-md-3">
+                    <div class="col-md-4">
+                      <img
+                        src="https://asterodigital.com/storage/local/aalp/cms/post/94/sites-like-etsy.png"
+                        class="img-fluid rounded-4"
+                        style="height: 100px; object-fit: cover;"
+                        alt="Blog Image"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h2 class="my-0" style="line-height: 0.6;">
+                          <a
+                            href="https://asterodigital.com/seo/sites-like-etsy-to-sell-digital-products/"
+                            class="text-decoration-none text-body fs-6"
+                            >Top 5 sites like etsy to sell digital products</a
+                          >
+                        </h2>
+                      </div>
+                      <div class="card-footer d-flex align-items-center gap-2 pt-2 pt-md-3">
+                        <div class="text-muted gap-1">
+                          <i class="ri-calendar-line"></i>
+                          <span style="font-size: 0.9rem;">24 Feb 2025</span>
+                        </div>
+                        <div class="text-muted gap-1">
+                          <a href="#" class="text-decoration-none text-muted">
+                            <i class="ri-user-line"></i>
+                            <span style="font-size: 0.9rem;">By Azad Shaikh</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card p-0">
+                  <div class="row g-2 g-md-3">
+                    <div class="col-md-4">
+                      <img
+                        src="https://asterodigital.com/storage/local/aalp/cms/post/67/ai-seo.png"
+                        class="img-fluid rounded-4"
+                        style="height: 100px; object-fit: cover;"
+                        alt="Blog Image"
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h2 class="my-0" style="line-height: 0.6;">
+                          <a
+                            href="https://asterodigital.com/seo/is-it-good-idea-use-ai-seo/"
+                            class="text-decoration-none text-body fs-6"
+                            >Is It a Good Idea to Use AI for SEO? | Facts and Myths</a
+                          >
+                        </h2>
+                      </div>
+                      <div class="card-footer d-flex align-items-center gap-2 pt-2 pt-md-3">
+                        <div class="text-muted gap-1">
+                          <i class="ri-calendar-line"></i>
+                          <span style="font-size: 0.9rem;">15 Feb 2025</span>
+                        </div>
+                        <div class="text-muted gap-1">
+                          <a href="#" class="text-decoration-none text-muted">
+                            <i class="ri-user-line"></i>
+                            <span style="font-size: 0.9rem;">By Azad Shaikh</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
