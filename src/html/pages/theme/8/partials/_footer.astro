@@ -1,0 +1,121 @@
+---
+import { getPathPrefix } from '../../../../../utils/path.js'
+import Logo from './_topbar/_logo.astro'
+---
+
+<!-- Footer -->
+<footer class="bg-body pt-5 pt-xl-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <a href={getPathPrefix('/theme/8')}>
+          <Logo />
+        </a>
+        <p class="text-muted mt-3 mb-2 pe-0 pe-lg-4 pe-xl-5">
+          71-75 Shelton Street, Covent Garden, London, WC2H 9JQ
+        </p>
+        <p class="text-muted mb-2">+44 7728022218</p>
+        <p class="mb-3">
+          <a href="mailto:contact@asterodigital.com" class="text-decoration-none text-muted"
+            >contact@asterodigital.com</a
+          >
+        </p>
+        <nav class="nav social">
+          <a class="me-2" href="https://www.facebook.com/" target="_blank" title="Facebook">
+            <i class="uil uil-facebook-f"></i></a
+          >
+          <a class="me-2" href="https://www.instagram.com/" target="_blank" title="Instagram">
+            <i class="uil uil-instagram"></i></a
+          >
+          <a class="me-2" href="https://www.whatsapp.web/" target="_blank" title="WhatsApp">
+            <i class="uil uil-whatsapp"></i></a
+          >
+          <a class="me-2" href="https://www.twitter.com/" target="_blank" title="Twitter">
+            <i class="uil uil-twitter"></i></a
+          >
+          <a class="me-2" href="https://www.linkedin.com/" target="_blank" title="Linkedin">
+            <i class="uil uil-linkedin"></i></a
+          >
+        </nav>
+      </div>
+      <div class="col-md-3 offset-md-2 pt-4 pt-md-0">
+        <h5 class="mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a
+              class="text-decoration-none text-muted"
+              href={getPathPrefix('/theme/8/about')}
+              title="About"
+            >
+              About</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="text-decoration-none text-muted"
+              href={getPathPrefix('/theme/8/blog')}
+              title="Our Blog"
+            >
+              Our Blog</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="text-decoration-none text-muted"
+              href={getPathPrefix('/theme/8/services')}
+              title="Services"
+            >
+              Services</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="text-decoration-none text-muted"
+              href={getPathPrefix('/theme/8/hire-us')}
+              title="Hire Us"
+            >
+              Hire Us</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 pt-4 pt-md-0">
+        <h5 class="mb-3">Other Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a
+              class="text-decoration-none text-muted"
+              href={getPathPrefix('/theme/8/contact-us')}
+              title="Contact Us"
+            >
+              Contact Us</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="text-decoration-none text-muted"
+              href={getPathPrefix('/theme/8/privacy-policy')}
+              title="Privacy Policy"
+            >
+              Privacy Policy</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              class="text-decoration-none text-muted"
+              href={getPathPrefix('/theme/8/terms-and-conditions')}
+              title="Terms & Conditions"
+            >
+              Terms &amp; Conditions</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-4 mt-md-5">
+      <div class="border-top col-md-12">
+        <p class="text-muted my-4">© 2025 : Astero Digital Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>

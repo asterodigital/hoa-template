@@ -1,0 +1,59 @@
+---
+import Head from './partials/_head.astro'
+import TopNav from './partials/_topbar.astro'
+import QuickLinks from '../../../layouts/front/partials/_quick-links.astro'
+import Footer from './partials/_footer.astro'
+import Scripts from './partials/_scripts.astro'
+
+interface Props {
+  title: string
+  description?: string
+  currentPath?: string
+  pageScript?: string
+  pageCss?: string
+  isRtl?: boolean
+}
+
+const { title, description, pageScript, pageCss, isRtl = false } = Astro.props
+
+const pageSeo = {
+  title,
+  description: description || title
+}
+---
+
+<!doctype html>
+<html lang="en" dir={isRtl ? 'rtl' : 'ltr'} data-bs-theme="light">
+  <head>
+    <Head {...pageSeo} {pageCss} isRtl={isRtl} />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        font-optical-sizing: auto;
+      }
+    </style>
+    <style>
+      :root,
+      [data-bs-theme='light'] {
+        --bs-primary: #6c3794;
+        --bs-primary-rgb: 108, 55, 148;
+        --bs-secondary: #757575;
+        --bs-secondary-rgb: 117, 117, 117;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <TopNav />
+      <!-- Page Content -->
+      <div class="content-wrapper bg-body">
+        <slot />
+        <QuickLinks />
+      </div>
+      <Footer />
+    </main>
+    <!-- All Scripts -->
+    <Scripts {pageScript} />
+  </body>
+</html>
